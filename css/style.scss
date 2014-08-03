@@ -1,3 +1,106 @@
 @charset "UTF-8";
 @import "signature";
 @import "base";
+
+.page-wrapper{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 5000px;
+}
+
+$menu-width: 300px;
+
+.content-wrapper{
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	@include width-below($grid-collapse-below){
+		&.menu-toggle{
+			transform: translateX($menu-width);
+		}
+	}
+}
+
+.menu-wrapper{
+	position: fixed;
+	width: 100%;
+	background: #E54C3C;
+	color: #fff;
+	@extend .clearfix;
+	
+	@include width-below($grid-collapse-below){
+		width: $menu-width;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -$menu-width;
+	}
+}
+.main-menu{
+	width: 100%;
+	text-align: center;
+	
+	@include width-below($grid-collapse-below){
+		text-align: left;
+	}
+}
+.menu-wrapper ul{
+	list-style: none;
+}
+.menu-wrapper li{
+	display: inline-block;
+	
+	@include width-below($grid-collapse-below){
+		display: block;
+	}
+}
+.menu-wrapper a{
+	display: inline-block;
+	color: #fff;
+	padding: 8px 4px;
+	text-decoration: none;
+	
+	@include width-below($grid-collapse-below){
+		display: block;
+	}
+}
+.menu-wrapper .sub-menu{
+	display: none;
+	position: absolute;
+	background: green;
+	left: 0;
+	right: 0;
+	top: 100%;
+	
+	@include width-below($grid-collapse-below){
+		display: block;
+		position: static;
+		padding-left: 20px;
+	}
+}
+
+.menu-wrapper .search-form,
+.menu-wrapper .social-menu{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	
+	@include width-below($grid-collapse-below){
+		position: static;
+	}
+}
+.menu-wrapper .search-form{
+	left: 0;
+}
+.menu-wrapper .social-menu{
+	right: 0;
+}
+
+.content{
+	padding-top: 40px;
+	@include width-below($grid-collapse-below){
+		padding-top: 0;
+	}
+}
