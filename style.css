@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,400italic,700,700italic|Montserrat&subset=latin,latin-ext);
 /*!
 Theme Name: Galopin
 Theme URI: https://www.themesdefrance.fr/galopin
@@ -49,10 +50,10 @@ table {
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: 'Times New Roman'; }
+  font-family: 'Raleway'; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Times New Roman';
+  font-family: 'Montserrat';
   font-weight: normal; }
 
 ul, ol {
@@ -251,7 +252,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .main-menu {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Montserrat'; }
   @media only screen and (max-width: 500px) {
     .main-menu {
       text-align: left; } }
@@ -260,7 +262,12 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   list-style: none; }
 
 .menu-wrapper li {
-  display: inline-block; }
+  display: inline-block;
+  opacity: 0.7;
+  -webkit-transition: 0.2s ease opacity;
+          transition: 0.2s ease opacity; }
+  .menu-wrapper li.current-menu-item, .menu-wrapper li:hover {
+    opacity: 1; }
   @media only screen and (max-width: 500px) {
     .menu-wrapper li {
       display: block; } }
@@ -268,8 +275,9 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .menu-wrapper a {
   display: inline-block;
   color: #fff;
-  padding: 8px 4px;
-  text-decoration: none; }
+  padding: 8px 10px 10px;
+  text-decoration: none;
+  font-size: 20px; }
   @media only screen and (max-width: 500px) {
     .menu-wrapper a {
       display: block; } }

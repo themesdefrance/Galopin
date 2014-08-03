@@ -41,6 +41,7 @@ $menu-width: 300px;
 .main-menu{
 	width: 100%;
 	text-align: center;
+	font-family: $heading-font;
 	
 	@include width-below($grid-collapse-below){
 		text-align: left;
@@ -51,6 +52,13 @@ $menu-width: 300px;
 }
 .menu-wrapper li{
 	display: inline-block;
+	opacity: .7;
+	transition: .2s ease opacity;
+	
+	&.current-menu-item,
+	&:hover{
+		opacity: 1;
+	}
 	
 	@include width-below($grid-collapse-below){
 		display: block;
@@ -59,8 +67,9 @@ $menu-width: 300px;
 .menu-wrapper a{
 	display: inline-block;
 	color: #fff;
-	padding: 8px 4px;
+	padding: 8px 10px 10px;
 	text-decoration: none;
+	font-size: 20px;
 	
 	@include width-below($grid-collapse-below){
 		display: block;
