@@ -1,0 +1,221 @@
+/*!
+Theme Name: Galopin
+Theme URI: https://www.themesdefrance.fr/galopin
+Author: Themes de France
+Author URI: https://www.themesdefrance.fr
+Description:
+Version: 1.000
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain: galopin
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+*, *:after, *:before {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
+
+/*
+ * miscellaneous stuff, not really box related but always needed
+ */
+img {
+  border: 0; }
+
+a:focus {
+  outline: thin dotted; }
+a:active, a:hover {
+  outline: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+[hidden] {
+  display: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: 'Times New Roman'; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman';
+  font-weight: normal; }
+
+ul, ol {
+  list-style-position: inside; }
+
+ol {
+  list-style-type: decimal; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+pre, code, samp {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: monospace, serif; }
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+textarea {
+  overflow: auto;
+  font-family: inherit;
+  resize: vertical;
+  font-size: 100%; }
+
+button, input, select {
+  font-family: inherit;
+  font-size: 100%; }
+
+button, input {
+  line-height: normal; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer; }
+
+button {
+  width: auto;
+  overflow: visible; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+html {
+  font-size: 16pxpx; }
+
+.clearfix:before, .grid:before, .clearfix:after, .grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+@media print {
+  /* Black prints faster: sanbeiji.com/archives/953 */
+  /* Don't show links for images, or javascript/internal links */
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  @page {
+    margin: 0.5cm; }
+
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    -webkit-filter: none !important;
+            filter: none !important;
+    -ms-filter: none !important; }
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr, img {
+    page-break-inside: avoid; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+  h2, h3 {
+    page-break-after: avoid; } }
+
+.grid {
+  margin-left: -20px !important; }
+
+[class*='col-'] {
+  float: left;
+  padding-left: 20px; }
+
+.col-1-1 {
+  width: 100%; }
+
+.col-1-2 {
+  width: 50%; }
+
+.col-1-3 {
+  width: 33.33%; }
+
+.col-2-3 {
+  width: 66.66%; }
+
+.col-1-4 {
+  width: 25%; }
+
+.col-1-5 {
+  width: 20%; }
+
+.col-4-5 {
+  width: 80%; }
+
+@media only screen and (max-width: 500px) {
+  [class*='col-'] {
+    width: 100%;
+    padding-right: 0; }
+  .grid {
+    margin-right: 0 !important; } }
+
+img, table, td, blockquote, code, pre, textarea, input, video {
+  max-width: 100%; }
