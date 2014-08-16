@@ -2,11 +2,12 @@
 @import "signature";
 @import "base";
 
+$main-color: #E54C3C;
+
 .page-wrapper{
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 5000px;
 }
 
 $menu-width: 300px;
@@ -26,7 +27,7 @@ $menu-width: 300px;
 .menu-wrapper{
 	position: fixed;
 	width: 100%;
-	background: #E54C3C;
+	background: $main-color;
 	color: #fff;
 	@extend .clearfix;
 	
@@ -94,7 +95,7 @@ $menu-width: 300px;
 	}
 	
 	a{
-		color: #E54C3C;
+		color: $main-color;
 	}
 }
 .menu-wrapper .top-level-menu > li:hover .sub-menu{
@@ -164,4 +165,18 @@ $menu-width: 300px;
 	padding: 6px 14px;
 }
 
+.content .wrapper{
+	width: 600px;
+	margin: 0 auto;
+}
+
+.posts{
+	list-style: none;
+	padding: 10px 0;
+}
+.posts .post{
+	margin-bottom: 40px;
+}
+
 @import "modules/search";
+@import "modules/post";

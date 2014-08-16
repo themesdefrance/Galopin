@@ -65,6 +65,16 @@
 					</div>
 				</div>
 				
+				<div class="wrapper">
+					<ul class="posts">
+						<?php while (have_posts()) : the_post(); ?>
+						<li>
+							<?php get_template_part('content', get_post_format()); ?>
+						</li>
+						<?php endwhile; ?>
+					</ul>
+				</div>
+				
 			</div>
 			
 		</div>

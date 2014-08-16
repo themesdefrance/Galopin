@@ -224,8 +224,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .page-wrapper {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 5000px; }
+  width: 100%; }
 
 .content-wrapper {
   width: 100%;
@@ -371,6 +370,17 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   color: #fff;
   padding: 6px 14px; }
 
+.content .wrapper {
+  width: 600px;
+  margin: 0 auto; }
+
+.posts {
+  list-style: none;
+  padding: 10px 0; }
+
+.posts .post {
+  margin-bottom: 40px; }
+
 .search-form {
   width: 100%;
   text-align: center; }
@@ -407,3 +417,81 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   border: none;
   background: none;
   color: #fff; }
+
+.post-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #E54C3C; }
+
+.post-header-title, .post-header-title a {
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 10px; }
+
+.post-header-meta {
+  color: #B2B2B2; }
+
+.post-header-meta a {
+  color: #E54C3C;
+  text-decoration: none; }
+
+.post-content * {
+  max-width: 100%;
+  -ms-word-wrap: break-word;
+  word-break: break-word; }
+.post-content h1 {
+  font-size: 36px;
+  margin-bottom: 14px; }
+.post-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px; }
+.post-content h3 {
+  font-size: 20px;
+  margin-bottom: 8px; }
+.post-content h4, .post-content h5, .post-content h6 {
+  font-size: 18px;
+  margin-bottom: 6px; }
+.post-content dl, .post-content table, .post-content ul, .post-content ol, .post-content address {
+  margin-bottom: 20px; }
+.post-content p {
+  margin-bottom: 10px; }
+.post-content ul ul, .post-content ul ol, .post-content ol ul, .post-content ol ol {
+  margin-bottom: 0; }
+.post-content li {
+  list-style-position: outside;
+  margin-left: 25px;
+  margin-bottom: 5px; }
+.post-content a {
+  color: #E54C3C;
+  text-decoration: none; }
+  .post-content a:hover {
+    text-decoration: underline; }
+.post-content dt {
+  font-weight: 700; }
+.post-content dt ~ dd {
+  margin-bottom: 10px; }
+.post-content abbr, .post-content acronym {
+  cursor: help;
+  border-bottom: 1px dotted; }
+.post-content tr {
+  border-bottom: 1px solid #bfbfbf; }
+  .post-content tr:last-child {
+    border-bottom: none; }
+  .post-content tr:nth-child(even) {
+    background: #f7f7f7; }
+.post-content th {
+  text-align: center; }
+.post-content td, .post-content th {
+  padding: 8px 4px; }
+.post-content .alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+.post-content .alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+.post-content .aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+.post-content .wp-caption-text {
+  padding: 2px 0;
+  color: #8d8d8d;
+  text-align: center; }
