@@ -349,6 +349,28 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     .content {
       padding-top: 0; } }
 
+.hero-image {
+  width: 100%;
+  height: 300px;
+  background: #ccc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.hero-text {
+  background: #333;
+  color: #fff;
+  padding: 6px 14px; }
+
 .search-form {
   width: 100%;
   text-align: center; }

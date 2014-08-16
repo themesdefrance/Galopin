@@ -144,9 +144,24 @@ $menu-width: 300px;
 
 .content{
 	padding-top: 40px;
+	
 	@include width-below($grid-collapse-below){
 		padding-top: 0;
 	}
+}
+
+.hero-image{
+	width: 100%;
+	height: 300px;
+	background: #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hero-text{
+	background: #333;
+	color: #fff;
+	padding: 6px 14px;
 }
 
 @import "modules/search";

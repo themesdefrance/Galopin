@@ -58,7 +58,13 @@
 			</header>
 			
 			<div class="content">
-				content
+				
+				<div class="hero-image">
+					<div class="hero-text">
+						Galopin
+					</div>
+				</div>
+				
 			</div>
 			
 		</div>
