@@ -33,8 +33,9 @@
 		<div class="content-wrapper">
 			
 			<header class="menu-wrapper">
-				<div class="search-form">
-					search
+				<div class="search-wrapper">
+					<button class="form-toggle typcn typcn-zoom"></button>
+					 <?php get_search_form(true); ?> 
 				</div>
 				
 				<nav class="main-menu">
@@ -50,7 +51,9 @@
 				</nav>
 				
 				<ul class="social-menu">
-					social shit
+					<li>
+						<a href="#" class="typcn typcn-social-facebook-circular"></a>
+					</li>
 				</ul>
 			</header>
 			

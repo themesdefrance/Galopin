@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Exo+2:400,400italic,700,700italic|Montserrat&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Montserrat|Raleway:400,700&subset=latin,latin-ext);
 /*!
 Theme Name: Galopin
 Theme URI: https://www.themesdefrance.fr/galopin
@@ -295,22 +295,86 @@ img, table, td, blockquote, code, pre, textarea, input, video {
       position: static;
       padding-left: 20px; } }
 
-.menu-wrapper .search-form, .menu-wrapper .social-menu {
+.menu-wrapper .search-wrapper, .menu-wrapper .social-menu {
   position: absolute;
   top: 0;
   bottom: 0; }
   @media only screen and (max-width: 500px) {
-    .menu-wrapper .search-form, .menu-wrapper .social-menu {
+    .menu-wrapper .search-wrapper, .menu-wrapper .social-menu {
       position: static; } }
 
-.menu-wrapper .search-form {
-  left: 0; }
+.menu-wrapper .search-wrapper {
+  left: 0;
+  width: 20%;
+  max-width: 250px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .menu-wrapper .search-wrapper.active {
+    background: #fff; }
+
+.search-wrapper .search-form {
+  display: none; }
+
+.search-wrapper .submit-btn {
+  display: none; }
+
+.search-wrapper .form-toggle {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 20px; }
 
 .menu-wrapper .social-menu {
   right: 0; }
+
+.menu-wrapper .social-menu .typcn:before {
+  font-size: 26px; }
 
 .content {
   padding-top: 40px; }
   @media only screen and (max-width: 500px) {
     .content {
       padding-top: 0; } }
+
+.search-form {
+  width: 100%;
+  text-align: center; }
+
+.search-form label {
+  position: relative;
+  display: block; }
+
+.search-form .screen-reader-text {
+  display: none; }
+
+.search-form .search-field {
+  border: none;
+  background: #fff;
+  width: 80%;
+  border-left: 2px solid #B2B2B2;
+  padding: 4px 4px; }
+  .search-form .search-field:focus {
+    background: #fafafa; }
+
+.search-form .reset-btn {
+  position: absolute;
+  right: 10%;
+  padding: 4px 4px;
+  border: none;
+  color: #B2B2B2;
+  background: #fafafa;
+  opacity: 0; }
+
+.search-form .search-field:focus + .reset-btn {
+  opacity: 1; }
+
+.search-form .submit-btn {
+  border: none;
+  background: none;
+  color: #fff; }
