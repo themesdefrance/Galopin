@@ -78,7 +78,7 @@ $menu-width: 300px;
 .menu-wrapper .sub-menu{
 	display: none;
 	position: absolute;
-	background: green;
+	background: #fff;
 	left: 0;
 	right: 0;
 	top: 100%;
@@ -88,6 +88,17 @@ $menu-width: 300px;
 		position: static;
 		padding-left: 20px;
 	}
+	
+	li{
+		opacity: 1;
+	}
+	
+	a{
+		color: #E54C3C;
+	}
+}
+.menu-wrapper .top-level-menu > li:hover .sub-menu{
+	display: block;
 }
 
 .menu-wrapper .search-wrapper,

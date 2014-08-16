@@ -285,7 +285,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .menu-wrapper .sub-menu {
   display: none;
   position: absolute;
-  background: green;
+  background: #fff;
   left: 0;
   right: 0;
   top: 100%; }
@@ -294,6 +294,13 @@ img, table, td, blockquote, code, pre, textarea, input, video {
       display: block;
       position: static;
       padding-left: 20px; } }
+  .menu-wrapper .sub-menu li {
+    opacity: 1; }
+  .menu-wrapper .sub-menu a {
+    color: #E54C3C; }
+
+.menu-wrapper .top-level-menu > li:hover .sub-menu {
+  display: block; }
 
 .menu-wrapper .search-wrapper, .menu-wrapper .social-menu {
   position: absolute;
