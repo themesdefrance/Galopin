@@ -60,6 +60,8 @@
 			<div class="content">
 				
 				<div class="hero-image">
+					<button class="menu-toggle typcn typcn-th-menu"></button>
+					
 					<div class="hero-text">
 						Galopin
 					</div>

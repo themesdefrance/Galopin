@@ -16,11 +16,13 @@ $menu-width: 300px;
 	position: relative;
 
 	@include width-below($grid-collapse-below){
-		&.menu-toggle{
+		&.menu-open{
 			transform: translateX($menu-width);
 		}
 	}
 }
+
+
 
 .menu-wrapper{
 	position: fixed;
@@ -28,6 +30,7 @@ $menu-width: 300px;
 	background: $main-color;
 	color: #fff;
 	@extend .clearfix;
+	z-index: $z-menu;
 	
 	@include width-below($grid-collapse-below){
 		width: $menu-width;
@@ -35,6 +38,7 @@ $menu-width: 300px;
 		position: absolute;
 		top: 0;
 		left: -$menu-width;
+		background: #333;
 	}
 }
 .main-menu{
@@ -61,6 +65,7 @@ $menu-width: 300px;
 	
 	@include width-below($grid-collapse-below){
 		display: block;
+		opacity: 1;
 	}
 }
 .menu-wrapper a{
@@ -72,32 +77,50 @@ $menu-width: 300px;
 	
 	@include width-below($grid-collapse-below){
 		display: block;
+		
+		&:hover{
+			background: $main-color;
+		}
 	}
 }
+.top-level-menu{
+	z-index: 10;
+	position: relative;
+}
 .menu-wrapper .sub-menu{
-	display: none;
 	position: absolute;
 	background: #fff;
 	left: 0;
 	right: 0;
 	top: 100%;
+	padding-top: 2px;
+	display: none;
 	
 	@include width-below($grid-collapse-below){
 		display: block;
 		position: static;
-		padding-left: 20px;
+		background: #444;
 	}
 	
 	li{
 		opacity: 1;
 	}
+}
+.menu-wrapper .sub-menu a{
+	color: $main-color;
+	font-size: 16px;
 	
-	a{
-		color: $main-color;
-		font-size: 16px;
+	@include width-below($grid-collapse-below){
+		color: #fff;
+		padding-left: 20px;
+	}
+
+	&:hover{
+		background: $main-color;
+		color: #fff;
 	}
 }
-.menu-wrapper .top-level-menu > li:hover .sub-menu{
+.top-level-menu > li:hover .sub-menu{
 	display: block;
 }
 
@@ -157,18 +180,46 @@ $menu-width: 300px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
+	@include width-below($grid-collapse-below){
+		position: fixed;
+		top: 0;
+		height: 5%;
+		min-height: 50px;
+		justify-content: space-between;
+	}
+}
+.menu-toggle{
+	background: none;
+	border: none;
+	font-size: 30px;
+	display: none;
+	
+	@include width-below($grid-collapse-below){
+		display: block;
+	}
 }
 .hero-text{
 	background: #333;
 	color: #fff;
-	padding: 8px 28px;
+	padding: 6px 18px;
 	font-family: $heading-font;
 	font-size: 38px;
+	
+	@include width-below($grid-collapse-below){
+		font-size: 20px;
+		margin-right: 10px;
+	}
 }
 
 .content .wrapper{
 	width: 900px;
 	margin: 0 auto;
+	
+	@include width-below($grid-collapse-below){
+		width: 100%;
+		padding: 0 15px;
+	}
 }
 
 .posts{
