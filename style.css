@@ -371,7 +371,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   padding: 6px 14px; }
 
 .content .wrapper {
-  width: 600px;
+  width: 900px;
   margin: 0 auto; }
 
 .posts {
@@ -380,6 +380,15 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .posts .post {
   margin-bottom: 40px; }
+
+.footer {
+  width: 95%;
+  margin: 40px auto 0;
+  padding: 10px 0 10px;
+  border-top: 1px solid #E54C3C; }
+
+.footer .menu {
+  text-align: right; }
 
 .search-form {
   width: 100%;

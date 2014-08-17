@@ -166,7 +166,7 @@ $menu-width: 300px;
 }
 
 .content .wrapper{
-	width: 600px;
+	width: 900px;
 	margin: 0 auto;
 }
 
@@ -176,6 +176,16 @@ $menu-width: 300px;
 }
 .posts .post{
 	margin-bottom: 40px;
+}
+
+.footer{
+	width: 95%;
+	margin: 40px auto 0;
+	padding: 10px 0 10px;
+	border-top: 1px solid $main-color;
+}
+.footer .menu{
+	text-align: right;
 }
 
 @import "modules/search";

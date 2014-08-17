@@ -56,7 +56,7 @@
 
 	</div>
 	
-	<footer class="footer">
+	<footer class="post-footer">
 	
 		<?php get_template_part('content', 'footer-meta'); ?>
 		

@@ -23,3 +23,24 @@ if (!function_exists('etendard_is_paginated_post')){
 		return 0 !== $multipage;
 	}
 }
+
+
+register_sidebar(array(
+		'name'          => __('Sidebar', 'galopin'),
+		'id'            => 'blog',
+		'description'   => __('Add widgets in the sidebar.', 'galopin'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+));
+
+register_sidebar(array(
+		'name'          => __('Footer', 'galopin'),
+		'id'            => 'footer',
+		'description'   => __('Add widgets in the footer.', 'galopin'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+));

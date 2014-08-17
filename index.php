@@ -65,15 +65,35 @@
 					</div>
 				</div>
 				
-				<div class="wrapper">
-					<ul class="posts">
-						<?php while (have_posts()) : the_post(); ?>
-						<li>
-							<?php get_template_part('content', get_post_format()); ?>
-						</li>
-						<?php endwhile; ?>
-					</ul>
+				<div class="wrapper">	
+					<div class="grid">
+						<ul class="posts col-2-3">
+							<?php while (have_posts()) : the_post(); ?>
+							<li>
+								<?php get_template_part('content', get_post_format()); ?>
+							</li>
+							<?php endwhile; ?>
+						</ul>
+						<aside class="sidebar col-1-3">
+							<?php get_sidebar('blog'); ?>
+						</aside>
+					</div>
+					
+					<aside class="footerbar">
+						<?php get_sidebar('footer'); ?>
+					</aside>
 				</div>
+				
+				<footer class="footer">
+					<div class="grid">
+						<div class="note col-1-2">
+							left
+						</div>
+						<div class="menu col-1-2">
+							right
+						</div>
+					</div>
+				</footer>
 				
 			</div>
 			
