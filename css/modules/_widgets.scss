@@ -1,5 +1,7 @@
 .widget{
 	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #f1f1f1;
 	
 	ul,
 	ol{
@@ -16,10 +18,29 @@
 		text-align: center;
 	}
 }
+.widget > h3{
+	font-size: 20px;
+	margin-bottom: 10px;
+	
+	@extend .typcn;
+	&:before{
+		color: $main-color;
+		margin-right: 5px;
+	}
+}
+
+.widget_recent_entries h3{
+	@extend .typcn-folder-open;
+}
+
 .widget_search{
 	background: #F1F1F1;
 	position: relative;
-	padding: 10px 0;
+	padding: 8px 0;
+	
+	h3{
+		@extend .typcn-folder-zoom;
+	}
 	
 	.search-field{
 		width: 70%;
@@ -37,5 +58,59 @@
 		&:before{
 			font-size: 24px;
 		}
+	}
+}
+
+.widget_tag_cloud h3,
+.widget_categories h3{
+	@extend .typcn-tags;
+}
+
+.widget_recent_entries h3{
+	@extend .typcn-folder-open;
+}
+
+.widget_tag_cloud a{
+	display: inline-block;
+	color: #B2B2B2;
+	background: #F1F1F1;
+	padding: 2px 8px;
+	margin: 4px 0;
+	
+	&:hover{
+		color: darken(#B2B2B2, 10);
+		background: darken(#F1F1F1, 5);
+	}
+}
+
+.widget_calendar{
+	caption{
+		font-family: $heading-font;
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+	
+	th{
+		font-weight: 400;
+		color: #B2B2B2;
+	}
+	
+	#next a,
+	#prev a{
+		display: inline-block;
+		margin-top: 10px;
+		@extend .button;
+	}
+}
+
+.widget_recent_comments{
+	h3{
+		@extend .typcn-messages;
+	}
+	
+	li{
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid #f1f1f1;
 	}
 }
