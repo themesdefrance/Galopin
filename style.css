@@ -381,6 +381,9 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .posts .post {
   margin-bottom: 40px; }
 
+.sidebar {
+  padding-top: 40px; }
+
 .footer {
   width: 95%;
   margin: 40px auto 0;
@@ -504,3 +507,15 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   padding: 2px 0;
   color: #8d8d8d;
   text-align: center; }
+
+.widget {
+  margin-bottom: 30px; }
+  .widget ul, .widget ol {
+    list-style: none; }
+  .widget a {
+    color: #E54C3C;
+    text-decoration: none; }
+  .widget table {
+    width: 100%; }
+  .widget td {
+    text-align: center; }

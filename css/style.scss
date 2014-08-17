@@ -178,6 +178,10 @@ $menu-width: 300px;
 	margin-bottom: 40px;
 }
 
+.sidebar{
+	padding-top: 40px;
+}
+
 .footer{
 	width: 95%;
 	margin: 40px auto 0;
@@ -190,3 +194,4 @@ $menu-width: 300px;
 
 @import "modules/search";
 @import "modules/post";
+@import "modules/widgets";
