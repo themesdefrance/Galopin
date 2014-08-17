@@ -221,6 +221,15 @@ html {
 img, table, td, blockquote, code, pre, textarea, input, video {
   max-width: 100%; }
 
+.button, html a.button {
+  background: #E54C3C;
+  color: #fff;
+  font-size: 16px;
+  padding: 6px 16px;
+  font-family: 'Montserrat'; }
+  .button:hover, html a.button:hover {
+    text-decoration: none; }
+
 .page-wrapper {
   position: relative;
   overflow: hidden;
@@ -276,7 +285,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   color: #fff;
   padding: 8px 10px 10px;
   text-decoration: none;
-  font-size: 20px; }
+  font-size: 18px; }
   @media only screen and (max-width: 500px) {
     .menu-wrapper a {
       display: block; } }
@@ -296,7 +305,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   .menu-wrapper .sub-menu li {
     opacity: 1; }
   .menu-wrapper .sub-menu a {
-    color: #E54C3C; }
+    color: #E54C3C;
+    font-size: 16px; }
 
 .menu-wrapper .top-level-menu > li:hover .sub-menu {
   display: block; }
@@ -350,7 +360,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .hero-image {
   width: 100%;
-  height: 300px;
+  height: 400px;
   background: #ccc;
   display: -webkit-box;
   display: -webkit-flex;
@@ -368,7 +378,9 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .hero-text {
   background: #333;
   color: #fff;
-  padding: 6px 14px; }
+  padding: 8px 28px;
+  font-family: 'Montserrat';
+  font-size: 38px; }
 
 .content .wrapper {
   width: 900px;
@@ -379,7 +391,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   padding: 10px 0; }
 
 .posts .post {
-  margin-bottom: 40px; }
+  margin-bottom: 50px; }
 
 .sidebar {
   padding-top: 40px; }
@@ -432,81 +444,122 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .post-header {
   margin-bottom: 20px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #E54C3C; }
 
 .post-header-title, .post-header-title a {
   color: #333;
   text-decoration: none;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-size: 32px; }
 
 .post-header-meta {
-  color: #B2B2B2; }
+  color: #B2B2B2;
+  font-size: 16px; }
 
 .post-header-meta a {
   color: #E54C3C;
   text-decoration: none; }
 
-.post-content * {
-  max-width: 100%;
-  -ms-word-wrap: break-word;
-  word-break: break-word; }
-.post-content h1 {
-  font-size: 36px;
-  margin-bottom: 14px; }
-.post-content h2 {
-  font-size: 24px;
-  margin-bottom: 10px; }
-.post-content h3 {
-  font-size: 20px;
-  margin-bottom: 8px; }
-.post-content h4, .post-content h5, .post-content h6 {
+.post-content {
   font-size: 18px;
-  margin-bottom: 6px; }
-.post-content dl, .post-content table, .post-content ul, .post-content ol, .post-content address {
-  margin-bottom: 20px; }
-.post-content p {
-  margin-bottom: 10px; }
-.post-content ul ul, .post-content ul ol, .post-content ol ul, .post-content ol ol {
-  margin-bottom: 0; }
-.post-content li {
-  list-style-position: outside;
-  margin-left: 25px;
-  margin-bottom: 5px; }
-.post-content a {
-  color: #E54C3C;
-  text-decoration: none; }
-  .post-content a:hover {
-    text-decoration: underline; }
-.post-content dt {
-  font-weight: 700; }
-.post-content dt ~ dd {
-  margin-bottom: 10px; }
-.post-content abbr, .post-content acronym {
-  cursor: help;
-  border-bottom: 1px dotted; }
-.post-content tr {
-  border-bottom: 1px solid #bfbfbf; }
-  .post-content tr:last-child {
-    border-bottom: none; }
-  .post-content tr:nth-child(even) {
-    background: #f7f7f7; }
-.post-content th {
-  text-align: center; }
-.post-content td, .post-content th {
-  padding: 8px 4px; }
-.post-content .alignright {
-  float: right;
-  margin: 5px 0 20px 20px; }
-.post-content .alignleft {
-  float: left;
-  margin: 5px 20px 20px 0; }
-.post-content .aligncenter {
-  display: block;
-  margin: 5px auto 5px auto; }
-.post-content .wp-caption-text {
-  padding: 2px 0;
-  color: #8d8d8d;
-  text-align: center; }
+  line-height: 1.42; }
+  .post-content * {
+    max-width: 100%;
+    -ms-word-wrap: break-word;
+    word-break: break-word; }
+  .post-content h1 {
+    font-size: 36px;
+    margin-bottom: 14px; }
+  .post-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px; }
+  .post-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px; }
+  .post-content h4, .post-content h5, .post-content h6 {
+    font-size: 18px;
+    margin-bottom: 6px; }
+  .post-content dl, .post-content table, .post-content ul, .post-content ol, .post-content address {
+    margin-bottom: 20px; }
+  .post-content p {
+    margin-bottom: 10px; }
+  .post-content ul ul, .post-content ul ol, .post-content ol ul, .post-content ol ol {
+    margin-bottom: 0; }
+    .post-content ul ul li, .post-content ul ol li, .post-content ol ul li, .post-content ol ol li {
+      margin-left: 25px; }
+  .post-content ul, .post-content ol {
+    list-style: none; }
+  .post-content ul > li:before {
+    content: "▪";
+    color: #E54C3C;
+    padding-right: 4px;
+    font-size: 20px; }
+  .post-content ol {
+    counter-reset: ordered; }
+  .post-content ol > li {
+    counter-increment: ordered; }
+    .post-content ol > li:before {
+      content: counter(ordered);
+      color: #E54C3C;
+      padding-right: 8px;
+      font-size: 20px; }
+  .post-content li {
+    list-style-position: outside;
+    margin-bottom: 5px; }
+  .post-content a {
+    color: #E54C3C;
+    text-decoration: none; }
+    .post-content a:hover {
+      text-decoration: underline; }
+  .post-content dt {
+    font-weight: 700; }
+  .post-content dt ~ dd {
+    margin-bottom: 10px; }
+  .post-content abbr, .post-content acronym {
+    cursor: help;
+    border-bottom: 1px dotted; }
+  .post-content tr:nth-child(odd) {
+    background: #F1F1F1; }
+  .post-content th {
+    text-align: center;
+    background: #E54C3C;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Montserrat'; }
+  .post-content td, .post-content th {
+    padding: 8px 4px; }
+  .post-content pre {
+    line-height: 1.1; }
+  .post-content blockquote {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 30px 0; }
+    .post-content blockquote p:before {
+      content: "“";
+      font-size: 24px;
+      position: relative; }
+    .post-content blockquote cite {
+      display: block;
+      font-family: 'Raleway';
+      font-size: 16px;
+      margin-top: 20px;
+      font-style: normal; }
+  .post-content .alignright {
+    float: right;
+    margin: 5px 0 20px 20px; }
+  .post-content .alignleft {
+    float: left;
+    margin: 5px 20px 20px 0; }
+  .post-content .aligncenter {
+    display: block;
+    margin: 5px auto 5px auto; }
+  .post-content .wp-caption-text {
+    padding: 2px 0;
+    color: #8d8d8d;
+    text-align: center; }
 
 .widget {
   margin-bottom: 30px; }

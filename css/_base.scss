@@ -3,5 +3,19 @@
 $body-copy-font: 'Raleway';
 $heading-font: 'Montserrat';
 $grid-collapse-below: 500px;
+$main-color: #E54C3C;
 
 @import "qb/all";
+
+.button,
+html a.button{
+	background: $main-color;
+	color: #fff;
+	font-size: 16px;
+	padding: 6px 16px;
+	font-family: $heading-font;
+	
+	&:hover{
+		text-decoration: none;
+	}
+}

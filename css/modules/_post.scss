@@ -2,6 +2,7 @@
 }
 .post-header{
 	margin-bottom: 20px;
+	padding-bottom: 5px;
 	border-bottom: 1px solid $main-color;
 }
 .post-header-title,
@@ -9,15 +10,20 @@
 	color: #333;
 	text-decoration: none;
 	margin-bottom: 10px;
+	font-size: 32px;
 }
 .post-header-meta{
 	color: #B2B2B2;
+	font-size: 16px;
 }
 .post-header-meta a{
 	color: $main-color;
 	text-decoration: none;
 }
 .post-content{
+	font-size: 18px;
+	line-height: 1.42;
+	
 	*{
 		max-width:100%;
 		-ms-word-wrap: break-word;
@@ -56,10 +62,37 @@
 	ol ul,
 	ol ol{
 		margin-bottom: 0;
+		
+		li{
+			margin-left: 25px;
+		}
+	}
+	//custom list style
+	ul,
+	ol{
+		list-style: none;
+	}
+	ul > li:before{
+		content: "▪";
+		color: $main-color;
+		padding-right: 4px;
+		font-size: 20px;
+	}
+	ol{
+		counter-reset: ordered;
+	}
+	ol > li{
+		counter-increment: ordered;
+		
+		&:before{
+			content: counter(ordered);
+			color: $main-color;
+			padding-right: 8px;
+			font-size: 20px;
+		}
 	}
 	li{
 		list-style-position: outside;
-		margin-left: 25px;
 		margin-bottom: 5px;
 	}
 	a{
@@ -83,22 +116,43 @@
 		cursor: help;
 		border-bottom: 1px dotted;
 	}
-	tr{
-		border-bottom: 1px solid #bfbfbf;
-		
-		&:last-child{
-			border-bottom: none;
-		}
-		&:nth-child(even){
-			background: #f7f7f7;
-		}
+	tr:nth-child(odd){
+		background: #F1F1F1;
 	}
 	th{
 		text-align:center;
+		background: $main-color;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 400;
+		font-family: $heading-font;
 	}
 	td,
 	th{
 		padding: 8px 4px;
+	}
+	pre{
+		line-height: 1.1;
+	}
+	blockquote{
+		font-family: $heading-font;
+		font-size: 20px;
+		line-height: 1.3;
+		margin: 30px 0;
+		
+		p:before{
+			content: "“";
+			font-size: 24px;
+			position: relative;
+		}
+		
+		cite{
+			display: block;
+			font-family: $body-copy-font;
+			font-size: 16px;
+			margin-top: 20px;
+			font-style: normal;
+		}
 	}
 	.alignright{
 		float:right;
