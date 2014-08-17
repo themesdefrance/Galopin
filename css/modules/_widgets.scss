@@ -16,3 +16,26 @@
 		text-align: center;
 	}
 }
+.widget_search{
+	background: #F1F1F1;
+	position: relative;
+	padding: 10px 0;
+	
+	.search-field{
+		width: 70%;
+	}
+	.reset-btn{
+		right: 15%;
+	}
+	.submit-btn{
+		width: 40px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		
+		&:before{
+			font-size: 24px;
+		}
+	}
+}

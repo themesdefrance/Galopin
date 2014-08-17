@@ -485,7 +485,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .search-form .submit-btn {
   border: none;
   background: none;
-  color: #fff; }
+  color: #fff;
+  background: #E54C3C; }
 
 .post-header {
   margin-bottom: 20px;
@@ -617,3 +618,20 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     width: 100%; }
   .widget td {
     text-align: center; }
+
+.widget_search {
+  background: #F1F1F1;
+  position: relative;
+  padding: 10px 0; }
+  .widget_search .search-field {
+    width: 70%; }
+  .widget_search .reset-btn {
+    right: 15%; }
+  .widget_search .submit-btn {
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+    .widget_search .submit-btn:before {
+      font-size: 24px; }
