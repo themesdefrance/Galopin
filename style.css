@@ -1237,7 +1237,7 @@ html {
 @media only screen and (max-width: 500px) {
   [class*='col-'] {
     width: 100%;
-    padding-right: 0; }
+    padding-left: 0; }
   .grid {
     margin-left: 0 !important; } }
 
@@ -1467,11 +1467,31 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .footer {
   width: 95%;
   margin: 40px auto 0;
-  padding: 10px 0 10px;
+  padding: 20px 0;
   border-top: 1px solid #E54C3C; }
+
+.footer a {
+  color: #E54C3C;
+  text-decoration: none;
+  font-family: 'Montserrat'; }
+
+@media only screen and (max-width: 500px) {
+  .footer .footnote {
+    text-align: center; } }
 
 .footer .menu {
   text-align: right; }
+  @media only screen and (max-width: 500px) {
+    .footer .menu {
+      text-align: center;
+      margin-top: 20px; } }
+
+.footer .menu ul {
+  list-style: none; }
+
+.footer .menu li {
+  display: inline-block;
+  margin-left: 14px; }
 
 .search-form {
   width: 100%;

@@ -37,7 +37,7 @@ $grid-collapse-below: 500px !default;
 @media only screen and (max-width: $grid-collapse-below){
 	[class*='col-']{
 		width: 100%;
-		padding-right: 0;
+		padding-left: 0;
 	}
 	.grid{
 		margin-left: 0 !important;

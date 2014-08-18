@@ -45,7 +45,7 @@
 						'menu_class'     => 'top-level-menu',
 						'container'      => false,
 						'depth'          => 2,
-						'fallback_cb'    => 'etendard_nomenu'
+						'fallback_cb'    => 'galopin_nomenu'
 					));
 					?>
 				</nav>
@@ -85,24 +85,4 @@
 						<?php get_sidebar('footer'); ?>
 					</aside>
 				</div>
-				
-				<footer class="footer">
-					<div class="grid">
-						<div class="note col-1-2">
-							left
-						</div>
-						<div class="menu col-1-2">
-							right
-						</div>
-					</div>
-				</footer>
-				
-			</div>
-			
-		</div>
-	</div>
-	
-	<?php wp_footer(); ?>
-	
-</body>
-</html>
+				<?php get_footer(); ?>

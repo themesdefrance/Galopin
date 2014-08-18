@@ -237,12 +237,35 @@ $menu-width: 300px;
 .footer{
 	width: 95%;
 	margin: 40px auto 0;
-	padding: 10px 0 10px;
+	padding: 20px 0;
 	border-top: 1px solid $main-color;
+}
+.footer a{
+	color: $main-color;
+	text-decoration: none;
+	font-family: $heading-font;
+}
+.footer .footnote{
+	@include width-below($grid-collapse-below){
+		text-align: center;
+	}
 }
 .footer .menu{
 	text-align: right;
+	
+	@include width-below($grid-collapse-below){
+		text-align: center;
+		margin-top: 20px;
+	}
 }
+.footer .menu ul{
+	list-style: none;
+}
+.footer .menu li{
+	display: inline-block;
+	margin-left: 14px;
+}
+
 
 @import "modules/search";
 @import "modules/post";
