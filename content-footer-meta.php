@@ -9,10 +9,10 @@
 <?php } ?>
 
 <?php if(etendard_is_paginated_post()){ ?>
-	<nav>
+	<nav cl>
 	
 	<?php wp_link_pages(array(
-		'before'=>'<div class="page-links"><span class="page-links-title">'.__('Pages:', 'galopin').'</span>', 
+		'before'=>'<div class="post-pagination"><span class="page-links-title">'.__('Pages:', 'galopin').'</span>', 
 		'after'=>'</div>'
 	)); ?>
 	

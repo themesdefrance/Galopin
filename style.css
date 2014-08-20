@@ -1732,3 +1732,21 @@ img, table, td, blockquote, code, pre, textarea, input, video {
           transition: 0.2s color ease-out; }
   .pagination > span.current, .pagination > span:hover, .pagination > a.current, .pagination > a:hover {
     color: #fff; }
+
+.post-pagination {
+  margin: 15px 0;
+  background: #E54C3C;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Montserrat';
+  display: inline-block;
+  padding: 4px 10px; }
+  .post-pagination a {
+    padding: 0 4px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    -webkit-transition: 0.2s color ease-out;
+            transition: 0.2s color ease-out; }
+    .post-pagination a:hover {
+      color: #fff; }
+  .post-pagination .page-links-title {
+    margin-right: 10px; }

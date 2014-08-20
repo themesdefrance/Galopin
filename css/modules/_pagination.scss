@@ -16,3 +16,26 @@
 		}
 	}
 }
+.post-pagination{
+	margin: 15px 0;
+	background: $main-color;
+	color: rgba(#fff, .6);
+	font-family: $heading-font;
+	display: inline-block;
+	padding: 4px 10px;
+	
+	a{
+		padding: 0 4px;
+		color: rgba(#fff, .6);
+		text-decoration: none;
+		transition: .2s color ease-out;
+		
+		&:hover{
+			color: #fff;
+		}
+	}
+	
+	.page-links-title{
+		margin-right: 10px;
+	}
+}
