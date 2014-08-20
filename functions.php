@@ -116,3 +116,82 @@ if (!function_exists('galopin_nomenu')){
 		echo '<ul class="top-level-menu"><li><a href="'.admin_url('nav-menus.php').'">'.__('Set up the main menu', 'galopin').'</a></li></ul>';
 	}
 }
+
+//customized pagination links
+if (!function_exists('galopin_posts_nav')){
+	//derived from http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
+	/*
+	 @param $extremes : display or not previous & next links
+	 @param $separator : string to insert between each page
+	*/
+	
+	function galopin_posts_nav($extremes=true, $separator='|'){
+		if (is_singular()) return;
+	
+		global $wp_query;
+		$output = '';
+	
+		// Stop execution if there's only 1 page
+		if($wp_query->max_num_pages <= 1) return;
+	
+		$paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
+		$max = intval($wp_query->max_num_pages);
+	
+		// Add current page to the array
+		if ($paged >= 1) $links[] = $paged;
+	
+		// Add the pages around the current page to the array
+		if ($paged >= 3){
+			$links[] = $paged - 1;
+			$links[] = $paged - 2;
+		}
+	
+		if (($paged + 2 ) <= $max){
+			$links[] = $paged + 2;
+			$links[] = $paged + 1;
+		}
+		
+		$current = apply_filters('etendard_post_nav_current', '<span class="current">%s</span>');
+		$linkTemplate = apply_filters('etendard_post_nav_link', '<a href="%s">%s</a>');
+	
+		// Previous Post Link
+		if ($extremes && get_previous_posts_link()) previous_posts_link();
+	
+		// Link to first page, plus ellipses if necessary */
+		if (!in_array(1, $links)){
+			if ($paged == 1)
+				$output .= sprintf($current, '1');
+			else
+				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link(1)), '1');
+			
+			echo $separator;
+			if (!in_array(2, $links)) $output .= '…'.$separator;
+		}
+	
+		// Link to current page, plus 2 pages in either direction if necessary
+		sort($links);
+		foreach ((array) $links as $link){
+			if ($paged == $link)
+				$output .= sprintf($current, $link);
+			else
+				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link($link)), $link);
+				
+			if ($link < $max) echo $separator;
+		}
+	
+		// Link to last page, plus ellipses if necessary
+		if (!in_array($max, $links)){
+			if (!in_array($max-1, $links)) echo '…'.$separator;
+	
+			if ($paged == $max)
+				$output .= sprintf($current, $link);
+			else
+				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link($max)), $max);
+		}
+		
+		echo apply_filters('etendard_post_nav', $output);
+	
+		// Next Post Link
+		if ($extremes && get_next_posts_link()) next_posts_link();
+	}
+}

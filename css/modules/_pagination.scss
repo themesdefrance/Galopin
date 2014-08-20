@@ -1,0 +1,18 @@
+.pagination{
+	> span,
+	> a{
+		display: inline-block;
+		background: $main-color;
+		color: rgba(#fff, .6);
+		text-decoration: none;
+		padding: 4px 10px;
+		font-family: $heading-font;
+		font-size: 18px;
+		transition: .2s color ease-out;
+		
+		&.current,
+		&:hover{
+			color: #fff;
+		}
+	}
+}

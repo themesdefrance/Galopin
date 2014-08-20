@@ -1719,3 +1719,16 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   padding-bottom: 5px;
   margin-bottom: 10px;
   border-bottom: 1px solid #f1f1f1; }
+
+.pagination > span, .pagination > a {
+  display: inline-block;
+  background: #E54C3C;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 4px 10px;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  -webkit-transition: 0.2s color ease-out;
+          transition: 0.2s color ease-out; }
+  .pagination > span.current, .pagination > span:hover, .pagination > a.current, .pagination > a:hover {
+    color: #fff; }
