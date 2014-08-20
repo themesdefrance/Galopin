@@ -1494,6 +1494,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   margin-left: 14px; }
 
 .search-form {
+  position: relative;
   width: 100%;
   text-align: center; }
 
