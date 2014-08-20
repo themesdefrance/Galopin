@@ -216,6 +216,9 @@ $menu-width: 300px;
 	width: 900px;
 	margin: 0 auto;
 	
+	@include width-below(1000px){
+		width: 500px;
+	}
 	@include width-below($grid-collapse-below){
 		width: 100%;
 		padding: 0 15px;

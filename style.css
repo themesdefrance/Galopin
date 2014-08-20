@@ -1234,7 +1234,7 @@ html {
 .col-4-5 {
   width: 80%; }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
   [class*='col-'] {
     width: 100%;
     padding-left: 0; }
@@ -1262,7 +1262,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   width: 100%;
   height: 100%;
   position: relative; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .content-wrapper.menu-open {
       -webkit-transform: translateX(300px);
           -ms-transform: translateX(300px);
@@ -1274,7 +1274,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   background: #E54C3C;
   color: #fff;
   z-index: 500; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .menu-wrapper {
       width: 300px;
       height: 100%;
@@ -1287,7 +1287,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   width: 100%;
   text-align: center;
   font-family: 'Montserrat'; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .main-menu {
       text-align: left; } }
 
@@ -1301,7 +1301,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
           transition: 0.2s ease opacity; }
   .menu-wrapper li.current-menu-item, .menu-wrapper li:hover {
     opacity: 1; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .menu-wrapper li {
       display: block;
       opacity: 1; } }
@@ -1312,7 +1312,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   padding: 8px 10px 10px;
   text-decoration: none;
   font-size: 18px; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .menu-wrapper a {
       display: block; }
       .menu-wrapper a:hover {
@@ -1330,7 +1330,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   top: 100%;
   padding-top: 2px;
   display: none; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .menu-wrapper .sub-menu {
       display: block;
       position: static;
@@ -1341,7 +1341,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .menu-wrapper .sub-menu a {
   color: #E54C3C;
   font-size: 16px; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .menu-wrapper .sub-menu a {
       color: #fff;
       padding-left: 20px; } }
@@ -1356,7 +1356,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   position: absolute;
   top: 0;
   bottom: 0; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .menu-wrapper .search-wrapper, .menu-wrapper .social-menu {
       position: static; } }
 
@@ -1395,7 +1395,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .content {
   padding-top: 40px; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .content {
       padding-top: 0; } }
 
@@ -1415,7 +1415,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .hero-image {
       position: fixed;
       top: 0;
@@ -1431,7 +1431,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   border: none;
   font-size: 30px;
   display: none; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .menu-toggle {
       display: block; } }
 
@@ -1441,7 +1441,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   padding: 6px 18px;
   font-family: 'Montserrat';
   font-size: 38px; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .hero-text {
       font-size: 20px;
       margin-right: 10px; } }
@@ -1449,7 +1449,10 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .content .wrapper {
   width: 900px;
   margin: 0 auto; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1000px) {
+    .content .wrapper {
+      width: 500px; } }
+  @media only screen and (max-width: 550px) {
     .content .wrapper {
       width: 100%;
       padding: 0 15px; } }
@@ -1475,13 +1478,13 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   text-decoration: none;
   font-family: 'Montserrat'; }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
   .footer .footnote {
     text-align: center; } }
 
 .footer .menu {
   text-align: right; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .footer .menu {
       text-align: center;
       margin-top: 20px; } }
