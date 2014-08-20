@@ -40,6 +40,7 @@
 	
 	h3{
 		@extend .typcn-folder-zoom;
+		padding-left: 15%;
 	}
 	
 	.search-field{
@@ -70,6 +71,22 @@
 	@extend .typcn-folder-open;
 }
 
+.widget_archive h3{
+	@extend .typcn-archive;
+}
+
+.widget_pages h3{
+	@extend .typcn-document;
+}
+
+.widget_meta h3{
+	@extend .typcn-link;
+}
+
+.widget_nav_menu h3{
+	@extend .typcn-th-list;
+}
+
 .widget_tag_cloud a{
 	display: inline-block;
 	color: #B2B2B2;
@@ -84,6 +101,10 @@
 }
 
 .widget_calendar{
+	h3{
+		@extend .typcn-calender;
+	}
+	
 	caption{
 		font-family: $heading-font;
 		font-size: 16px;

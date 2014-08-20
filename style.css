@@ -38,7 +38,7 @@ Text Domain: galopin
 .typcn-anchor:before {
   content: '\e003'; }
 
-.typcn-archive:before {
+.typcn-archive:before, .widget_archive h3:before {
   content: '\e004'; }
 
 .typcn-arrow-back-outline:before {
@@ -197,7 +197,7 @@ Text Domain: galopin
 .typcn-calender-outline:before {
   content: '\e038'; }
 
-.typcn-calender:before {
+.typcn-calender:before, .widget_calendar h3:before {
   content: '\e039'; }
 
 .typcn-camera-outline:before {
@@ -323,7 +323,7 @@ Text Domain: galopin
 .typcn-document-text:before {
   content: '\e062'; }
 
-.typcn-document:before {
+.typcn-document:before, .widget_pages h3:before {
   content: '\e063'; }
 
 .typcn-download-outline:before {
@@ -494,7 +494,7 @@ Text Domain: galopin
 .typcn-link-outline:before {
   content: '\e09b'; }
 
-.typcn-link:before {
+.typcn-link:before, .widget_meta h3:before {
   content: '\e09c'; }
 
 .typcn-location-arrow-outline:before {
@@ -854,7 +854,7 @@ Text Domain: galopin
 .typcn-th-list-outline:before {
   content: '\e113'; }
 
-.typcn-th-list:before {
+.typcn-th-list:before, .widget_nav_menu h3:before {
   content: '\e114'; }
 
 .typcn-th-menu-outline:before {
@@ -1676,6 +1676,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   background: #F1F1F1;
   position: relative;
   padding: 8px 0; }
+  .widget_search h3 {
+    padding-left: 15%; }
   .widget_search .search-field {
     width: 70%; }
   .widget_search .reset-btn {
