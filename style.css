@@ -1209,7 +1209,7 @@ html {
 .grid {
   margin-left: -20px !important; }
 
-[class*='col-'] {
+[class*='col-'], .footerbar .widget {
   float: left;
   padding-left: 20px; }
 
@@ -1440,7 +1440,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   color: #fff;
   padding: 6px 18px;
   font-family: 'Montserrat';
-  font-size: 38px; }
+  font-size: 38px;
+  text-decoration: none; }
   @media only screen and (max-width: 550px) {
     .hero-text {
       font-size: 20px;
@@ -1466,6 +1467,16 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .sidebar {
   padding-top: 40px; }
+
+@media only screen and (min-width: 701px) {
+  .footerbar .widget {
+    width: 33.3%; } }
+@media only screen and (max-width: 700px) {
+  .footerbar .widget {
+    width: 50%; } }
+@media only screen and (max-width: 550px) {
+  .footerbar .widget {
+    width: 100%; } }
 
 .footer {
   width: 95%;

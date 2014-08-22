@@ -2,9 +2,9 @@
 <div class="hero-image">
 	<button class="menu-toggle typcn typcn-th-menu"></button>
 
-	<div class="hero-text">
+	<a href="#" class="hero-text">
 		Galopin
-	</div>
+	</a>
 </div>
 
 <div class="wrapper">	
@@ -27,7 +27,9 @@
 	</div>
 
 	<aside class="footerbar">
-		<?php get_sidebar('footer'); ?>
+		<div class="grid">
+			<?php get_sidebar('footer'); ?>
+		</div>
 	</aside>
 </div>
 <?php get_footer(); ?>

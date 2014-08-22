@@ -205,6 +205,7 @@ $menu-width: 300px;
 	padding: 6px 18px;
 	font-family: $heading-font;
 	font-size: 38px;
+	text-decoration: none;
 	
 	@include width-below($grid-collapse-below){
 		font-size: 20px;
@@ -235,6 +236,20 @@ $menu-width: 300px;
 
 .sidebar{
 	padding-top: 40px;
+}
+
+.footerbar .widget{
+	@extend %grid-col;
+	
+	@include width-above(701px){
+		width: 33.3%;
+	}
+	@include width-below(700px){
+		width: 50%;
+	}
+	@include width-below($grid-collapse-below){
+		width: 100%;
+	}
 }
 
 .footer{
