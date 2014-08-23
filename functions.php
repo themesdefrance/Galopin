@@ -195,3 +195,59 @@ if (!function_exists('galopin_posts_nav')){
 		if ($extremes && get_next_posts_link()) next_posts_link();
 	}
 }
+
+// Borrowed from http://themeshaper.com/2012/11/04/the-wordpress-theme-comments-template/
+if (!function_exists('galopin_comment')){
+	function galopin_comment($comment, $args, $depth){
+		$GLOBALS['comment'] = $comment;
+		switch ($comment->comment_type) :
+			case 'pingback' :
+			case 'trackback' :
+		?>
+		<li class="post pingback">
+			<p>
+				<?php echo apply_filters('etendard_pingback', __('Pingback:', 'galopin')); ?>
+				<?php comment_author_link(); ?>
+			</p>
+		<?php
+			break;
+		default :
+		?>
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+			<article id="comment-<?php comment_ID(); ?>" class="comment">
+				<aside class="">
+					<?php if ($comment->comment_approved == '0') : ?>
+						<em><?php echo apply_filters('etendard_commentaire_modere', __('Your comment is waiting for moderation.', 'galopin')); ?></em>
+					<?php endif; ?>
+					<?php echo get_avatar($comment, 104); ?>
+				</aside>
+				
+				<div class="">
+					<header class="comment-header">
+						<div class="comment-author vcard">
+							<?php echo apply_filters('etendard_commentaire_auteur', sprintf(__('%s', 'galopin'), sprintf(__('<cite class="fn">%s</cite>', 'etendard'), get_comment_author_link()))); ?>
+						</div>
+						<span class="comment-date">
+							<?php echo apply_filters('etendard_commentaire_date', sprintf(__('Published on %s at %s', 'galopin'),get_comment_date(),get_comment_time('H:i'))); ?>
+						</span>
+					</header>
+		 
+					<div class="content">
+						<?php comment_text(); ?>
+					</div>
+					
+					<div class="reply">
+						<?php 
+						comment_reply_link(array_merge($args, 
+							array(	'depth'=>$depth, 
+									'max_depth'=>$args['max_depth'],
+									'reply_text'=>apply_filters('etendard_commentaire_repondre', __('Reply', 'galopin'))))); 
+						?>
+					</div><!-- .reply -->
+				</div>
+			</article><!-- #comment-## -->
+		<?php
+			break;
+		endswitch;
+	}
+}

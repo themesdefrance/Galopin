@@ -2,13 +2,8 @@
 <div class="wrapper">	
 	<div class="grid">
 		<div class="col-2-3">
-			<ul class="posts">
-				<?php while (have_posts()) : the_post(); ?>
-				<li>
-					<?php get_template_part('content', get_post_format()); ?>
-				</li>
-				<?php endwhile; ?>
-			</ul>
+			<?php the_post(); get_template_part('content', get_post_format()); ?>
+			<?php comments_template(); ?>
 			<div class="pagination">
 				<?php galopin_posts_nav(false, ''); ?>
 			</div>

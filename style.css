@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: galopin
 */
-.typcn:before, .widget > h3:before {
+.typcn:before, .comment-form label:before, .widget > h3:before {
   font-family: 'typicons';
   font-style: normal;
   font-weight: normal;
@@ -137,7 +137,7 @@ Text Domain: galopin
 .typcn-arrow-up:before {
   content: '\e024'; }
 
-.typcn-at:before {
+.typcn-at:before, .comment-form .comment-form-email label:before {
   content: '\e025'; }
 
 .typcn-attachment-outline:before {
@@ -494,7 +494,7 @@ Text Domain: galopin
 .typcn-link-outline:before {
   content: '\e09b'; }
 
-.typcn-link:before, .widget_meta h3:before {
+.typcn-link:before, .comment-form .comment-form-url label:before, .widget_meta h3:before {
   content: '\e09c'; }
 
 .typcn-location-arrow-outline:before {
@@ -611,7 +611,7 @@ Text Domain: galopin
 .typcn-pen:before {
   content: '\e0c2'; }
 
-.typcn-pencil:before {
+.typcn-pencil:before, .comment-form .comment-form-comment label:before {
   content: '\e0c3'; }
 
 .typcn-phone-outline:before {
@@ -923,7 +923,7 @@ Text Domain: galopin
 .typcn-user-delete:before {
   content: '\e12a'; }
 
-.typcn-user-outline:before {
+.typcn-user-outline:before, .comment-form .comment-form-author label:before {
   content: '\e12b'; }
 
 .typcn-user:before {
@@ -1244,13 +1244,14 @@ html {
 img, table, td, blockquote, code, pre, textarea, input, video {
   max-width: 100%; }
 
-.button, .widget_calendar #next a, .widget_calendar #prev a, html a.button, html .widget_calendar #next a, .widget_calendar #next html a, html .widget_calendar #prev a, .widget_calendar #prev html a {
+.button, .comment-form input[type="submit"], .widget_calendar #next a, .widget_calendar #prev a, html a.button, html .widget_calendar #next a, .widget_calendar #next html a, html .widget_calendar #prev a, .widget_calendar #prev html a {
   background: #E54C3C;
+  border: none;
   color: #fff;
   font-size: 16px;
   padding: 6px 16px;
   font-family: 'Montserrat'; }
-  .button:hover, .widget_calendar #next a:hover, .widget_calendar #prev a:hover, html a.button:hover, html .widget_calendar #next a:hover, .widget_calendar #next html a:hover, html .widget_calendar #prev a:hover, .widget_calendar #prev html a:hover {
+  .button:hover, .comment-form input[type="submit"]:hover, .widget_calendar #next a:hover, .widget_calendar #prev a:hover, html a.button:hover, html .widget_calendar #next a:hover, .widget_calendar #next html a:hover, html .widget_calendar #prev a:hover, .widget_calendar #prev html a:hover {
     text-decoration: none; }
 
 .page-wrapper {
@@ -1390,7 +1391,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .menu-wrapper .social-menu {
   right: 0; }
 
-.menu-wrapper .social-menu .typcn:before, .menu-wrapper .social-menu .widget > h3:before, .widget > .menu-wrapper .social-menu h3:before {
+.menu-wrapper .social-menu .typcn:before, .menu-wrapper .social-menu .comment-form label:before, .comment-form .menu-wrapper .social-menu label:before, .menu-wrapper .social-menu .widget > h3:before, .widget > .menu-wrapper .social-menu h3:before {
   font-size: 26px; }
 
 .content {
@@ -1664,6 +1665,63 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     padding: 2px 0;
     color: #8d8d8d;
     text-align: center; }
+
+.comment-form {
+  margin: 20px 0; }
+
+.comment-form > p {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 35px;
+  background: #F1F1F1; }
+
+.comment-form label {
+  position: absolute;
+  left: 45px;
+  padding-top: 4px;
+  font-size: 20px; }
+  .comment-form label:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -45px;
+    z-index: 101;
+    display: block;
+    width: 30px;
+    height: 100%;
+    padding: 4px 4px;
+    color: #fff;
+    font-size: 20px;
+    background: #333333; }
+
+.comment-form input[type="text"] {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  font-size: 20px;
+  padding: 4px 10px;
+  background: none;
+  border: none; }
+  .comment-form input[type="text"]:focus {
+    background: inherit; }
+
+.comment-form .comment-form-comment {
+  background: transparent; }
+
+.comment-form textarea {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  background: #F1F1F1;
+  border: none;
+  padding: 4px 10px; }
+
+.comment-form .form-submit {
+  text-align: right;
+  background: transparent; }
+
+.comment-list {
+  list-style: none; }
 
 .widget {
   margin-bottom: 30px;

@@ -1,0 +1,82 @@
+.post-comments{
+}
+
+.comment-form{
+	margin: 20px 0;
+}
+
+.comment-form > p{
+	position: relative;
+	margin-bottom: 10px;
+	padding-left: 35px;
+	background: #F1F1F1;
+}
+.comment-form .comment-form-author label{
+	@extend .typcn-user-outline;
+}
+.comment-form .comment-form-email label{
+	@extend .typcn-at;
+}
+.comment-form .comment-form-url label{
+	@extend .typcn-link;
+}
+.comment-form .comment-form-comment label{
+	@extend .typcn-pencil;
+}
+.comment-form label{
+	position: absolute;
+	left: 45px;
+	padding-top: 4px;
+	font-size: 20px;
+	@extend .typcn;
+	
+	&:before{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -45px;
+		z-index: 101;
+		display: block;
+		width: 30px;
+		height: 100%;
+		padding: 4px 4px;
+		color: #fff;
+		font-size: 20px;
+		background: #333333;
+	}
+}
+.comment-form input[type="text"]{
+	position: relative;
+	z-index: 100;
+	width: 100%;
+	font-size: 20px;
+	padding: 4px 10px;
+	background: none;
+	border: none;
+	
+	&:focus{
+		background: inherit;
+	}
+}
+.comment-form .comment-form-comment{
+	background: transparent;
+}
+.comment-form textarea{
+	position: relative;
+	z-index: 100;
+	width: 100%;
+	background: #F1F1F1;
+	border: none;
+	padding: 4px 10px;
+}
+.comment-form .form-submit{
+	text-align: right;
+	background: transparent;
+}
+.comment-form input[type="submit"]{
+	@extend .button;
+}
+
+.comment-list{
+	list-style: none;
+}
