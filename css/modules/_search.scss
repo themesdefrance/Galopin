@@ -36,6 +36,5 @@
 .search-form .submit-btn{
 	border: none;
 	background: none;
-	color: #fff;
-	background: $main-color;
+	@extend %custom-bg;
 }

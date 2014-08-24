@@ -110,6 +110,67 @@ if (!function_exists('galopin_options')){
     }
 }
 
+// Main Etendard color
+if(!function_exists('galopin_user_styles')){
+	function galopin_user_styles(){
+		if (get_option('galopin_color')){
+//			$color = apply_filters('etendard_color', get_option('etendard_color'));
+//			
+//			require_once 'admin/color_functions.php';
+//			$hsl = etendard_RGBToHSL(etendard_HTMLToRGB($color));
+//			if ($hsl->lightness > 180){
+//				$contrast = '#333';
+//			}
+//			else{
+//				$contrast = apply_filters('etendard_color_contrast', '#fff');
+//			}
+//			
+//			$hsl->lightness -= 30;
+//			$complement = apply_filters('etendard_color_complement', etendard_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness));
+		}
+		else{ // Default color
+			$color = '#02a7c6';
+			$contrast = '#fff';
+		} 
+		?>
+			<style type="text/css">
+			.button, 
+			.comment-form input[type="submit"], 
+			html a.button, 
+			.widget_calendar #next a, 
+			.widget_calendar #prev a,
+			.menu-wrapper,
+			.search-form .submit-btn,
+			.post-content th,
+			.post-pagination,
+			.pagination,
+			.menu-wrapper .sub-menu a:hover{
+				background: <?php echo $color; ?>;
+				color: <?php echo $contrast; ?>;
+			}
+			.menu-wrapper .sub-menu a,
+			.footer a,
+			.post-header-meta a,
+			.post-content ul > li:before,
+			.post-content ol > li:before,
+			.post-content a,
+			.comment-author a,
+			.comment-reply-link,
+			.widget a,
+			.comment-form .logged-in-as a,
+			.widget > h3:before{
+				color: <?php echo $color; ?>;
+			}
+			.footer,
+			.post-header,
+			.comment-footer{
+				border-color: <?php echo $color; ?>;
+			}
+			</style>
+		<?php }
+}
+add_action('wp_head','galopin_user_styles', 98);
+
 
 /////////////////////////
 // Utility functions   //

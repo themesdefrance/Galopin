@@ -1,37 +1,40 @@
 .pagination{
+	display: inline-block;
+	@extend %custom-bg;
+	
 	> span,
 	> a{
 		display: inline-block;
-		background: $main-color;
-		color: rgba(#fff, .6);
+		color: inherit;
 		text-decoration: none;
 		padding: 4px 10px;
 		font-family: $heading-font;
 		font-size: 18px;
 		transition: .2s color ease-out;
+		opacity: .6;
 		
 		&.current,
 		&:hover{
-			color: #fff;
+			opacity: 1;
 		}
 	}
 }
 .post-pagination{
 	margin: 15px 0;
-	background: $main-color;
-	color: rgba(#fff, .6);
+	@extend %custom-bg;
 	font-family: $heading-font;
 	display: inline-block;
 	padding: 4px 10px;
 	
 	a{
 		padding: 0 4px;
-		color: rgba(#fff, .6);
+		color: inherit;
 		text-decoration: none;
-		transition: .2s color ease-out;
+		transition: .2s opacity ease-out;
+		opacity: .6;
 		
 		&:hover{
-			color: #fff;
+			opacity: 1;
 		}
 	}
 	

@@ -26,11 +26,10 @@ $menu-width: 300px;
 
 .menu-wrapper{
 	position: fixed;
-	width: 100%;
-	background: $main-color;
-	color: #fff;
-	@extend .clearfix;
 	z-index: $z-menu;
+	width: 100%;
+	@extend %custom-bg;
+	@extend .clearfix;
 	
 	@include width-below($grid-collapse-below){
 		width: $menu-width;
@@ -77,10 +76,6 @@ $menu-width: 300px;
 	
 	@include width-below($grid-collapse-below){
 		display: block;
-		
-		&:hover{
-			background: $main-color;
-		}
 	}
 }
 .top-level-menu{
@@ -107,7 +102,7 @@ $menu-width: 300px;
 	}
 }
 .menu-wrapper .sub-menu a{
-	color: $main-color;
+	@extend %custom-color;
 	font-size: 16px;
 	
 	@include width-below($grid-collapse-below){
@@ -116,8 +111,7 @@ $menu-width: 300px;
 	}
 
 	&:hover{
-		background: $main-color;
-		color: #fff;
+		@extend %custom-bg;
 	}
 }
 .top-level-menu > li:hover .sub-menu{
@@ -256,10 +250,10 @@ $menu-width: 300px;
 	width: 95%;
 	margin: 40px auto 0;
 	padding: 20px 0;
-	border-top: 1px solid $main-color;
+	@extend %custom-border;
 }
 .footer a{
-	color: $main-color;
+	@extend %custom-color;
 	text-decoration: none;
 	font-family: $heading-font;
 }

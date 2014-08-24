@@ -1244,14 +1244,14 @@ html {
 img, table, td, blockquote, code, pre, textarea, input, video {
   max-width: 100%; }
 
-.button, .comment-form input[type="submit"], .widget_calendar #next a, .widget_calendar #prev a, html a.button, html .widget_calendar #next a, .widget_calendar #next html a, html .widget_calendar #prev a, .widget_calendar #prev html a {
+.button, .comment-form input[type="submit"], html a.button, .widget_calendar #next a, .widget_calendar #prev a {
   background: #E54C3C;
   border: none;
   color: #fff;
   font-size: 16px;
   padding: 6px 16px;
   font-family: 'Montserrat'; }
-  .button:hover, .comment-form input[type="submit"]:hover, .widget_calendar #next a:hover, .widget_calendar #prev a:hover, html a.button:hover, html .widget_calendar #next a:hover, .widget_calendar #next html a:hover, html .widget_calendar #prev a:hover, .widget_calendar #prev html a:hover {
+  .button:hover, .comment-form input[type="submit"]:hover, html a.button:hover, .widget_calendar #next a:hover, .widget_calendar #prev a:hover {
     text-decoration: none; }
 
 .page-wrapper {
@@ -1271,10 +1271,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .menu-wrapper {
   position: fixed;
-  width: 100%;
-  background: #E54C3C;
-  color: #fff;
-  z-index: 500; }
+  z-index: 500;
+  width: 100%; }
   @media only screen and (max-width: 550px) {
     .menu-wrapper {
       width: 300px;
@@ -1315,9 +1313,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   font-size: 18px; }
   @media only screen and (max-width: 550px) {
     .menu-wrapper a {
-      display: block; }
-      .menu-wrapper a:hover {
-        background: #E54C3C; } }
+      display: block; } }
 
 .top-level-menu {
   z-index: 10;
@@ -1340,15 +1336,11 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     opacity: 1; }
 
 .menu-wrapper .sub-menu a {
-  color: #E54C3C;
   font-size: 16px; }
   @media only screen and (max-width: 550px) {
     .menu-wrapper .sub-menu a {
       color: #fff;
       padding-left: 20px; } }
-  .menu-wrapper .sub-menu a:hover {
-    background: #E54C3C;
-    color: #fff; }
 
 .top-level-menu > li:hover .sub-menu {
   display: block; }
@@ -1482,11 +1474,9 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .footer {
   width: 95%;
   margin: 40px auto 0;
-  padding: 20px 0;
-  border-top: 1px solid #E54C3C; }
+  padding: 20px 0; }
 
 .footer a {
-  color: #E54C3C;
   text-decoration: none;
   font-family: 'Montserrat'; }
 
@@ -1543,14 +1533,11 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .search-form .submit-btn {
   border: none;
-  background: none;
-  color: #fff;
-  background: #E54C3C; }
+  background: none; }
 
 .post-header {
   margin-bottom: 20px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #E54C3C; }
+  padding-bottom: 5px; }
 
 .post-header-title, .post-header-title a {
   color: #333;
@@ -1563,7 +1550,6 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   font-size: 16px; }
 
 .post-header-meta a {
-  color: #E54C3C;
   text-decoration: none; }
 
 .post-content {
@@ -1597,7 +1583,6 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     list-style: none; }
   .post-content ul > li:before {
     content: "▪";
-    color: #E54C3C;
     padding-right: 4px;
     font-size: 20px; }
   .post-content ol {
@@ -1606,14 +1591,12 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     counter-increment: ordered; }
     .post-content ol > li:before {
       content: counter(ordered);
-      color: #E54C3C;
       padding-right: 8px;
       font-size: 20px; }
   .post-content li {
     list-style-position: outside;
     margin-bottom: 5px; }
   .post-content a {
-    color: #E54C3C;
     text-decoration: none; }
     .post-content a:hover {
       text-decoration: underline; }
@@ -1628,8 +1611,6 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     background: #F1F1F1; }
   .post-content th {
     text-align: center;
-    background: #E54C3C;
-    color: #fff;
     font-size: 20px;
     font-weight: 400;
     font-family: 'Montserrat'; }
@@ -1731,6 +1712,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   background: transparent;
   padding: 0;
   margin: 10px 0; }
+  .comment-form .logged-in-as a {
+    text-decoration: none; }
 
 .comment-list {
   list-style: none; }
@@ -1762,15 +1745,13 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   margin-bottom: 30px; }
   .comment-author a {
     font-style: normal;
-    color: #E54C3C;
     text-decoration: none; }
   .comment-author cite {
     font-style: normal; }
 
 .comment-footer {
   margin-top: 15px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #E54C3C; }
+  padding-bottom: 5px; }
   .comment-footer .comment-date {
     display: inline-block;
     opacity: 0.6; }
@@ -1779,7 +1760,6 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     padding-right: 4px; }
 
 .comment-reply-link {
-  color: #E54C3C;
   text-decoration: none; }
 
 .widget {
@@ -1789,7 +1769,6 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   .widget ul, .widget ol {
     list-style: none; }
   .widget a {
-    color: #E54C3C;
     text-decoration: none; }
   .widget table {
     width: 100%; }
@@ -1800,7 +1779,6 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   font-size: 20px;
   margin-bottom: 10px; }
   .widget > h3:before {
-    color: #E54C3C;
     margin-right: 5px; }
 
 .widget_search {
@@ -1848,33 +1826,34 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   margin-bottom: 10px;
   border-bottom: 1px solid #f1f1f1; }
 
-.pagination > span, .pagination > a {
-  display: inline-block;
-  background: #E54C3C;
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  padding: 4px 10px;
-  font-family: 'Montserrat';
-  font-size: 18px;
-  -webkit-transition: 0.2s color ease-out;
-          transition: 0.2s color ease-out; }
-  .pagination > span.current, .pagination > span:hover, .pagination > a.current, .pagination > a:hover {
-    color: #fff; }
+.pagination {
+  display: inline-block; }
+  .pagination > span, .pagination > a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    padding: 4px 10px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    -webkit-transition: 0.2s color ease-out;
+            transition: 0.2s color ease-out;
+    opacity: 0.6; }
+    .pagination > span.current, .pagination > span:hover, .pagination > a.current, .pagination > a:hover {
+      opacity: 1; }
 
 .post-pagination {
   margin: 15px 0;
-  background: #E54C3C;
-  color: rgba(255, 255, 255, 0.6);
   font-family: 'Montserrat';
   display: inline-block;
   padding: 4px 10px; }
   .post-pagination a {
     padding: 0 4px;
-    color: rgba(255, 255, 255, 0.6);
+    color: inherit;
     text-decoration: none;
-    -webkit-transition: 0.2s color ease-out;
-            transition: 0.2s color ease-out; }
+    -webkit-transition: 0.2s opacity ease-out;
+            transition: 0.2s opacity ease-out;
+    opacity: 0.6; }
     .post-pagination a:hover {
-      color: #fff; }
+      opacity: 1; }
   .post-pagination .page-links-title {
     margin-right: 10px; }

@@ -3,7 +3,7 @@
 .post-header{
 	margin-bottom: 20px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid $main-color;
+	@extend %custom-border;
 }
 .post-header-title,
 .post-header-title a{
@@ -17,7 +17,7 @@
 	font-size: 16px;
 }
 .post-header-meta a{
-	color: $main-color;
+	@extend %custom-color;
 	text-decoration: none;
 }
 .post-content{
@@ -74,7 +74,7 @@
 	}
 	ul > li:before{
 		content: "▪";
-		color: $main-color;
+		@extend %custom-color;
 		padding-right: 4px;
 		font-size: 20px;
 	}
@@ -86,7 +86,7 @@
 		
 		&:before{
 			content: counter(ordered);
-			color: $main-color;
+			@extend %custom-color;
 			padding-right: 8px;
 			font-size: 20px;
 		}
@@ -96,7 +96,7 @@
 		margin-bottom: 5px;
 	}
 	a{
-		color: $main-color;
+		@extend %custom-color;
 		text-decoration: none;
 		
 		&:hover{
@@ -121,8 +121,7 @@
 	}
 	th{
 		text-align:center;
-		background: $main-color;
-		color: #fff;
+		@extend %custom-bg;
 		font-size: 20px;
 		font-weight: 400;
 		font-family: $heading-font;

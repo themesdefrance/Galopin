@@ -89,6 +89,10 @@
 	background: transparent;
 	padding: 0;
 	margin: 10px 0;
+	
+	a{
+		text-decoration: none;
+	}
 }
 
 .comment-list{
@@ -128,7 +132,7 @@
 	
 	a{
 		font-style: normal;
-		color: $main-color;
+		@extend %custom-color;
 		text-decoration: none;
 	}
 	cite{
@@ -138,7 +142,7 @@
 .comment-footer{
 	margin-top: 15px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid $main-color;
+	@extend %custom-border;
 	
 	.comment-date{
 		display: inline-block;
@@ -147,10 +151,9 @@
 	.reply{
 		float: right;
 		padding-right: 4px;
-//		padding-top: 2px;
 	}
 }
 .comment-reply-link{
-	color: $main-color;
+	@extend %custom-color;
 	text-decoration: none;
 }
