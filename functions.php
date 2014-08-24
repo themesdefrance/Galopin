@@ -87,6 +87,29 @@ if (!function_exists('galopin_enqueue')){
 }
 add_action('wp_enqueue_scripts', 'galopin_enqueue');
 
+/////////////////////////
+////  Admin stuff   /////
+/////////////////////////
+// Add admin menu
+if (!function_exists('galopin_admin_menu')){
+	function galopin_admin_menu(){
+		add_theme_page('Galopin Settings', 'Galopin Settings', 'edit_theme_options', 'galopin_options', 'galopin_options');
+	}
+}
+add_action('admin_menu', 'galopin_admin_menu');
+
+if (!function_exists('galopin_options')){
+	function galopin_options(){
+		if (!current_user_can('edit_theme_options')) {
+			wp_die(__('You do not have sufficient permissions to access this page.'));
+		}
+       	
+       	define('GALOPIN_COCORICO_PREFIX', 'galopin_');
+		require_once 'admin/Cocorico/Cocorico.php';
+       	include 'admin/index.php';
+    }
+}
+
 
 /////////////////////////
 // Utility functions   //
