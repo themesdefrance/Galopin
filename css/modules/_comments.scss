@@ -85,6 +85,11 @@
 .comment-form input[type="submit"]{
 	@extend .button;
 }
+.comment-form .logged-in-as{
+	background: transparent;
+	padding: 0;
+	margin: 10px 0;
+}
 
 .comment-list{
 	list-style: none;

@@ -1727,6 +1727,11 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   text-align: right;
   background: transparent; }
 
+.comment-form .logged-in-as {
+  background: transparent;
+  padding: 0;
+  margin: 10px 0; }
+
 .comment-list {
   list-style: none; }
   .comment-list .children {
