@@ -215,37 +215,39 @@ if (!function_exists('galopin_comment')){
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 			<article id="comment-<?php comment_ID(); ?>" class="comment">
-				<aside class="">
+				<aside class="comment-aside">
 					<?php if ($comment->comment_approved == '0') : ?>
 						<em><?php echo apply_filters('etendard_commentaire_modere', __('Your comment is waiting for moderation.', 'galopin')); ?></em>
 					<?php endif; ?>
-					<?php echo get_avatar($comment, 104); ?>
+					<?php echo get_avatar($comment, 80); ?>
 				</aside>
 				
-				<div class="">
+				<div class="comment-main">
 					<header class="comment-header">
 						<div class="comment-author vcard">
 							<?php echo apply_filters('etendard_commentaire_auteur', sprintf(__('%s', 'galopin'), sprintf(__('<cite class="fn">%s</cite>', 'etendard'), get_comment_author_link()))); ?>
 						</div>
-						<span class="comment-date">
-							<?php echo apply_filters('etendard_commentaire_date', sprintf(__('Published on %s at %s', 'galopin'),get_comment_date(),get_comment_time('H:i'))); ?>
-						</span>
 					</header>
 		 
-					<div class="content">
+					<div class="post-content">
 						<?php comment_text(); ?>
 					</div>
 					
-					<div class="reply">
-						<?php 
-						comment_reply_link(array_merge($args, 
-							array(	'depth'=>$depth, 
-									'max_depth'=>$args['max_depth'],
-									'reply_text'=>apply_filters('etendard_commentaire_repondre', __('Reply', 'galopin'))))); 
-						?>
-					</div><!-- .reply -->
+					<footer class="comment-footer">
+						<div class="comment-date">
+							<?php echo apply_filters('etendard_commentaire_date', sprintf(__('Published on %s at %s', 'galopin'),get_comment_date(),get_comment_time('H:i'))); ?>
+						</div>
+						<div class="reply">
+							<?php 
+							comment_reply_link(array_merge($args, 
+								array(	'depth'=>$depth, 
+										'max_depth'=>$args['max_depth'],
+										'reply_text'=>apply_filters('etendard_commentaire_repondre', __('Reply', 'galopin'))))); 
+							?>
+						</div>
+					<footer>
 				</div>
-			</article><!-- #comment-## -->
+			</article>
 		<?php
 			break;
 		endswitch;
