@@ -78,11 +78,16 @@ if (!function_exists('galopin_enqueue')){
 	
 		$theme = wp_get_theme();
 		
+		
+		wp_register_script('galopin', get_template_directory_uri().'/js/galopin.js', array('jquery'), $theme->get('Version'), true);
+		
 		//main stylesheet
 		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), $theme->get('Version'));
 		
 		//icons
 		wp_enqueue_style('icons', get_stylesheet_directory_uri().'/fonts/typicons.min.css', array(), $theme->get('Version'));
+		
+		wp_enqueue_script('galopin');
 	}
 }
 add_action('wp_enqueue_scripts', 'galopin_enqueue');
