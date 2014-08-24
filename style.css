@@ -1677,19 +1677,20 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .comment-form label {
   position: absolute;
+  top: 0;
   left: 45px;
   padding-top: 4px;
-  font-size: 20px; }
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6); }
   .comment-form label:before {
     position: absolute;
     top: 0;
-    bottom: 0;
     left: -45px;
     z-index: 101;
     display: block;
-    width: 30px;
-    height: 100%;
-    padding: 4px 4px;
+    width: 32px;
+    height: 32px;
+    padding: 6px 4px;
     color: #fff;
     font-size: 20px;
     background: #333333; }
@@ -1704,6 +1705,12 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   border: none; }
   .comment-form input[type="text"]:focus {
     background: inherit; }
+
+.comment-form .comment-form-url {
+  background: #fff;
+  border: 2px solid #B2B2B2; }
+  .comment-form .comment-form-url label:before {
+    background: #B2B2B2; }
 
 .comment-form .comment-form-comment {
   background: transparent; }
