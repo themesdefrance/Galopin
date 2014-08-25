@@ -1,5 +1,8 @@
 <?php
 
+define('GALOPIN_COCORICO_PREFIX', 'galopin_');
+require_once 'admin/Cocorico/Cocorico.php';
+
 //////////////////
 // Bootstraping //
 //////////////////
@@ -109,8 +112,6 @@ if (!function_exists('galopin_options')){
 			wp_die(__('You do not have sufficient permissions to access this page.'));
 		}
        	
-       	define('GALOPIN_COCORICO_PREFIX', 'galopin_');
-		require_once 'admin/Cocorico/Cocorico.php';
        	include 'admin/index.php';
     }
 }
@@ -119,22 +120,23 @@ if (!function_exists('galopin_options')){
 if(!function_exists('galopin_user_styles')){
 	function galopin_user_styles(){
 		if (get_option('galopin_color')){
-//			$color = apply_filters('etendard_color', get_option('etendard_color'));
-//			
-//			require_once 'admin/color_functions.php';
-//			$hsl = etendard_RGBToHSL(etendard_HTMLToRGB($color));
-//			if ($hsl->lightness > 180){
-//				$contrast = '#333';
-//			}
-//			else{
-//				$contrast = apply_filters('etendard_color_contrast', '#fff');
-//			}
-//			
-//			$hsl->lightness -= 30;
-//			$complement = apply_filters('etendard_color_complement', etendard_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness));
+			$color = apply_filters('galopin_color', get_option('galopin_color'));
+			
+			require_once 'admin/color_functions.php';
+			$hsl = etendard_RGBToHSL(etendard_HTMLToRGB($color));
+			if ($hsl->lightness > 180){
+				$contrast = apply_filters('galopin_color_contrast', '#333');
+			}
+			else{
+				$contrast = apply_filters('galopin_color_contrast', '#fff');
+			}
+			
+			$hsl->lightness -= 30;
+			$complement = apply_filters('galopin_color_complement', etendard_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness));
 		}
 		else{ // Default color
 			$color = '#02a7c6';
+			$complement = '#008ca7';
 			$contrast = '#fff';
 		} 
 		?>
@@ -153,6 +155,18 @@ if(!function_exists('galopin_user_styles')){
 				background: <?php echo $color; ?>;
 				color: <?php echo $contrast; ?>;
 			}
+			.button:hover, 
+			.comment-form input[type="submit"]:hover, 
+			html a.button:hover, 
+			.widget_calendar #next a:hover, 
+			.widget_calendar #prev a:hover,
+			.search-form .submit-btn:hover,
+			.post-content th:hover,
+			.post-pagination:hover,
+			.pagination{
+				background: <?php echo $complement; ?>;
+				color: <?php echo $contrast; ?>;
+			}
 			.menu-wrapper .sub-menu a,
 			.footer a,
 			.post-header-meta a,
@@ -166,6 +180,16 @@ if(!function_exists('galopin_user_styles')){
 			.widget > h3:before{
 				color: <?php echo $color; ?>;
 			}
+			.footer a:hover,
+			.post-header-meta a:hover,
+			.post-content a:hover,
+			.comment-author a:hover,
+			.comment-reply-link:hover,
+			.widget a:hover,
+			.comment-form .logged-in-as a:hover{
+				color: <?php echo $complement; ?>;
+			}
+			
 			.footer,
 			.post-header,
 			.comment-footer{

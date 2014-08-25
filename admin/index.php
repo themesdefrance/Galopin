@@ -1,5 +1,5 @@
 <?php
-$form = new Cocorico(ETENDARD_COCORICO_PREFIX);
+$form = new Cocorico(GALOPIN_COCORICO_PREFIX);
 
 $form->startWrapper('titre');
 $form->component('raw', __('Etendard Options', 'etendard'));
