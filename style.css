@@ -1528,7 +1528,9 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .footer {
   width: 95%;
   margin: 40px auto 0;
-  padding: 20px 0; }
+  padding: 20px 0;
+  border-top-width: 1px;
+  border-top-style: solid; }
 
 .footer a {
   text-decoration: none;
@@ -1591,7 +1593,9 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .post-header {
   margin-bottom: 20px;
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }
 
 .post-header-title, .post-header-title a {
   color: #333;
@@ -1805,7 +1809,9 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 .comment-footer {
   margin-top: 15px;
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }
   .comment-footer .comment-date {
     display: inline-block;
     opacity: 0.6; }

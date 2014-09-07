@@ -142,6 +142,8 @@
 .comment-footer{
 	margin-top: 15px;
 	padding-bottom: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
 	@extend %custom-border;
 	
 	.comment-date{

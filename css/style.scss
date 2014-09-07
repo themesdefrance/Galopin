@@ -312,6 +312,8 @@ $menu-width: 300px;
 	margin: 40px auto 0;
 	padding: 20px 0;
 	@extend %custom-border;
+	border-top-width: 1px;
+	border-top-style: solid;
 }
 .footer a{
 	@extend %custom-color;
