@@ -16,5 +16,18 @@ $(function(){
 			$('.search-wrapper .form-toggle').toggle();
 		});
 	});
+	
+	//fix the menu in hero mode
+	if ($('.content-wrapper.cover').length){
+		var $menu =$('.menu-wrapper'),
+			top = $menu.position().top;
+				
+		$(document).on('scroll', function(event){
+			var scroll = $(window).scrollTop();
+				
+			if (top-scroll <= 0) $menu.addClass('stuck');
+			else if ($menu.hasClass('stuck')) $menu.removeClass('stuck');
+		});
+	}
 });
 })(jQuery);

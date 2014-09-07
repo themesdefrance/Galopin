@@ -162,8 +162,7 @@ if(!function_exists('galopin_user_styles')){
 			.widget_calendar #prev a:hover,
 			.search-form .submit-btn:hover,
 			.post-content th:hover,
-			.post-pagination:hover,
-			.pagination{
+			.post-pagination:hover{
 				background: <?php echo $complement; ?>;
 				color: <?php echo $contrast; ?>;
 			}
