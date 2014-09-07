@@ -29,5 +29,11 @@ $(function(){
 			else if ($menu.hasClass('stuck')) $menu.removeClass('stuck');
 		});
 	}
+	
+	var masonry = new Masonry($('.masonry')[0], {
+		itemSelector: '.brick',
+		columnWidth: '.masonry .brick',
+		gutter: 30
+	});
 });
 })(jQuery);

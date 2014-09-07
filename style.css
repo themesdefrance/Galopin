@@ -1405,6 +1405,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .hero-image {
   width: 100%;
   height: 400px;
+  margin-bottom: 40px;
   background: #ccc;
   background-size: cover;
   background-attachment: fixed;
@@ -1500,6 +1501,9 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     .content .wrapper {
       width: 100%;
       padding: 0 15px; } }
+
+.masonry .brick {
+  width: 30%; }
 
 .posts {
   list-style: none;

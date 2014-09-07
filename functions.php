@@ -91,6 +91,7 @@ if (!function_exists('galopin_enqueue')){
 		wp_enqueue_style('icons', get_stylesheet_directory_uri().'/fonts/typicons.min.css', array(), $theme->get('Version'));
 		
 		wp_enqueue_script('galopin');
+		wp_enqueue_script('masonry');
 	}
 }
 add_action('wp_enqueue_scripts', 'galopin_enqueue');

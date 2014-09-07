@@ -61,7 +61,7 @@
 				<div class="hero-image" style="background-image: url(<?php echo get_option('galopin_hero_image'); ?>);">
 					<button class="menu-toggle typcn typcn-th-menu"></button>
 
-					<a href="#" class="hero-text">
+					<a href="<?php echo home_url(); ?>" class="hero-text">
 						Galopin
 					</a>
 				</div>

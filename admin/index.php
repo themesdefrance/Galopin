@@ -21,11 +21,11 @@ $form->setting(array('type'=>'boolean',
 					 'description'=>__("", 'galopin')));
 					 
 $form->setting(array('type'=>'boolean',
-					 'name'=>'show_masonry',
+					 'name'=>'masonry',
 					 'options'=>array(
 					 	'default'=>false
 					 ),
-					 'label'=>__("Maosnry", 'galopin'),
+					 'label'=>__("Masonry", 'galopin'),
 					 'description'=>__("", 'galopin')));
 					 
 $form->setting(array('type'=>'boolean',
