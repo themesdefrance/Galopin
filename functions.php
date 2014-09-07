@@ -152,7 +152,8 @@ if(!function_exists('galopin_user_styles')){
 			.post-content th,
 			.post-pagination,
 			.pagination,
-			.menu-wrapper .sub-menu a:hover{
+			.menu-wrapper .sub-menu a:hover,
+			.back-to-top{
 				background: <?php echo $color; ?>;
 				color: <?php echo $contrast; ?>;
 			}
@@ -163,7 +164,8 @@ if(!function_exists('galopin_user_styles')){
 			.widget_calendar #prev a:hover,
 			.search-form .submit-btn:hover,
 			.post-content th:hover,
-			.post-pagination:hover{
+			.post-pagination:hover,
+			.back-to-top:hover{
 				background: <?php echo $complement; ?>;
 				color: <?php echo $contrast; ?>;
 			}

@@ -1554,6 +1554,15 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   display: inline-block;
   margin-left: 14px; }
 
+.back-to-top {
+  border: none;
+  position: fixed;
+  right: 0;
+  bottom: 30px;
+  padding: 5px 5px; }
+  .back-to-top:before {
+    font-size: 22px; }
+
 .search-form {
   position: relative;
   width: 100%;

@@ -23,6 +23,8 @@
 					</div>
 				</footer>
 				
+				<button id="back-to-top" title="<?php _e('Back to the top', 'galopin'); ?>" class="back-to-top typcn typcn-arrow-up-thick"></button>
+				
 			</div>
 			
 		</div>

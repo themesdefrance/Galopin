@@ -30,10 +30,28 @@ $(function(){
 		});
 	}
 	
-	var masonry = new Masonry($('.masonry')[0], {
-		itemSelector: '.brick',
-		columnWidth: '.masonry .brick',
-		gutter: 30
+	//initmasonry
+	if ($('.masonry').length){
+		var masonry = new Masonry($('.masonry')[0], {
+			itemSelector: '.brick',
+			columnWidth: '.masonry .brick',
+			gutter: 30
+		});
+	}
+	
+	//back to top button
+	var $toTop = $('#back-to-top');
+	if ($(window).scrollTop() <= $(window).height()) $toTop.hide();
+	
+	$toTop.on('click', function(){
+		$('html,body').animate({
+			scrollTop: 0
+		}, 400);
+	});
+	
+	$(document).on('scroll', function(event){
+		if ($(window).scrollTop() > $(window).height()) $toTop.fadeIn();
+		else $toTop.fadeOut();
 	});
 });
 })(jQuery);
