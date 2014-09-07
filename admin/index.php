@@ -48,6 +48,15 @@ $form->setting(array('type'=>'upload',
 					 'name'=>'hero_image',
 					 'label'=>__('Hero image', 'galopin'),
 					 'description'=>__('', 'galopin')));
+					 
+$form->setting(array('type'=>'textarea',
+					 'name'=>'footer_left',
+					 'label'=>__("Footer", 'galopin'),
+					 'description'=>__('Left footer content. The following HTML tags are allowed : &lt;a href=&quot;LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, &lt;em&gt;ITALIC_TEXT&lt;/em&gt;, &lt;img src=&quot;IMAGE_URL&quot;&gt;.', 'etendard'),
+					 'options'=>array(
+					 	'default'=>__('<strong>2014</strong> - Galopin by <a href="https://www.themesdefrance.fr/" target="_blank">Themes de France</a>', 'galopin')
+					 	)
+					 ));
 
 $form->endForm();
 $form->endWrapper('tab');
