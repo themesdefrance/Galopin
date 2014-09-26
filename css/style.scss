@@ -71,9 +71,9 @@ $menu-width: 300px;
 .menu-wrapper a{
 	display: inline-block;
 	color: #fff;
-	padding: 8px 10px 10px;
+	padding:18px 10px 20px;;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 16px;
 	
 	@include width-below($grid-collapse-below){
 		display: block;
@@ -160,6 +160,10 @@ $menu-width: 300px;
 
 .menu-wrapper .social-menu{
 	right: 0;
+	
+	a{
+		padding: 15px 10px;
+	}
 }
 .menu-wrapper .social-menu .typcn:before{
 	font-size: 26px;
@@ -238,6 +242,10 @@ $menu-width: 300px;
 		position: fixed;
 		top: 0;
 	}
+}
+
+body.admin-bar .cover .menu-wrapper.stuck{
+	top: 32px;
 }
 
 .menu-toggle{
