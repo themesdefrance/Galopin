@@ -1507,8 +1507,14 @@ body.admin-bar .cover .menu-wrapper.stuck {
       width: 100%;
       padding: 0 15px; } }
 
+.masonry-wrapper {
+  background: #f1f1f1; }
+
 .masonry .brick {
-  width: 30%; }
+  width: 30%;
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 10px; }
 
 .masonry .brick img {
   height: auto; }

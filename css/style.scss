@@ -285,8 +285,14 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	}
 }
 
+.masonry-wrapper{
+	background: #f1f1f1;
+}
 .masonry .brick{
 	width: 30%;
+	background: #fff;
+	margin-bottom: 30px;
+	padding: 10px;
 }
 .masonry .brick img{
 	height: auto;
