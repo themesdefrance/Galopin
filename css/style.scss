@@ -301,6 +301,10 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	padding-top: 40px;
 }
 
+.footerbar{
+	margin-top: 130px;
+}
+
 .footerbar .widget{
 	@extend %grid-col;
 	

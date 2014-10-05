@@ -1520,6 +1520,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
 .sidebar {
   padding-top: 40px; }
 
+.footerbar {
+  margin-top: 130px; }
+
 @media only screen and (min-width: 701px) {
   .footerbar .widget {
     width: 33.3%; } }

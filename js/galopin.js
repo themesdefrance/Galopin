@@ -10,11 +10,12 @@ $(function(){
 		$(this).toggle();
 		$('.search-wrapper .search-form').toggle();
 		$('.search-wrapper .search-field').focus();
-		
-		$('.search-wrapper .search-field').blur(function(){
-			$('.search-wrapper .search-form').toggle();
-			$('.search-wrapper .form-toggle').toggle();
-		});
+	});
+	
+	$('.search-wrapper .search-field').blur(function(event){
+		$('.search-wrapper .search-field').val('');
+		$('.search-wrapper .search-form').toggle();
+		$('.search-wrapper .form-toggle').toggle();
 	});
 	
 	//fix the menu in hero mode
