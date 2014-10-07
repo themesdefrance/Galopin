@@ -1523,17 +1523,15 @@ body.admin-bar .cover .menu-wrapper.stuck {
   transition: all 0.4s ease-in; }
   .masonry .brick img {
     height: auto; }
-  .masonry .brick:hover {
-    /*.post-content p{
-				margin-bottom: 45px;
-			}*/ }
-    .masonry .brick:hover img, .masonry .brick:hover .post-header-title, .masonry .brick:hover .post-header-title a, .masonry .brick:hover .post-header-meta, .masonry .brick:hover .post-header-meta a, .masonry .brick:hover .post-content p {
-      opacity: 0.6;
-      filter: alpha(opacity=60); }
-    .masonry .brick:hover .button, .masonry .brick:hover .comment-form input[type="submit"], .comment-form .masonry .brick:hover input[type="submit"] {
-      position: absolute;
-      top: 50%;
-      right: 30%; }
+  .masonry .brick:hover img, .masonry .brick:hover .post-header-title, .masonry .brick:hover .post-header-title a, .masonry .brick:hover .post-header-meta, .masonry .brick:hover .post-header-meta a, .masonry .brick:hover .post-content p {
+    opacity: 0.6;
+    filter: alpha(opacity=60); }
+  .masonry .brick:hover .post-content p {
+    margin-bottom: 45px; }
+  .masonry .brick:hover .button, .masonry .brick:hover .comment-form input[type="submit"], .comment-form .masonry .brick:hover input[type="submit"] {
+    position: absolute;
+    top: 50%;
+    right: 30%; }
 
 .posts {
   list-style: none;

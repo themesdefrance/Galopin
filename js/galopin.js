@@ -32,13 +32,16 @@ $(function(){
 	}
 	
 	//initmasonry
-	if ($('.masonry').length){
-		var masonry = new Masonry($('.masonry')[0], {
-			itemSelector: '.brick',
-			columnWidth: '.masonry .brick',
-			gutter: 30
-		});
-	}
+	$('.masonry').imagesLoaded(function(){
+	
+		if ($('.masonry').length){
+			var masonry = new Masonry($('.masonry')[0], {
+				itemSelector: '.brick',
+				columnWidth: '.masonry .brick',
+				gutter: 30
+			});
+		}
+	});
 	
 	//back to top button
 	var $toTop = $('#back-to-top');
