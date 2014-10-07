@@ -1,5 +1,5 @@
 <?php
-function etendard_HTMLToRGB($htmlCode)
+function galopin_HTMLToRGB($htmlCode)
 {
 	if($htmlCode[0] == '#') $htmlCode = substr($htmlCode, 1);
     
@@ -14,7 +14,7 @@ function etendard_HTMLToRGB($htmlCode)
 	return $b + ($g << 0x8) + ($r << 0x10);
 }
 
-function etendard_RGBToHSL($RGB) {
+function galopin_RGBToHSL($RGB) {
 	$r = 0xFF & ($RGB >> 0x10);
 	$g = 0xFF & ($RGB >> 0x8);
 	$b = 0xFF & $RGB;
@@ -56,7 +56,7 @@ function etendard_RGBToHSL($RGB) {
 	return (object) Array('hue' => $h, 'saturation' => $s, 'lightness' => $l);
 }
 
-function etendard_HSLToHTML($h, $s, $l) {
+function galopin_HSLToHTML($h, $s, $l) {
 	$h = ((float)$h) / 255.0;
 	$s = ((float)$s) / 255.0;
 	$l = ((float)$l) / 255.0;

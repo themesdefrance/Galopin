@@ -57,7 +57,7 @@ add_action('after_setup_theme', 'galopin_setup');
 //add custom image size to native dailogs
 if (!function_exists('galopin_image_size_names_choose')){
 	function galopin_image_size_names_choose($sizes) {
-		$added = array('etendard-post-thumbnail'=>__('Post', 'galopin'));
+		$added = array('galopin-post-thumbnail'=>__('Post', 'galopin'));
 		$newsizes = array_merge($sizes, $added);
 		return $newsizes;
 	}
@@ -117,14 +117,14 @@ if (!function_exists('galopin_options')){
     }
 }
 
-// Main Etendard color
+// Main galopin color
 if(!function_exists('galopin_user_styles')){
 	function galopin_user_styles(){
 		if (get_option('galopin_color')){
 			$color = apply_filters('galopin_color', get_option('galopin_color'));
 			
 			require_once 'admin/color_functions.php';
-			$hsl = etendard_RGBToHSL(etendard_HTMLToRGB($color));
+			$hsl = galopin_RGBToHSL(galopin_HTMLToRGB($color));
 			if ($hsl->lightness > 180){
 				$contrast = apply_filters('galopin_color_contrast', '#333');
 			}
@@ -133,7 +133,7 @@ if(!function_exists('galopin_user_styles')){
 			}
 			
 			$hsl->lightness -= 30;
-			$complement = apply_filters('galopin_color_complement', etendard_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness));
+			$complement = apply_filters('galopin_color_complement', galopin_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness));
 		}
 		else{ // Default color
 			$color = '#02a7c6';
@@ -206,8 +206,8 @@ add_action('wp_head','galopin_user_styles', 98);
 /////////////////////////
 // Utility functions   //
 /////////////////////////
-if (!function_exists('etendard_excerpt')){
-	function etendard_excerpt($length){
+if (!function_exists('galopin_excerpt')){
+	function galopin_excerpt($length){
 		if($length==0)
 			return '';
 		
@@ -218,8 +218,8 @@ if (!function_exists('etendard_excerpt')){
 }
 
 // Thanks to https://gist.github.com/tommcfarlin/f2310bfad60b60ae00bf#file-is-paginated-post-php
-if (!function_exists('etendard_is_paginated_post')){
-	function etendard_is_paginated_post() {
+if (!function_exists('galopin_is_paginated_post')){
+	function galopin_is_paginated_post() {
 		global $multipage;
 		return 0 !== $multipage;
 	}
@@ -266,8 +266,8 @@ if (!function_exists('galopin_posts_nav')){
 			$links[] = $paged + 1;
 		}
 		
-		$current = apply_filters('etendard_post_nav_current', '<span class="current">%s</span>');
-		$linkTemplate = apply_filters('etendard_post_nav_link', '<a href="%s">%s</a>');
+		$current = apply_filters('galopin_post_nav_current', '<span class="current">%s</span>');
+		$linkTemplate = apply_filters('galopin_post_nav_link', '<a href="%s">%s</a>');
 	
 		// Previous Post Link
 		if ($extremes && get_previous_posts_link()) previous_posts_link();
@@ -291,12 +291,12 @@ if (!function_exists('galopin_posts_nav')){
 			else
 				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link($link)), $link);
 				
-			if ($link < $max) echo $separator;
+			if ($link < $max) $output .= $separator;
 		}
 	
 		// Link to last page, plus ellipses if necessary
 		if (!in_array($max, $links)){
-			if (!in_array($max-1, $links)) echo '…'.$separator;
+			if (!in_array($max-1, $links)) $output .= '…'.$separator;
 	
 			if ($paged == $max)
 				$output .= sprintf($current, $link);
@@ -304,7 +304,7 @@ if (!function_exists('galopin_posts_nav')){
 				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link($max)), $max);
 		}
 		
-		echo apply_filters('etendard_post_nav', $output);
+		echo apply_filters('galopin_post_nav', $output);
 	
 		// Next Post Link
 		if ($extremes && get_next_posts_link()) next_posts_link();
@@ -321,7 +321,7 @@ if (!function_exists('galopin_comment')){
 		?>
 		<li class="post pingback">
 			<p>
-				<?php echo apply_filters('etendard_pingback', __('Pingback:', 'galopin')); ?>
+				<?php echo apply_filters('galopin_pingback', __('Pingback:', 'galopin')); ?>
 				<?php comment_author_link(); ?>
 			</p>
 		<?php
@@ -332,7 +332,7 @@ if (!function_exists('galopin_comment')){
 			<article id="comment-<?php comment_ID(); ?>" class="comment">
 				<aside class="comment-aside">
 					<?php if ($comment->comment_approved == '0') : ?>
-						<em><?php echo apply_filters('etendard_commentaire_modere', __('Your comment is waiting for moderation.', 'galopin')); ?></em>
+						<em><?php echo apply_filters('galopin_commentaire_modere', __('Your comment is waiting for moderation.', 'galopin')); ?></em>
 					<?php endif; ?>
 					<?php echo get_avatar($comment, 80); ?>
 				</aside>
@@ -340,7 +340,7 @@ if (!function_exists('galopin_comment')){
 				<div class="comment-main">
 					<header class="comment-header">
 						<div class="comment-author vcard">
-							<?php echo apply_filters('etendard_commentaire_auteur', sprintf(__('%s', 'galopin'), sprintf(__('<cite class="fn">%s</cite>', 'etendard'), get_comment_author_link()))); ?>
+							<?php echo apply_filters('galopin_commentaire_auteur', sprintf(__('%s', 'galopin'), sprintf(__('<cite class="fn">%s</cite>', 'galopin'), get_comment_author_link()))); ?>
 						</div>
 					</header>
 		 
@@ -350,14 +350,14 @@ if (!function_exists('galopin_comment')){
 					
 					<footer class="comment-footer">
 						<div class="comment-date">
-							<?php echo apply_filters('etendard_commentaire_date', sprintf(__('Published on %s at %s', 'galopin'),get_comment_date(),get_comment_time('H:i'))); ?>
+							<?php echo apply_filters('galopin_commentaire_date', sprintf(__('Published on %s at %s', 'galopin'),get_comment_date(),get_comment_time('H:i'))); ?>
 						</div>
 						<div class="reply">
 							<?php 
 							comment_reply_link(array_merge($args, 
 								array(	'depth'=>$depth, 
 										'max_depth'=>$args['max_depth'],
-										'reply_text'=>apply_filters('etendard_commentaire_repondre', __('Reply', 'galopin'))))); 
+										'reply_text'=>apply_filters('galopin_commentaire_repondre', __('Reply', 'galopin'))))); 
 							?>
 						</div>
 					<footer>

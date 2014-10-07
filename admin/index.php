@@ -2,10 +2,10 @@
 $form = new Cocorico(GALOPIN_COCORICO_PREFIX);
 
 $form->startWrapper('titre');
-$form->component('raw', __('Etendard Options', 'etendard'));
+$form->component('raw', __('Galopin Options', 'galopin'));
 $form->endWrapper('titre');
 
-$form->groupHeader(array('general'=>__('General', 'etendard')));
+$form->groupHeader(array('general'=>__('General', 'galopin')));
 
 //Tab general
 $form->startWrapper('tab', 'general');
@@ -52,7 +52,7 @@ $form->setting(array('type'=>'upload',
 $form->setting(array('type'=>'textarea',
 					 'name'=>'footer_left',
 					 'label'=>__("Footer", 'galopin'),
-					 'description'=>__('Left footer content. The following HTML tags are allowed : &lt;a href=&quot;LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, &lt;em&gt;ITALIC_TEXT&lt;/em&gt;, &lt;img src=&quot;IMAGE_URL&quot;&gt;.', 'etendard'),
+					 'description'=>__('Left footer content. The following HTML tags are allowed : &lt;a href=&quot;LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, &lt;em&gt;ITALIC_TEXT&lt;/em&gt;, &lt;img src=&quot;IMAGE_URL&quot;&gt;.', 'galopin'),
 					 'options'=>array(
 					 	'default'=>__('<strong>2014</strong> - Galopin by <a href="https://www.themesdefrance.fr/" target="_blank">Themes de France</a>', 'galopin')
 					 	)
@@ -61,6 +61,6 @@ $form->setting(array('type'=>'textarea',
 $form->endForm();
 $form->endWrapper('tab');
 
-$form->component('submit', 'submit', array('value'=>__('Save changes', 'etendard')));
+$form->component('submit', 'submit', array('value'=>__('Save changes', 'galopin')));
 
 $form->render();

@@ -8,7 +8,7 @@
 
 <?php } ?>
 
-<?php if(etendard_is_paginated_post()){ ?>
+<?php if(galopin_is_paginated_post()){ ?>
 	<nav cl>
 	
 	<?php wp_link_pages(array(

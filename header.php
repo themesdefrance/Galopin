@@ -28,7 +28,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<!--[if lt IE 8]><p class=chromeframe><?php _e('Your browser is <em>too old !','etendard'); ?></em> <a href="http://browsehappy.com/"><?php _e('Update your browser','etendard'); ?></a> <?php _e('or','etendard'); ?> <a href="http://www.google.com/chromeframe/?redirect=true"><?php _e('Install Google Chrome Frame','etendard'); ?></a> <?php _e('to display this website correctly','etendard'); ?>.</p><![endif]-->
+<!--[if lt IE 8]><p class=chromeframe><?php _e('Your browser is <em>too old !','galopin'); ?></em> <a href="http://browsehappy.com/"><?php _e('Update your browser','galopin'); ?></a> <?php _e('or','galopin'); ?> <a href="http://www.google.com/chromeframe/?redirect=true"><?php _e('Install Google Chrome Frame','galopin'); ?></a> <?php _e('to display this website correctly','galopin'); ?>.</p><![endif]-->
 	
 	<div class="page-wrapper">
 		<div class="content-wrapper <?php if (is_home())echo 'cover'; ?>">
