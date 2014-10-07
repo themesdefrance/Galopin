@@ -1510,14 +1510,30 @@ body.admin-bar .cover .menu-wrapper.stuck {
 .masonry-wrapper {
   background: #f1f1f1; }
 
+.masonry.posts .post {
+  margin-bottom: 10px; }
+  .masonry.posts .post .post-header-title, .masonry.posts .post .post-header-title a {
+    font-size: 26px; }
 .masonry .brick {
   width: 30%;
   background: #fff;
   margin-bottom: 30px;
-  padding: 10px; }
-
-.masonry .brick img {
-  height: auto; }
+  padding: 10px;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in; }
+  .masonry .brick img {
+    height: auto; }
+  .masonry .brick:hover {
+    /*.post-content p{
+				margin-bottom: 45px;
+			}*/ }
+    .masonry .brick:hover img, .masonry .brick:hover .post-header-title, .masonry .brick:hover .post-header-title a, .masonry .brick:hover .post-header-meta, .masonry .brick:hover .post-header-meta a, .masonry .brick:hover .post-content p {
+      opacity: 0.6;
+      filter: alpha(opacity=60); }
+    .masonry .brick:hover .button, .masonry .brick:hover .comment-form input[type="submit"], .comment-form .masonry .brick:hover input[type="submit"] {
+      position: absolute;
+      top: 50%;
+      right: 30%; }
 
 .posts {
   list-style: none;
@@ -1634,7 +1650,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
 
 .post-header-meta {
   color: #B2B2B2;
-  font-size: 16px; }
+  font-size: 14px; }
 
 .post-header-meta a {
   text-decoration: none; }

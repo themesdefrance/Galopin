@@ -171,6 +171,7 @@ if(!function_exists('galopin_user_styles')){
 			}
 			.menu-wrapper .sub-menu a,
 			.footer a,
+			.post-header-title a,
 			.post-header-meta a,
 			.post-content ul > li:before,
 			.post-content ol > li:before,
@@ -197,6 +198,22 @@ if(!function_exists('galopin_user_styles')){
 			.comment-footer{
 				border-color: <?php echo $color; ?>;
 			}
+			
+			.masonry .brick:hover{
+				background: <?php echo $color; ?>;
+				color: <?php echo $contrast; ?>;
+			}
+			.masonry .brick:hover .post-header-title a,
+			.masonry .brick:hover .post-header-meta,
+			.masonry .brick:hover .post-header-meta a{
+				color: <?php echo $contrast; ?>
+			}
+			
+			.masonry .brick:hover .button{
+				background: <?php echo $contrast; ?>;
+				color: <?php echo $color; ?>;
+			}
+			
 			</style>
 		<?php }
 }
