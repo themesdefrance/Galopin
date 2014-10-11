@@ -33,7 +33,6 @@ $(function(){
 	
 	//initmasonry
 	$('.masonry').imagesLoaded(function(){
-	
 		if ($('.masonry').length){
 			var masonry = new Masonry($('.masonry')[0], {
 				itemSelector: '.brick',

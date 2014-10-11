@@ -17,7 +17,7 @@ $sidebar = get_option('galopin_show_sidebar');
 				
 				<li class="<?php if ($masonry) echo 'brick'; ?>">
 				
-					<?php get_template_part('content', get_post_format()); ?>
+						<?php get_template_part('content', get_post_format()); ?>
 					
 				</li>
 				

@@ -1939,10 +1939,18 @@ body.admin-bar .cover .menu-wrapper.stuck {
   background: #f1f1f1; }
 
 .masonry .brick {
-  width: 30%;
   background: #fff;
   margin-bottom: 30px;
   padding: 10px; }
+  @media only screen and (min-width: 999px) {
+    .masonry .brick {
+      width: 30%; } }
+  @media only screen and (max-width: 999px) {
+    .masonry .brick {
+      width: 45%; } }
+  @media only screen and (max-width: 550px) {
+    .masonry .brick {
+      width: 100%; } }
   .masonry .brick img {
     height: auto; }
   .masonry .brick .post {

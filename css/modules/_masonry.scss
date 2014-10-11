@@ -2,10 +2,19 @@
 	background: #f1f1f1;
 }
 .masonry .brick{
-	width: 30%;
 	background: #fff;
 	margin-bottom: 30px;
 	padding: 10px;
+	
+	@include width-above(999px){
+		width: 30%;
+	}
+	@include width-below(999px){
+		width: 45%;
+	}
+	@include width-below($grid-collapse-below){
+		width: 100%;
+	}
 	
 	img{
 		height: auto;
