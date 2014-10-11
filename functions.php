@@ -173,6 +173,7 @@ if(!function_exists('galopin_user_styles')){
 			.footer a,
 			.post-header-title a,
 			.post-header-meta a,
+			.masonry .post-header-title,
 			.post-content ul > li:before,
 			.post-content ol > li:before,
 			.post-content a,
@@ -204,13 +205,12 @@ if(!function_exists('galopin_user_styles')){
 				background: <?php echo $color; ?>;
 				color: <?php echo $contrast; ?>;
 			}
-			.masonry .brick:hover .post-header-title a,
-			.masonry .brick:hover .post-header-meta,
-			.masonry .brick:hover .post-header-meta a{
+			.masonry .brick:hover .post-header-title,
+			.masonry .brick:hover .masonry-footer{
 				color: <?php echo $contrast; ?>
 			}
 			
-			.masonry .brick:hover .button{
+			.masonry .brick-link:before{
 				background: <?php echo $contrast; ?>;
 				color: <?php echo $color; ?>;
 			}

@@ -22,5 +22,6 @@
 <?php if (galopin_is_masonry()){ ?>
 	<div class="masonry-footer">
 		<?php the_time(get_option('date_format')); ?>
+<!--		<a href="<?php the_permalink(); ?>" class="read-more" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a>-->
 	</div>
 <?php } ?>

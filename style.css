@@ -1958,12 +1958,39 @@ body.admin-bar .cover .menu-wrapper.stuck {
   .masonry .brick .post-header {
     border-bottom: none;
     margin-bottom: 0; }
-  .masonry .brick .post-header-title, .masonry .brick .post-header-title a {
+  .masonry .brick .post-header-title {
     font-size: 28px;
     line-height: 1.1; }
+
+.masonry .brick-link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  display: block; }
+  .masonry .brick-link:before {
+    content: attr(title);
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 22px;
+    line-height: 1;
+    padding: 12px 8px;
+    text-align: center; }
+
+.masonry .brick:hover .brick-link:before {
+  display: block; }
 
 .masonry-footer {
   color: #989898;
   padding-bottom: 4px;
   border-bottom-width: 1px;
   border-bottom-style: solid; }
+  .masonry-footer .read-more {
+    float: right;
+    text-decoration: none; }
+    .masonry-footer .read-more:hover {
+      text-decoration: underline; }

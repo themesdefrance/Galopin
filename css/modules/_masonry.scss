@@ -28,10 +28,32 @@
 		border-bottom: none;
 		margin-bottom: 0;
 	}
-	.post-header-title, .post-header-title a{
+	.post-header-title{
 		font-size: 28px;
 		line-height: 1.1;
 	}
+}
+.masonry .brick-link{
+	text-decoration: none;
+	color: inherit;
+	position: relative;
+	display: block;
+	
+	&:before{
+		content: attr(title);
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 22px;
+		line-height: 1;
+		padding: 12px 8px;
+		text-align: center;
+	}
+}
+.masonry .brick:hover .brick-link:before{
+	display: block;
 }
 .masonry-footer{
 	color: #989898;
@@ -39,55 +61,13 @@
 	@extend %custom-border;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
+	
+	.read-more{
+		float: right;
+		text-decoration: none;
+		
+		&:hover{
+			text-decoration: underline;
+		}
+	}
 }
-
-//.masonry {
-//	
-//	&.posts .post{
-//		margin-bottom:10px;
-//		
-//		.post-header-title, .post-header-title a{
-//			font-size: 26px;
-//		}
-//		
-//	}
-//
-//	.brick{
-//		width: 30%;
-//		background: #fff;
-//		margin-bottom: 30px;
-//		padding: 10px;
-//		
-//		@include transition(all, 0.4s, ease-in);
-//		
-//		img{
-//			height: auto;
-//		}
-//		
-//		&:hover{
-//			img,
-//			.post-header-title,
-//			.post-header-title a,
-//			.post-header-meta,
-//			.post-header-meta a,
-//			.post-content p
-//			{
-//				@include opacity(0.6);
-//				
-//			}
-//			
-//			.post-content p{
-//				margin-bottom: 45px;
-//			}
-//			
-//			.button{
-//				position: absolute;
-//				top:50%;
-//				right:30%;
-//			}
-//			
-//		}
-//		
-//		
-//	}
-//}
