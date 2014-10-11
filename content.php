@@ -46,7 +46,7 @@
 		
 		<?php endif; ?> 
 		
-		<?php get_template_part('content', 'header-meta'); ?>
+		<?php if (!galopin_is_masonry()) get_template_part('content', 'header-meta'); ?>
 		
 	</header>
 	

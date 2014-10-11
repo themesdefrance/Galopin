@@ -9,7 +9,7 @@
 <?php } ?>
 
 <?php if(galopin_is_paginated_post()){ ?>
-	<nav cl>
+	<nav>
 	
 	<?php wp_link_pages(array(
 		'before'=>'<div class="post-pagination"><span class="page-links-title">'.__('Pages:', 'galopin').'</span>', 
@@ -17,4 +17,10 @@
 	)); ?>
 	
 	</nav>
+<?php } ?>
+
+<?php if (galopin_is_masonry()){ ?>
+	<div class="masonry-footer">
+		<?php the_time(get_option('date_format')); ?>
+	</div>
 <?php } ?>

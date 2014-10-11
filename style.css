@@ -1507,32 +1507,6 @@ body.admin-bar .cover .menu-wrapper.stuck {
       width: 100%;
       padding: 0 15px; } }
 
-.masonry-wrapper {
-  background: #f1f1f1; }
-
-.masonry.posts .post {
-  margin-bottom: 10px; }
-  .masonry.posts .post .post-header-title, .masonry.posts .post .post-header-title a {
-    font-size: 26px; }
-.masonry .brick {
-  width: 30%;
-  background: #fff;
-  margin-bottom: 30px;
-  padding: 10px;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in; }
-  .masonry .brick img {
-    height: auto; }
-  .masonry .brick:hover img, .masonry .brick:hover .post-header-title, .masonry .brick:hover .post-header-title a, .masonry .brick:hover .post-header-meta, .masonry .brick:hover .post-header-meta a, .masonry .brick:hover .post-content p {
-    opacity: 0.6;
-    filter: alpha(opacity=60); }
-  .masonry .brick:hover .post-content p {
-    margin-bottom: 45px; }
-  .masonry .brick:hover .button, .masonry .brick:hover .comment-form input[type="submit"], .comment-form .masonry .brick:hover input[type="submit"] {
-    position: absolute;
-    top: 50%;
-    right: 30%; }
-
 .posts {
   list-style: none;
   padding: 10px 0; }
@@ -1960,3 +1934,28 @@ body.admin-bar .cover .menu-wrapper.stuck {
       opacity: 1; }
   .post-pagination .page-links-title {
     margin-right: 10px; }
+
+.masonry-wrapper {
+  background: #f1f1f1; }
+
+.masonry .brick {
+  width: 30%;
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 10px; }
+  .masonry .brick img {
+    height: auto; }
+  .masonry .brick .post {
+    margin-bottom: 0; }
+  .masonry .brick .post-header {
+    border-bottom: none;
+    margin-bottom: 0; }
+  .masonry .brick .post-header-title, .masonry .brick .post-header-title a {
+    font-size: 28px;
+    line-height: 1.1; }
+
+.masonry-footer {
+  color: #989898;
+  padding-bottom: 4px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }

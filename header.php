@@ -1,4 +1,3 @@
-<?php $masonry = is_home() && get_option('galopin_masonry'); ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
@@ -58,7 +57,7 @@
 				</ul>
 			</header>
 			
-			<div class="content <?php if ($masonry) echo 'masonry-wrapper'; ?>">
+			<div class="content <?php if (galopin_is_masonry()) echo 'masonry-wrapper'; ?>">
 				<div class="hero-image" style="background-image: url(<?php echo get_option('galopin_hero_image'); ?>);">
 					<button class="menu-toggle typcn typcn-th-menu"></button>
 

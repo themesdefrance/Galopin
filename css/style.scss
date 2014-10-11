@@ -285,60 +285,6 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	}
 }
 
-.masonry-wrapper{
-	background: #f1f1f1;
-}
-.masonry {
-	
-	&.posts .post{
-		margin-bottom:10px;
-		
-		.post-header-title, .post-header-title a{
-			font-size: 26px;
-		}
-		
-	}
-
-	.brick{
-		width: 30%;
-		background: #fff;
-		margin-bottom: 30px;
-		padding: 10px;
-		
-		@include transition(all, 0.4s, ease-in);
-		
-		img{
-			height: auto;
-		}
-		
-		&:hover{
-			img,
-			.post-header-title,
-			.post-header-title a,
-			.post-header-meta,
-			.post-header-meta a,
-			.post-content p
-			{
-				@include opacity(0.6);
-				
-			}
-			
-			.post-content p{
-				margin-bottom: 45px;
-			}
-			
-			.button{
-				position: absolute;
-				top:50%;
-				right:30%;
-			}
-			
-		}
-		
-		
-	}
-}
-
 .posts{
 	list-style: none;
 	padding: 10px 0;
@@ -421,3 +367,4 @@ body.admin-bar .cover .menu-wrapper.stuck{
 @import "modules/comments";
 @import "modules/widgets";
 @import "modules/pagination";
+@import "modules/masonry";

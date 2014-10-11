@@ -9,6 +9,8 @@ else if(is_category() || is_tax()){
 <?php 
 }else if(is_tag()|| is_search()){
 	echo galopin_excerpt(0); // == No excerpt
+} else if (galopin_is_masonry()){
+	echo galopin_excerpt(40);
 }else{
 	echo galopin_excerpt(40);
 ?>

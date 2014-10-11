@@ -195,7 +195,8 @@ if(!function_exists('galopin_user_styles')){
 			
 			.footer,
 			.post-header,
-			.comment-footer{
+			.comment-footer,
+			.masonry-footer{
 				border-color: <?php echo $color; ?>;
 			}
 			
@@ -223,6 +224,12 @@ add_action('wp_head','galopin_user_styles', 98);
 /////////////////////////
 // Utility functions   //
 /////////////////////////
+if (!function_exists('galopin_is_masonry')){
+	function galopin_is_masonry(){
+		return is_home() && get_option('galopin_masonry');
+	}
+}
+
 if (!function_exists('galopin_excerpt')){
 	function galopin_excerpt($length){
 		if($length==0)

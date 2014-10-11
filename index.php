@@ -1,5 +1,5 @@
 <?php 
-$masonry = is_home() && get_option('galopin_masonry');
+$masonry = galopin_is_masonry();
 $sidebar = get_option('galopin_show_sidebar');
 ?>
 
