@@ -5,6 +5,8 @@
 	background: #fff;
 	margin-bottom: 30px;
 	padding: 10px;
+	transition: .4s background ease-out,
+				.4s color ease-out;
 	
 	@include width-above(999px){
 		width: 30%;
@@ -31,6 +33,7 @@
 	.post-header-title{
 		font-size: 28px;
 		line-height: 1.1;
+		transition: .4s color ease-out;
 	}
 }
 .masonry .brick-link{
@@ -41,22 +44,26 @@
 	
 	&:before{
 		content: attr(title);
-		display: none;
+		opacity: 0;
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, 100%) rotateX(60deg) perspective(500px);
+		backface-visibility: hidden;
 		font-size: 22px;
 		line-height: 1;
 		padding: 12px 8px;
 		text-align: center;
+		transition: .4s all ease-out;
 	}
 }
 .masonry .brick:hover .brick-link:before{
-	display: block;
+	opacity: 1;
+	transform: translate(-50%, -50%);
 }
 .masonry-footer{
 	color: #989898;
+	transition: .4s color ease-out;
 	padding-bottom: 4px;
 	@extend %custom-border;
 	border-bottom-width: 1px;

@@ -1941,7 +1941,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
 .masonry .brick {
   background: #fff;
   margin-bottom: 30px;
-  padding: 10px; }
+  padding: 10px;
+  -webkit-transition: 0.4s background ease-out, 0.4s color ease-out;
+          transition: 0.4s background ease-out, 0.4s color ease-out; }
   @media only screen and (min-width: 999px) {
     .masonry .brick {
       width: 30%; } }
@@ -1960,7 +1962,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
     margin-bottom: 0; }
   .masonry .brick .post-header-title {
     font-size: 28px;
-    line-height: 1.1; }
+    line-height: 1.1;
+    -webkit-transition: 0.4s color ease-out;
+            transition: 0.4s color ease-out; }
 
 .masonry .brick-link {
   text-decoration: none;
@@ -1969,23 +1973,31 @@ body.admin-bar .cover .menu-wrapper.stuck {
   display: block; }
   .masonry .brick-link:before {
     content: attr(title);
-    display: none;
+    opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, 100%) rotateX(60deg) perspective(500px);
+            transform: translate(-50%, 100%) rotateX(60deg) perspective(500px);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     font-size: 22px;
     line-height: 1;
     padding: 12px 8px;
-    text-align: center; }
+    text-align: center;
+    -webkit-transition: 0.4s all ease-out;
+            transition: 0.4s all ease-out; }
 
 .masonry .brick:hover .brick-link:before {
-  display: block; }
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 .masonry-footer {
   color: #989898;
+  -webkit-transition: 0.4s color ease-out;
+          transition: 0.4s color ease-out;
   padding-bottom: 4px;
   border-bottom-width: 1px;
   border-bottom-style: solid; }
