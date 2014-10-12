@@ -24,27 +24,27 @@
 		<?php endif; ?>
 		
 		<?php if (is_single()): ?>
-		
-			<?php if(!is_page_template('template_home.php')): ?>
 			
-				<h1 class="post-header-title" itemprop="name">
+			<h1 class="post-header-title" itemprop="name">
 				
-					<?php the_title(); ?>
+				<?php the_title(); ?>
 					
-				</h1>
-				
-			<?php endif; ?>
+			</h1>
 			
 		<?php elseif(!is_page()): ?>
 		
 			<h2 class="post-header-title" itemprop="name">
 			
 				<?php if (galopin_is_masonry()): ?>
+					
 					<?php the_title(); ?>
+					
 				<?php else: ?>
+				
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 					<?php the_title(); ?>
 				</a>
+				
 				<?php endif; ?>
 				
 			</h2>
