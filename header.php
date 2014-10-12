@@ -30,7 +30,7 @@
 <!--[if lt IE 8]><p class=chromeframe><?php _e('Your browser is <em>too old !','galopin'); ?></em> <a href="http://browsehappy.com/"><?php _e('Update your browser','galopin'); ?></a> <?php _e('or','galopin'); ?> <a href="http://www.google.com/chromeframe/?redirect=true"><?php _e('Install Google Chrome Frame','galopin'); ?></a> <?php _e('to display this website correctly','galopin'); ?>.</p><![endif]-->
 	
 	<div class="page-wrapper">
-		<div class="content-wrapper <?php if (is_home())echo 'cover'; ?>">
+		<div class="content-wrapper <?php if (is_home() && get_option('galopin_use_hero')) echo 'cover'; ?>">
 			
 			<header class="menu-wrapper">
 				<div class="search-wrapper">
