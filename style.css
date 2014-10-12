@@ -1351,13 +1351,13 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .menu-wrapper .search-wrapper, .menu-wrapper .social-menu {
   position: absolute;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 100; }
   @media only screen and (max-width: 550px) {
     .menu-wrapper .search-wrapper, .menu-wrapper .social-menu {
       position: static; } }
 
 .menu-wrapper .search-wrapper {
-  z-index: 100;
   left: 0;
   width: 20%;
   max-width: 250px;
@@ -1390,7 +1390,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 .menu-wrapper .social-menu {
   right: 0; }
   .menu-wrapper .social-menu a {
-    padding: 15px 10px; }
+    padding: 15px 5px; }
 
 .menu-wrapper .social-menu .typcn:before, .menu-wrapper .social-menu .comment-form label:before, .comment-form .menu-wrapper .social-menu label:before, .menu-wrapper .social-menu .widget > h3:before, .widget > .menu-wrapper .social-menu h3:before {
   font-size: 26px; }

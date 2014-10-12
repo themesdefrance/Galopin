@@ -125,13 +125,13 @@ $menu-width: 300px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
+	z-index: 100;
 	
 	@include width-below($grid-collapse-below){
 		position: static;
 	}
 }
 .menu-wrapper .search-wrapper{
-	z-index: 100;
 	left: 0;
 	width: 20%;
 	max-width: 250px;
@@ -162,7 +162,7 @@ $menu-width: 300px;
 	right: 0;
 	
 	a{
-		padding: 15px 10px;
+		padding: 15px 5px;
 	}
 }
 .menu-wrapper .social-menu .typcn:before{

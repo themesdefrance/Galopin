@@ -392,3 +392,37 @@ if (!function_exists('galopin_comment')){
 		endswitch;
 	}
 }
+
+//relies the Cocorico Social plugin
+if (!function_exists('galopin_social')){
+	function galopin_social(){
+		$export = '';
+		
+		if (function_exists('coco_social_share')){
+			$networks =  get_option('cocosocial_networks_blocks');
+			
+			foreach ($networks as $network=>$enabled){
+				if (!$enabled) continue;
+				
+				switch ($network){
+					case 'twitter':
+						$export .= '<li><a href="https://twitter.com/'.get_option('cocosocial_twitter_username').'" class="typcn typcn-social-twitter-circular"></a></li>';
+						break;
+					case 'email':
+					case 'viadeo':
+						//sorry, no viadeo support because wedon't have an icon for it
+						//and email doesnt make too much sense here
+						break;
+					default:
+						$icon = $network;
+						if ($network == 'googleplus') $icon = 'google-plus';
+						
+						$export .= '<li><a href="'.get_option('cocosocial_'.$network.'_url').'" class="typcn typcn-social-'.$icon.'-circular"></a></li>';
+						break;
+				}
+			}
+		}
+		
+		return $export;
+	}
+}

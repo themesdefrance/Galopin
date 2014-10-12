@@ -51,9 +51,7 @@
 				</nav>
 				
 				<ul class="social-menu">
-					<li>
-						<a href="#" class="typcn typcn-social-facebook-circular"></a>
-					</li>
+					<?php echo galopin_social(); ?>
 				</ul>
 			</header>
 			
