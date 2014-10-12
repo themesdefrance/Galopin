@@ -1722,6 +1722,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
     color: #8d8d8d;
     text-align: center; }
 
+.post-content.quote blockquote {
+  margin: 0; }
+
 .comment-form {
   margin: 20px 0; }
 
