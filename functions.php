@@ -414,10 +414,13 @@ if (!function_exists('galopin_social')){
 						//and email doesnt make too much sense here
 						break;
 					default:
-						$icon = $network;
-						if ($network == 'googleplus') $icon = 'google-plus';
-						
-						$export .= '<li><a href="'.get_option('cocosocial_'.$network.'_url').'" class="typcn typcn-social-'.$icon.'-circular"></a></li>';
+						$url = get_option('cocosocial_'.$network.'_url');
+						if (trim($url) !== ''){
+							$icon = $network;
+							if ($network == 'googleplus') $icon = 'google-plus';
+
+							$export .= '<li><a href="'.esc_url($url).'" class="typcn typcn-social-'.$icon.'-circular"></a></li>';
+						}
 						break;
 				}
 			}
