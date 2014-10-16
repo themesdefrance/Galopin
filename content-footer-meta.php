@@ -8,7 +8,7 @@
 
 <?php } ?>
 
-<?php if(galopin_is_paginated_post()){ ?>
+<?php if(galopin_is_paginated_post() && !galopin_is_masonry()){ ?>
 	<nav>
 	
 	<?php wp_link_pages(array(

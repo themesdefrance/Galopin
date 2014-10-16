@@ -1994,8 +1994,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, 100%) rotateX(60deg) perspective(500px);
-            transform: translate(-50%, 100%) rotateX(60deg) perspective(500px);
+    -webkit-transform: translate(-50%, -50%) scale(0.1);
+        -ms-transform: translate(-50%, -50%) scale(0.1);
+            transform: translate(-50%, -50%) scale(0.1);
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     font-size: 22px;
