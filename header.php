@@ -60,6 +60,6 @@
 					<button class="menu-toggle typcn typcn-th-menu"></button>
 
 					<a href="<?php echo home_url(); ?>" class="hero-text">
-						Galopin
+						<?php echo apply_filters('galopin_hero_text', bloginfo('name')); ?>
 					</a>
 				</div>
