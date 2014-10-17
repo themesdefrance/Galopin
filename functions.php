@@ -185,6 +185,7 @@ if(!function_exists('galopin_user_styles')){
 				color: <?php echo $color; ?>;
 			}
 			.footer a:hover,
+			.post-header-title a:hover,
 			.post-header-meta a:hover,
 			.post-content a:hover,
 			.comment-author a:hover,
@@ -401,27 +402,30 @@ if (!function_exists('galopin_social')){
 		if (function_exists('coco_social_share')){
 			$networks =  get_option('cocosocial_networks_blocks');
 			
-			foreach ($networks as $network=>$enabled){
-				if (!$enabled) continue;
-				
-				switch ($network){
-					case 'twitter':
-						$export .= '<li><a href="https://twitter.com/'.get_option('cocosocial_twitter_username').'" class="typcn typcn-social-twitter-circular"></a></li>';
-						break;
-					case 'email':
-					case 'viadeo':
-						//sorry, no viadeo support because wedon't have an icon for it
-						//and email doesnt make too much sense here
-						break;
-					default:
-						$url = get_option('cocosocial_'.$network.'_url');
-						if (trim($url) !== ''){
-							$icon = $network;
-							if ($network == 'googleplus') $icon = 'google-plus';
-
-							$export .= '<li><a href="'.esc_url($url).'" class="typcn typcn-social-'.$icon.'-circular"></a></li>';
-						}
-						break;
+			if (is_array($networks)){
+			
+				foreach ($networks as $network=>$enabled){
+					if (!$enabled) continue;
+					
+					switch ($network){
+						case 'twitter':
+							$export .= '<li><a href="https://twitter.com/'.get_option('cocosocial_twitter_username').'" class="typcn typcn-social-twitter-circular"></a></li>';
+							break;
+						case 'email':
+						case 'viadeo':
+							//sorry, no viadeo support because wedon't have an icon for it
+							//and email doesnt make too much sense here
+							break;
+						default:
+							$url = get_option('cocosocial_'.$network.'_url');
+							if (trim($url) !== ''){
+								$icon = $network;
+								if ($network == 'googleplus') $icon = 'google-plus';
+	
+								$export .= '<li><a href="'.esc_url($url).'" class="typcn typcn-social-'.$icon.'-circular"></a></li>';
+							}
+							break;
+					}
 				}
 			}
 		}
