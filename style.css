@@ -1046,8 +1046,7 @@ audio, canvas, video {
   display: inline-block; }
 
 *, *:after, *:before {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 /*
  * miscellaneous stuff, not really box related but always needed
@@ -1528,11 +1527,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
 .posts .post {
   margin-bottom: 50px; }
 
-.sidebar {
-  padding-top: 40px; }
-
 .footerbar {
-  margin-top: 130px; }
+  margin-top: 20px; }
 
 @media only screen and (min-width: 701px) {
   .footerbar .widget {
