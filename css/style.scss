@@ -203,12 +203,16 @@ $menu-width: 280px;
 	align-items: center;
 	
 	@include width-below($grid-collapse-below){
-		position: fixed;
 		top: 0;
 		height: 50px;
 		z-index: 200;
 		justify-content: space-between;
 		background-position: center;
+	}
+}
+@include width-below($grid-collapse-below){
+	.admin-bar .hero-image{
+		top: auto;
 	}
 }
 .cover .hero-image{
