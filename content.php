@@ -23,7 +23,7 @@
 		
 		<?php endif; ?>
 		
-		<?php if (is_single()): ?>
+		<?php if (is_single() || is_page()): ?>
 			
 			<h1 class="post-header-title" itemprop="name">
 				
