@@ -20,6 +20,7 @@
 	
 	img{
 		height: auto;
+		transition: .4s opacity ease-out;
 	}
 	
 	.post{
@@ -34,6 +35,12 @@
 		font-size: 28px;
 		line-height: 1.1;
 		transition: .4s color ease-out;
+	}
+	
+	&:hover{
+		img{
+			opacity:.5;
+		}
 	}
 }
 .masonry .brick-link{

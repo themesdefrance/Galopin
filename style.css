@@ -1967,7 +1967,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
     .masonry .brick {
       width: 100%; } }
   .masonry .brick img {
-    height: auto; }
+    height: auto;
+    -webkit-transition: 0.4s opacity ease-out;
+            transition: 0.4s opacity ease-out; }
   .masonry .brick .post {
     margin-bottom: 0; }
   .masonry .brick .post-header {
@@ -1978,6 +1980,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
     line-height: 1.1;
     -webkit-transition: 0.4s color ease-out;
             transition: 0.4s color ease-out; }
+  .masonry .brick:hover img {
+    opacity: 0.5; }
 
 .masonry .brick-link {
   text-decoration: none;
