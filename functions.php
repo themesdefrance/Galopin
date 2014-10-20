@@ -136,8 +136,8 @@ if(!function_exists('galopin_user_styles')){
 			$complement = apply_filters('galopin_color_complement', galopin_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness));
 		}
 		else{ // Default color
-			$color = '#02a7c6';
-			$complement = '#008ca7';
+			$color = '#E54C3C';
+			$complement = '#c73829';
 			$contrast = '#fff';
 		} 
 		?>
