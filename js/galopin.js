@@ -32,7 +32,7 @@ $(function(){
 	}
 	
 	 $(document).ready(function(){
-	    $(".post-video").fitVids();
+	    $('.post-video').fitVids();
 	  });
 	
 	//initmasonry
