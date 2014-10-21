@@ -1625,7 +1625,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
   border-bottom-width: 1px;
   border-bottom-style: solid; }
 
-.post-thumbnail {
+.post-thumbnail, .post-video {
   margin-bottom: 10px; }
 
 .post-header-title, .post-header-title a {
@@ -1638,7 +1638,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
   color: #B2B2B2;
   font-size: 14px; }
 
-.post-header-meta a {
+.post-header-meta a, .post-footer-meta a {
   text-decoration: none; }
 
 .post-content {
@@ -1970,7 +1970,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
   @media only screen and (max-width: 550px) {
     .masonry .brick {
       width: 100%; } }
-  .masonry .brick img {
+  .masonry .brick img, .masonry .brick .post-video {
     height: auto;
     -webkit-transition: 0.4s opacity ease-out;
             transition: 0.4s opacity ease-out; }
@@ -1984,7 +1984,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
     line-height: 1.1;
     -webkit-transition: 0.4s color ease-out;
             transition: 0.4s color ease-out; }
-  .masonry .brick:hover img {
+  .masonry .brick:hover img, .masonry .brick:hover .post-video {
     opacity: 0.5; }
 
 .masonry .brick-link {

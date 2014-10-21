@@ -16,7 +16,7 @@
 			<?php else: ?>
 				
 				<h2 class="post-header-title" itemprop="name">
-					<blockquote><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">“<?php echo $quote; ?>”</a></blockquote>
+					<blockquote>“<?php echo $quote; ?>”</blockquote>
 				</h2>
 				
 			<?php endif; ?>
@@ -24,6 +24,8 @@
 			<span class="post-quote-author"><?php echo $author_quote; ?></span>
 			
 		</div>
+		
+		<?php if (!galopin_is_masonry()) get_template_part('content', 'header-meta'); ?>
 		
 	</header>
 	

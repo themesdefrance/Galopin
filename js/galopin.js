@@ -31,6 +31,10 @@ $(function(){
 		});
 	}
 	
+	 $(document).ready(function(){
+	    $(".post-video").fitVids();
+	  });
+	
 	//initmasonry
 	$('.masonry').imagesLoaded(function(){
 		//if ($('.masonry').length){

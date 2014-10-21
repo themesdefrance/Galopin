@@ -8,7 +8,8 @@
 	border-bottom-style: solid;
 }
 
-.post-thumbnail{
+.post-thumbnail,
+.post-video{
 	margin-bottom:10px;
 }
 
@@ -23,7 +24,8 @@
 	color: #B2B2B2;
 	font-size: 14px;
 }
-.post-header-meta a{
+.post-header-meta a,
+.post-footer-meta a{
 	@extend %custom-color;
 	text-decoration: none;
 }

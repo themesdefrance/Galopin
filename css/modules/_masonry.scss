@@ -18,7 +18,8 @@
 		width: 100%;
 	}
 	
-	img{
+	img,
+	.post-video{
 		height: auto;
 		transition: .4s opacity ease-out;
 	}
@@ -38,7 +39,8 @@
 	}
 	
 	&:hover{
-		img{
+		img,
+		.post-video{
 			opacity:.5;
 		}
 	}

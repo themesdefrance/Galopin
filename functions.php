@@ -84,6 +84,7 @@ if (!function_exists('galopin_enqueue')){
 	
 		$theme = wp_get_theme();
 		
+		wp_register_script('fitvids', get_template_directory_uri().'/js/jquery.fitvids.js', array('jquery'), $theme->get('Version'), true);
 		
 		wp_register_script('galopin', get_template_directory_uri().'/js/galopin.js', array('jquery'), $theme->get('Version'), true);
 		
@@ -93,8 +94,10 @@ if (!function_exists('galopin_enqueue')){
 		//icons
 		wp_enqueue_style('icons', get_stylesheet_directory_uri().'/fonts/typicons.min.css', array(), $theme->get('Version'));
 		
-		wp_enqueue_script('galopin');
+		wp_enqueue_script('fitvids');
 		wp_enqueue_script('masonry');
+		
+		wp_enqueue_script('galopin');
 	}
 }
 add_action('wp_enqueue_scripts', 'galopin_enqueue');
@@ -180,6 +183,7 @@ if(!function_exists('galopin_user_styles')){
 			.post-content ul > li:before,
 			.post-content ol > li:before,
 			.post-content a,
+			.post-footer-meta a,
 			.comment-author a,
 			.comment-reply-link,
 			.widget a,
@@ -191,6 +195,7 @@ if(!function_exists('galopin_user_styles')){
 			.post-header-title a:hover,
 			.post-header-meta a:hover,
 			.post-content a:hover,
+			.post-footer-meta a:hover,
 			.comment-author a:hover,
 			.comment-reply-link:hover,
 			.widget a:hover,
