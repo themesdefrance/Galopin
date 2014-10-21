@@ -229,9 +229,14 @@ $menu-width: 280px;
 		background-position: center;
 	}
 }
+
 @include width-below($grid-collapse-below){
 	.admin-bar .hero-image{
 		top: auto;
+	}
+	
+	.home .hero-image{
+		align-items:baseline;	
 	}
 }
 .cover .hero-image{
@@ -280,6 +285,15 @@ $menu-width: 280px;
 
 body.admin-bar .cover .menu-wrapper.stuck{
 	top: 32px;
+	
+	/* WTF ? */
+	@include width-below('782px'){
+		top:46px;
+	}
+	
+	@include width-below('600px'){
+		top:0;
+	}
 }
 
 .menu-toggle{
@@ -316,7 +330,7 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	@include width-below($grid-collapse-below){
 		width: 100%;
 		padding: 0 15px;
-		padding-top: 50px;
+		/*padding-top: 50px;*/
 	}
 }
 

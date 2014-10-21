@@ -216,7 +216,8 @@ if(!function_exists('galopin_user_styles')){
 			}
 			.masonry .brick:hover .post-header-title,
 			.masonry .brick:hover .post-header-title blockquote a,
-			.masonry .brick:hover .masonry-footer{
+			.masonry .brick:hover .masonry-footer,
+			.typcn-th-menu:before{
 				color: <?php echo $contrast; ?>
 			}
 			
@@ -224,6 +225,13 @@ if(!function_exists('galopin_user_styles')){
 				background: <?php echo $contrast; ?>;
 				color: <?php echo $color; ?>;
 			}
+			@media only screen and (max-width: 550px){
+				body:not(.home) .hero-image{
+					background: <?php echo $color; ?> !important;
+					color: <?php echo $contrast; ?> !important;
+				}
+			}
+			
 			
 			</style>
 		<?php }

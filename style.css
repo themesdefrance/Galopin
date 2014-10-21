@@ -1468,7 +1468,12 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 @media only screen and (max-width: 550px) {
   .admin-bar .hero-image {
-    top: auto; } }
+    top: auto; }
+  .home .hero-image {
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline; } }
 
 .cover .hero-image {
   margin-bottom: 70px; }
@@ -1508,7 +1513,14 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     top: 0; }
 
 body.admin-bar .cover .menu-wrapper.stuck {
-  top: 32px; }
+  top: 32px;
+  /* WTF ? */ }
+  @media only screen and (max-width: '782px') {
+    body.admin-bar .cover .menu-wrapper.stuck {
+      top: 46px; } }
+  @media only screen and (max-width: '600px') {
+    body.admin-bar .cover .menu-wrapper.stuck {
+      top: 0; } }
 
 .menu-toggle {
   background: none;
@@ -1541,7 +1553,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
     .content .wrapper {
       width: 100%;
       padding: 0 15px;
-      padding-top: 50px; } }
+      /*padding-top: 50px;*/ } }
 
 .posts {
   list-style: none;
