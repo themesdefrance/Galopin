@@ -34,7 +34,6 @@
 }
 
 .widget_search{
-	background: #F1F1F1;
 	position: relative;
 	padding: 8px 0;
 	
@@ -44,10 +43,13 @@
 	}
 	
 	.search-field{
-		width: 70%;
+		width: 100%;
+		padding: 4px 40px 4px 10px;
+		line-height: 32px;
 	}
 	.reset-btn{
 		right: 15%;
+		top: 6px;
 	}
 	.submit-btn{
 		width: 40px;
