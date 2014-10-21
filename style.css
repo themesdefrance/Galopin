@@ -1151,6 +1151,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
+*:focus {
+  outline: 0; }
+
 html {
   font-size: 16pxpx; }
 
@@ -1620,7 +1623,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
 
 .search-form .reset-btn {
   position: absolute;
-  right: 10%;
+  right: 40px;
   padding: 4px 4px;
   border: none;
   color: #9e9e9e;

@@ -67,3 +67,8 @@ input::-moz-focus-inner{
     border: 0;
     padding: 0;
 }
+
+// Removes :focus from all navigators
+*:focus{
+	outline:0;
+}
