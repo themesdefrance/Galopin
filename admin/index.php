@@ -5,12 +5,20 @@ $form->startWrapper('titre');
 $form->component('raw', __('Galopin Options', 'galopin'));
 $form->endWrapper('titre');
 
-$form->groupHeader(array('general'=>__('General', 'galopin')));
+//$form->groupHeader(array('general'=>__('General', 'galopin')));
 
-//Tab general
-$form->startWrapper('tab', 'general');
+//Tab general // Unwanted for now
+//$form->startWrapper('tab', 'general');
 
 $form->startForm();
+
+$form->setting(array('type'=>'color',
+					 'name'=>'color',
+					 'options'=>array(
+					 	'default'=>'#E54C3C'
+					 ),
+					 'label'=>__("Main color", 'galopin'),
+					 'description'=>__('Main Color description', 'galopin')));
 
 $form->setting(array('type'=>'boolean',
 					 'name'=>'show_sidebar',
@@ -18,7 +26,7 @@ $form->setting(array('type'=>'boolean',
 					 	'default'=>true
 					 ),
 					 'label'=>__("Sidebar", 'galopin'),
-					 'description'=>__("", 'galopin')));
+					 'description'=>__('Sidebar description', 'galopin')));
 					 
 $form->setting(array('type'=>'boolean',
 					 'name'=>'masonry',
@@ -26,7 +34,7 @@ $form->setting(array('type'=>'boolean',
 					 	'default'=>false
 					 ),
 					 'label'=>__("Masonry", 'galopin'),
-					 'description'=>__("", 'galopin')));
+					 'description'=>__('Masonry description', 'galopin')));
 					 
 $form->setting(array('type'=>'boolean',
 					 'name'=>'use_hero',
@@ -34,20 +42,17 @@ $form->setting(array('type'=>'boolean',
 					 	'default'=>true
 					 ),
 					 'label'=>__("Fullpage hero", 'galopin'),
-					 'description'=>__("", 'galopin')));
-					 
-$form->setting(array('type'=>'color',
-					 'name'=>'color',
-					 'options'=>array(
-					 	'default'=>'#E54C3C'
-					 ),
-					 'label'=>__("Main color", 'galopin'),
-					 'description'=>__("", 'galopin')));
+					 'description'=>__('Fullpage hero description', 'galopin')));
+
+$form->setting(array('type'=>'text',
+					 'name'=>'hero_text',
+					 'label'=>__('Hero text', 'galopin'),
+					 'description'=>__('Hero Text description', 'galopin')));
 					 
 $form->setting(array('type'=>'upload',
 					 'name'=>'hero_image',
 					 'label'=>__('Hero image', 'galopin'),
-					 'description'=>__('', 'galopin')));
+					 'description'=>__('Hero image description', 'galopin')));
 					 
 $form->setting(array('type'=>'textarea',
 					 'name'=>'footer_left',
@@ -59,7 +64,7 @@ $form->setting(array('type'=>'textarea',
 					 ));
 
 $form->endForm();
-$form->endWrapper('tab');
+//$form->endWrapper('tab');
 
 $form->component('submit', 'submit', array('value'=>__('Save changes', 'galopin')));
 

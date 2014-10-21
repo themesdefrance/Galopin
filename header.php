@@ -58,8 +58,12 @@
 			<div class="content <?php if (galopin_is_masonry()) echo 'masonry-wrapper'; ?>">
 				<div class="hero-image" style="background-image: url(<?php echo get_option('galopin_hero_image'); ?>);">
 					<button class="menu-toggle typcn typcn-th-menu"></button>
-
+					
 					<a href="<?php echo home_url(); ?>" class="hero-text">
-						<?php echo apply_filters('galopin_hero_text', bloginfo('name')); ?>
+					
+						<?php echo apply_filters('galopin_hero_text', (get_option('galopin_hero_text') ? get_option('galopin_hero_text') : bloginfo('name'))); ?>
 					</a>
 				</div>
+				
+				
+				
