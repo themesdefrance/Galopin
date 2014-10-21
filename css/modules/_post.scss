@@ -1,5 +1,7 @@
 .post{
+	margin-bottom: 50px;
 }
+
 .post-header{
 	margin-bottom: 20px;
 	padding-bottom: 5px;
@@ -185,4 +187,9 @@
 
 .post-content.quote blockquote{
 	margin: 0;
+}
+
+.post-quote-author{
+	margin-bottom:10px;
+	display:block;
 }

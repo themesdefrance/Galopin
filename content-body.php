@@ -18,7 +18,7 @@
 		
 	} else if (galopin_is_masonry()){
 	
-		echo galopin_excerpt(40);
+		echo galopin_excerpt(20);
 		
 	}else{
 	

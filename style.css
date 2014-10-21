@@ -1619,6 +1619,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
   border: none;
   background: none; }
 
+.post {
+  margin-bottom: 50px; }
+
 .post-header {
   margin-bottom: 20px;
   padding-bottom: 5px;
@@ -1738,6 +1741,10 @@ body.admin-bar .cover .menu-wrapper.stuck {
 
 .post-content.quote blockquote {
   margin: 0; }
+
+.post-quote-author {
+  margin-bottom: 10px;
+  display: block; }
 
 .comment-form {
   margin: 20px 0; }

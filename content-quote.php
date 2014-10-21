@@ -1,4 +1,4 @@
-<?php $quote = get_post_meta($post->ID, '_galopin_quote_meta', true); ?>
+<?php $quote = "“" . get_post_meta($post->ID, '_galopin_quote_meta', true) . "”"; ?>
 <?php $author_quote = get_post_meta($post->ID, '_galopin_quote_author_meta', true); ?>
 
 <article <?php post_class('post'); ?> itemscope itemtype="http://schema.org/Article">
@@ -10,13 +10,33 @@
 			<?php if (is_single()): ?>
 				
 				<h1 class="post-header-title" itemprop="name">
-					<blockquote>“<?php echo $quote; ?>”</blockquote>
+				
+					<blockquote><?php echo $quote; ?></blockquote>
+					
 				</h1>
 				
 			<?php else: ?>
 				
 				<h2 class="post-header-title" itemprop="name">
-					<blockquote>“<?php echo $quote; ?>”</blockquote>
+				
+					<blockquote>
+					
+						<?php if (galopin_is_masonry()): ?>
+						
+							<?php echo $quote; ?>
+							
+						<?php else: ?>
+						
+							<a href="<?php the_permalink(); ?>" title="<?php echo $quote; ?>">
+							
+								<?php echo $quote; ?>
+								
+							</a>
+						
+						<?php endif; ?>
+					
+					</blockquote>
+					
 				</h2>
 				
 			<?php endif; ?>

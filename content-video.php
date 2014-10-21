@@ -18,8 +18,18 @@
 		
 			<h2 class="post-header-title">
 			
-				<?php the_title(); ?>
+				<?php if (galopin_is_masonry()): ?>
+						
+					<?php the_title(); ?>
+					
+				<?php else: ?>
 				
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+						<?php the_title(); ?>
+					</a>
+				
+				<?php endif; ?>
+			
 			</h2>
 			
 		<?php endif; ?>
