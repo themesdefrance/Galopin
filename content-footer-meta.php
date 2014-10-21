@@ -1,10 +1,14 @@
-<?php if(has_tag() && is_single()){ ?>
+<?php if(apply_filters('galopin_display_post_tags', true)){ ?>
+
+	<?php if(has_tag() && is_single()){ ?>
 	
-	<span class="post-footer-meta" itemscope="keywords">
-	
-		<?php echo get_the_tag_list('',' | ',''); ?>
-	
-	</span>
+		<span class="post-footer-meta" itemscope="keywords">
+		
+			<?php echo get_the_tag_list(apply_filters('galopin_before_post_tags', ''),' | ',apply_filters('galopin_after_post_tags', '')); ?>
+		
+		</span>
+		
+	<?php } ?>
 
 <?php } ?>
 
