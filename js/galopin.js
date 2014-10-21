@@ -33,13 +33,13 @@ $(function(){
 	
 	//initmasonry
 	$('.masonry').imagesLoaded(function(){
-		if ($('.masonry').length){
+		//if ($('.masonry').length){
 			var masonry = new Masonry($('.masonry')[0], {
 				itemSelector: '.brick',
 				columnWidth: '.masonry .brick',
 				gutter: 30
 			});
-		}
+		//}
 	});
 	
 	//back to top button
