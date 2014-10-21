@@ -48,6 +48,9 @@ if (!function_exists('galopin_setup')){
 		// Set images sizes
 		add_image_size('galopin-post-thumbnail', 633, 400, true);
 		
+		// Add Meta boxes for post formats
+		require_once 'admin/metaboxes/post-formats.php';
+		
 		// Load language
 		//load_theme_textdomain('galopin', get_template_directory().'/local');
 	}
@@ -207,6 +210,7 @@ if(!function_exists('galopin_user_styles')){
 				color: <?php echo $contrast; ?>;
 			}
 			.masonry .brick:hover .post-header-title,
+			.masonry .brick:hover .post-header-title blockquote a,
 			.masonry .brick:hover .masonry-footer{
 				color: <?php echo $contrast; ?>
 			}

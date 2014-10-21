@@ -15,18 +15,24 @@ $sidebar = get_option('galopin_show_sidebar');
 			
 				<?php while (have_posts()) : the_post(); ?>
 				
-				<li class="<?php if ($masonry) echo 'brick'; ?>">
-					<?php if ($masonry): ?><a class="brick-link" title="<?php _e('Read more','galopin'); ?>" href="<?php the_permalink(); ?>"><?php endif; ?>
-						<?php get_template_part('content', get_post_format()); ?>
-					<?php if ($masonry): ?></a><?php endif; ?>
-				</li>
+					<li class="<?php if ($masonry) echo 'brick'; ?>">
+					
+						<?php if ($masonry): ?><a class="brick-link" title="<?php _e('Read more','galopin'); ?>" href="<?php the_permalink(); ?>"><?php endif; ?>
+						
+							<?php get_template_part('content', get_post_format()); ?>
+							
+						<?php if ($masonry): ?></a><?php endif; ?>
+						
+					</li>
 				
 				<?php endwhile; ?>
 				
 			</ul>
 			
 			<div class="pagination">
+			
 				<?php galopin_posts_nav(false, ''); ?>
+				
 			</div>
 			
 		</div>
