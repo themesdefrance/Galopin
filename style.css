@@ -2043,6 +2043,14 @@ body.admin-bar .cover .menu-wrapper.stuck {
 
 .masonry-wrapper {
   background: #f1f1f1; }
+  .masonry-wrapper .masonry-header {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid; }
+
+.masonry {
+  margin: 0 auto; }
 
 .masonry .brick {
   background: #fff;
@@ -2052,10 +2060,10 @@ body.admin-bar .cover .menu-wrapper.stuck {
           transition: 0.4s background ease-out, 0.2s color ease-out; }
   @media only screen and (min-width: 999px) {
     .masonry .brick {
-      width: 30%; } }
+      width: calc(100% / 3 - 20px); } }
   @media only screen and (max-width: 999px) {
     .masonry .brick {
-      width: 45%; } }
+      width: calc(100% / 2 - 15px); } }
   @media only screen and (max-width: 550px) {
     .masonry .brick {
       width: 100%; } }

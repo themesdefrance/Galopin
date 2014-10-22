@@ -1,6 +1,18 @@
 .masonry-wrapper{
 	background: #f1f1f1;
+	
+	.masonry-header{
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+	}
 }
+
+.masonry{
+	margin: 0 auto;
+}
+
 .masonry .brick{
 	background: #fff;
 	margin-bottom: 30px;
@@ -9,10 +21,10 @@
 				.2s color ease-out;
 	
 	@include width-above(999px){
-		width: 30%;
+		width: calc(100% / 3 - 20px) ;
 	}
 	@include width-below(999px){
-		width: 45%;
+		width: calc(100% / 2 - 15px);
 	}
 	@include width-below($grid-collapse-below){
 		width: 100%;

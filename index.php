@@ -10,7 +10,10 @@ $sidebar = get_option('galopin_show_sidebar');
 	<div class="<?php if (!$masonry && $sidebar) echo 'grid'; ?>">
 	
 		<div class="<?php if (!$masonry && $sidebar) echo 'col-2-3'; ?>">
-		
+			
+			<?php if ($masonry){ get_template_part('header', 'masonry'); } ?>
+			
+			
 			<ul class="posts <?php if ($masonry) echo 'masonry'; ?>">
 			
 				<?php while (have_posts()) : the_post(); ?>

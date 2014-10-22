@@ -219,7 +219,8 @@ if(!function_exists('galopin_user_styles')){
 			.footer,
 			.post-header,
 			.comment-footer,
-			.masonry-footer{
+			.masonry-footer,
+			.masonry-header{
 				border-color: <?php echo $color; ?>;
 			}
 			
