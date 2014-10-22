@@ -348,6 +348,10 @@ body.admin-bar .cover .menu-wrapper.stuck{
 
 .footerbar{
 	margin-top: 20px;
+	
+	.widget{
+		border-bottom: none;
+	}
 }
 
 .footerbar .widget{

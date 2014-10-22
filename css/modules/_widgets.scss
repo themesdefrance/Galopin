@@ -7,6 +7,17 @@
 	ol{
 		list-style: none;
 	}
+	
+	ul li{
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+		
+		&:last-child{
+			padding-bottom:0;
+			margin-bottom:0;
+		}
+	}
+	
 	a{
 		@extend %custom-color;
 		text-decoration: none;
@@ -17,6 +28,10 @@
 	td{
 		text-align: center;
 	}
+	select{
+		max-width: 100%;
+	}
+	
 }
 .widget > h3{
 	font-size: 20px;
@@ -29,18 +44,9 @@
 	}
 }
 
-.widget_recent_entries h3{
-	@extend .typcn-folder-open;
-}
-
 .widget_search{
 	position: relative;
-	padding: 8px 0;
-	
-	h3{
-		@extend .typcn-folder-zoom;
-		padding-left: 15%;
-	}
+	padding: 8px 0 30px;
 	
 	.search-field{
 		width: 100%;
@@ -89,12 +95,49 @@
 	@extend .typcn-th-list;
 }
 
+.widget_recent_entries h3{
+	@extend .typcn-folder-open;
+}
+
+.widget_search h3{
+	@extend .typcn-zoom;
+}
+
+.widget_recent_comments h3{
+	@extend .typcn-messages;
+}
+
+.widget_text{
+
+	h3{
+		@extend .typcn-folder-open;
+	}
+	
+	p {
+		margin-bottom: 10px;
+	}
+	img{
+		height:auto;
+	}
+	
+	.wp-caption{
+		background: #f1f1f1;
+		margin-bottom: 10px;
+		
+		.wp-caption-text{
+			font-size: 14px;
+			text-align: center;
+			padding-bottom: 5px;
+		}
+	}
+}
+
 .widget_tag_cloud a{
 	display: inline-block;
-	color: #B2B2B2;
-	background: #F1F1F1;
-	padding: 2px 8px;
-	margin: 4px 0;
+	color: #b2b2b2;
+	background: #f1f1f1;
+	padding: 6px 8px;
+	margin: 2px 0;
 	
 	&:hover{
 		color: darken(#B2B2B2, 10);
@@ -111,29 +154,57 @@
 		font-family: $heading-font;
 		font-size: 16px;
 		margin-bottom: 5px;
+		padding: 10px 0;
+		background: #f1f1f1;
 	}
 	
 	th{
 		font-weight: 400;
 		color: #B2B2B2;
+		padding: 5px 0;
+	}
+	
+	td,
+	th{
+		padding: 5px;
+	}
+	
+	#today{
+		font-weight:bold;
+	}
+	
+	#next,
+	#prev{
+		padding:0;
 	}
 	
 	#next a,
 	#prev a{
-		display: inline-block;
-		margin-top: 10px;
+		display:block;
+		margin-top:10px;
+		width: 100%;
+		height: 100%;
 		@extend %button;
 	}
 }
 
-.widget_recent_comments{
-	h3{
-		@extend .typcn-messages;
+.widget_rss{
+
+	ul li a.rsswidget{
+		display:block;
+		margin-bottom: 5px;
 	}
 	
-	li{
-		padding-bottom: 5px;
-		margin-bottom: 10px;
-		border-bottom: 1px solid #f1f1f1;
+	.rss-date {
+		font-size: 14px;
+	}
+	
+	.rssSummary{
+		margin: 5px 0;
 	}
 }
+
+
+
+
+
