@@ -33,9 +33,13 @@
 		margin-bottom: 0;
 	}
 	.post-header-title{
-		font-size: 28px;
+		font-size: 22px;
 		line-height: 1.1;
 		transition: .4s color ease-out;
+	}
+	
+	.post-footer{
+		font-size:14px;
 	}
 	
 	&:hover{
@@ -64,6 +68,7 @@
 		padding: 12px 8px;
 		text-align: center;
 		transition: .4s all ease-out;
+		z-index: 10;
 	}
 }
 .masonry .brick:hover .brick-link:before{

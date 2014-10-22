@@ -1046,7 +1046,8 @@ audio, canvas, video {
   display: inline-block; }
 
 *, *:after, *:before {
-  box-sizing: border-box; }
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
 
 /*
  * miscellaneous stuff, not really box related but always needed
@@ -1678,7 +1679,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
   text-decoration: none; }
 
 .post-content {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.42; }
   .post-content * {
     max-width: 100%;
@@ -2022,10 +2023,12 @@ body.admin-bar .cover .menu-wrapper.stuck {
     border-bottom: none;
     margin-bottom: 0; }
   .masonry .brick .post-header-title {
-    font-size: 28px;
+    font-size: 22px;
     line-height: 1.1;
     -webkit-transition: 0.4s color ease-out;
             transition: 0.4s color ease-out; }
+  .masonry .brick .post-footer {
+    font-size: 14px; }
   .masonry .brick:hover img, .masonry .brick:hover .post-video {
     opacity: 0.5; }
 
@@ -2050,7 +2053,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
     padding: 12px 8px;
     text-align: center;
     -webkit-transition: 0.4s all ease-out;
-            transition: 0.4s all ease-out; }
+            transition: 0.4s all ease-out;
+    z-index: 10; }
 
 .masonry .brick:hover .brick-link:before {
   opacity: 1;
