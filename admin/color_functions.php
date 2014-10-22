@@ -56,7 +56,7 @@ function galopin_RGBToHSL($RGB) {
 	return (object) Array('hue' => $h, 'saturation' => $s, 'lightness' => $l);
 }
 
-function galopin_HSLToHTML($h, $s, $l) {
+function galopin_HSLToHTML($h, $s, $l, $o = 1) {
 	$h = ((float)$h) / 255.0;
 	$s = ((float)$s) / 255.0;
 	$l = ((float)$l) / 255.0;
@@ -106,5 +106,8 @@ function galopin_HSLToHTML($h, $s, $l) {
 	$g = (int)round(255.0 * $g);
 	$b = (int)round(255.0 * $b);
     
-	return 'rgb('.$r.','.$g.','.$b.')';
+    if($o==1)
+    	return 'rgb('.$r.','.$g.','.$b.')';
+    	
+	return 'rgba('.$r.','.$g.','.$b.','.$o.')';
 }

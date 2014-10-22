@@ -2048,8 +2048,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
   background: #fff;
   margin-bottom: 30px;
   padding: 10px;
-  -webkit-transition: 0.4s background ease-out, 0.4s color ease-out;
-          transition: 0.4s background ease-out, 0.4s color ease-out; }
+  -webkit-transition: 0.4s background ease-out, 0.2s color ease-out;
+          transition: 0.4s background ease-out, 0.2s color ease-out; }
   @media only screen and (min-width: 999px) {
     .masonry .brick {
       width: 30%; } }
@@ -2100,15 +2100,22 @@ body.admin-bar .cover .menu-wrapper.stuck {
     line-height: 1;
     padding: 12px 8px;
     text-align: center;
-    -webkit-transition: 0.4s all ease-out;
-            transition: 0.4s all ease-out;
+    -webkit-transition: 0.2s all ease-out;
+            transition: 0.2s all ease-out;
     z-index: 10; }
 
-.masonry .brick:hover .brick-link:before {
-  opacity: 1;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+.masonry .brick:hover {
+  color: transparent; }
+  .masonry .brick:hover .post-content, .masonry .brick:hover .post-header-title, .masonry .brick:hover .post-header-title:before, .masonry .brick:hover .masonry-footer {
+    color: transparent; }
+  .masonry .brick:hover img, .masonry .brick:hover iframe {
+    -webkit-filter: blur(2px);
+            filter: blur(2px); }
+  .masonry .brick:hover .brick-link:before {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
 
 .masonry-footer {
   color: #989898;

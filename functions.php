@@ -224,15 +224,17 @@ if(!function_exists('galopin_user_styles')){
 			}
 			
 			.masonry .brick:hover{
+				<?php $hsl_hover = galopin_RGBToHSL(galopin_HTMLToRGB($contrast)); ?>
 				background: <?php echo $color; ?>;
-				color: <?php echo $contrast; ?>;
+				text-shadow: 0 0 3px <?php echo galopin_HSLToHTML($hsl_hover->hue, $hsl_hover->saturation, $hsl_hover->lightness, 0.7); ?>;
 			}
+			
 			.masonry .brick:hover .post-header-title,
 			.masonry .brick:hover .post-header-title:before,
 			.masonry .brick:hover .post-header-title blockquote a,
 			.masonry .brick:hover .masonry-footer,
 			.typcn-th-menu:before{
-				color: <?php echo $contrast; ?>
+				text-shadow: 0 0 3px <?php echo galopin_HSLToHTML($hsl_hover->hue, $hsl_hover->saturation, $hsl_hover->lightness, 0.7); ?>;
 			}
 			
 			.masonry .brick-link:before{
