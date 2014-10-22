@@ -200,6 +200,7 @@ if(!function_exists('galopin_user_styles')){
 			.comment-reply-link,
 			.widget a,
 			.comment-form .logged-in-as a,
+			.post-header-title:before,
 			.widget > h3:before{
 				color: <?php echo $color; ?>;
 			}
@@ -227,6 +228,7 @@ if(!function_exists('galopin_user_styles')){
 				color: <?php echo $contrast; ?>;
 			}
 			.masonry .brick:hover .post-header-title,
+			.masonry .brick:hover .post-header-title:before,
 			.masonry .brick:hover .post-header-title blockquote a,
 			.masonry .brick:hover .masonry-footer,
 			.typcn-th-menu:before{

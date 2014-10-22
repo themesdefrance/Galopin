@@ -19,6 +19,30 @@
 	margin-bottom:10px;
 }
 
+.post-header-title{
+	@extend .typcn;
+		
+		&:before{
+			@extend %custom-color;
+		}
+}
+
+.format-standard .post-header-title:before{
+			content: '\e04a';
+}
+
+.format-link .post-header-title:before{
+			content: '\e09b';
+}
+
+.format-video .post-header-title:before{
+			content: '\e130';
+}
+
+.format-quote .post-header-title:before{
+			content: '\e0b7';
+}
+
 .post-header-title,
 .post-header-title a{
 	color: #333;

@@ -32,10 +32,15 @@
 		border-bottom: none;
 		margin-bottom: 0;
 	}
-	.post-header-title{
+	.post-header-title,
+	.post-header-title:before{
 		font-size: 22px;
 		line-height: 1.1;
 		transition: .4s color ease-out;
+	}
+	
+	.post-quote .post-header-title blockquote{
+		display:inline;
 	}
 	
 	.post-footer{

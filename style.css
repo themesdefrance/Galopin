@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: galopin
 */
-.typcn:before, .comment-form label:before, .widget > h3:before {
+.typcn:before, .post-header-title:before, .comment-form label:before, .widget > h3:before {
   font-family: 'typicons';
   font-style: normal;
   font-weight: normal;
@@ -1424,7 +1424,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     .menu-wrapper .social-menu li {
       display: inline-block; } }
 
-.menu-wrapper .social-menu .typcn:before, .menu-wrapper .social-menu .comment-form label:before, .comment-form .menu-wrapper .social-menu label:before, .menu-wrapper .social-menu .widget > h3:before, .widget > .menu-wrapper .social-menu h3:before {
+.menu-wrapper .social-menu .typcn:before, .menu-wrapper .social-menu .post-header-title:before, .menu-wrapper .social-menu .comment-form label:before, .comment-form .menu-wrapper .social-menu label:before, .menu-wrapper .social-menu .widget > h3:before, .widget > .menu-wrapper .social-menu h3:before {
   font-size: 26px; }
 
 .content {
@@ -1664,6 +1664,18 @@ body.admin-bar .cover .menu-wrapper.stuck {
 
 .post-thumbnail, .post-video {
   margin-bottom: 10px; }
+
+.format-standard .post-header-title:before {
+  content: '\e04a'; }
+
+.format-link .post-header-title:before {
+  content: '\e09b'; }
+
+.format-video .post-header-title:before {
+  content: '\e130'; }
+
+.format-quote .post-header-title:before {
+  content: '\e0b7'; }
 
 .post-header-title, .post-header-title a {
   color: #333;
@@ -2022,11 +2034,13 @@ body.admin-bar .cover .menu-wrapper.stuck {
   .masonry .brick .post-header {
     border-bottom: none;
     margin-bottom: 0; }
-  .masonry .brick .post-header-title {
+  .masonry .brick .post-header-title, .masonry .brick .post-header-title:before {
     font-size: 22px;
     line-height: 1.1;
     -webkit-transition: 0.4s color ease-out;
             transition: 0.4s color ease-out; }
+  .masonry .brick .post-quote .post-header-title blockquote {
+    display: inline; }
   .masonry .brick .post-footer {
     font-size: 14px; }
   .masonry .brick:hover img, .masonry .brick:hover .post-video {
