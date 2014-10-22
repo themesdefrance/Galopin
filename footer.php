@@ -16,7 +16,7 @@
 								'menu_class'     => 'top-level-menu',
 								'container'      => false,
 								'depth'          => 1,
-								'fallback_cb'    => 'galopin_nomenu'
+								'fallback_cb'    => ''
 							));
 							?>
 						</div>
