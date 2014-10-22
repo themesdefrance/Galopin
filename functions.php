@@ -430,7 +430,7 @@ if (!function_exists('galopin_comment')){
 	}
 }
 
-//relies the Cocorico Social plugin
+//relies on the Cocorico Social plugin : https://wordpress.org/plugins/cocorico-social/
 if (!function_exists('galopin_social')){
 	function galopin_social(){
 		$export = '';
@@ -469,3 +469,14 @@ if (!function_exists('galopin_social')){
 		return $export;
 	}
 }
+
+// Only get post in search results
+if (!function_exists('galopin_search_filter')){
+	function galopin_search_filter($query) {
+	
+		if ($query->is_search)
+			$query->set('post_type', 'post');
+		return $query;
+	}
+}
+add_filter('pre_get_posts','galopin_search_filter');
