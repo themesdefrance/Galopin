@@ -260,7 +260,10 @@ add_action('wp_head','galopin_user_styles', 98);
 /////////////////////////
 if (!function_exists('galopin_is_masonry')){
 	function galopin_is_masonry(){
-		return is_home() && get_option('galopin_masonry');
+		// Are we on a page that support masonry ? If yes, check if masonry is activated
+		if(!is_page() && !is_single() && !is_404() && !is_singular() && !is_attachment() && !is_page_template() && !is_preview())
+			return get_option('galopin_masonry');
+		return false;
 	}
 }
 

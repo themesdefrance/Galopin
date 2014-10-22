@@ -1,27 +1,24 @@
 <article <?php post_class('post'); ?> itemscope itemtype="http://schema.org/Article">
 
 	<header class="post-header">
-	
-		<?php if(!is_category() && !is_tag()): ?>
 					
-			<?php if (has_post_thumbnail() && !post_password_required()): ?>
-			
-				<div class="post-thumbnail">
-				
-					<?php if (is_single() || is_page() || galopin_is_masonry()): ?>
-					
-						<?php the_post_thumbnail('galopin-post-thumbnail'); ?>
-						
-					<?php else: ?>
-					
-						<a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_post_thumbnail('galopin-post-thumbnail'); ?></a>
-						
-					<?php endif; ?>
-				</div><!--END .entry-thumbnail-->
-				
-			<?php endif; ?>
+		<?php if (has_post_thumbnail() && !post_password_required()): ?>
 		
+			<div class="post-thumbnail">
+			
+				<?php if (is_single() || is_page() || galopin_is_masonry()): ?>
+				
+					<?php the_post_thumbnail('galopin-post-thumbnail'); ?>
+					
+				<?php else: ?>
+				
+					<a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_post_thumbnail('galopin-post-thumbnail'); ?></a>
+					
+				<?php endif; ?>
+			</div><!--END .entry-thumbnail-->
+			
 		<?php endif; ?>
+		
 		
 		<?php if (is_single() || is_page()): ?>
 			

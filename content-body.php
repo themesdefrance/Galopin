@@ -6,11 +6,14 @@
 	}
 	else if(is_category() || is_tax()){
 	
-		echo galopin_excerpt(25); ?>
+		echo galopin_excerpt(25);
 		
-		<a href="<?php the_permalink(); ?>" class="button" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a>
+		if (!galopin_is_masonry()){ ?>
+		
+		<p><a href="<?php the_permalink(); ?>" class="button" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a></p>
 		
 	<?php
+		}
 	 
 	}else if(is_tag()|| is_search()){
 	
@@ -22,8 +25,12 @@
 		
 	}else{
 	
-		echo galopin_excerpt(40); ?>
+		echo galopin_excerpt(40);
 		
-		<a href="<?php the_permalink(); ?>" class="button" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a>
-
+		if (!galopin_is_masonry()){ ?>
+		
+		<p><a href="<?php the_permalink(); ?>" class="button" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a></p>
+		
+	<?php } ?>
+	
 <?php } ?>
