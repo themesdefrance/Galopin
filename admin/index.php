@@ -62,6 +62,10 @@ $form->setting(array('type'=>'textarea',
 					 	'default'=>__('<strong>2014</strong> - Galopin by <a href="https://www.themesdefrance.fr/" target="_blank">Themes de France</a>', 'galopin')
 					 	)
 					 ));
+$form->setting(array('type'=>'textarea',
+					 'name'=>'custom_css',
+					 'label'=>__('Additionnal CSS', 'galopin'),
+					 'description'=>__('CSS rules added in this field will be added to your site. If you have too many updates, you should create a child theme.', 'galopin')));
 
 $form->endForm();
 //$form->endWrapper('tab');

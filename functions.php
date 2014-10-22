@@ -123,6 +123,18 @@ if (!function_exists('galopin_options')){
     }
 }
 
+// Custom CSS loading
+if(!function_exists('galopin_custom_styles')){
+	function galopin_custom_styles(){
+		if (get_option("galopin_custom_css")){
+			echo '<style type="text/css">';
+			echo htmlentities(stripslashes(get_option("galopin_custom_css")), ENT_NOQUOTES);
+			echo '</style>';
+		}
+	}
+}
+add_action('wp_head', 'galopin_custom_styles', 99);
+
 // Main galopin color
 if(!function_exists('galopin_user_styles')){
 	function galopin_user_styles(){
