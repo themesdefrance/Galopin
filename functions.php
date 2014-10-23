@@ -3,6 +3,10 @@
 define('GALOPIN_COCORICO_PREFIX', 'galopin_');
 require_once 'admin/Cocorico/Cocorico.php';
 
+// Widgets
+//require_once 'admin/widgets/social.php';
+require 'admin/widgets/calltoaction.php';
+
 //////////////////
 // Bootstraping //
 //////////////////
@@ -106,6 +110,7 @@ add_action('wp_enqueue_scripts', 'galopin_enqueue');
 /////////////////////////
 ////  Admin stuff   /////
 /////////////////////////
+
 // Add admin menu
 if (!function_exists('galopin_admin_menu')){
 	function galopin_admin_menu(){
@@ -254,7 +259,6 @@ if(!function_exists('galopin_user_styles')){
 		<?php }
 }
 add_action('wp_head','galopin_user_styles', 98);
-
 
 /////////////////////////
 // Utility functions   //

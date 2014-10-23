@@ -1,3 +1,5 @@
+// Common styles
+
 .widget{
 	margin-bottom: 30px;
 	padding-bottom: 30px;
@@ -43,6 +45,8 @@
 		margin-right: 5px;
 	}
 }
+
+// WordPress default widgets
 
 .widget_search{
 	position: relative;
@@ -204,7 +208,26 @@
 	}
 }
 
+// Galopin custom widgets
 
+.widget_galopincalltoaction{
+	
+	h3{
+		@extend .typcn-flag-outline;
+	}
+	
+	.cta-description{
+	
+		p{
+			margin-bottom: 10px;
+			line-height: 1.42;
+		}
+	}
+	
+	a.button{
+		display:inline-block;
+	}
+}
 
 
 

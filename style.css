@@ -371,7 +371,7 @@ Text Domain: galopin
 .typcn-filter:before {
   content: '\e072'; }
 
-.typcn-flag-outline:before {
+.typcn-flag-outline:before, .widget_galopincalltoaction h3:before {
   content: '\e073'; }
 
 .typcn-flag:before {
@@ -2030,6 +2030,12 @@ body.admin-bar .cover .menu-wrapper.stuck {
   font-size: 14px; }
 .widget_rss .rssSummary {
   margin: 5px 0; }
+
+.widget_galopincalltoaction .cta-description p {
+  margin-bottom: 10px;
+  line-height: 1.42; }
+.widget_galopincalltoaction a.button {
+  display: inline-block; }
 
 .pagination {
   display: inline-block;
