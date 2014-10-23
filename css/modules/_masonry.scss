@@ -3,10 +3,14 @@
 	
 	.masonry-header{
 		margin-bottom: 20px;
-		padding-bottom: 20px;
+		padding:0 0 30px;
 		border-bottom-width: 1px;
 		border-bottom-style: solid;
 	}
+}
+
+.content-wrapper.cover .masonry-wrapper .masonry-header{
+	padding:20px 0 30px;
 }
 
 .masonry{
