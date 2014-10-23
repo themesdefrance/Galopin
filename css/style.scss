@@ -285,15 +285,6 @@ $menu-width: 280px;
 
 body.admin-bar .cover .menu-wrapper.stuck{
 	top: 32px;
-	
-	/* WTF ? */
-	@include width-below('782px'){
-		top:46px;
-	}
-	
-	@include width-below('600px'){
-		top:0;
-	}
 }
 
 .menu-toggle{
@@ -336,14 +327,23 @@ body.admin-bar .cover .menu-wrapper.stuck{
 
 .posts{
 	list-style: none;
-	padding: 10px 0;
+	padding:0 0 10px;
 }
+
+.cover .posts{
+	padding-top:25px;	
+}
+
 .posts .post{
 	margin-bottom: 50px;
 }
 
 .sidebar{
-	
+	padding-top:0;
+}
+
+.cover .sidebar{
+	padding-top:25px;
 }
 
 .footerbar{

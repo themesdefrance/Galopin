@@ -47,6 +47,7 @@ if (!function_exists('galopin_setup')){
 		
 		// Set images sizes
 		add_image_size('galopin-post-thumbnail', 633, 400, true);
+		add_image_size('galopin-post-thumbnail-full', 900, 400, true);
 		
 		// Add Meta boxes for post formats
 		require_once 'admin/metaboxes/post-formats.php';
@@ -189,7 +190,7 @@ if(!function_exists('galopin_user_styles')){
 			}
 			.menu-wrapper .sub-menu a,
 			.footer a,
-			.post-header-title a,
+			.post-header-title a:hover,
 			.post-header-meta a,
 			.masonry .post-header-title,
 			.post-content ul > li:before,
@@ -205,7 +206,6 @@ if(!function_exists('galopin_user_styles')){
 				color: <?php echo $color; ?>;
 			}
 			.footer a:hover,
-			.post-header-title a:hover,
 			.post-header-meta a:hover,
 			.post-content a:hover,
 			.post-footer-meta a:hover,

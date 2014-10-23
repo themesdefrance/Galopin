@@ -21,10 +21,14 @@
 
 .post-header-title{
 	@extend .typcn;
-		
-		&:before{
-			@extend %custom-color;
-		}
+	
+	a{
+		transition: color 0.2s ease-out;
+	}
+	
+	&:before{
+		@extend %custom-color;
+	}
 }
 
 .format-standard .post-header-title:before{
@@ -50,6 +54,11 @@
 	margin-bottom: 10px;
 	font-size: 36px;
 }
+
+.post-header-title blockquote{
+	display:inline;
+}
+
 .post-header-meta{
 	color: #B2B2B2;
 	font-size: 14px;
@@ -211,6 +220,10 @@
 		color: #8d8d8d;
 		text-align:center;
 	}
+	
+	.readmore{
+		padding-top:10px;
+	}
 }
 
 .post-content.quote blockquote{
@@ -220,4 +233,10 @@
 .post-quote-author{
 	margin-bottom:10px;
 	display:block;
+	font-style:italic;
 }
+
+.post-footer{
+	margin-top: 20px;
+}
+
