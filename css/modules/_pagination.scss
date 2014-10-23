@@ -1,5 +1,7 @@
 .pagination{
 	display: inline-block;
+	margin: 20px 0 80px;
+	
 	@extend %custom-bg;
 	
 	> span,

@@ -311,7 +311,9 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	}
 }
 
-.content .wrapper{
+.content .wrapper,
+.footer-wrapper .wrapper{
+
 	width: 900px;
 	margin: 0 auto;
 	
@@ -344,6 +346,10 @@ body.admin-bar .cover .menu-wrapper.stuck{
 
 .cover .sidebar{
 	padding-top:25px;
+}
+
+.footer-wrapper {
+	padding-top: 60px;
 }
 
 .footerbar{
@@ -406,8 +412,8 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	border: none;
 	position: fixed;
 	right: 0;
-	bottom: 30px;
-	padding: 5px 5px;
+	bottom: 70px;
+	padding: 10px;
 	
 	&:before{
 		font-size: 22px;

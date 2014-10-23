@@ -1540,14 +1540,14 @@ body.admin-bar .cover .menu-wrapper.stuck {
       font-size: 20px;
       margin-right: 10px; } }
 
-.content .wrapper {
+.content .wrapper, .footer-wrapper .wrapper {
   width: 900px;
   margin: 0 auto; }
   @media only screen and (max-width: 1000px) {
-    .content .wrapper {
+    .content .wrapper, .footer-wrapper .wrapper {
       width: 500px; } }
   @media only screen and (max-width: 550px) {
-    .content .wrapper {
+    .content .wrapper, .footer-wrapper .wrapper {
       width: 100%;
       padding: 0 15px;
       /*padding-top: 50px;*/ } }
@@ -1567,6 +1567,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
 
 .cover .sidebar {
   padding-top: 25px; }
+
+.footer-wrapper {
+  padding-top: 60px; }
 
 .footerbar {
   margin-top: 20px; }
@@ -1616,8 +1619,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
   border: none;
   position: fixed;
   right: 0;
-  bottom: 30px;
-  padding: 5px 5px; }
+  bottom: 70px;
+  padding: 10px; }
   .back-to-top:before {
     font-size: 22px; }
 
@@ -2029,7 +2032,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
   margin: 5px 0; }
 
 .pagination {
-  display: inline-block; }
+  display: inline-block;
+  margin: 20px 0 80px; }
   .pagination > span, .pagination > a {
     display: inline-block;
     color: inherit;

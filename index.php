@@ -51,16 +51,6 @@ $sidebar = get_option('galopin_show_sidebar');
 		<?php } ?>
 		
 	</div>
-
-	<aside class="footerbar">
-	
-		<div class="grid">
-		
-			<?php get_sidebar('footer'); ?>
-			
-		</div>
-		
-	</aside>
 	
 </div>
 

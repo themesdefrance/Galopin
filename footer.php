@@ -1,3 +1,20 @@
+			</div> <!-- END .content -->
+			
+			<div class="footer-wrapper">
+					
+				<div class="wrapper">
+				
+					<div class="footerbar">
+		
+						<div class="grid">
+						
+							<?php get_sidebar('footer'); ?>
+							
+						</div>
+			
+					</div>
+				</div>
+				
 				<footer class="footer">
 					<div class="grid">
 						<div class="footnote col-1-2">
@@ -24,8 +41,9 @@
 				</footer>
 				
 				<button id="back-to-top" title="<?php _e('Back to the top', 'galopin'); ?>" class="back-to-top typcn typcn-arrow-up-thick"></button>
-				
-			</div>
+			
+			</div> <!-- END .footer-wrapper -->
+			
 			
 		</div>
 	</div>
