@@ -13,7 +13,7 @@ $postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
 		
 			<div class="post-thumbnail">
 			
-				<?php if ($postlink){ ?> <a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>"><?php } ?>
+				<?php if ($postlink){ ?> <a href="<?php the_permalink(); ?>" title="<?php _e('Read more','galopin'); ?>" class="post-permalink"><?php } ?>
 
 					<?php
 						if($sidebar)
@@ -22,7 +22,7 @@ $postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
 							the_post_thumbnail('galopin-post-thumbnail-full');
 					?>
 					
-				<?php if ($postlink){ ?> </a> <?php } ?>
+				<?php if ($postlink){ ?> <span class="post-thumbnail-overlay"></span></a> <?php } ?>
 					
 			</div><!--END .entry-thumbnail-->
 			

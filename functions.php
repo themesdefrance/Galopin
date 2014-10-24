@@ -234,7 +234,8 @@ if(!function_exists('galopin_user_styles')){
 				border-color: <?php echo $color; ?>;
 			}
 			
-			.masonry .brick:hover{
+			.masonry .brick:hover,
+			.post-thumbnail:hover{
 				<?php $hsl_hover = galopin_RGBToHSL(galopin_HTMLToRGB($contrast)); ?>
 				background: <?php echo $color; ?>;
 				text-shadow: 0 0 3px <?php echo galopin_HSLToHTML($hsl_hover->hue, $hsl_hover->saturation, $hsl_hover->lightness, 0.7); ?>;
@@ -248,7 +249,8 @@ if(!function_exists('galopin_user_styles')){
 				text-shadow: 0 0 3px <?php echo galopin_HSLToHTML($hsl_hover->hue, $hsl_hover->saturation, $hsl_hover->lightness, 0.7); ?>;
 			}
 			
-			.masonry .brick-link:before{
+			.masonry .brick-link:before,
+			.post-thumbnail .post-permalink:before{
 				background: <?php echo $contrast; ?>;
 				color: <?php echo $color; ?>;
 			}
