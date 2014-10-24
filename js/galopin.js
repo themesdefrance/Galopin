@@ -36,7 +36,7 @@ $(function(){
 	  });
 	
 	//initmasonry
-	if ($('.masonry')){
+	if ($('.masonry').length){
 		$('.masonry').imagesLoaded(function(){
 			//if ($('.masonry').length){
 				var masonry = new Masonry($('.masonry')[0], {

@@ -1,4 +1,9 @@
-<?php $sidebar = get_option('galopin_show_sidebar'); ?>
+<?php 
+
+$sidebar = get_option('galopin_show_sidebar');
+$postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
+
+?>
 
 <article <?php post_class('post'); ?> itemscope itemtype="http://schema.org/Article">
 
@@ -8,8 +13,8 @@
 		
 			<div class="post-thumbnail">
 			
-				<?php if (is_single() || is_page() || galopin_is_masonry()): ?>
-				
+				<?php if ($postlink){ ?> <a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>"><?php } ?>
+
 					<?php
 						if($sidebar)
 							the_post_thumbnail('galopin-post-thumbnail');
@@ -17,20 +22,8 @@
 							the_post_thumbnail('galopin-post-thumbnail-full');
 					?>
 					
-				<?php else: ?>
-				
-					<a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>">
-						
-						<?php
-							if($sidebar)
-								the_post_thumbnail('galopin-post-thumbnail');
-							else
-								the_post_thumbnail('galopin-post-thumbnail-full');
-						?>
-						
-					</a>
+				<?php if ($postlink){ ?> </a> <?php } ?>
 					
-				<?php endif; ?>
 			</div><!--END .entry-thumbnail-->
 			
 		<?php endif; ?>
