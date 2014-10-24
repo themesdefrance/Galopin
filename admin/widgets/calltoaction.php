@@ -17,7 +17,7 @@ class GalopinCalltoAction extends WP_Widget{
 		echo $args['before_widget'];
 		?>
 		
-			<?php if (isset($instance['title'])){
+			<?php if (isset($instance['title']) && !empty($instance['title'])){
 					echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 			} ?>
 			

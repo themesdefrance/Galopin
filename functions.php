@@ -4,8 +4,8 @@ define('GALOPIN_COCORICO_PREFIX', 'galopin_');
 require_once 'admin/Cocorico/Cocorico.php';
 
 // Widgets
-//require_once 'admin/widgets/social.php';
-require 'admin/widgets/calltoaction.php';
+require_once 'admin/widgets/social.php';
+require_once 'admin/widgets/calltoaction.php';
 
 //////////////////
 // Bootstraping //

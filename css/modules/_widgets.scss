@@ -229,5 +229,27 @@
 	}
 }
 
+.widget_galopinsocial{
+	
+	h3{
+		@extend .typcn-thumbs-up
+	}
+	
+	ul {
+		overflow: hidden;
+		@extend .clearfix;
+		
+		li{
+			float: left;
+			padding: 5px;
+			margin-bottom:0;
+			
+			a{
+				font-size:26px;
+			}
+		}
+	}
+	
+}
 
 
