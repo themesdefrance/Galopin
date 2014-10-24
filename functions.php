@@ -139,7 +139,7 @@ if(!function_exists('galopin_custom_styles')){
 	function galopin_custom_styles(){
 		if (get_option("galopin_custom_css")){
 			echo '<style type="text/css">';
-			echo htmlentities(stripslashes(get_option("galopin_custom_css")), ENT_NOQUOTES);
+			echo strip_tags(stripslashes(get_option("galopin_custom_css")));
 			echo '</style>';
 		}
 	}
@@ -177,6 +177,7 @@ if(!function_exists('galopin_user_styles')){
 			.widget_calendar #next a, 
 			.widget_calendar #prev a,
 			.menu-wrapper,
+			.menu-wrapper .sub-menu,
 			.search-form .submit-btn,
 			.post-content th,
 			.post-pagination,
