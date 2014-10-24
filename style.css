@@ -1308,10 +1308,14 @@ img, table, td, blockquote, code, pre, textarea, input, video {
           transition: 0.2s ease opacity; }
   .menu-wrapper li.current-menu-item, .menu-wrapper li:hover {
     opacity: 1; }
+    .menu-wrapper li.current-menu-item ul li, .menu-wrapper li:hover ul li {
+      opacity: 0.7; }
   @media only screen and (max-width: 550px) {
     .menu-wrapper li {
       display: block;
-      opacity: 0.8; } }
+      opacity: 0.7; }
+      .menu-wrapper li ul li:hover {
+        opacity: 1; } }
 
 .menu-wrapper a {
   display: inline-block;
@@ -1339,8 +1343,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   @media only screen and (max-width: 550px) {
     .menu-wrapper .sub-menu {
       display: block;
-      position: static;
-      background: #444; } }
+      position: static; } }
   .menu-wrapper .sub-menu li {
     opacity: 1; }
 

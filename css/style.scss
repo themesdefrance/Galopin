@@ -59,11 +59,20 @@ $menu-width: 280px;
 	&.current-menu-item,
 	&:hover{
 		opacity: 1;
+		
+		ul li{
+			opacity: .7;
+		}
 	}
 	
 	@include width-below($grid-collapse-below){
 		display: block;
-		opacity: .8;
+		opacity: .7;
+		
+		ul li:hover{
+			opacity: 1;
+		}
+		
 	}
 }
 .menu-wrapper a{
@@ -94,7 +103,6 @@ $menu-width: 280px;
 	@include width-below($grid-collapse-below){
 		display: block;
 		position: static;
-		background: #444;
 	}
 	
 	li{
@@ -188,6 +196,7 @@ $menu-width: 280px;
 	a{
 		padding: 15px 5px;
 	}
+	
 	@include width-below($grid-collapse-below){
 		
 		padding-left: 5px;
