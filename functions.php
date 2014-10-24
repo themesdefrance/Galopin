@@ -177,7 +177,6 @@ if(!function_exists('galopin_user_styles')){
 			.widget_calendar #next a, 
 			.widget_calendar #prev a,
 			.menu-wrapper,
-			.menu-wrapper .sub-menu,
 			.search-form .submit-btn,
 			.post-content th,
 			.post-pagination,
@@ -257,6 +256,10 @@ if(!function_exists('galopin_user_styles')){
 				body:not(.home) .hero-image{
 					background: <?php echo $color; ?> !important;
 					color: <?php echo $contrast; ?> !important;
+				}
+				.menu-wrapper .sub-menu{
+					background: <?php echo $color; ?>;
+					color: <?php echo $contrast; ?>;
 				}
 			}
 			
