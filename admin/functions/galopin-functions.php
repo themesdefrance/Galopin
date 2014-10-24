@@ -1,0 +1,278 @@
+<?php 
+
+/////////////////////////
+// Utility functions   //
+/////////////////////////
+
+if (!function_exists('galopin_is_masonry')){
+	function galopin_is_masonry(){
+		// Are we on a page that support masonry ? If yes, check if masonry is activated
+		if(!is_page() && !is_single() && !is_404() && !is_singular() && !is_attachment() && !is_page_template() && !is_preview())
+			return get_option('galopin_masonry');
+		return false;
+	}
+}
+
+if (!function_exists('galopin_excerpt')){
+	function galopin_excerpt($length){
+		if($length==0)
+			return '';
+		
+		$content = strip_shortcodes(get_the_content());
+		$excerpt = "<p>" . wp_trim_words( $content , $length ) . "</p>";
+		return $excerpt;
+	}
+}
+
+// Thanks to https://gist.github.com/tommcfarlin/f2310bfad60b60ae00bf#file-is-paginated-post-php
+if (!function_exists('galopin_is_paginated_post')){
+	function galopin_is_paginated_post() {
+		global $multipage;
+		return 0 !== $multipage;
+	}
+}
+
+// Function to call if no primary menu
+if (!function_exists('galopin_nomenu')){
+	function galopin_nomenu(){
+		echo '<ul class="top-level-menu"><li><a href="'.admin_url('nav-menus.php').'">'.__('Set up the main menu', 'galopin').'</a></li></ul>';
+	}
+}
+
+// Only get post in search results
+if (!function_exists('galopin_search_filter')){
+	function galopin_search_filter($query) {
+	
+		if ($query->is_search)
+			$query->set('post_type', 'post');
+		return $query;
+	}
+}
+add_filter('pre_get_posts','galopin_search_filter');
+
+//customized pagination links
+if (!function_exists('galopin_posts_nav')){
+	//derived from http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
+	/*
+	 @param $extremes : display or not previous & next links
+	 @param $separator : string to insert between each page
+	*/
+	
+	function galopin_posts_nav($extremes=true, $separator='|'){
+		if (is_singular()) return;
+	
+		global $wp_query;
+		$output = '';
+	
+		// Stop execution if there's only 1 page
+		if($wp_query->max_num_pages <= 1) return;
+	
+		$paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
+		$max = intval($wp_query->max_num_pages);
+	
+		// Add current page to the array
+		if ($paged >= 1) $links[] = $paged;
+	
+		// Add the pages around the current page to the array
+		if ($paged >= 3){
+			$links[] = $paged - 1;
+			$links[] = $paged - 2;
+		}
+	
+		if (($paged + 2 ) <= $max){
+			$links[] = $paged + 2;
+			$links[] = $paged + 1;
+		}
+		
+		$current = apply_filters('galopin_post_nav_current', '<span class="current">%s</span>');
+		$linkTemplate = apply_filters('galopin_post_nav_link', '<a href="%s">%s</a>');
+	
+		// Previous Post Link
+		if ($extremes && get_previous_posts_link()) previous_posts_link();
+	
+		// Link to first page, plus ellipses if necessary */
+		if (!in_array(1, $links)){
+			if ($paged == 1)
+				$output .= sprintf($current, '1');
+			else
+				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link(1)), '1');
+			
+			echo $separator;
+			if (!in_array(2, $links)) $output .= '…'.$separator;
+		}
+	
+		// Link to current page, plus 2 pages in either direction if necessary
+		sort($links);
+		foreach ((array) $links as $link){
+			if ($paged == $link)
+				$output .= sprintf($current, $link);
+			else
+				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link($link)), $link);
+				
+			if ($link < $max) $output .= $separator;
+		}
+	
+		// Link to last page, plus ellipses if necessary
+		if (!in_array($max, $links)){
+			if (!in_array($max-1, $links)) $output .= '…'.$separator;
+	
+			if ($paged == $max)
+				$output .= sprintf($current, $link);
+			else
+				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link($max)), $max);
+		}
+		
+		echo apply_filters('galopin_post_nav', $output);
+	
+		// Next Post Link
+		if ($extremes && get_next_posts_link()) next_posts_link();
+	}
+}
+
+// Borrowed from http://themeshaper.com/2012/11/04/the-wordpress-theme-comments-template/
+if (!function_exists('galopin_comment')){
+	function galopin_comment($comment, $args, $depth){
+		$GLOBALS['comment'] = $comment;
+		switch ($comment->comment_type) :
+			case 'pingback' :
+			case 'trackback' :
+		?>
+		<li class="post pingback">
+			<p>
+				<?php echo apply_filters('galopin_pingback', __('Pingback:', 'galopin')); ?>
+				<?php comment_author_link(); ?>
+			</p>
+		<?php
+			break;
+		default :
+		?>
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+			<article id="comment-<?php comment_ID(); ?>" class="comment">
+				<aside class="comment-aside">
+					<?php if ($comment->comment_approved == '0') : ?>
+						<em><?php echo apply_filters('galopin_commentaire_modere', __('Your comment is waiting for moderation.', 'galopin')); ?></em>
+					<?php endif; ?>
+					<?php echo get_avatar($comment, 80); ?>
+				</aside>
+				
+				<div class="comment-main">
+					<header class="comment-header">
+						<div class="comment-author vcard">
+							<?php echo apply_filters('galopin_commentaire_auteur', sprintf(__('%s', 'galopin'), sprintf(__('<cite class="fn">%s</cite>', 'galopin'), get_comment_author_link()))); ?>
+						</div>
+					</header>
+		 
+					<div class="post-content">
+						<?php comment_text(); ?>
+					</div>
+					
+					<footer class="comment-footer">
+						<div class="comment-date">
+							<?php echo apply_filters('galopin_commentaire_date', sprintf(__('Published on %s at %s', 'galopin'),get_comment_date(),get_comment_time('H:i'))); ?>
+						</div>
+						<div class="reply">
+							<?php 
+							comment_reply_link(array_merge($args, 
+								array(	'depth'=>$depth, 
+										'max_depth'=>$args['max_depth'],
+										'reply_text'=>apply_filters('galopin_commentaire_repondre', __('Reply', 'galopin'))))); 
+							?>
+						</div>
+					<footer>
+				</div>
+			</article>
+		<?php
+			break;
+		endswitch;
+	}
+}
+
+//relies on the Cocorico Social plugin : https://wordpress.org/plugins/cocorico-social/
+if (!function_exists('galopin_social')){
+	function galopin_social(){
+		$export = '';
+		
+		if (function_exists('coco_social_share')){
+			$networks =  get_option('cocosocial_networks_blocks');
+			
+			if (is_array($networks)){
+			
+				foreach ($networks as $network=>$enabled){
+					if (!$enabled) continue;
+					
+					switch ($network){
+						case 'twitter':
+							$export .= '<li><a href="https://twitter.com/'.get_option('cocosocial_twitter_username').'" class="typcn typcn-social-twitter-circular"></a></li>';
+							break;
+						case 'email':
+						case 'viadeo':
+							//sorry, no viadeo support because wedon't have an icon for it
+							//and email doesnt make too much sense here
+							break;
+						default:
+							$url = get_option('cocosocial_'.$network.'_url');
+							if (trim($url) !== ''){
+								$icon = $network;
+								if ($network == 'googleplus') $icon = 'google-plus';
+	
+								$export .= '<li><a href="'.esc_url($url).'" class="typcn typcn-social-'.$icon.'-circular"></a></li>';
+							}
+							break;
+					}
+				}
+			}
+		}
+		
+		return $export;
+	}
+}
+
+// Based on the Compact Archives plugin https://wordpress.org/plugins/compact-archives/
+if (!function_exists('galopin_archives')){
+	function galopin_archives( $style='block', $before='<li>', $after='</li>' ) {
+		global $wpdb;
+		
+		setlocale(LC_ALL,get_locale()); // set localization language
+		
+		$results = $wpdb->get_results("SELECT DISTINCT YEAR(post_date) AS year, MONTH(post_date) AS month FROM " . $wpdb->posts . " WHERE post_type='post' AND post_status='publish' AND post_password='' ORDER BY year DESC, month DESC");
+		
+		if (!$results) {
+			return $before.__('There is no archives to display.', 'galopin').$after;
+		}
+		$dates = array();
+		foreach ($results as $result) {
+			$dates[$result->year][$result->month] = 1;
+		}
+		unset($results);
+		$result = '';
+		foreach ($dates as $year => $months){
+			$result .= $before.'<strong><a href="'.get_year_link($year).'">'.$year.'</a>: </strong> ';
+			for ( $month = 1; $month <= 12; $month += 1) {
+				$month_has_posts = (isset($months[$month]));
+				$dummydate = strtotime("$month/01/2001");
+				// get the month name; strftime() localizes
+				$month_name = strftime("%B", $dummydate); 
+				switch ($style) {
+				case 'initial':
+					$month_abbrev = $month_name[0]; // the inital of the month
+					break;
+				case 'block':
+					$month_abbrev = strftime("%b", $dummydate); // get the short month name; strftime() localizes
+					break;
+				case 'numeric':
+					$month_abbrev = strftime("%m", $dummydate); // get the month number, e.g., '04'
+					break;
+				default:
+					$month_abbrev = $month_name[0]; // the inital of the month
+				}
+				if ($month_has_posts) {
+					$result .= '<a href="'.get_month_link($year, $month).'" title="'.utf8_encode($month_name).' '.$year.'">'.utf8_encode($month_abbrev).'</a> ';
+				} else {
+					$result .= '<span class="emptymonth">'.utf8_encode($month_abbrev).'</span> ';
+				}
+			}
+			$result .= $after."\n";
+		}
+		return $result;
+	}
+}

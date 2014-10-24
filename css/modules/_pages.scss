@@ -1,0 +1,16 @@
+.error404{
+	h1{
+		@extend .typcn-warning-outline
+	}
+	
+	ul.galopin-archives{
+	
+		li{
+			
+			&:before{
+				content:'';
+				padding:0;
+			}
+		}
+	}
+}

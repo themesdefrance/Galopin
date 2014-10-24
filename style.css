@@ -956,7 +956,7 @@ Text Domain: galopin
 .typcn-volume:before {
   content: '\e135'; }
 
-.typcn-warning-outline:before {
+.typcn-warning-outline:before, .error404 h1:before {
   content: '\e136'; }
 
 .typcn-warning:before {
@@ -1814,6 +1814,10 @@ body.admin-bar .cover .menu-wrapper.stuck {
 
 .post-footer {
   margin-top: 20px; }
+
+.error404 ul.galopin-archives li:before {
+  content: '';
+  padding: 0; }
 
 .comment-form {
   margin: 20px 0; }
