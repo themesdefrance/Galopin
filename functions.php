@@ -6,6 +6,7 @@ require_once 'admin/Cocorico/Cocorico.php';
 // Widgets
 require_once 'admin/widgets/social.php';
 require_once 'admin/widgets/calltoaction.php';
+require_once 'admin/widgets/video.php';
 
 //////////////////
 // Bootstraping //

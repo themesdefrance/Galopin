@@ -938,7 +938,7 @@ Text Domain: galopin
 .typcn-vendor-microsoft:before {
   content: '\e12f'; }
 
-.typcn-video-outline:before {
+.typcn-video-outline:before, .widget_galopinvideo h3:before {
   content: '\e130'; }
 
 .typcn-video:before {

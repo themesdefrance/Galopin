@@ -249,7 +249,11 @@
 			}
 		}
 	}
-	
 }
 
+.widget_galopinvideo{
+	h3{
+		@extend .typcn-video-outline
+	}
+}
 
