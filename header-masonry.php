@@ -3,13 +3,13 @@
 	<?php if(is_category()){ ?>
 	
 			<h1 class="masonry-header-title">
-				<?php single_cat_title(_e('Posts from ', 'galopin')); ?>
+				<?php single_cat_title(__('Posts from ', 'galopin')); ?>
 			</h1>
 			
 	<?php }else if(is_tag()){ ?>
 		
 			<h1 class="masonry-header-title">
-				<?php single_tag_title(_e('Posts tagged by ', 'galopin')); ?>
+				<?php single_tag_title(__('Posts tagged by ', 'galopin')); ?>
 			</h1>
 			
 	<?php }else if(is_search()){ ?>
