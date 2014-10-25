@@ -5,6 +5,20 @@ $(function(){
 		$('.content-wrapper').toggleClass('menu-open');
 	});
 	
+	$('.main-menu').menuAim({
+		activate: function(row){
+			$(row).find('> .sub-menu').show();
+		},
+		deactivate: function(row){
+			$(row).find('> .sub-menu').hide();
+		},
+		exitMenu: function(){
+			return true;
+		},
+		submenuDirection: 'below',
+		rowSelector: '> ul >li'
+	});
+	
 	//top bar search form
 	$('.search-wrapper .form-toggle').click(function(){
 		$(this).toggle();

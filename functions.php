@@ -100,6 +100,8 @@ if (!function_exists('galopin_enqueue')){
 		
 		wp_register_script('fitvids', get_template_directory_uri().'/js/jquery.fitvids.js', array('jquery'), $theme->get('Version'), true);
 		
+		wp_register_script('jq-aim', get_template_directory_uri().'/js/jquery.aim.js', array('jquery'), $theme->get('Version'), true);
+		
 		wp_register_script('galopin', get_template_directory_uri().'/js/galopin.js', array('jquery'), $theme->get('Version'), true);
 		
 		//main stylesheet
@@ -109,6 +111,7 @@ if (!function_exists('galopin_enqueue')){
 		wp_enqueue_style('icons', get_stylesheet_directory_uri().'/fonts/typicons.min.css', array(), $theme->get('Version'));
 		
 		wp_enqueue_script('fitvids');
+		wp_enqueue_script('jq-aim');
 		wp_enqueue_script('masonry');
 		
 		wp_enqueue_script('galopin');

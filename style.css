@@ -1308,8 +1308,6 @@ img, table, td, blockquote, code, pre, textarea, input, video {
           transition: 0.2s ease opacity; }
   .menu-wrapper li.current-menu-item, .menu-wrapper li:hover {
     opacity: 1; }
-    .menu-wrapper li.current-menu-item ul li, .menu-wrapper li:hover ul li {
-      opacity: 0.7; }
   @media only screen and (max-width: 550px) {
     .menu-wrapper li {
       display: block;
@@ -1338,7 +1336,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   left: 0;
   right: 0;
   top: 100%;
-  padding-top: 2px;
+  padding-top: 1px;
   display: none; }
   @media only screen and (max-width: 550px) {
     .menu-wrapper .sub-menu {
@@ -1346,6 +1344,11 @@ img, table, td, blockquote, code, pre, textarea, input, video {
       position: static; } }
   .menu-wrapper .sub-menu li {
     opacity: 1; }
+  .menu-wrapper .sub-menu a {
+    font-size: 14px;
+    padding: 12px 10px 14px 10px;
+    -webkit-transition: 0.2s background ease-out, 0.2s color ease-out;
+            transition: 0.2s background ease-out, 0.2s color ease-out; }
 
 .menu-wrapper .sub-menu a {
   font-size: 16px; }
@@ -1353,9 +1356,6 @@ img, table, td, blockquote, code, pre, textarea, input, video {
     .menu-wrapper .sub-menu a {
       color: #fff !important;
       padding-left: 30px; } }
-
-.top-level-menu > li:hover .sub-menu {
-  display: block; }
 
 .menu-wrapper .search-wrapper, .menu-wrapper .social-menu {
   position: absolute;
@@ -1687,7 +1687,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
     display: block;
     position: relative;
     text-decoration: none;
-    color: inherit; }
+    color: inherit;
+    overflow: hidden; }
     .post-thumbnail .post-permalink:before {
       background: #000;
       content: attr(title);
