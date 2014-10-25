@@ -93,19 +93,13 @@
 	}
 }
 .masonry .brick:hover{
-	
-	color:transparent;
-	
+	img,
+	iframe,
 	.post-content,
 	.post-header-title,
 	.post-header-title:before,
 	.masonry-footer{
-		color: transparent;
-	}
-	
-	img,
-	iframe{
-		filter: blur(2px);
+		filter: blur(1.5px);
 	}
 	
 	.brick-link:before{
