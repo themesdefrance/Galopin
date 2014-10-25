@@ -13,12 +13,14 @@
 .post-thumbnail{
 	position:relative;
 	overflow:hidden;
-	transition: .4s opacity ease-out;
+	
+	transition: .4s background ease-out;
+	
 	img{
 		height:auto;
 		display:block;
 		opacity:1;
-		
+		transition:.4s opacity ease-out;
 	}
 	
 	.post-permalink{

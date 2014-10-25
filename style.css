@@ -1159,7 +1159,7 @@ html {
   font-size: 16pxpx;
   color: #333; }
 
-.clearfix:before, .grid:before, .menu-wrapper:before, .comment:before, .widget_galopinsocial ul:before, .clearfix:after, .grid:after, .menu-wrapper:after, .comment:after, .widget_galopinsocial ul:after {
+.clearfix:before, .grid:before, .menu-wrapper:before, .comment:before, .widget_galopinsocial ul:before, .masonry:before, .clearfix:after, .grid:after, .menu-wrapper:after, .comment:after, .widget_galopinsocial ul:after, .masonry:after {
   content: "";
   display: table;
   clear: both; }
@@ -1670,12 +1670,14 @@ body.admin-bar .cover .menu-wrapper.stuck {
 .post-thumbnail {
   position: relative;
   overflow: hidden;
-  -webkit-transition: 0.4s opacity ease-out;
-          transition: 0.4s opacity ease-out; }
+  -webkit-transition: 0.4s background ease-out;
+          transition: 0.4s background ease-out; }
   .post-thumbnail img {
     height: auto;
     display: block;
-    opacity: 1; }
+    opacity: 1;
+    -webkit-transition: 0.4s opacity ease-out;
+            transition: 0.4s opacity ease-out; }
   .post-thumbnail .post-permalink {
     display: block;
     position: relative;
@@ -2153,6 +2155,12 @@ body.admin-bar .cover .menu-wrapper.stuck {
   margin: 0 auto; }
 
 .masonry .brick {
+  float: left;
+  /*margin-right: 30px;
+	
+	&:nth-child(3n){
+		margin-right:0;
+	}*/
   background: #fff;
   margin-bottom: 30px;
   padding: 10px;
@@ -2170,7 +2178,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
   .masonry .brick img, .masonry .brick .post-video {
     height: auto;
     -webkit-transition: 0.4s opacity ease-out;
-            transition: 0.4s opacity ease-out; }
+            transition: 0.4s opacity ease-out;
+    overflow: hidden; }
   .masonry .brick .post {
     margin-bottom: 0; }
   .masonry .brick .post-header {
@@ -2184,7 +2193,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
   .masonry .brick .post-quote .post-header-title blockquote {
     display: inline; }
   .masonry .brick .post-footer {
-    font-size: 14px; }
+    font-size: 14px;
+    margin-top: 0px; }
   .masonry .brick:hover img, .masonry .brick:hover .post-video {
     opacity: 0.5; }
 

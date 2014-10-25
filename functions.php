@@ -74,7 +74,7 @@ add_action('after_setup_theme', 'galopin_setup');
 //add custom image size to native dailogs
 if (!function_exists('galopin_image_size_names_choose')){
 	function galopin_image_size_names_choose($sizes) {
-		$added = array('galopin-post-thumbnail'=>__('Post', 'galopin'));
+		$added = array('galopin-post-thumbnail'=>__('Post width', 'galopin'));
 		$newsizes = array_merge($sizes, $added);
 		return $newsizes;
 	}

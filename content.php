@@ -22,7 +22,7 @@ $postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
 							the_post_thumbnail('galopin-post-thumbnail-full');
 					?>
 					
-				<?php if ($postlink){ ?> <span class="post-thumbnail-overlay"></span></a> <?php } ?>
+				<?php if ($postlink){ ?></a> <?php } ?>
 					
 			</div><!--END .entry-thumbnail-->
 			
