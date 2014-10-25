@@ -1475,12 +1475,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
 
 @media only screen and (max-width: 550px) {
   .admin-bar .hero-image {
-    top: auto; }
-  .home .hero-image {
-    -webkit-box-align: baseline;
-    -webkit-align-items: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline; } }
+    top: auto; } }
 
 .cover .hero-image {
   margin-bottom: 70px; }
