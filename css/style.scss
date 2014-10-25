@@ -53,22 +53,14 @@ $menu-width: 280px;
 }
 .menu-wrapper li{
 	display: inline-block;
-	opacity: .7;
-	transition: .2s ease opacity;
-	
-	&.current-menu-item,
-	&:hover{
-		opacity: 1;
-	}
 	
 	@include width-below($grid-collapse-below){
-		display: block;
-		opacity: .7;
-		
-		ul li:hover{
-			opacity: 1;
-		}
-		
+		display: block;		
+	}
+	
+	&.current-menu-item a,
+	&:hover a{
+		opacity: 1;
 	}
 }
 .menu-wrapper a{
@@ -77,6 +69,7 @@ $menu-width: 280px;
 	padding:18px 10px 20px 15px;
 	text-decoration: none;
 	font-size: 16px;
+	opacity: .7;
 	
 	@include width-below($grid-collapse-below){
 		display: block;
@@ -99,6 +92,8 @@ $menu-width: 280px;
 	@include width-below($grid-collapse-below){
 		display: block;
 		position: static;
+		background: #333;
+		padding-top: 0;
 	}
 	
 	li{
@@ -107,7 +102,8 @@ $menu-width: 280px;
 	a{
 		font-size: 14px;
 		padding:12px 10px 14px 10px;
-		transition: .2s background ease-out, .2s color ease-out;
+		transition: .2s background ease-out, 
+					.2s color ease-out;
 	}
 }
 .menu-wrapper .sub-menu a{
@@ -117,6 +113,7 @@ $menu-width: 280px;
 	@include width-below($grid-collapse-below){
 		color: #fff !important;
 		padding-left: 30px;
+		opacity: 1;
 	}
 
 	&:hover{

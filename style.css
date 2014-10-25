@@ -1302,25 +1302,20 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   list-style: none; }
 
 .menu-wrapper li {
-  display: inline-block;
-  opacity: 0.7;
-  -webkit-transition: 0.2s ease opacity;
-          transition: 0.2s ease opacity; }
-  .menu-wrapper li.current-menu-item, .menu-wrapper li:hover {
-    opacity: 1; }
+  display: inline-block; }
   @media only screen and (max-width: 550px) {
     .menu-wrapper li {
-      display: block;
-      opacity: 0.7; }
-      .menu-wrapper li ul li:hover {
-        opacity: 1; } }
+      display: block; } }
+  .menu-wrapper li.current-menu-item a, .menu-wrapper li:hover a {
+    opacity: 1; }
 
 .menu-wrapper a {
   display: inline-block;
   color: #fff;
   padding: 18px 10px 20px 15px;
   text-decoration: none;
-  font-size: 16px; }
+  font-size: 16px;
+  opacity: 0.7; }
   @media only screen and (max-width: 550px) {
     .menu-wrapper a {
       display: block;
@@ -1341,7 +1336,9 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   @media only screen and (max-width: 550px) {
     .menu-wrapper .sub-menu {
       display: block;
-      position: static; } }
+      position: static;
+      background: #333;
+      padding-top: 0; } }
   .menu-wrapper .sub-menu li {
     opacity: 1; }
   .menu-wrapper .sub-menu a {
@@ -1355,7 +1352,8 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   @media only screen and (max-width: 550px) {
     .menu-wrapper .sub-menu a {
       color: #fff !important;
-      padding-left: 30px; } }
+      padding-left: 30px;
+      opacity: 1; } }
 
 .menu-wrapper .search-wrapper, .menu-wrapper .social-menu {
   position: absolute;

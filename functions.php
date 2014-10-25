@@ -205,6 +205,11 @@ if(!function_exists('galopin_user_styles')){
 				background: <?php echo $complement; ?>;
 				color: <?php echo $contrast; ?>;
 			}
+			.masonry .brick-link:before,
+			.post-thumbnail .post-permalink:before{
+				background: <?php echo $contrast; ?>;
+				color: <?php echo $color; ?>;
+			}
 			.menu-wrapper .sub-menu a,
 			.footer a,
 			.post-header-title a:hover,
@@ -251,28 +256,9 @@ if(!function_exists('galopin_user_styles')){
 			.masonry .brick:hover .post-header-title,
 			.masonry .brick:hover .post-header-title:before,
 			.masonry .brick:hover .post-header-title blockquote a,
-			.masonry .brick:hover .masonry-footer,
-			.typcn-th-menu:before{
+			.masonry .brick:hover .masonry-footer{
 				text-shadow: 0 0 3px <?php echo galopin_HSLToHTML($hsl_hover->hue, $hsl_hover->saturation, $hsl_hover->lightness, 0.7); ?>;
-			}
-			
-			.masonry .brick-link:before,
-			.post-thumbnail .post-permalink:before{
-				background: <?php echo $contrast; ?>;
-				color: <?php echo $color; ?>;
-			}
-			@media only screen and (max-width: 550px){
-				body:not(.home) .hero-image{
-					background: <?php echo $color; ?> !important;
-					color: <?php echo $contrast; ?> !important;
-				}
-				.menu-wrapper .sub-menu{
-					background: <?php echo $color; ?>;
-					color: <?php echo $contrast; ?>;
-				}
-			}
-			
-			
+			}			
 			</style>
 		<?php }
 }
