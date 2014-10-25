@@ -1706,8 +1706,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
   .post-thumbnail:hover {
     /*color:transparent;*/ }
     .post-thumbnail:hover img, .post-thumbnail:hover iframe {
-      -webkit-filter: blur(2px);
-              filter: blur(2px);
+      -webkit-filter: blur(1.5px);
+              filter: blur(1.5px);
       opacity: 0.5; }
     .post-thumbnail:hover .post-permalink:before {
       opacity: 1;
