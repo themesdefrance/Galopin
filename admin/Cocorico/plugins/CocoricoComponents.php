@@ -297,7 +297,7 @@ function cocoricoUploadComponent($component, $options=array()){
 	$output .= '
 		<div class="cocorico-preview-wrapper attachment" style="float: none; '.(($value) ? '' : 'display: none;').'">		
 			<div class="attachment-preview" style="width: 150px; height: 150px; cursor: auto;">
-				<img src="'.$src.'" alt="'.$component->getName().'" class="cocorico-preview icon" style="max-width: 100%; max-height: 80%;">
+				<img src="'.$src.'" alt="'.$component->getName().'" class="cocorico-preview icon" style="max-width: 100%; max-height: 80%; position: absolute; top:0; left: 0;">
 				
 				<div class="filename">
 					<div class="submitbox">
