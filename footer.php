@@ -21,10 +21,10 @@
 							<?php
 							if(get_option("galopin_footer_left")) {
 								echo strip_tags(get_option("galopin_footer_left"), '<strong><a><em><img>');
+							}else{
+								printf(__('<strong>%s</strong> - Galopin by <a href="https://www.themesdefrance.fr/" target="_blank">Themes de France</a>', 'galopin'),date('Y'));
 							}
-							else{  
-								_e('<strong>2014</strong> - Galopin by <a href="https://www.themesdefrance.fr" target="_blank">Themes de France</a>', 'galopin');
-							} ?>
+							 ?>
 						</div>
 						<div class="menu col-1-2">
 							<?php

@@ -26,9 +26,15 @@ add_action('after_switch_theme', 'galopin_activation');
 //Register menus, sidebars and image sizes
 if (!function_exists('galopin_setup')){
 	function galopin_setup(){
+		
+		// Load language
+		load_theme_textdomain('galopin', get_template_directory().'/languages');
+		
 		// Register menus
-		register_nav_menu('primary', __('Main menu', 'galopin'));
-		register_nav_menu('footer', __('Footer menu', 'galopin'));
+		register_nav_menus( array(
+			'primary'   => __('Main menu', 'galopin'),
+			'footer' => __('Footer menu', 'galopin'),
+		) );
 		
 		//Register sidebars
 		register_sidebar(array(
@@ -60,9 +66,7 @@ if (!function_exists('galopin_setup')){
 		
 		// Add Meta boxes for post formats
 		require_once 'admin/metaboxes/post-formats.php';
-		
-		// Load language
-		//load_theme_textdomain('galopin', get_template_directory().'/local');
+
 	}
 }
 add_action('after_setup_theme', 'galopin_setup');
@@ -119,7 +123,7 @@ add_action('wp_enqueue_scripts', 'galopin_enqueue');
 // Add admin menu
 if (!function_exists('galopin_admin_menu')){
 	function galopin_admin_menu(){
-		add_theme_page('Galopin Settings', 'Galopin Settings', 'edit_theme_options', 'galopin_options', 'galopin_options');
+		add_theme_page(__('Galopin Settings', 'galopin'),__('Galopin Settings', 'galopin'), 'edit_theme_options', 'galopin_options', 'galopin_options');
 	}
 }
 add_action('admin_menu', 'galopin_admin_menu');

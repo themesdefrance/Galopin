@@ -2,7 +2,7 @@
 $form = new Cocorico(GALOPIN_COCORICO_PREFIX);
 
 $form->startWrapper('titre');
-$form->component('raw', __('Galopin Options', 'galopin'));
+$form->component('raw', __('Galopin Settings', 'galopin'));
 $form->endWrapper('titre');
 
 $form->groupHeader(array('general'=>__('General', 'galopin'),
@@ -34,14 +34,14 @@ $form->setting(array('type'=>'text',
 $form->setting(array('type'=>'upload',
 					 'name'=>'hero_image',
 					 'label'=>__('Header image', 'galopin'),
-					 'description'=>__('Upload on image to use as header on your website. Use a 1920x400 jpg/png file or more if you enabled the fullscreen home header image.', 'galopin')));
+					 'description'=>__('Upload an image to use as header on your website. Use a 1920x500 jpg/png file or more if you enabled the fullscreen home header image.', 'galopin')));
 					 
 $form->setting(array('type'=>'textarea',
 					 'name'=>'footer_left',
 					 'label'=>__("Footer", 'galopin'),
 					 'description'=>__('Left footer content. The following HTML tags are allowed : &lt;a href=&quot;LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, &lt;em&gt;ITALIC_TEXT&lt;/em&gt;, &lt;img src=&quot;IMAGE_URL&quot;&gt;.', 'galopin'),
 					 'options'=>array(
-					 	'default'=>__('<strong>2014</strong> - Galopin by <a href="https://www.themesdefrance.fr/" target="_blank">Themes de France</a>', 'galopin')
+					 	'default'=>sprintf(__('<strong>%s</strong> - Galopin by <a href="https://www.themesdefrance.fr/" target="_blank">Themes de France</a>', 'galopin'),date('Y'))
 					 	)));
 
 

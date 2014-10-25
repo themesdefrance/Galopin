@@ -1687,8 +1687,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
     display: block;
     position: relative;
     text-decoration: none;
-    color: inherit;
-    overflow: hidden; }
+    color: inherit; }
     .post-thumbnail .post-permalink:before {
       background: #000;
       content: attr(title);
