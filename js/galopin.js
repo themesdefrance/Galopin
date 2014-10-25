@@ -5,15 +5,17 @@ $(function(){
 		$('.content-wrapper').toggleClass('menu-open');
 	});
 	
+	//menu aim
+	var useJsMenu = ($('.menu-wrapper .sub-menu').css('position') === 'absolute');
 	$('.main-menu').menuAim({
 		activate: function(row){
-			$(row).find('> .sub-menu').show();
+			if (useJsMenu) $(row).find('> .sub-menu').show();
 		},
 		deactivate: function(row){
-			$(row).find('> .sub-menu').hide();
+			if (useJsMenu) $(row).find('> .sub-menu').hide();
 		},
 		exitMenu: function(){
-			return true;
+			if (useJsMenu) return true;
 		},
 		submenuDirection: 'below',
 		rowSelector: '> ul >li'
@@ -75,6 +77,23 @@ $(function(){
 	$(document).on('scroll', function(event){
 		if ($(window).scrollTop() > $(window).height()) $toTop.fadeIn();
 		else $toTop.fadeOut();
+	});
+	
+	//things dependant on window size
+	var resizeTimeout;
+	
+	function windowSizeChanged(){
+		var previousState = useJsMenu;
+		useJsMenu = ($('.menu-wrapper .sub-menu').css('position') === 'absolute');
+		
+		if (previousState != useJsMenu){
+			(useJsMenu) ? $('.menu-wrapper .sub-menu').hide() : $('.menu-wrapper .sub-menu').show();
+		}
+	}
+	
+	$(window).resize(function(){
+		if (resizeTimeout) clearTimeout(resizeTimeout);
+		resizeTimeout = setTimeout(windowSizeChanged, 100);
 	});
 });
 })(jQuery);
