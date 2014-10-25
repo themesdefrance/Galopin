@@ -1,5 +1,23 @@
 (function($){
 $(function(){
+	
+	//initmasonry
+	
+	$(document).ready(function(){
+		if ($('.masonry').length){
+			$('.masonry').imagesLoaded(function(){
+				//if ($('.masonry').length){
+					var masonry = new Masonry($('.masonry')[0], {
+						itemSelector: '.brick',
+						columnWidth: '.masonry .brick',
+						transitionDuration: '0.3s',
+						gutter: 30
+					});
+				//}
+			});
+		}
+	});
+	
 	//menu toggle on mobile view
 	$('.menu-toggle').click(function(){
 		$('.content-wrapper').toggleClass('menu-open');
@@ -50,19 +68,6 @@ $(function(){
 	 $(document).ready(function(){
 	    $('.post-video, .widget-video').fitVids();
 	  });
-	
-	//initmasonry
-	if ($('.masonry').length){
-		$('.masonry').imagesLoaded(function(){
-			//if ($('.masonry').length){
-				var masonry = new Masonry($('.masonry')[0], {
-					itemSelector: '.brick',
-					columnWidth: '.masonry .brick',
-					gutter: 30
-				});
-			//}
-		});
-	}
 	
 	//back to top button
 	var $toTop = $('#back-to-top');

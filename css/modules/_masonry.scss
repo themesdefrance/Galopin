@@ -15,9 +15,18 @@
 
 .masonry{
 	margin: 0 auto;
+	
+	@extend .clearfix
 }
 
 .masonry .brick{
+	float:left;
+	/*margin-right: 30px;
+	
+	&:nth-child(3n){
+		margin-right:0;
+	}*/
+	
 	background: #fff;
 	margin-bottom: 30px;
 	padding: 10px;
@@ -38,6 +47,7 @@
 	.post-video{
 		height: auto;
 		transition: .4s opacity ease-out;
+		overflow:hidden;
 	}
 	
 	.post{
@@ -61,6 +71,7 @@
 	
 	.post-footer{
 		font-size:14px;
+		margin-top:0px;
 	}
 	
 	&:hover{
