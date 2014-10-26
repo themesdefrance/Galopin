@@ -328,6 +328,9 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	margin: 0 auto;
 	
 	@include width-below(1000px){
+		width: 800px;
+	}
+	@include width-below(800px){
 		width: 500px;
 	}
 	@include width-below($grid-collapse-below){

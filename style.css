@@ -1543,6 +1543,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
   margin: 0 auto; }
   @media only screen and (max-width: 1000px) {
     .content .wrapper, .footer-wrapper .wrapper {
+      width: 800px; } }
+  @media only screen and (max-width: 800px) {
+    .content .wrapper, .footer-wrapper .wrapper {
       width: 500px; } }
   @media only screen and (max-width: 550px) {
     .content .wrapper, .footer-wrapper .wrapper {
