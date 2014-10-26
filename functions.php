@@ -1,5 +1,13 @@
 <?php
 
+define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr');
+define('EDD_SL_THEME_NAME', 'Galopin');
+define('EDD_SL_THEME_VERSION', '0.001');
+define('EDD_SL_LICENSE_KEY', 'galopin_license_edd');
+
+if(!class_exists('EDD_SL_Theme_Updater'))
+	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
+
 define('GALOPIN_COCORICO_PREFIX', 'galopin_');
 if(is_admin())
 	require_once 'admin/Cocorico/Cocorico.php';
@@ -264,3 +272,57 @@ if(!function_exists('galopin_user_styles')){
 add_action('wp_head','galopin_user_styles', 98);
 
 
+////////////////////////////////////
+// License activation
+////////////////////////////////////
+
+if(!function_exists('galopin_edd')){
+	function galopin_edd(){
+		$license = trim(get_option(EDD_SL_LICENSE_KEY));
+		$status = get_option('galopin_license_status');
+		
+		if (!$status){
+			//valider la license
+			$api_params = array(
+				'edd_action'=>'activate_license',
+				'license'=>$license,
+				'item_name'=>urlencode(EDD_SL_THEME_NAME)
+			);
+	
+			$response = wp_remote_get(add_query_arg($api_params, EDD_SL_STORE_URL), array('timeout'=>15, 'sslverify'=>false));
+	
+			if (!is_wp_error($response)){
+				$license_data = json_decode(wp_remote_retrieve_body($response));
+				if ($license_data->license === 'valid') update_option('galopin_license_status', true);
+			}
+		}
+		
+		$edd_updater = new EDD_SL_Theme_Updater(array( 
+				'remote_api_url'=> EDD_SL_STORE_URL,
+				'version' 	=> EDD_SL_THEME_VERSION,
+				'license' 	=> $license,
+				'item_name' => EDD_SL_THEME_NAME,
+				'author'	=> __('Themes de France','galopin')
+			)
+		);
+	}
+}
+add_action('admin_init', 'galopin_edd');
+
+////////////////////////////////////
+// Etendard notifications
+////////////////////////////////////
+
+if(!function_exists('galopin_admin_notice')){
+	function galopin_admin_notice(){
+		global $current_user;
+        $user_id = $current_user->ID;
+	
+		if(!get_option('galopin_license_status')){
+			echo '<div class="error"><p>';
+			_e("In order to get updates, please enter your licence that you received by email.", 'galopin');
+			echo '</p></div>';
+		}
+	}
+}
+add_action('admin_notices', 'galopin_admin_notice');
