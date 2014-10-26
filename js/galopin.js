@@ -1,8 +1,6 @@
 (function($){
 $(function(){
-	
 	//initmasonry
-	
 	$(document).ready(function(){
 		if ($('.masonry').length){
 			$('.masonry').imagesLoaded(function(){
@@ -52,15 +50,20 @@ $(function(){
 		$('.search-wrapper .form-toggle').toggle();
 	});
 	
-	//fix the menu in hero mode
+	var $menu = $('.menu-wrapper');
+	var winHeight = $(window).height(),
+		menuHeight = $menu.height(),
+		heroImageStop = (winHeight-menuHeight);
 	if ($('.content-wrapper.cover').length){
-		var $menu =$('.menu-wrapper'),
-			top = $menu.position().top;
-				
+		//fit hero to the exact size
+		$('.cover .hero-image').css('height', heroImageStop+'px');
+		$menu.css('top', heroImageStop+'px');
+		
+		//fix the menu in hero mode
 		$(document).on('scroll', function(event){
 			var scroll = $(window).scrollTop();
 				
-			if (top-scroll <= 0) $menu.addClass('stuck');
+			if (heroImageStop-scroll <= 0) $menu.addClass('stuck');
 			else if ($menu.hasClass('stuck')) $menu.removeClass('stuck');
 		});
 	}
@@ -88,12 +91,18 @@ $(function(){
 	var resizeTimeout;
 	
 	function windowSizeChanged(){
+		//usingflyout menu or not?
 		var previousState = useJsMenu;
 		useJsMenu = ($('.menu-wrapper .sub-menu').css('position') === 'absolute');
 		
 		if (previousState != useJsMenu){
 			(useJsMenu) ? $('.menu-wrapper .sub-menu').hide() : $('.menu-wrapper .sub-menu').show();
 		}
+		
+		//hero image stuff
+		winHeight = $(window).height();
+		menuHeight = $menu.height();
+		heroImageStop = (winHeight-menuHeight);
 	}
 	
 	$(window).resize(function(){

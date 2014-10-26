@@ -289,7 +289,7 @@ $menu-width: 280px;
 	
 	&.stuck{
 		position: fixed;
-		top: 0;
+		top: 0 !important;
 	}
 }
 

@@ -1512,7 +1512,7 @@ img, table, td, blockquote, code, pre, textarea, input, video {
       top: 0; } }
   .cover .menu-wrapper.stuck {
     position: fixed;
-    top: 0; }
+    top: 0 !important; }
 
 body.admin-bar .cover .menu-wrapper.stuck {
   top: 32px; }
