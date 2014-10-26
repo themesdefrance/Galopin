@@ -40,11 +40,13 @@ $(function(){
 	//top bar search form
 	$('.search-wrapper .form-toggle').click(function(){
 		$(this).toggle();
+		$('.search-wrapper').addClass('active');
 		$('.search-wrapper .search-form').toggle();
 		$('.search-wrapper .search-field').focus();
 	});
 	
 	$('.search-wrapper .search-field').blur(function(event){
+		$('.search-wrapper').removeClass('active');
 		$('.search-wrapper .search-field').val('');
 		$('.search-wrapper .search-form').toggle();
 		$('.search-wrapper .form-toggle').toggle();

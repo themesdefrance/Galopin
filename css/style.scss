@@ -134,7 +134,6 @@ $menu-width: 280px;
 	
 	@include width-below($grid-collapse-below){
 		position: static;
-		height:50px;
 	}
 }
 .menu-wrapper .search-wrapper{
@@ -145,36 +144,31 @@ $menu-width: 280px;
 	align-items: center;
 	
 	&.active{
-		background: #f1f1f1;
+		background: #fff;
 	}
 	
 	@include width-below($grid-collapse-below){
 		width: 100%;
 		max-width: none;
-		padding:0;
-		height: 50px;
 		align-items: flex-start;
+		padding: 10px 0;
 	}
 }
 
-.search-wrapper .search-form .reset-btn{
-	top:13px;
-	right:0;
-	
-	@include width-below($grid-collapse-below){
-		top: 9px;
-	}	
-}
 .search-wrapper .search-form{
 	display: none;
 }
-.search-wrapper input.search-field{
-	border-left: none;
-	padding: 4px 4px 4px 14px;
-	height:57px;
-	@include width-below($grid-collapse-below){
-		height:50px;
+.search-wrapper .search-form .search-field{
+	width: 80%;
+	padding: 4px 4px;
+	border-left: 2px solid #B2B2B2;
+	
+	&:focus{
+		background: #fff;
 	}
+}
+.search-wrapper .search-form .reset-btn{
+	background: #fff;
 }
 .search-wrapper .submit-btn{
 	display: none;
@@ -184,8 +178,10 @@ $menu-width: 280px;
 	background: none;
 	color: #f1f1f1;
 	font-size: 20px;
+	
 	@include width-below($grid-collapse-below){
 		padding-top: 10px;
+		padding-left: 15px;
 	}
 }
 
