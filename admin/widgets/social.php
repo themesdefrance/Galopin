@@ -20,7 +20,7 @@ class GalopinSocial extends WP_Widget{
 	public function __construct(){
 		parent::__construct(
 			'GalopinSocial',
-			__('Galopin Social', 'galopin'),
+			__('Galopin - Social', 'galopin'),
 			array('description'=>__('Display links to your social profiles.', 'galopin'),)
 		);
 	}

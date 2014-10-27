@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Galopin\n"
-"POT-Creation-Date: 2014-10-25 06:36+0100\n"
-"PO-Revision-Date: 2014-10-25 06:36+0100\n"
+"POT-Creation-Date: 2014-10-27 17:17+0100\n"
+"PO-Revision-Date: 2014-10-27 17:17+0100\n"
 "Last-Translator: \n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: en_US\n"
@@ -82,9 +82,10 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: ../footer.php:26
+#: ../footer.php:25 ../admin/index.php:44
+#, php-format
 msgid ""
-"<strong>2014</strong> - Galopin by <a href=\"https://www.themesdefrance.fr\" "
+"<strong>%s</strong> - Galopin by <a href=\"https://www.themesdefrance.fr/\" "
 "target=\"_blank\">Themes de France</a>"
 msgstr ""
 
@@ -92,36 +93,50 @@ msgstr ""
 msgid "Back to the top"
 msgstr ""
 
-#: ../functions.php:30
+#: ../functions.php:43
 msgid "Main menu"
 msgstr ""
 
-#: ../functions.php:31
+#: ../functions.php:44
 msgid "Footer menu"
 msgstr ""
 
-#: ../functions.php:35 ../admin/index.php:68
+#: ../functions.php:49 ../admin/index.php:68
 msgid "Sidebar"
 msgstr ""
 
-#: ../functions.php:37
+#: ../functions.php:51
 msgid "Add widgets in the sidebar."
 msgstr ""
 
-#: ../functions.php:45 ../admin/index.php:41
+#: ../functions.php:59 ../admin/index.php:41
 msgid "Footer"
 msgstr ""
 
-#: ../functions.php:47
+#: ../functions.php:61
 msgid "Add widgets in the footer."
 msgstr ""
 
-#: ../functions.php:73
-msgid "Post"
+#: ../functions.php:85
+msgid "Post width"
 msgstr ""
 
-#: ../functions.php:130
+#: ../functions.php:137 ../admin/index.php:5
+msgid "Galopin Settings"
+msgstr ""
+
+#: ../functions.php:145
 msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../functions.php:305
+msgid "Themes de France"
+msgstr ""
+
+#: ../functions.php:323
+msgid ""
+"In order to get updates, please enter your licence that you received by "
+"email."
 msgstr ""
 
 #: ../header-masonry.php:6
@@ -185,8 +200,18 @@ msgstr ""
 msgid "Fullwidth"
 msgstr ""
 
-#: ../admin/index.php:5
-msgid "Galopin Options"
+#: ../admin/EDD_SL_Theme_Updater.php:56
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+
+#: ../admin/EDD_SL_Theme_Updater.php:61
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Discover what's new</a> or <a href=\"%5$s\"%6$s>Update now !</"
+"a>."
 msgstr ""
 
 #: ../admin/index.php:8
@@ -195,6 +220,16 @@ msgstr ""
 
 #: ../admin/index.php:9
 msgid "Appearance"
+msgstr ""
+
+#: ../admin/index.php:18
+msgid "License"
+msgstr ""
+
+#: ../admin/index.php:19
+msgid ""
+"Enter your licence key in order to receive Galopin updates. You'll find it "
+"in the confirmation email we sent you after your purchase."
 msgstr ""
 
 #: ../admin/index.php:26
@@ -219,7 +254,7 @@ msgstr ""
 
 #: ../admin/index.php:37
 msgid ""
-"Upload on image to use as header on your website. Use a 1920x400 jpg/png "
+"Upload an image to use as header on your website. Use a 1920x500 jpg/png "
 "file or more if you enabled the fullscreen home header image."
 msgstr ""
 
@@ -228,12 +263,6 @@ msgid ""
 "Left footer content. The following HTML tags are allowed : &lt;a href=&quot;"
 "LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, "
 "&lt;em&gt;ITALIC_TEXT&lt;/em&gt;, &lt;img src=&quot;IMAGE_URL&quot;&gt;."
-msgstr ""
-
-#: ../admin/index.php:44
-msgid ""
-"<strong>2014</strong> - Galopin by <a href=\"https://www.themesdefrance.fr/"
-"\" target=\"_blank\">Themes de France</a>"
 msgstr ""
 
 #: ../admin/index.php:60

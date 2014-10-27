@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Galopin\n"
-"POT-Creation-Date: 2014-10-25 08:10+0100\n"
-"PO-Revision-Date: 2014-10-25 08:10+0100\n"
+"POT-Creation-Date: 2014-10-27 17:18+0100\n"
+"PO-Revision-Date: 2014-10-27 19:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: fr_FR\n"
@@ -97,41 +97,53 @@ msgstr ""
 msgid "Back to the top"
 msgstr "Remonter"
 
-#: ../functions.php:30
+#: ../functions.php:43
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: ../functions.php:31
+#: ../functions.php:44
 msgid "Footer menu"
 msgstr "Menu du pied de page"
 
-#: ../functions.php:35 ../admin/index.php:68
+#: ../functions.php:49 ../admin/index.php:68
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: ../functions.php:37
+#: ../functions.php:51
 msgid "Add widgets in the sidebar."
 msgstr "Ajouter des widgets à la barre latérale."
 
-#: ../functions.php:45 ../admin/index.php:41
+#: ../functions.php:59 ../admin/index.php:41
 msgid "Footer"
 msgstr "Pied de page"
 
-#: ../functions.php:47
+#: ../functions.php:61
 msgid "Add widgets in the footer."
 msgstr "Ajouter des widgets au pied de page."
 
-#: ../functions.php:73
-msgid "Post"
-msgstr "Article"
+#: ../functions.php:85
+msgid "Post width"
+msgstr "Largeur de l'article"
 
-#: ../functions.php:122 ../admin/index.php:5
+#: ../functions.php:137 ../admin/index.php:5
 msgid "Galopin Settings"
 msgstr "Options Galopin"
 
-#: ../functions.php:130
+#: ../functions.php:145
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous n’avez pas les droits suffisants pour accéder à cette page."
+
+#: ../functions.php:305
+msgid "Themes de France"
+msgstr "Thèmes de France"
+
+#: ../functions.php:323
+msgid ""
+"In order to get updates, please enter your licence that you received by "
+"email."
+msgstr ""
+"Afin de recevoir les mises à jour, veuillez entrer votre clé de licence "
+"reçue par email."
 
 #: ../header-masonry.php:6
 msgid "Posts from "
@@ -194,6 +206,26 @@ msgstr "Rechercher ..."
 msgid "Fullwidth"
 msgstr "Pleine page"
 
+#: ../admin/EDD_SL_Theme_Updater.php:56
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+"Mettre ce thème à jour effacera les personnalisations que vous lui avez "
+"apporté. Cliquez sur 'Annuler' pour arrêter ou 'OK' pour procéder à la mise "
+"à jour."
+
+#: ../admin/EDD_SL_Theme_Updater.php:61
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Discover what's new</a> or <a href=\"%5$s\"%6$s>Update now !</"
+"a>."
+msgstr ""
+"<strong>%1$s %2$s</strong> est disponible. <a href=\"%3$s\" class=\"thickbox"
+"\" title=\"%4s\">Découvrez les nouveautés</a> ou <a href=\"%5$s\"%6$s>Mettez "
+"à jour maintenant</a>."
+
 #: ../admin/index.php:8
 msgid "General"
 msgstr "Général"
@@ -201,6 +233,19 @@ msgstr "Général"
 #: ../admin/index.php:9
 msgid "Appearance"
 msgstr "Apparence"
+
+#: ../admin/index.php:18
+msgid "License"
+msgstr "Licence"
+
+#: ../admin/index.php:19
+msgid ""
+"Enter your licence key in order to receive Galopin updates. You'll find it "
+"in the confirmation email we sent you after your purchase."
+msgstr ""
+"Entrez votre clé de licence afin de recevoir les mises à jour de Galopin. "
+"Vous la trouverez quand l'email de confirmation que nous vous avons envoyé "
+"après à votre commande."
 
 #: ../admin/index.php:26
 msgid "Fullscreen home header image"
@@ -470,6 +515,9 @@ msgstr "L'url de cette vidéo semble être erronée."
 #: ../admin/widgets/video.php:71
 msgid "Video URL (Youtube, Dailymotion or Vimeo):"
 msgstr "URL de la vidéo"
+
+#~ msgid "Post"
+#~ msgstr "Article"
 
 #~ msgid ""
 #~ "Galopin by <a href=\"https://www.themesdefrance.fr\" target=\"_blank"
