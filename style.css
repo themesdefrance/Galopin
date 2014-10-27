@@ -2189,6 +2189,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
             transition: 0.4s color ease-out; }
   .masonry .brick .post-quote .post-header-title blockquote {
     display: inline; }
+    .masonry .brick .post-quote .post-header-title blockquote .post-quote-author {
+      -webkit-transition: 0.4s color ease-out;
+              transition: 0.4s color ease-out; }
   .masonry .brick .post-footer {
     font-size: 14px;
     margin-top: 0px; }
@@ -2219,7 +2222,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
             transition: 0.2s all ease-out;
     z-index: 10; }
 
-.masonry .brick:hover img, .masonry .brick:hover iframe, .masonry .brick:hover .post-content, .masonry .brick:hover .post-header-title, .masonry .brick:hover .post-header-title:before, .masonry .brick:hover .masonry-footer {
+.masonry .brick:hover img, .masonry .brick:hover iframe, .masonry .brick:hover .post-content, .masonry .brick:hover .post-header-title, .masonry .brick:hover .post-header-title:before, .masonry .brick:hover .post-quote-author, .masonry .brick:hover .masonry-footer {
   -webkit-filter: blur(1.5px);
           filter: blur(1.5px); }
 .masonry .brick:hover .brick-link:before {

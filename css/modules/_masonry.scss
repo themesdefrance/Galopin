@@ -67,6 +67,10 @@
 	
 	.post-quote .post-header-title blockquote{
 		display:inline;
+		
+		.post-quote-author{
+			transition: .4s color ease-out;
+		}
 	}
 	
 	.post-footer{
@@ -109,6 +113,7 @@
 	.post-content,
 	.post-header-title,
 	.post-header-title:before,
+	.post-quote-author,
 	.masonry-footer{
 		filter: blur(1.5px);
 	}
