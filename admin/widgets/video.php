@@ -24,7 +24,7 @@ class GalopinVideo extends WP_Widget{
 				<?php if (isset($instance['video_link']) && $instance['video_link']!=""){ ?>
 				
 					<div class="widget-video">
-						<?php echo wp_oembed_get($instance['video_link']); ?>
+						<?php echo wp_oembed_get($instance['video_link'], array('width'=>287)); ?>
 					</div>
 					
 				<?php }else{ ?>
