@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Galopin\n"
-"POT-Creation-Date: 2014-10-27 17:17+0100\n"
-"PO-Revision-Date: 2014-10-27 17:17+0100\n"
+"POT-Creation-Date: 2014-10-28 08:14+0100\n"
+"PO-Revision-Date: 2014-10-28 08:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: en_US\n"
@@ -27,28 +27,19 @@ msgid ""
 "\"%s\">the home page</a> or browse the archives :"
 msgstr ""
 
-#: ../comments.php:15 ../comments.php:43
-#, php-format
-msgid "Reply to %s"
-msgstr ""
-
-#: ../comments.php:16 ../comments.php:44
-msgid "Post comment"
-msgstr ""
-
-#: ../comments.php:26
+#: ../comments.php:20
 msgid "Previous comments"
 msgstr ""
 
-#: ../comments.php:29
+#: ../comments.php:23
 msgid "Next comments"
 msgstr ""
 
-#: ../comments.php:36
+#: ../comments.php:30
 msgid "Be the first to post a comment."
 msgstr ""
 
-#: ../comments.php:49
+#: ../comments.php:37
 msgid "Comments are closed."
 msgstr ""
 
@@ -129,11 +120,11 @@ msgstr ""
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../functions.php:305
+#: ../functions.php:306
 msgid "Themes de France"
 msgstr ""
 
-#: ../functions.php:323
+#: ../functions.php:324
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
@@ -364,7 +355,37 @@ msgstr ""
 msgid "Reply"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:240
+#: ../admin/functions/galopin-functions.php:201
+#, php-format
+msgid "Reply to %s"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:202
+msgid "Post comment"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:209
+msgid "Name"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:209
+#: ../admin/functions/galopin-functions.php:216
+msgid "required"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:216
+msgid "Email"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:222
+msgid "Website"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:225
+msgid "Comment"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:283
 msgid "There is no archives to display."
 msgstr ""
 
@@ -443,7 +464,7 @@ msgid "Button's label:"
 msgstr ""
 
 #: ../admin/widgets/social.php:23
-msgid "Galopin Social"
+msgid "Galopin - Social"
 msgstr ""
 
 #: ../admin/widgets/social.php:24

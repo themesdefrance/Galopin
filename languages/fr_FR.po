@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Galopin\n"
-"POT-Creation-Date: 2014-10-27 17:18+0100\n"
-"PO-Revision-Date: 2014-10-27 19:57+0100\n"
+"POT-Creation-Date: 2014-10-28 08:14+0100\n"
+"PO-Revision-Date: 2014-10-28 08:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: fr_FR\n"
@@ -29,28 +29,19 @@ msgstr ""
 "La page que vous demander semble ne pas exister. Vous pouvez revenir à <a "
 "href=\"%s\">la page d'accueil</a> ou parcourir les archives :"
 
-#: ../comments.php:15 ../comments.php:43
-#, php-format
-msgid "Reply to %s"
-msgstr "Répondre à %s"
-
-#: ../comments.php:16 ../comments.php:44
-msgid "Post comment"
-msgstr "Envoyer le commentaire"
-
-#: ../comments.php:26
+#: ../comments.php:20
 msgid "Previous comments"
 msgstr "Commentaires précédents"
 
-#: ../comments.php:29
+#: ../comments.php:23
 msgid "Next comments"
 msgstr "Commentaires suivants"
 
-#: ../comments.php:36
+#: ../comments.php:30
 msgid "Be the first to post a comment."
 msgstr "Soyez le premier à publier un commentaire."
 
-#: ../comments.php:49
+#: ../comments.php:37
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
@@ -133,11 +124,11 @@ msgstr "Options Galopin"
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous n’avez pas les droits suffisants pour accéder à cette page."
 
-#: ../functions.php:305
+#: ../functions.php:306
 msgid "Themes de France"
 msgstr "Thèmes de France"
 
-#: ../functions.php:323
+#: ../functions.php:324
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
@@ -396,7 +387,37 @@ msgstr "Publié le %s à %s"
 msgid "Reply"
 msgstr "Répondre"
 
-#: ../admin/functions/galopin-functions.php:240
+#: ../admin/functions/galopin-functions.php:201
+#, php-format
+msgid "Reply to %s"
+msgstr "Répondre à %s"
+
+#: ../admin/functions/galopin-functions.php:202
+msgid "Post comment"
+msgstr "Envoyer le commentaire"
+
+#: ../admin/functions/galopin-functions.php:209
+msgid "Name"
+msgstr "Nom"
+
+#: ../admin/functions/galopin-functions.php:209
+#: ../admin/functions/galopin-functions.php:216
+msgid "required"
+msgstr "requis"
+
+#: ../admin/functions/galopin-functions.php:216
+msgid "Email"
+msgstr "Email"
+
+#: ../admin/functions/galopin-functions.php:222
+msgid "Website"
+msgstr "Site"
+
+#: ../admin/functions/galopin-functions.php:225
+msgid "Comment"
+msgstr "Commentaire"
+
+#: ../admin/functions/galopin-functions.php:283
 msgid "There is no archives to display."
 msgstr "Il n'y a aucune archive à afficher."
 
