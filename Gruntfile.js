@@ -34,6 +34,18 @@ module.exports = function(grunt) {
 				tasks: ['compile']
 			},
 		},
+		uglify: {
+		    options: {
+		      mangle: false
+		    },
+		    build: {
+		      files: {
+		        'js/min/galopin.min.js': ['js/galopin.js'],
+		        'js/min/jquery.aim.min.js': ['js/jquery.aim.js'],
+		        'js/min/jquery.fitvids.min.js': ['js/jquery.fitvids.js']
+		      }
+		    }
+		},
 		copy: {
 			build: {
 				expand: true,
@@ -47,7 +59,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	
-	grunt.registerTask('compile', ['sass:dev', 'autoprefixer:dev']);
-	grunt.registerTask('build', ['sass:dev', 'sass:build', 'autoprefixer:dev', 'copy:build']);
+	grunt.registerTask('compile', ['sass:dev', 'autoprefixer:dev', 'uglify:build']);
+	grunt.registerTask('build', ['sass:dev', 'sass:build', 'autoprefixer:dev', 'uglify:build', 'copy:build']);
 };
