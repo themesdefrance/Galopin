@@ -1,7 +1,7 @@
 <?php
 
 define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr');
-define('EDD_SL_THEME_NAME', 'Galopin');
+define('EDD_SL_THEME_NAME', 'Galopin Perso');
 define('EDD_SL_THEME_VERSION', '0.001');
 define('EDD_SL_LICENSE_KEY', 'galopin_license_edd');
 
@@ -110,7 +110,7 @@ if (!function_exists('galopin_enqueue')){
 		
 		wp_register_script('jq-aim', get_template_directory_uri().'/js/min/jquery.aim.min.js', array('jquery'), $theme->get('Version'), true);
 		
-		wp_register_script('galopin', get_template_directory_uri().'/js/min/galopin.min.js', array('jquery'), $theme->get('Version'), true);
+		wp_register_script('galopin', get_template_directory_uri().'/js/galopin.js', array('jquery'), $theme->get('Version'), true);
 		
 		//main stylesheet
 		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), $theme->get('Version'));
@@ -268,6 +268,7 @@ if(!function_exists('galopin_user_styles')){
 			.masonry .brick:hover .post-header-title:before,
 			.masonry .brick:hover .post-header-title blockquote a,
 			.masonry .brick:hover .post-content,
+			.masonry .brick:hover .post-quote-author,
 			.masonry .brick:hover .masonry-footer{
 				color: <?php echo $contrast; ?>;
 			}			
