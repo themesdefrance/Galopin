@@ -30,6 +30,23 @@ $z-menu: 500;
 }
 
 .button,
-html a.button{
+html a.button,
+input[type='submit'],
+input[type='button']{
 	@extend %button;
+}
+
+input[type='text'],input[type='email'], input[type='url'], input[type='tel'], input[type='number'], input[type='date'], textarea, select{
+	display: inline-block;
+	padding: 4px 10px;
+	border: 1px solid transparent;
+	background: #f1f1f1;
+}
+
+input[type='text'],input[type='email'], input[type='url'], select{
+	max-width:300px;
+}
+
+input[type='tel'], input[type='number'], input[type='date']{
+	max-width:170px;
 }

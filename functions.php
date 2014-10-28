@@ -188,7 +188,9 @@ if(!function_exists('galopin_user_styles')){
 			<style type="text/css">
 			.button, 
 			.comment-form input[type="submit"], 
-			html a.button, 
+			html a.button,
+			input[type='submit'],
+			input[type='button'],
 			.widget_calendar #next a, 
 			.widget_calendar #prev a,
 			.menu-wrapper,
@@ -203,7 +205,9 @@ if(!function_exists('galopin_user_styles')){
 			}
 			.button:hover, 
 			.comment-form input[type="submit"]:hover, 
-			html a.button:hover, 
+			html a.button:hover,
+			input[type='submit']:hover,
+			input[type='button']:hover,
 			.widget_calendar #next a:hover, 
 			.widget_calendar #prev a:hover,
 			.search-form .submit-btn:hover,

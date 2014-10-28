@@ -1248,7 +1248,7 @@ html {
 img, table, td, blockquote, code, pre, textarea, input, video {
   max-width: 100%; }
 
-.button, .comment-form input[type="submit"], html a.button, .widget_calendar #next a, .widget_calendar #prev a {
+.button, .comment-form input[type="submit"], html a.button, input[type='submit'], input[type='button'], .widget_calendar #next a, .widget_calendar #prev a {
   background: #E54C3C;
   border: none;
   color: #fff;
@@ -1257,8 +1257,20 @@ img, table, td, blockquote, code, pre, textarea, input, video {
   font-family: 'Montserrat';
   -webkit-transition: background 0.2s ease-out;
           transition: background 0.2s ease-out; }
-  .button:hover, .comment-form input[type="submit"]:hover, html a.button:hover, .widget_calendar #next a:hover, .widget_calendar #prev a:hover {
+  .button:hover, .comment-form input[type="submit"]:hover, html a.button:hover, input[type='submit']:hover, input[type='button']:hover, .widget_calendar #next a:hover, .widget_calendar #prev a:hover {
     text-decoration: none; }
+
+input[type='text'], input[type='email'], input[type='url'], input[type='tel'], input[type='number'], input[type='date'], textarea, select {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  background: #f1f1f1; }
+
+input[type='text'], input[type='email'], input[type='url'], select {
+  max-width: 300px; }
+
+input[type='tel'], input[type='number'], input[type='date'] {
+  max-width: 170px; }
 
 .page-wrapper {
   position: relative;
