@@ -55,7 +55,8 @@ $(function(){
 	var $menu = $('.menu-wrapper');
 	var winHeight = $(window).height(),
 		menuHeight = $menu.height(),
-		heroImageStop = (winHeight-menuHeight);
+		offset = $('#wpadminbar').height(),
+		heroImageStop = (winHeight-menuHeight-offset);
 	if ($('.content-wrapper.cover').length){
 		//fit hero to the exact size
 		$('.cover .hero-image').css('height', heroImageStop+'px');
@@ -104,7 +105,8 @@ $(function(){
 		//hero image stuff
 		winHeight = $(window).height();
 		menuHeight = $menu.height();
-		heroImageStop = (winHeight-menuHeight);
+		offset = $('#wpadminbar').height();
+		heroImageStop = (winHeight-menuHeight-offset);
 	}
 	
 	$(window).resize(function(){
