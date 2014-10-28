@@ -19,8 +19,6 @@
 	img{
 		height:auto;
 		display:block;
-		opacity:1;
-		transition:.4s opacity ease-out;
 	}
 	
 	.post-permalink{
@@ -29,6 +27,11 @@
 		text-decoration: none;
 		color: inherit;
 		overflow: hidden;
+		
+		img{		
+			opacity:1;
+			transition:.4s opacity ease-out;
+		}
 		
 		&:before{
 			background: #000;

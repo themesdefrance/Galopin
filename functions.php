@@ -255,7 +255,8 @@ if(!function_exists('galopin_user_styles')){
 			}
 			
 			.masonry .brick:hover,
-			.post-thumbnail:hover{
+			.blog .post-thumbnail:hover,
+			.archive .post-thumbnail:hover{
 				background: <?php echo $color; ?>;
 			}
 			
