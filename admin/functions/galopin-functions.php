@@ -150,7 +150,7 @@ if (!function_exists('galopin_comment')){
 			<article id="comment-<?php comment_ID(); ?>" class="comment">
 				<aside class="comment-aside">
 					<?php if ($comment->comment_approved == '0') : ?>
-						<em><?php echo apply_filters('galopin_commentaire_modere', __('Your comment is waiting for moderation.', 'galopin')); ?></em>
+						<em><?php echo apply_filters('galopin_comment_waiting_moderation', __('Your comment is waiting for moderation.', 'galopin')); ?></em>
 					<?php endif; ?>
 					<?php echo get_avatar($comment, 80); ?>
 				</aside>
@@ -158,7 +158,7 @@ if (!function_exists('galopin_comment')){
 				<div class="comment-main">
 					<header class="comment-header">
 						<div class="comment-author vcard">
-							<?php echo apply_filters('galopin_commentaire_auteur', sprintf(__('%s', 'galopin'), sprintf(__('<cite class="fn">%s</cite>', 'galopin'), get_comment_author_link()))); ?>
+							<?php echo apply_filters('galopin_comment_author', sprintf(__('%s', 'galopin'), sprintf(__('<cite class="fn">%s</cite>', 'galopin'), get_comment_author_link()))); ?>
 						</div>
 					</header>
 		 
@@ -168,14 +168,14 @@ if (!function_exists('galopin_comment')){
 					
 					<footer class="comment-footer">
 						<div class="comment-date">
-							<?php echo apply_filters('galopin_commentaire_date', sprintf(__('Published on %s at %s', 'galopin'),get_comment_date(),get_comment_time('H:i'))); ?>
+							<?php echo apply_filters('galopin_comment_date', sprintf(__('Published on %s at %s', 'galopin'),get_comment_date(),get_comment_time('H:i'))); ?>
 						</div>
 						<div class="reply">
 							<?php 
 							comment_reply_link(array_merge($args, 
 								array(	'depth'=>$depth, 
 										'max_depth'=>$args['max_depth'],
-										'reply_text'=>apply_filters('galopin_commentaire_repondre', __('Reply', 'galopin'))))); 
+										'reply_text'=>apply_filters('galopin_comment_reply', __('Reply', 'galopin'))))); 
 							?>
 						</div>
 					<footer>
@@ -185,6 +185,49 @@ if (!function_exists('galopin_comment')){
 			break;
 		endswitch;
 	}
+}
+
+if (!function_exists('galopin_comment_form_args')){
+	function galopin_comment_form_args(){
+		
+		$commenter = wp_get_current_commenter();
+		$req = get_option( 'require_name_email' );
+		$aria_req = ( $req ? " aria-required='true'" : '' );
+		
+		$comment_args = array(
+			'comment_notes_before'=>'',
+			'comment_notes_after'=>'',
+			'title_reply'=>'',
+			'title_reply_to'=>apply_filters('galopin_comment_reply_to', __('Reply to %s', 'galopin')),
+			'label_submit'=>apply_filters('galopin_comment_send', __('Post comment', 'galopin')),
+			'fields' => apply_filters( 'galopin_comment_form_default_fields', array(
+			    'author' =>
+			      '<p class="comment-form-author">' .
+			      '<label for="author"></label> ' .
+			      '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+			      '" size="30"' . $aria_req .
+			      ' placeholder="' . __('Name','galopin') . ( $req ? ' (' . __( 'required', 'galopin' ) . ')' : '' ) .'"/></p>',
+			
+			    'email' =>
+			      '<p class="comment-form-email">' .
+			      '<label for="email"></label> ' .
+			      '<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+			      '" size="30"' . $aria_req .
+			      ' placeholder="' . __( 'Email', 'galopin' ) . ( $req ? ' (' . __( 'required', 'galopin' ) . ')' : '' ) .'"/></p>',
+			
+			    'url' =>
+			      '<p class="comment-form-url"><label for="url"></label>' .
+			      '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+			      '" size="30"' .
+			      ' placeholder="' . __( 'Website', 'galopin' ) . '"/></p>'
+			   )
+			),
+			'comment_field' =>  apply_filters( 'galopin_comment_form_default_comment_field','<p class="comment-form-comment"><label for="comment"></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="' . _x( 'Comment', 'noun', 'galopin' ) .'"></textarea></p>')
+		);
+		
+		return $comment_args;
+			
+	}	
 }
 
 //relies on the Cocorico Social plugin : https://wordpress.org/plugins/cocorico-social/

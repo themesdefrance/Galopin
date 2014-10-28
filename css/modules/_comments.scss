@@ -8,7 +8,7 @@
 .comment-form > p{
 	position: relative;
 	margin-bottom: 10px;
-	padding-left: 35px;
+	padding-left: 32px;
 	background: #F1F1F1;
 }
 .comment-form .comment-form-author label{
@@ -46,25 +46,19 @@
 		background: #333333;
 	}
 }
-.comment-form input[type="text"]{
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"]{
 	position: relative;
 	z-index: 100;
 	width: 100%;
-	font-size: 20px;
+	line-height:20px;
 	padding: 4px 10px;
 	background: none;
 	border: none;
 		
 	&:focus{
 		background: inherit;
-	}
-}
-.comment-form .comment-form-url{
-	background: #fff;
-	border: 2px solid #B2B2B2;
-	
-	label:before{
-		background: #B2B2B2;
 	}
 }
 .comment-form .comment-form-comment{
