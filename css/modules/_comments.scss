@@ -56,6 +56,7 @@
 	padding: 4px 10px;
 	background: none;
 	border: none;
+	height:32px;
 		
 	&:focus{
 		background: inherit;
@@ -70,6 +71,7 @@
 	width: 100%;
 	background: #F1F1F1;
 	border: none;
+	margin:0;
 	padding: 4px 10px;
 }
 .comment-form .form-submit{
@@ -78,6 +80,7 @@
 }
 .comment-form input[type="submit"]{
 	@extend .button;
+	margin-right:0;
 }
 .comment-form .logged-in-as{
 	background: transparent;

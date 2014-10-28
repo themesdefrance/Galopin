@@ -1919,7 +1919,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
   line-height: 20px;
   padding: 4px 10px;
   background: none;
-  border: none; }
+  border: none;
+  height: 32px; }
   .comment-form input[type="text"]:focus, .comment-form input[type="email"]:focus, .comment-form input[type="url"]:focus {
     background: inherit; }
 
@@ -1932,11 +1933,15 @@ body.admin-bar .cover .menu-wrapper.stuck {
   width: 100%;
   background: #F1F1F1;
   border: none;
+  margin: 0;
   padding: 4px 10px; }
 
 .comment-form .form-submit {
   text-align: right;
   background: transparent; }
+
+.comment-form input[type="submit"] {
+  margin-right: 0; }
 
 .comment-form .logged-in-as {
   background: transparent;
