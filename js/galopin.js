@@ -107,6 +107,9 @@ $(function(){
 		menuHeight = $menu.height();
 		offset = $('#wpadminbar').height();
 		heroImageStop = (winHeight-menuHeight-offset);
+		
+		$('.cover .hero-image').css('height', heroImageStop+'px');
+		$menu.css('top', heroImageStop+'px');
 	}
 	
 	$(window).resize(function(){
