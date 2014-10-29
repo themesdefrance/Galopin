@@ -290,7 +290,7 @@ $menu-width: 280px;
 }
 
 body.admin-bar .cover .menu-wrapper.stuck{
-	top: 32px;
+	top: 32px !important;
 }
 
 .menu-toggle{
