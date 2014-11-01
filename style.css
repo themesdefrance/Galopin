@@ -1732,20 +1732,6 @@ body.admin-bar .cover .menu-wrapper.stuck {
           filter: none;
   opacity: 1; }
 
-/*.post-thumbnail-overlay{
-	background: #000;
-	opacity: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	transition: opacity 0.5s ease-in 0s;
-	
-	&:hover{
-		opacity:.3;
-	}
-}*/
 .post-header-title a {
   -webkit-transition: color 0.2s ease-out;
           transition: color 0.2s ease-out; }
@@ -1785,6 +1771,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
     max-width: 100%;
     -ms-word-wrap: break-word;
     word-break: break-word; }
+  .post-content img {
+    height: auto; }
   .post-content h1 {
     font-size: 36px;
     margin-bottom: 14px; }

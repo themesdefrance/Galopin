@@ -77,26 +77,6 @@
 	opacity:1;
 }
 
-
-
-/*.post-thumbnail-overlay{
-	background: #000;
-	opacity: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	transition: opacity 0.5s ease-in 0s;
-	
-	&:hover{
-		opacity:.3;
-	}
-}*/
-
-
-
-
 .post-header-title{
 	@extend .typcn;
 	
@@ -154,6 +134,10 @@
 		max-width:100%;
 		-ms-word-wrap: break-word;
 		word-break: break-word;
+	}
+	
+	img{
+		height:auto;
 	}
 	
 	h1{
