@@ -32,11 +32,7 @@ $sidebar = get_option('galopin_show_sidebar');
 				
 			</ul>
 			
-			<div class="pagination">
-			
-				<?php galopin_posts_nav(false, ''); ?>
-				
-			</div>
+			<?php galopin_posts_nav(false, '', '<div class="pagination">', '</div>'); ?>
 			
 		</div>
 		

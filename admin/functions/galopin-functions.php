@@ -58,12 +58,12 @@ if (!function_exists('galopin_posts_nav')){
 	 @param $separator : string to insert between each page
 	*/
 	
-	function galopin_posts_nav($extremes=true, $separator='|'){
+	function galopin_posts_nav($extremes=true, $separator='|', $before = '', $after){
 		if (is_singular()) return;
 	
 		global $wp_query;
 		$output = '';
-	
+		
 		// Stop execution if there's only 1 page
 		if($wp_query->max_num_pages <= 1) return;
 	
@@ -86,7 +86,9 @@ if (!function_exists('galopin_posts_nav')){
 		
 		$current = apply_filters('galopin_post_nav_current', '<span class="current">%s</span>');
 		$linkTemplate = apply_filters('galopin_post_nav_link', '<a href="%s">%s</a>');
-	
+		
+		$output .= $before;
+		
 		// Previous Post Link
 		if ($extremes && get_previous_posts_link()) previous_posts_link();
 	
@@ -121,6 +123,8 @@ if (!function_exists('galopin_posts_nav')){
 			else
 				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link($max)), $max);
 		}
+		
+		$output .= $after;
 		
 		echo apply_filters('galopin_post_nav', $output);
 	
