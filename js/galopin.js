@@ -52,7 +52,7 @@ $(function(){
 		$('.search-wrapper .form-toggle').toggle();
 	});
 	
-	var $menu = $('.menu-wrapper');
+	var $menu = $('.home .menu-wrapper');
 	var winHeight = $(window).height(),
 		menuHeight = $menu.height(),
 		offset = $('#wpadminbar').height(),
