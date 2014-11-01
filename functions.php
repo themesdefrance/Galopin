@@ -83,6 +83,7 @@ add_action('after_setup_theme', 'galopin_setup');
 if (!function_exists('galopin_image_size_names_choose')){
 	function galopin_image_size_names_choose($sizes) {
 		$added = array('galopin-post-thumbnail'=>__('Post width', 'galopin'));
+		$added = array('galopin-post-thumbnail-full'=>__('Fullpage width', 'galopin'));
 		$newsizes = array_merge($sizes, $added);
 		return $newsizes;
 	}
