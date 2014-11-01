@@ -222,7 +222,7 @@ if (!function_exists('galopin_comment_form_args')){
 			      ' placeholder="' . __( 'Website', 'galopin' ) . '"/></p>'
 			   )
 			),
-			'comment_field' =>  apply_filters( 'galopin_comment_form_default_comment_field','<p class="comment-form-comment"><label for="comment"></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="' . _x( 'Comment', 'noun', 'galopin' ) .'"></textarea></p>')
+			'comment_field' =>  apply_filters( 'galopin_comment_form_default_comment_field','<p class="comment-form-comment"><label for="comment"></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="' . __('Comment','galopin' ) .'"></textarea></p>')
 		);
 		
 		return $comment_args;

@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Galopin\n"
-"POT-Creation-Date: 2014-10-28 08:14+0100\n"
-"PO-Revision-Date: 2014-10-28 08:14+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-11-01 10:49+0100\n"
+"PO-Revision-Date: 2014-11-01 10:55+0100\n"
+"Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.9\n"
 "X-Poedit-KeywordsList: __;_e;_x;_n\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -29,173 +29,17 @@ msgstr ""
 "La page que vous demander semble ne pas exister. Vous pouvez revenir à <a "
 "href=\"%s\">la page d'accueil</a> ou parcourir les archives :"
 
-#: ../comments.php:20
-msgid "Previous comments"
-msgstr "Commentaires précédents"
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:180
+msgid "Save all changes"
+msgstr "Sauvegarder"
 
-#: ../comments.php:23
-msgid "Next comments"
-msgstr "Commentaires suivants"
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:274
+msgid "Select"
+msgstr "Selectionner"
 
-#: ../comments.php:30
-msgid "Be the first to post a comment."
-msgstr "Soyez le premier à publier un commentaire."
-
-#: ../comments.php:37
-msgid "Comments are closed."
-msgstr "Les commentaires sont fermés."
-
-#: ../content-body.php:14 ../content-body.php:35 ../content-footer-meta.php:29
-#: ../content.php:16 ../index.php:23
-msgid "Read more"
-msgstr "Lire la suite"
-
-#: ../content-footer-meta.php:19
-msgid "Pages:"
-msgstr "Pages:"
-
-#: ../content-header-meta.php:5
-#, php-format
-msgid "Published on %2$s by <a href=\"%3$s\">%4$s</a> in %5$s | "
-msgstr "Publié le %2$s par <a href=\"%3$s\">%4$s</a> dans %5$s | "
-
-#: ../content-header-meta.php:7
-msgid "No Comment"
-msgstr "Aucun commentaire"
-
-#: ../content-header-meta.php:7
-msgid "One Comment"
-msgstr "Un commentaire"
-
-#: ../content-header-meta.php:7
-msgid "% Comments"
-msgstr "% commentaires"
-
-#: ../content-header-meta.php:9
-msgid "Edit"
-msgstr "Modifier"
-
-#: ../footer.php:25 ../admin/index.php:44
-#, php-format
-msgid ""
-"<strong>%s</strong> - Galopin by <a href=\"https://www.themesdefrance.fr/\" "
-"target=\"_blank\">Themes de France</a>"
-msgstr ""
-"<strong>%s</strong> - Galopin par <a href=\"https://www.themesdefrance.fr\" "
-"target=\"_blank\">Thèmes de France</a>"
-
-#: ../footer.php:43
-msgid "Back to the top"
-msgstr "Remonter"
-
-#: ../functions.php:43
-msgid "Main menu"
-msgstr "Menu principal"
-
-#: ../functions.php:44
-msgid "Footer menu"
-msgstr "Menu du pied de page"
-
-#: ../functions.php:49 ../admin/index.php:68
-msgid "Sidebar"
-msgstr "Barre latérale"
-
-#: ../functions.php:51
-msgid "Add widgets in the sidebar."
-msgstr "Ajouter des widgets à la barre latérale."
-
-#: ../functions.php:59 ../admin/index.php:41
-msgid "Footer"
-msgstr "Pied de page"
-
-#: ../functions.php:61
-msgid "Add widgets in the footer."
-msgstr "Ajouter des widgets au pied de page."
-
-#: ../functions.php:85
-msgid "Post width"
-msgstr "Largeur de l'article"
-
-#: ../functions.php:137 ../admin/index.php:5
-msgid "Galopin Settings"
-msgstr "Options Galopin"
-
-#: ../functions.php:145
-msgid "You do not have sufficient permissions to access this page."
-msgstr "Vous n’avez pas les droits suffisants pour accéder à cette page."
-
-#: ../functions.php:306
-msgid "Themes de France"
-msgstr "Thèmes de France"
-
-#: ../functions.php:324
-msgid ""
-"In order to get updates, please enter your licence that you received by "
-"email."
-msgstr ""
-"Afin de recevoir les mises à jour, veuillez entrer votre clé de licence "
-"reçue par email."
-
-#: ../header-masonry.php:6
-msgid "Posts from "
-msgstr "Articles classés dans "
-
-#: ../header-masonry.php:12
-msgid "Posts tagged by "
-msgstr "Articles identifiés par "
-
-#: ../header-masonry.php:18
-#, php-format
-msgid "Search results for : %s"
-msgstr "Résultats de recherche pour : %s"
-
-#: ../header-masonry.php:25
-msgid "Archives from "
-msgstr "Archives de "
-
-#: ../header-masonry.php:29 ../header-masonry.php:33
-msgid "Archives for "
-msgstr "Archives pour "
-
-#: ../header-masonry.php:37
-msgid "Archives"
-msgstr "Archives"
-
-#: ../header-masonry.php:45 ../header-masonry.php:51
-msgid "Blog"
-msgstr "Blog"
-
-#: ../header.php:30
-msgid "Your browser is <em>too old !"
-msgstr "Votre navigateur est <em>trop vieux !"
-
-#: ../header.php:30
-msgid "Update your browser"
-msgstr "Mettez à jour votre navigateur"
-
-#: ../header.php:30
-msgid "or"
-msgstr "ou"
-
-#: ../header.php:30
-msgid "Install Google Chrome Frame"
-msgstr "Installez Google Chrome Frame"
-
-#: ../header.php:30
-msgid "to display this website correctly"
-msgstr "pour afficher votre site correctement"
-
-#: ../searchform.php:3 ../searchform.php:4
-msgid "Search for:"
-msgstr "Rechercher:"
-
-#: ../searchform.php:4
-msgid "Search ..."
-msgstr "Rechercher ..."
-
-#: ../template-fullwidth.php:5
-msgid "Fullwidth"
-msgstr "Pleine page"
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:321
+msgid "Delete"
+msgstr "Supprimer"
 
 #: ../admin/EDD_SL_Theme_Updater.php:56
 msgid ""
@@ -216,145 +60,6 @@ msgstr ""
 "<strong>%1$s %2$s</strong> est disponible. <a href=\"%3$s\" class=\"thickbox"
 "\" title=\"%4s\">Découvrez les nouveautés</a> ou <a href=\"%5$s\"%6$s>Mettez "
 "à jour maintenant</a>."
-
-#: ../admin/index.php:8
-msgid "General"
-msgstr "Général"
-
-#: ../admin/index.php:9
-msgid "Appearance"
-msgstr "Apparence"
-
-#: ../admin/index.php:18
-msgid "License"
-msgstr "Licence"
-
-#: ../admin/index.php:19
-msgid ""
-"Enter your licence key in order to receive Galopin updates. You'll find it "
-"in the confirmation email we sent you after your purchase."
-msgstr ""
-"Entrez votre clé de licence afin de recevoir les mises à jour de Galopin. "
-"Vous la trouverez quand l'email de confirmation que nous vous avons envoyé "
-"après à votre commande."
-
-#: ../admin/index.php:26
-msgid "Fullscreen home header image"
-msgstr "Image d'en-tête en plein écran sur l'accueil"
-
-#: ../admin/index.php:27
-msgid "Fill out the screen with the home header image."
-msgstr "Afficher l'image d'en-tête sur la totalité de l'écran."
-
-#: ../admin/index.php:31
-msgid "Header title"
-msgstr "Titre de l'en-tête"
-
-#: ../admin/index.php:32
-msgid "Enter a title to display in the header (on each page of your website)."
-msgstr ""
-"Entrez un titre à afficher dans l'en-tête (sur chaque page de votre site)."
-
-#: ../admin/index.php:36
-msgid "Header image"
-msgstr "Image d'en-tête"
-
-#: ../admin/index.php:37
-msgid ""
-"Upload an image to use as header on your website. Use a 1920x500 jpg/png "
-"file or more if you enabled the fullscreen home header image."
-msgstr ""
-"Envoyer une image en tant qu'image d'en-tête pour votre site. Utilisez un "
-"fichier jpg/png de 1920x500 ou plus si vous avez activé l'image d'en-tête en "
-"plein écran sur l'accueil."
-
-#: ../admin/index.php:42
-msgid ""
-"Left footer content. The following HTML tags are allowed : &lt;a href=&quot;"
-"LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, "
-"&lt;em&gt;ITALIC_TEXT&lt;/em&gt;, &lt;img src=&quot;IMAGE_URL&quot;&gt;."
-msgstr ""
-"Contenu de la gauche du pied de page. Les balises HTML suivantes sont "
-"acceptées : &lt;a href=&quot;LIEN&quot;&gt;TEXTE_DU_LIEN&lt;/a&gt;, &lt;"
-"strong&gt;TEXTE_GRAS&lt;/strong&gt;, &lt;em&gt;TEXTE_ITALIQUE&lt;/em&gt;, "
-"&lt;img src=&quot;URL_IMAGE&quot;&gt;."
-
-#: ../admin/index.php:60
-msgid "Main color"
-msgstr "Couleur principale"
-
-#: ../admin/index.php:61
-msgid "This color will be used across your website for buttons, links, etc."
-msgstr ""
-"Cette couleur sera utilisée sur votre site pour les boutons, les liens, etc."
-
-#: ../admin/index.php:69
-msgid ""
-"Display a sidebar on the content's right across your website in all no-"
-"masonry pages."
-msgstr ""
-"Afficher une barre latérale sur la droite du contenu de votre site sur "
-"toutes les pages non dotées du style masonry."
-
-#: ../admin/index.php:76
-msgid "Masonry"
-msgstr "Masonry"
-
-#: ../admin/index.php:77
-msgid ""
-"Enables the masonry layout on the home page, categories, tags and archives "
-"pages."
-msgstr ""
-"Active l'agencement masonry sur la page d'accueil, les pages de catégories, "
-"mots-clés et d'archives."
-
-#: ../admin/index.php:81
-msgid "Additionnal CSS"
-msgstr "CSS Supplémentaire"
-
-#: ../admin/index.php:82
-msgid ""
-"CSS rules added in this field will be added to your site. If you have too "
-"many updates, you should download and install the child theme from <a href="
-"\"https://www.themesdefrance.fr/\" target=\"_blank\">your Themes de France "
-"account</a>."
-msgstr ""
-"Les règles CSS ajoutées dans ce champ seront ajoutées à votre site. Si vous "
-"ajoutez un grand nombre de règles, vous devriez télécharger et installer un "
-"thème enfant à partir de <a href=\"https://www.themesdefrance.fr/\" target="
-"\"_blank\">votre compte Themes de France</a>."
-
-#: ../admin/index.php:88
-msgid "Save changes"
-msgstr "Sauvegarder"
-
-#: ../admin/index.php:96
-msgid "Any questions on Galopin ? Go to the"
-msgstr "Des questions sur Galopin ? Posez-la sur la"
-
-#: ../admin/index.php:96
-msgid "Themes de France support page."
-msgstr "page de support de Thèmes de France."
-
-#: ../admin/index.php:96
-msgid "If you like Galopin, you should"
-msgstr "Si vous aimez Galopin, vous devriez"
-
-#: ../admin/index.php:96
-msgid "follow us on Facebook"
-msgstr "nous suivre sur Facebook"
-
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:180
-msgid "Save all changes"
-msgstr "Sauvegarder"
-
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:257
-msgid "Select"
-msgstr "Selectionner"
-
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:304
-msgid "Delete"
-msgstr "Supprimer"
 
 #: ../admin/functions/galopin-functions.php:38
 msgid "Set up the main menu"
@@ -420,6 +125,154 @@ msgstr "Commentaire"
 #: ../admin/functions/galopin-functions.php:283
 msgid "There is no archives to display."
 msgstr "Il n'y a aucune archive à afficher."
+
+#: ../admin/index.php:5 ../functions.php:137
+msgid "Galopin Settings"
+msgstr "Options Galopin"
+
+#: ../admin/index.php:8
+msgid "General"
+msgstr "Général"
+
+#: ../admin/index.php:9
+msgid "Appearance"
+msgstr "Apparence"
+
+#: ../admin/index.php:18
+msgid "License"
+msgstr "Licence"
+
+#: ../admin/index.php:19
+msgid ""
+"Enter your licence key in order to receive Galopin updates. You'll find it "
+"in the confirmation email we sent you after your purchase."
+msgstr ""
+"Entrez votre clé de licence afin de recevoir les mises à jour de Galopin. "
+"Vous la trouverez quand l'email de confirmation que nous vous avons envoyé "
+"après à votre commande."
+
+#: ../admin/index.php:26
+msgid "Fullscreen home header image"
+msgstr "Image d'en-tête en plein écran sur l'accueil"
+
+#: ../admin/index.php:27
+msgid "Fill out the screen with the home header image."
+msgstr "Afficher l'image d'en-tête sur la totalité de l'écran."
+
+#: ../admin/index.php:31
+msgid "Header title"
+msgstr "Titre de l'en-tête"
+
+#: ../admin/index.php:32
+msgid "Enter a title to display in the header (on each page of your website)."
+msgstr ""
+"Entrez un titre à afficher dans l'en-tête (sur chaque page de votre site)."
+
+#: ../admin/index.php:36
+msgid "Header image"
+msgstr "Image d'en-tête"
+
+#: ../admin/index.php:37
+msgid ""
+"Upload an image to use as header on your website. Use a 1920x500 jpg/png "
+"file or more if you enabled the fullscreen home header image."
+msgstr ""
+"Envoyer une image en tant qu'image d'en-tête pour votre site. Utilisez un "
+"fichier jpg/png de 1920x500 ou plus si vous avez activé l'image d'en-tête en "
+"plein écran sur l'accueil."
+
+#: ../admin/index.php:41 ../functions.php:59
+msgid "Footer"
+msgstr "Pied de page"
+
+#: ../admin/index.php:42
+msgid ""
+"Left footer content. The following HTML tags are allowed : &lt;a href=&quot;"
+"LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, "
+"&lt;em&gt;ITALIC_TEXT&lt;/em&gt;, &lt;img src=&quot;IMAGE_URL&quot;&gt;."
+msgstr ""
+"Contenu de la gauche du pied de page. Les balises HTML suivantes sont "
+"acceptées : &lt;a href=&quot;LIEN&quot;&gt;TEXTE_DU_LIEN&lt;/a&gt;, &lt;"
+"strong&gt;TEXTE_GRAS&lt;/strong&gt;, &lt;em&gt;TEXTE_ITALIQUE&lt;/em&gt;, "
+"&lt;img src=&quot;URL_IMAGE&quot;&gt;."
+
+#: ../admin/index.php:44 ../footer.php:25
+#, php-format
+msgid ""
+"<strong>%s</strong> - Galopin by <a href=\"https://www.themesdefrance.fr/\" "
+"target=\"_blank\">Themes de France</a>"
+msgstr ""
+"<strong>%s</strong> - Galopin par <a href=\"https://www.themesdefrance.fr\" "
+"target=\"_blank\">Thèmes de France</a>"
+
+#: ../admin/index.php:60
+msgid "Main color"
+msgstr "Couleur principale"
+
+#: ../admin/index.php:61
+msgid "This color will be used across your website for buttons, links, etc."
+msgstr ""
+"Cette couleur sera utilisée sur votre site pour les boutons, les liens, etc."
+
+#: ../admin/index.php:68 ../functions.php:49
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#: ../admin/index.php:69
+msgid ""
+"Display a sidebar on the content's right across your website in all no-"
+"masonry pages."
+msgstr ""
+"Afficher une barre latérale sur la droite du contenu de votre site sur "
+"toutes les pages non dotées du style masonry."
+
+#: ../admin/index.php:76
+msgid "Masonry"
+msgstr "Masonry"
+
+#: ../admin/index.php:77
+msgid ""
+"Enables the masonry layout on the home page, categories, tags and archives "
+"pages."
+msgstr ""
+"Active l'agencement masonry sur la page d'accueil, les pages de catégories, "
+"mots-clés et d'archives."
+
+#: ../admin/index.php:81
+msgid "Additionnal CSS"
+msgstr "CSS Supplémentaire"
+
+#: ../admin/index.php:82
+msgid ""
+"CSS rules added in this field will be added to your site. If you have too "
+"many updates, you should download and install the child theme from <a href="
+"\"https://www.themesdefrance.fr/\" target=\"_blank\">your Themes de France "
+"account</a>."
+msgstr ""
+"Les règles CSS ajoutées dans ce champ seront ajoutées à votre site. Si vous "
+"ajoutez un grand nombre de règles, vous devriez télécharger et installer un "
+"thème enfant à partir de <a href=\"https://www.themesdefrance.fr/\" target="
+"\"_blank\">votre compte Themes de France</a>."
+
+#: ../admin/index.php:88
+msgid "Save changes"
+msgstr "Sauvegarder"
+
+#: ../admin/index.php:96
+msgid "Any questions on Galopin ? Go to the"
+msgstr "Des questions sur Galopin ? Posez-la sur la"
+
+#: ../admin/index.php:96
+msgid "Themes de France support page."
+msgstr "page de support de Thèmes de France."
+
+#: ../admin/index.php:96
+msgid "If you like Galopin, you should"
+msgstr "Si vous aimez Galopin, vous devriez"
+
+#: ../admin/index.php:96
+msgid "follow us on Facebook"
+msgstr "nous suivre sur Facebook"
 
 #: ../admin/metaboxes/post-formats.php:8
 msgid "Link"
@@ -536,6 +389,153 @@ msgstr "L'url de cette vidéo semble être erronée."
 #: ../admin/widgets/video.php:71
 msgid "Video URL (Youtube, Dailymotion or Vimeo):"
 msgstr "URL de la vidéo"
+
+#: ../comments.php:20
+msgid "Previous comments"
+msgstr "Commentaires précédents"
+
+#: ../comments.php:23
+msgid "Next comments"
+msgstr "Commentaires suivants"
+
+#: ../comments.php:30
+msgid "Be the first to post a comment."
+msgstr "Soyez le premier à publier un commentaire."
+
+#: ../comments.php:37
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: ../content-body.php:14 ../content-body.php:35 ../content-footer-meta.php:29
+#: ../content.php:16 ../index.php:23
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: ../content-footer-meta.php:19
+msgid "Pages:"
+msgstr "Pages:"
+
+#: ../content-header-meta.php:5
+#, php-format
+msgid "Published on %2$s by <a href=\"%3$s\">%4$s</a> in %5$s | "
+msgstr "Publié le %2$s par <a href=\"%3$s\">%4$s</a> dans %5$s | "
+
+#: ../content-header-meta.php:7
+msgid "No Comment"
+msgstr "Aucun commentaire"
+
+#: ../content-header-meta.php:7
+msgid "One Comment"
+msgstr "Un commentaire"
+
+#: ../content-header-meta.php:7
+msgid "% Comments"
+msgstr "% commentaires"
+
+#: ../content-header-meta.php:9
+msgid "Edit"
+msgstr "Modifier"
+
+#: ../footer.php:43
+msgid "Back to the top"
+msgstr "Remonter"
+
+#: ../functions.php:43
+msgid "Main menu"
+msgstr "Menu principal"
+
+#: ../functions.php:44
+msgid "Footer menu"
+msgstr "Menu du pied de page"
+
+#: ../functions.php:51
+msgid "Add widgets in the sidebar."
+msgstr "Ajouter des widgets à la barre latérale."
+
+#: ../functions.php:61
+msgid "Add widgets in the footer."
+msgstr "Ajouter des widgets au pied de page."
+
+#: ../functions.php:85
+msgid "Post width"
+msgstr "Largeur de l'article"
+
+#: ../functions.php:145
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Vous n’avez pas les droits suffisants pour accéder à cette page."
+
+#: ../functions.php:311
+msgid "Themes de France"
+msgstr "Thèmes de France"
+
+#: ../functions.php:329
+msgid ""
+"In order to get updates, please enter your licence that you received by "
+"email."
+msgstr ""
+"Afin de recevoir les mises à jour, veuillez entrer votre clé de licence "
+"reçue par email."
+
+#: ../header-masonry.php:6
+msgid "Posts from "
+msgstr "Articles classés dans "
+
+#: ../header-masonry.php:12
+msgid "Posts tagged by "
+msgstr "Articles identifiés par "
+
+#: ../header-masonry.php:18
+#, php-format
+msgid "Search results for : %s"
+msgstr "Résultats de recherche pour : %s"
+
+#: ../header-masonry.php:25
+msgid "Archives from "
+msgstr "Archives de "
+
+#: ../header-masonry.php:29 ../header-masonry.php:33
+msgid "Archives for "
+msgstr "Archives pour "
+
+#: ../header-masonry.php:37
+msgid "Archives"
+msgstr "Archives"
+
+#: ../header-masonry.php:45 ../header-masonry.php:51
+msgid "Blog"
+msgstr "Blog"
+
+#: ../header.php:30
+msgid "Your browser is <em>too old !"
+msgstr "Votre navigateur est <em>trop vieux !"
+
+#: ../header.php:30
+msgid "Update your browser"
+msgstr "Mettez à jour votre navigateur"
+
+#: ../header.php:30
+msgid "or"
+msgstr "ou"
+
+#: ../header.php:30
+msgid "Install Google Chrome Frame"
+msgstr "Installez Google Chrome Frame"
+
+#: ../header.php:30
+msgid "to display this website correctly"
+msgstr "pour afficher votre site correctement"
+
+#: ../searchform.php:3 ../searchform.php:4
+msgid "Search for:"
+msgstr "Rechercher:"
+
+#: ../searchform.php:4
+msgid "Search ..."
+msgstr "Rechercher ..."
+
+#: ../template-fullwidth.php:5
+msgid "Fullwidth"
+msgstr "Pleine page"
 
 #~ msgid "Post"
 #~ msgstr "Article"
