@@ -1046,8 +1046,7 @@ audio, canvas, video {
   display: inline-block; }
 
 *, *:after, *:before {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 /*
  * miscellaneous stuff, not really box related but always needed
@@ -1521,7 +1520,7 @@ input[type='tel'], input[type='number'], input[type='date'] {
     top: 0 !important; }
 
 body.admin-bar .cover .menu-wrapper.stuck {
-  top: 32px; }
+  top: 32px !important; }
 
 .menu-toggle {
   background: none;
@@ -1727,6 +1726,11 @@ body.admin-bar .cover .menu-wrapper.stuck {
 
 .post-thumbnail, .post-video {
   margin-bottom: 10px; }
+
+.single .post-thumbnail:hover img {
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1; }
 
 /*.post-thumbnail-overlay{
 	background: #000;
