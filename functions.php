@@ -117,7 +117,7 @@ if (!function_exists('galopin_enqueue')){
 		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), $theme->get('Version'));
 		
 		//icons
-		wp_enqueue_style('icons', get_stylesheet_directory_uri().'/fonts/typicons.min.css', array(), $theme->get('Version'));
+		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/typicons.min.css', array(), $theme->get('Version'));
 		
 		wp_enqueue_script('fitvids');
 		wp_enqueue_script('jq-aim');
