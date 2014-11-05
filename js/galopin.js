@@ -52,11 +52,13 @@ $(function(){
 		$('.search-wrapper .form-toggle').toggle();
 	});
 	
-	var $menu = $('.home .menu-wrapper');
+	var $menu = $('.full-hero .menu-wrapper');
 	var winHeight = $(window).height(),
+		winWidth = $(window).width(),
 		menuHeight = $menu.height(),
 		offset = $('#wpadminbar').height(),
 		heroImageStop = (winHeight-menuHeight-offset);
+	
 	if ($('.content-wrapper.cover').length){
 		//fit hero to the exact size
 		$('.cover .hero-image').css('height', heroImageStop+'px');
@@ -103,13 +105,15 @@ $(function(){
 		}
 		
 		//hero image stuff
-		winHeight = $(window).height();
-		menuHeight = $menu.height();
-		offset = $('#wpadminbar').height();
-		heroImageStop = (winHeight-menuHeight-offset);
-		
-		$('.cover .hero-image').css('height', heroImageStop+'px');
-		$menu.css('top', heroImageStop+'px');
+		if ($('.content-wrapper.cover').length){
+			winHeight = $(window).height();
+			menuHeight = $menu.height();
+			offset = $('#wpadminbar').height();
+			heroImageStop = (winHeight-menuHeight-offset);
+			if($(window).width()<= 550)heroImageStop = 50;
+			$('.cover .hero-image').css('height', heroImageStop+'px');
+			$menu.css('top', heroImageStop+'px');
+		}
 	}
 	
 	$(window).resize(function(){

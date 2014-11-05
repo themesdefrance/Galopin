@@ -2,7 +2,7 @@
 
 define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr');
 define('EDD_SL_THEME_NAME', 'Galopin Perso');
-define('EDD_SL_THEME_VERSION', '0.001');
+define('EDD_SL_THEME_VERSION', '1.000');
 define('EDD_SL_LICENSE_KEY', 'galopin_license_edd');
 
 if(!class_exists('EDD_SL_Theme_Updater'))
