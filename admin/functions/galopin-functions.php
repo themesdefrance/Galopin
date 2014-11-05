@@ -249,7 +249,9 @@ if (!function_exists('galopin_social')){
 					
 					switch ($network){
 						case 'twitter':
-							$export .= '<li><a href="https://twitter.com/'.get_option('cocosocial_twitter_username').'" class="typcn typcn-social-twitter-circular"></a></li>';
+							if (trim(get_option('cocosocial_twitter_username')) !== ''){
+								$export .= '<li><a href="https://twitter.com/'.get_option('cocosocial_twitter_username').'" class="typcn typcn-social-twitter-circular"></a></li>';
+							}
 							break;
 						case 'email':
 						case 'viadeo':
