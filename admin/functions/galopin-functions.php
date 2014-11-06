@@ -15,12 +15,26 @@ if (!function_exists('galopin_is_masonry')){
 
 if (!function_exists('galopin_excerpt')){
 	function galopin_excerpt($length){
+		global $post;
+		
+		// No excerpt needed
 		if($length==0)
 			return '';
 		
-		$content = strip_shortcodes(get_the_content());
-		$excerpt = "<p>" . wp_trim_words( $content , $length ) . "</p>";
-		return $excerpt;
+		// Do we have an excerpt ?
+		if(has_excerpt())
+			return '<p>' . get_the_excerpt() . '</p>';
+		
+		// Do we have a read more tag ?
+		if(strpos( $post->post_content, '<!--more-->' )){
+			$content_arr = get_extended($post->post_content);
+			return '<p>' . $content_arr['main'] . '</p>';
+		}
+		
+		// Create a custom excerpt without shortcodes, images and iframes
+		$content = strip_shortcodes(strip_tags(get_the_content(), '<img><iframe>'));
+		
+		return '<p>' . wp_trim_words( $content , $length ) . '</p>';
 	}
 }
 
