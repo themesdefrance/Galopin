@@ -14,14 +14,32 @@
 		if($post_header_date || $post_header_author || $post_header_category){
 			_e('Published ','galopin');
 		}
-		if($post_header_date){
-			echo sprintf(__('on %s ','galopin'),get_the_date());
+		if($post_header_date){ ?>
+			
+			<?php _e('on','galopin'); ?>
+			
+			<time class="date updated">
+				<?php the_time( get_option( 'date_format' ) ); ?>
+			</time>
+			
+		<?php
 		}
-		if($post_header_author){
-			echo sprintf(__('by <a href="%s">%s</a> ','galopin'), get_author_posts_url(get_the_author_meta('ID')), get_the_author_meta('display_name') );
+		if($post_header_author){ ?>
+			
+			<?php _e('by','galopin'); ?>
+			
+			<span class="vcard author">
+				<span class="fn">
+					<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+						<?php the_author_meta('display_name'); ?>
+					</a>
+				</span>
+			</span>
+			
+		<?php
 		}
 		if($post_header_category){
-			echo sprintf(__('in %s ','galopin'), get_the_category_list('/'));
+			printf(__('in','galopin') . ' ' . get_the_category_list('/') . ' ');
 		}
 		if($post_header_date || $post_header_author || $post_header_category){
 			echo '| ';

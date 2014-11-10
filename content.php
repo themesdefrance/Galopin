@@ -31,7 +31,7 @@ $postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
 		
 		<?php if (is_single() || is_page()): ?>
 			
-			<h1 class="post-header-title" itemprop="name">
+			<h1 class="entry-title post-header-title" itemprop="name">
 				
 				<?php the_title(); ?>
 					
@@ -39,7 +39,7 @@ $postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
 			
 		<?php elseif(!is_page()): ?>
 		
-			<h2 class="post-header-title" itemprop="name">
+			<h2 class="entry-title post-header-title" itemprop="name">
 			
 				<?php if (galopin_is_masonry()): ?>
 					
@@ -62,7 +62,7 @@ $postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
 		
 	</header>
 	
-	<div class="post-content" itemprop="articleBody">
+	<div class="entry-content post-content" itemprop="articleBody">
 		
 		<?php get_template_part('content', 'body'); ?>
 

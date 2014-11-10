@@ -11,7 +11,7 @@
 		if (!galopin_is_masonry()){ ?>
 		
 		<p class="readmore">
-			<a href="<?php the_permalink(); ?>" class="button" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a>
+			<a href="<?php the_permalink(); ?>" class="bookmark button" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a>
 		</p>
 		
 	<?php
@@ -32,7 +32,7 @@
 		if (!galopin_is_masonry()){ ?>
 		
 		<p class="readmore">
-			<a href="<?php the_permalink(); ?>" class="button" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a>
+			<a href="<?php the_permalink(); ?>" class="bookmark button" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a>
 		</p>
 		
 	<?php } ?>
