@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			compile: {
-				files: ['css/**/*.scss'],
+				files: ['css/**/*.scss', 'js/*.js'],
 				tasks: ['compile']
 			},
 		},

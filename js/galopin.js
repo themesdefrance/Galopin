@@ -54,7 +54,6 @@ $(function(){
 	
 	var $menu = $('.home .menu-wrapper');
 	var winHeight = $(window).height(),
-		winWidth = $(window).width(),
 		menuHeight = $menu.height(),
 		offset = $('#wpadminbar').height(),
 		heroImageStop = (winHeight-menuHeight-offset);
