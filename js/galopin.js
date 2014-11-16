@@ -104,12 +104,14 @@ $(function(){
 		}
 		
 		//hero image stuff
-		winHeight = $(window).height();
-		menuHeight = $menu.height();
-		offset = $('#wpadminbar').height();
-		heroImageStop = (winHeight-menuHeight-offset);
-		$('.cover .hero-image').css('height', heroImageStop+'px');
-		$menu.css('top', heroImageStop+'px');
+		if ($('.content-wrapper.cover').length){
+			winHeight = $(window).height();
+			menuHeight = $menu.height();
+			offset = $('#wpadminbar').height();
+			heroImageStop = (winHeight-menuHeight-offset);
+			$('.cover .hero-image').css('height', heroImageStop+'px');
+			$menu.css('top', heroImageStop+'px');
+		}
 	}
 	
 	$(window).resize(function(){
