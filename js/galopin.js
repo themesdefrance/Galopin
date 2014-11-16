@@ -52,7 +52,7 @@ $(function(){
 		$('.search-wrapper .form-toggle').toggle();
 	});
 	
-	var $menu = $('.full-hero .menu-wrapper');
+	var $menu = $('.home .menu-wrapper');
 	var winHeight = $(window).height(),
 		winWidth = $(window).width(),
 		menuHeight = $menu.height(),
@@ -105,15 +105,12 @@ $(function(){
 		}
 		
 		//hero image stuff
-		if ($('.content-wrapper.cover').length){
-			winHeight = $(window).height();
-			menuHeight = $menu.height();
-			offset = $('#wpadminbar').height();
-			heroImageStop = (winHeight-menuHeight-offset);
-			if($(window).width()<= 550)heroImageStop = 50;
-			$('.cover .hero-image').css('height', heroImageStop+'px');
-			$menu.css('top', heroImageStop+'px');
-		}
+		winHeight = $(window).height();
+		menuHeight = $menu.height();
+		offset = $('#wpadminbar').height();
+		heroImageStop = (winHeight-menuHeight-offset);
+		$('.cover .hero-image').css('height', heroImageStop+'px');
+		$menu.css('top', heroImageStop+'px');
 	}
 	
 	$(window).resize(function(){
