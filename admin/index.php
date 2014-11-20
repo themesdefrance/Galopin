@@ -32,6 +32,11 @@ $form->setting(array('type'=>'text',
 					 'description'=>__('Enter a title to display in the header (on each page of your website).', 'galopin')));
 					 
 $form->setting(array('type'=>'upload',
+					 'name'=>'hero_logo',
+					 'label'=>__('Header logo', 'galopin'),
+					 'description'=>__('Upload a logo to display in the header (if uploaded, the logo will replace the header title).', 'galopin')));
+					 
+$form->setting(array('type'=>'upload',
 					 'name'=>'hero_image',
 					 'label'=>__('Header image', 'galopin'),
 					 'description'=>__('Upload an image to use as header on your website. Use a 1920x500 jpg/png file or more if you enabled the fullscreen home header image.', 'galopin')));

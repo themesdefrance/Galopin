@@ -1045,8 +1045,7 @@ audio, canvas, video {
   display: inline-block; }
 
 *, *:after, *:before {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 /*
  * miscellaneous stuff, not really box related but always needed
@@ -1542,6 +1541,13 @@ body.admin-bar .cover .menu-wrapper.stuck {
     .hero-text {
       font-size: 20px;
       margin-right: 10px; } }
+
+.hero-logo img {
+  max-height: 400px;
+  display: block; }
+  @media only screen and (max-width: 550px) {
+    .hero-logo img {
+      max-height: 50px; } }
 
 .content .wrapper, .footer-wrapper .wrapper {
   width: 900px;

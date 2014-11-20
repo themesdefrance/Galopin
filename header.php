@@ -61,10 +61,19 @@
 				
 					<button class="menu-toggle typcn typcn-th-menu"></button>
 					
-					<a href="<?php echo home_url(); ?>" class="hero-text">
+					<?php if(get_option('galopin_hero_logo')) : ?>
+						
+						<a href="<?php echo home_url(); ?>" class="hero-logo">	
+							<img src="<?php echo get_option('galopin_hero_logo'); ?>" alt="<?php echo bloginfo('name'); ?>">
+						</a>
 					
-						<?php echo apply_filters('galopin_hero_text', (get_option('galopin_hero_text') ? get_option('galopin_hero_text') : bloginfo('name'))); ?>
-					</a>
+					<?php else: ?>
+					
+						<a href="<?php echo home_url(); ?>" class="hero-text">	
+							<?php echo apply_filters('galopin_hero_text', (get_option('galopin_hero_text') ? get_option('galopin_hero_text') : bloginfo('name'))); ?>
+						</a>
+					
+					<?php endif; ?>
 					
 				</div>
 				

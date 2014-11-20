@@ -1515,6 +1515,13 @@ body.admin-bar .cover .menu-wrapper.stuck {
       font-size: 20px;
       margin-right: 10px; } }
 
+.hero-logo img {
+  max-height: 400px;
+  display: block; }
+  @media only screen and (max-width: 550px) {
+    .hero-logo img {
+      max-height: 50px; } }
+
 .content .wrapper, .footer-wrapper .wrapper {
   width: 900px;
   margin: 0 auto; }

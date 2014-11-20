@@ -317,6 +317,17 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	}
 }
 
+.hero-logo{
+	img{
+		max-height: 400px;
+		display: block;
+		
+		@include width-below($grid-collapse-below){
+			max-height: 50px;
+		}
+	}
+}
+
 .content .wrapper,
 .footer-wrapper .wrapper{
 
