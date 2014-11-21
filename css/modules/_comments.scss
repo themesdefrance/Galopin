@@ -5,11 +5,37 @@
 	margin: 20px 0;
 }
 
-.comment-form > p{
+.comment-form .comment-form-author,
+.comment-form .comment-form-email,
+.comment-form .comment-form-url{
 	position: relative;
 	margin-bottom: 10px;
 	padding-left: 32px;
 	background: #F1F1F1;
+	
+	label{
+		position: absolute;
+		top: 0;
+		left: 45px;
+		padding-top: 4px;
+		font-size: 20px;
+		color: rgba(black, .6);
+		@extend .typcn;
+		
+		&:before{
+			position: absolute;
+			top: 0;
+			left: -45px;
+			z-index: 101;
+			display: block;
+			width: 32px;
+			height: 32px;
+			padding: 6px 4px;
+			color: #fff;
+			font-size: 20px;
+			background: #333333;
+		}
+	}
 }
 .comment-form .comment-form-author label{
 	@extend .typcn-user-outline;
@@ -23,35 +49,14 @@
 .comment-form .comment-form-comment label{
 	@extend .typcn-pencil;
 }
-.comment-form label{
-	position: absolute;
-	top: 0;
-	left: 45px;
-	padding-top: 4px;
-	font-size: 20px;
-	color: rgba(black, .6);
-	@extend .typcn;
-	
-	&:before{
-		position: absolute;
-		top: 0;
-		left: -45px;
-		z-index: 101;
-		display: block;
-		width: 32px;
-		height: 32px;
-		padding: 6px 4px;
-		color: #fff;
-		font-size: 20px;
-		background: #333333;
-	}
-}
+
 .comment-form input[type="text"],
 .comment-form input[type="email"],
 .comment-form input[type="url"]{
 	position: relative;
 	z-index: 100;
 	width: 100%;
+	max-width:none;
 	line-height:20px;
 	padding: 4px 10px;
 	background: none;
@@ -71,12 +76,13 @@
 	width: 100%;
 	background: #F1F1F1;
 	border: none;
-	margin:0;
+	margin:0 0 5px 0;
 	padding: 4px 10px;
 }
 .comment-form .form-submit{
 	text-align: right;
 	background: transparent;
+	margin-bottom: 10px;
 }
 .comment-form input[type="submit"]{
 	@extend .button;
@@ -94,6 +100,7 @@
 
 .comment-list{
 	list-style: none;
+	margin-top: 50px;
 	
 	.children{
 		list-style: none;

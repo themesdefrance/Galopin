@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: galopin
 */
-.typcn:before, .post-header-title:before, .comment-form label:before, .widget > h3:before {
+.typcn:before, .post-header-title:before, .comment-form .comment-form-author label:before, .comment-form .comment-form-email label:before, .comment-form .comment-form-url label:before, .widget > h3:before {
   font-family: 'typicons';
   font-style: normal;
   font-weight: normal;
@@ -1045,7 +1045,8 @@ audio, canvas, video {
   display: inline-block; }
 
 *, *:after, *:before {
-  box-sizing: border-box; }
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
 
 /*
  * miscellaneous stuff, not really box related but always needed
@@ -1434,7 +1435,7 @@ input[type='tel'], input[type='number'], input[type='date'] {
       .menu-wrapper .social-menu li {
         display: inline-block; } }
 
-.menu-wrapper .social-menu .typcn:before, .menu-wrapper .social-menu .post-header-title:before, .menu-wrapper .social-menu .comment-form label:before, .comment-form .menu-wrapper .social-menu label:before, .menu-wrapper .social-menu .widget > h3:before, .widget > .menu-wrapper .social-menu h3:before {
+.menu-wrapper .social-menu .typcn:before, .menu-wrapper .social-menu .post-header-title:before, .menu-wrapper .social-menu .comment-form .comment-form-author label:before, .comment-form .comment-form-author .menu-wrapper .social-menu label:before, .menu-wrapper .social-menu .comment-form .comment-form-email label:before, .comment-form .comment-form-email .menu-wrapper .social-menu label:before, .menu-wrapper .social-menu .comment-form .comment-form-url label:before, .comment-form .comment-form-url .menu-wrapper .social-menu label:before, .menu-wrapper .social-menu .widget > h3:before, .widget > .menu-wrapper .social-menu h3:before {
   font-size: 26px; }
 
 .content {
@@ -1896,36 +1897,36 @@ body.admin-bar .cover .menu-wrapper.stuck {
 .comment-form {
   margin: 20px 0; }
 
-.comment-form > p {
+.comment-form .comment-form-author, .comment-form .comment-form-email, .comment-form .comment-form-url {
   position: relative;
   margin-bottom: 10px;
   padding-left: 32px;
   background: #F1F1F1; }
-
-.comment-form label {
-  position: absolute;
-  top: 0;
-  left: 45px;
-  padding-top: 4px;
-  font-size: 20px;
-  color: rgba(0, 0, 0, 0.6); }
-  .comment-form label:before {
+  .comment-form .comment-form-author label, .comment-form .comment-form-email label, .comment-form .comment-form-url label {
     position: absolute;
     top: 0;
-    left: -45px;
-    z-index: 101;
-    display: block;
-    width: 32px;
-    height: 32px;
-    padding: 6px 4px;
-    color: #fff;
+    left: 45px;
+    padding-top: 4px;
     font-size: 20px;
-    background: #333333; }
+    color: rgba(0, 0, 0, 0.6); }
+    .comment-form .comment-form-author label:before, .comment-form .comment-form-email label:before, .comment-form .comment-form-url label:before {
+      position: absolute;
+      top: 0;
+      left: -45px;
+      z-index: 101;
+      display: block;
+      width: 32px;
+      height: 32px;
+      padding: 6px 4px;
+      color: #fff;
+      font-size: 20px;
+      background: #333333; }
 
 .comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"] {
   position: relative;
   z-index: 100;
   width: 100%;
+  max-width: none;
   line-height: 20px;
   padding: 4px 10px;
   background: none;
@@ -1943,12 +1944,13 @@ body.admin-bar .cover .menu-wrapper.stuck {
   width: 100%;
   background: #F1F1F1;
   border: none;
-  margin: 0;
+  margin: 0 0 5px 0;
   padding: 4px 10px; }
 
 .comment-form .form-submit {
   text-align: right;
-  background: transparent; }
+  background: transparent;
+  margin-bottom: 10px; }
 
 .comment-form input[type="submit"] {
   margin-right: 0; }
@@ -1961,7 +1963,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
     text-decoration: none; }
 
 .comment-list {
-  list-style: none; }
+  list-style: none;
+  margin-top: 50px; }
   .comment-list .children {
     list-style: none;
     margin-left: 20%;
