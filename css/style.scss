@@ -440,6 +440,15 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	}
 }
 
+/* Jetpack optimization */
+
+.jetpack_subscription_widget{
+	
+	input[type='text'], input[type='email']{
+		margin: 8px 0;
+	}
+}
+
 
 @import "modules/search";
 @import "modules/post";

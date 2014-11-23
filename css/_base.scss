@@ -44,8 +44,10 @@ input[type='text'],input[type='email'], input[type='url'], input[type='tel'], in
 
 input[type='text'],input[type='email'], input[type='url'], select{
 	max-width:300px;
+	height: 32px;
 }
 
 input[type='tel'], input[type='number'], input[type='date']{
 	max-width:170px;
+	height: 32px;
 }

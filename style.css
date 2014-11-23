@@ -1268,10 +1268,12 @@ input[type='text'], input[type='email'], input[type='url'], input[type='tel'], i
   background: #f1f1f1; }
 
 input[type='text'], input[type='email'], input[type='url'], select {
-  max-width: 300px; }
+  max-width: 300px;
+  height: 32px; }
 
 input[type='tel'], input[type='number'], input[type='date'] {
-  max-width: 170px; }
+  max-width: 170px;
+  height: 32px; }
 
 .page-wrapper {
   position: relative;
@@ -1638,6 +1640,10 @@ body.admin-bar .cover .menu-wrapper.stuck {
   padding: 10px; }
   .back-to-top:before {
     font-size: 22px; }
+
+/* Jetpack optimization */
+.jetpack_subscription_widget input[type='text'], .jetpack_subscription_widget input[type='email'] {
+  margin: 8px 0; }
 
 .search-form {
   position: relative;
