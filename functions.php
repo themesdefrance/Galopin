@@ -225,6 +225,7 @@ if(!function_exists('galopin_user_styles')){
 				background: <?php echo $contrast; ?>;
 				color: <?php echo $color; ?>;
 			}
+			a,
 			.content a,
 			.menu-wrapper .sub-menu a,
 			.footer a,
@@ -243,6 +244,7 @@ if(!function_exists('galopin_user_styles')){
 			.widget > h3:before{
 				color: <?php echo $color; ?>;
 			}
+			a:hover,
 			.content a:hover,
 			.footer a:hover,
 			.post-header-meta a:hover,

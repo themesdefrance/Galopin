@@ -51,6 +51,9 @@ img{
 }
 
 a{
+	
+	text-decoration:none;
+	
 	//Addresses `outline` inconsistency between Chrome and other browsers.
 	&:focus{
 		outline: thin dotted;

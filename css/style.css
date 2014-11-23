@@ -1053,10 +1053,12 @@ audio, canvas, video {
 img {
   border: 0; }
 
-a:focus {
-  outline: thin dotted; }
-a:active, a:hover {
-  outline: 0; }
+a {
+  text-decoration: none; }
+  a:focus {
+    outline: thin dotted; }
+  a:active, a:hover {
+    outline: 0; }
 
 svg:not(:root) {
   overflow: hidden; }
