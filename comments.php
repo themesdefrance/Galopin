@@ -4,7 +4,7 @@
 	<?php if (have_comments()): ?>
 		<h2 class="comments-title">
 			<?php
-                printf(_n(apply_filters('galopin_one_comment', '1 comment was added, add yours.'), apply_filters('galopin_several_comments', '%1$s comments were added, add yours.'), get_comments_number(), 'galopin'), number_format_i18n(get_comments_number()));
+                printf(_n(apply_filters('galopin_one_comment', __('1 comment was added, add yours.','galopin')), apply_filters('galopin_several_comments', __('%1$s comments were added, add yours.','galopin')), get_comments_number(), 'galopin'), number_format_i18n(get_comments_number()));
             ?>
 		</h2>
 		
