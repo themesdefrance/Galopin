@@ -231,8 +231,14 @@ $menu-width: 280px;
 		top: 0;
 		min-height: 50px;
 		z-index: 200;
-		justify-content: space-between;
+		justify-content: center;
 		background-position: center;
+		
+		.menu-toggle{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	}
 }
 

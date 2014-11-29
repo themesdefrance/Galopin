@@ -1476,11 +1476,15 @@ input[type='tel'], input[type='number'], input[type='date'] {
       top: 0;
       min-height: 50px;
       z-index: 200;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      background-position: center; } }
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      background-position: center; }
+      .hero-image .menu-toggle {
+        position: absolute;
+        top: 0;
+        left: 0; } }
 
 @media only screen and (max-width: 550px) {
   .admin-bar .hero-image {
