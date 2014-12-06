@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="wrapper">
+	<div class="wrapper" role="main" itemprop="mainContentOfPage">
 		
 		<ul class="posts">
 			<li>
@@ -10,7 +10,7 @@
 					<header class="post-header">
 						
 						
-						<h1 class="post-header-title" itemprop="name">
+						<h1 class="post-header-title" itemprop="headline">
 								
 							<?php _e('Oops, there is nothing here...', 'galopin'); ?>
 									
