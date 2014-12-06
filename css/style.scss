@@ -304,6 +304,11 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	border: none;
 	font-size: 30px;
 	display: none;
+	color: #333;
+	
+	&.inverted{
+		color: #fff;
+	}
 	
 	@include width-below($grid-collapse-below){
 		display: block;

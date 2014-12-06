@@ -59,7 +59,7 @@
 			
 				<div class="hero-image" style="background-image: url(<?php echo get_option('galopin_hero_image'); ?>);">
 				
-					<button class="menu-toggle typcn typcn-th-menu"></button>
+					<button class="menu-toggle typcn typcn-th-menu <?php if (get_option('galopin_dark_hero')) echo 'inverted'; ?>"></button>
 					
 					<?php if(get_option('galopin_hero_logo')) : ?>
 						

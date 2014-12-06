@@ -38,6 +38,7 @@ $form->setting(array('type'=>'upload',
 					 
 $form->setting(array('type'=>'upload',
 					 'name'=>'hero_image',
+					 'filters'=>array('hero_color'),
 					 'label'=>__('Header image', 'galopin'),
 					 'description'=>__('Upload an image to use as header on your website. Use a 1920x500 jpg/png file or more if you enabled the fullscreen home header image.', 'galopin')));
 					 

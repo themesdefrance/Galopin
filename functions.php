@@ -19,6 +19,7 @@ require_once 'admin/widgets/video.php';
 
 // Themes functions
 require_once 'admin/functions/galopin-functions.php';
+require_once 'admin/functions/color-functions.php';
 
 //////////////////
 // Bootstraping //
@@ -170,7 +171,6 @@ if(!function_exists('galopin_user_styles')){
 		if (get_option('galopin_color')){
 			$color = apply_filters('galopin_color', get_option('galopin_color'));
 			
-			require_once 'admin/functions/color-functions.php';
 			$hsl = galopin_RGBToHSL(galopin_HTMLToRGB($color));
 			if ($hsl->lightness > 180){
 				$contrast = apply_filters('galopin_color_contrast', '#333');
