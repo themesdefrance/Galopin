@@ -1514,7 +1514,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
     .menu-toggle {
       display: block; } }
 
-.hero-text {
+.hero-image .hero-text {
   background: #333;
   color: #fff;
   padding: 6px 18px;
@@ -1522,7 +1522,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
   font-size: 38px;
   text-decoration: none; }
   @media only screen and (max-width: 550px) {
-    .hero-text {
+    .hero-image .hero-text {
       font-size: 20px;
       margin-right: 10px; } }
 
