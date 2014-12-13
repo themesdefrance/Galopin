@@ -6,7 +6,8 @@ $form->component('raw', __('Galopin Settings', 'galopin'));
 $form->endWrapper('titre');
 
 $form->groupHeader(array('general'=>__('General', 'galopin'),
-						 'appearance'=>__('Appearance', 'galopin')));
+						 'appearance'=>__('Appearance', 'galopin'),
+						 'addons'=>__('Addons', 'galopin')));
 
 //Tab general
 $form->startWrapper('tab', 'general');
@@ -88,6 +89,28 @@ $form->setting(array('type'=>'textarea',
 					 'description'=>__('CSS rules added in this field will be added to your site. If you have too many updates, you should download and install the child theme from <a href="https://www.themesdefrance.fr/" target="_blank">your Themes de France account</a>.', 'galopin')));
 
 $form->endForm();
+
+$form->endWrapper('tab');
+
+/* Modules Tab */
+
+$form->startWrapper('tab', 'addons');
+
+	$form->startForm();
+	
+		$form->startWrapper('td');
+		
+			$form->component('raw', __('Do you know that Galopin can be extended with addons ? Check the addons available below :', 'galopin'));
+		
+		$form->endWrapper('td');
+	
+	$form->endForm();
+	
+	$form->startForm();
+	
+		do_action('galopin_addons_tab', $form);
+	
+	$form->endForm();
 
 $form->endWrapper('tab');
 

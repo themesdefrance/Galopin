@@ -34,7 +34,7 @@ if (!function_exists('galopin_excerpt')){
 		// Create a custom excerpt without shortcodes, images and iframes
 		$content = strip_shortcodes(strip_tags(get_the_content(), '<img><iframe>'));
 		
-		return apply_filters('the_content', wpautop(wp_trim_words( $content , $length )));
+		return '<p>' . wp_trim_words( $content , $length ) . '</p>';
 	}
 }
 
@@ -328,3 +328,57 @@ if (!function_exists('galopin_archives')){
 		return $result;
 	}
 }
+
+// Addons tab content
+
+// bbPress addon
+if(!function_exists('galopin_addons_bbpress')){
+	function galopin_addons_bbpress($form){
+		
+		$form->startWrapper('tr');
+	
+			$form->startWrapper('th');
+			
+				$form->component('raw', __('Galopin bbPress Addon', 'galopin'));
+			
+			$form->endWrapper('th');
+	
+			$form->startWrapper('td');
+				
+				if(!function_exists('galopin_bbpress_styles')):
+				
+					$form->component('raw', __('Galopin bbPress Addon bring custom CSS styling to Galopin to get a perfect bbPress integration.', 'galopin') . '<br><br>');
+					
+					$form->component('link',
+									 'https://www.themesdefrance.fr/module-bbpress-galopin/?utm_source=Galopin&utm_medium=bouton&utm_content=Galopin_bbPress&utm_campaign=GalopinAdmin',
+									 __('Get Galopin bbPress Addon', 'galopin'),
+									 array(
+										 'class'=>array('button', 'button-primary'),
+										 'target'=>'_blank'
+									 ));
+				else:
+					$form->component('description', __('Galopin bbPress Addon is installed. Thanks for using it !', 'galopin'));
+					
+					$form->component('description', __('If you have some time, help us to improve it by giving some feedback.', 'galopin') . '<br><br>');
+					
+					$form->component('link',
+									 'https://www.themesdefrance.fr/temoignage/?produit=Galopin%20bbPress&utm_source=Galopin&utm_medium=bouton&utm_content=Galopin_bbPress&utm_campaign=GalopinAdmin',
+									 __('Give feedback on Galopin bbPress Addon', 'galopin'),
+									 array(
+										 'class'=>array('button'),
+										 'target'=>'_blank'
+									 ));
+					
+				endif;
+			
+			$form->endWrapper('td');
+		
+		$form->endWrapper('tr');
+		
+	
+	}
+}
+add_action('galopin_addons_tab', 'galopin_addons_bbpress', 10, 1);
+
+
+

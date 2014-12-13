@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Galopin\n"
-"POT-Creation-Date: 2014-11-24 06:39+0100\n"
-"PO-Revision-Date: 2014-11-24 06:41+0100\n"
+"POT-Creation-Date: 2014-12-13 17:08+0100\n"
+"PO-Revision-Date: 2014-12-13 17:11+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: fr_FR\n"
@@ -75,27 +75,27 @@ msgstr "le"
 msgid "by"
 msgstr "par"
 
-#: ../content-header-meta.php:42
+#: ../content-header-meta.php:41
 msgid "in"
 msgstr "dans"
 
-#: ../content-header-meta.php:48
+#: ../content-header-meta.php:51
 msgid "No Comment"
 msgstr "Aucun commentaire"
 
-#: ../content-header-meta.php:48
+#: ../content-header-meta.php:51
 msgid "One Comment"
 msgstr "Un commentaire"
 
-#: ../content-header-meta.php:48
+#: ../content-header-meta.php:51
 msgid "% Comments"
 msgstr "% commentaires"
 
-#: ../content-header-meta.php:52
+#: ../content-header-meta.php:58
 msgid "Edit"
 msgstr "Modifier"
 
-#: ../footer.php:25 ../admin/index.php:49
+#: ../footer.php:25 ../admin/index.php:51
 #, php-format
 msgid ""
 "<strong>%s</strong> - Galopin by <a href=\"https://www.themesdefrance.fr/\" "
@@ -108,43 +108,43 @@ msgstr ""
 msgid "Back to the top"
 msgstr "Remonter"
 
-#: ../functions.php:43
+#: ../functions.php:44
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: ../functions.php:44
+#: ../functions.php:45
 msgid "Footer menu"
 msgstr "Menu du pied de page"
 
-#: ../functions.php:49 ../admin/index.php:73
+#: ../functions.php:50 ../admin/index.php:75
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: ../functions.php:51
+#: ../functions.php:52
 msgid "Add widgets in the sidebar."
 msgstr "Ajouter des widgets à la barre latérale."
 
-#: ../functions.php:59 ../admin/index.php:46
+#: ../functions.php:60 ../admin/index.php:48
 msgid "Footer"
 msgstr "Pied de page"
 
-#: ../functions.php:61
+#: ../functions.php:62
 msgid "Add widgets in the footer."
 msgstr "Ajouter des widgets au pied de page."
 
-#: ../functions.php:85
+#: ../functions.php:86
 msgid "Post width"
 msgstr "Largeur de l'article"
 
-#: ../functions.php:86
+#: ../functions.php:87
 msgid "Fullpage width"
 msgstr "Largeur pleine page"
 
-#: ../functions.php:140 ../admin/index.php:5
+#: ../functions.php:141 ../admin/index.php:5
 msgid "Galopin Settings"
 msgstr "Options Galopin"
 
-#: ../functions.php:148
+#: ../functions.php:149
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous n’avez pas les droits suffisants pour accéder à cette page."
 
@@ -254,11 +254,15 @@ msgstr "Général"
 msgid "Appearance"
 msgstr "Apparence"
 
-#: ../admin/index.php:18
+#: ../admin/index.php:10
+msgid "Addons"
+msgstr "Modules"
+
+#: ../admin/index.php:19
 msgid "License"
 msgstr "Licence"
 
-#: ../admin/index.php:19
+#: ../admin/index.php:20
 msgid ""
 "Enter your licence key in order to receive Galopin updates. You'll find it "
 "in the confirmation email we sent you after your purchase."
@@ -267,28 +271,28 @@ msgstr ""
 "Vous la trouverez quand l'email de confirmation que nous vous avons envoyé "
 "après à votre commande."
 
-#: ../admin/index.php:26
+#: ../admin/index.php:27
 msgid "Fullscreen home header image"
 msgstr "Image d'en-tête en plein écran sur l'accueil"
 
-#: ../admin/index.php:27
+#: ../admin/index.php:28
 msgid "Fill out the screen with the home header image."
 msgstr "Afficher l'image d'en-tête sur la totalité de l'écran."
 
-#: ../admin/index.php:31
+#: ../admin/index.php:32
 msgid "Header title"
 msgstr "Titre de l'en-tête"
 
-#: ../admin/index.php:32
+#: ../admin/index.php:33
 msgid "Enter a title to display in the header (on each page of your website)."
 msgstr ""
 "Entrez un titre à afficher dans l'en-tête (sur chaque page de votre site)."
 
-#: ../admin/index.php:36
+#: ../admin/index.php:37
 msgid "Header logo"
 msgstr "Logo de l'en-tête"
 
-#: ../admin/index.php:37
+#: ../admin/index.php:38
 msgid ""
 "Upload a logo to display in the header (if uploaded, the logo will replace "
 "the header title)."
@@ -296,11 +300,11 @@ msgstr ""
 "Envoyez un logo pour l'afficher dans l'en-tête (le logo remplacera le Titre "
 "de l'en-tête)"
 
-#: ../admin/index.php:41
+#: ../admin/index.php:43
 msgid "Header image"
 msgstr "Image d'en-tête"
 
-#: ../admin/index.php:42
+#: ../admin/index.php:44
 msgid ""
 "Upload an image to use as header on your website. Use a 1920x500 jpg/png "
 "file or more if you enabled the fullscreen home header image."
@@ -309,7 +313,7 @@ msgstr ""
 "fichier jpg/png de 1920x500 ou plus si vous avez activé l'image d'en-tête en "
 "plein écran sur l'accueil."
 
-#: ../admin/index.php:47
+#: ../admin/index.php:49
 msgid ""
 "Left footer content. The following HTML tags are allowed : &lt;a href=&quot;"
 "LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, "
@@ -320,16 +324,16 @@ msgstr ""
 "strong&gt;TEXTE_GRAS&lt;/strong&gt;, &lt;em&gt;TEXTE_ITALIQUE&lt;/em&gt;, "
 "&lt;img src=&quot;URL_IMAGE&quot;&gt;."
 
-#: ../admin/index.php:65
+#: ../admin/index.php:67
 msgid "Main color"
 msgstr "Couleur principale"
 
-#: ../admin/index.php:66
+#: ../admin/index.php:68
 msgid "This color will be used across your website for buttons, links, etc."
 msgstr ""
 "Cette couleur sera utilisée sur votre site pour les boutons, les liens, etc."
 
-#: ../admin/index.php:74
+#: ../admin/index.php:76
 msgid ""
 "Display a sidebar on the content's right across your website in all no-"
 "masonry pages."
@@ -337,11 +341,11 @@ msgstr ""
 "Afficher une barre latérale sur la droite du contenu de votre site sur "
 "toutes les pages non dotées du style masonry."
 
-#: ../admin/index.php:81
+#: ../admin/index.php:83
 msgid "Masonry"
 msgstr "Masonry"
 
-#: ../admin/index.php:82
+#: ../admin/index.php:84
 msgid ""
 "Enables the masonry layout on the home page, categories, tags and archives "
 "pages."
@@ -349,11 +353,11 @@ msgstr ""
 "Active l'agencement masonry sur la page d'accueil, les pages de catégories, "
 "mots-clés et d'archives."
 
-#: ../admin/index.php:86
+#: ../admin/index.php:88
 msgid "Additionnal CSS"
 msgstr "CSS Supplémentaire"
 
-#: ../admin/index.php:87
+#: ../admin/index.php:89
 msgid ""
 "CSS rules added in this field will be added to your site. If you have too "
 "many updates, you should download and install the child theme from <a href="
@@ -365,23 +369,31 @@ msgstr ""
 "thème enfant à partir de <a href=\"https://www.themesdefrance.fr/\" target="
 "\"_blank\">votre compte Themes de France</a>."
 
-#: ../admin/index.php:93
+#: ../admin/index.php:103
+msgid ""
+"Do you know that Galopin can be extended with addons ? Check the addons "
+"available below :"
+msgstr ""
+"Savez-vous que Galopin peut se doter de nouvelles fonctionnalités ? Jetez un "
+"oeil aux modules ci-dessous :"
+
+#: ../admin/index.php:117
 msgid "Save changes"
 msgstr "Sauvegarder"
 
-#: ../admin/index.php:101
+#: ../admin/index.php:125
 msgid "Any questions on Galopin ? Go to the"
 msgstr "Des questions sur Galopin ? Posez-la sur la"
 
-#: ../admin/index.php:101
+#: ../admin/index.php:125
 msgid "Themes de France support page."
 msgstr "page de support de Thèmes de France."
 
-#: ../admin/index.php:101
+#: ../admin/index.php:125
 msgid "If you like Galopin, you should"
 msgstr "Si vous aimez Galopin, vous devriez"
 
-#: ../admin/index.php:101
+#: ../admin/index.php:125
 msgid "follow us on Facebook"
 msgstr "nous suivre sur Facebook"
 
@@ -461,6 +473,38 @@ msgstr "Commentaire"
 #: ../admin/functions/galopin-functions.php:292
 msgid "There is no archives to display."
 msgstr "Il n'y a aucune archive à afficher."
+
+#: ../admin/functions/galopin-functions.php:342
+msgid "Galopin bbPress Addon"
+msgstr "Module bbPress pour Galopin"
+
+#: ../admin/functions/galopin-functions.php:350
+msgid ""
+"Galopin bbPress Addon bring custom CSS styling to Galopin to get a perfect "
+"bbPress integration."
+msgstr ""
+"Le module bbPress pour Galopin optimise le style du thème Galopin pour une "
+"intégration parfaite avec le plugin bbPress (pour créer un forum sur votre "
+"site)."
+
+#: ../admin/functions/galopin-functions.php:354
+msgid "Get Galopin bbPress Addon"
+msgstr "Obtenir le module bbPress pour Étendard"
+
+#: ../admin/functions/galopin-functions.php:360
+msgid "Galopin bbPress Addon is installed. Thanks for using it !"
+msgstr ""
+"Le module bbPress pour Galopin est installé. Merci à vous de l'utiliser !"
+
+#: ../admin/functions/galopin-functions.php:362
+msgid "If you have some time, help us to improve it by giving some feedback."
+msgstr ""
+"Si vous avez un peu de temps, aidez-nous à améliorer ce module en nous "
+"disant que ce vous en pensez."
+
+#: ../admin/functions/galopin-functions.php:366
+msgid "Give feedback on Galopin bbPress Addon"
+msgstr "Faire un retour sur bbPress pour Galopin"
 
 #: ../admin/metaboxes/post-formats.php:8
 msgid "Link"
