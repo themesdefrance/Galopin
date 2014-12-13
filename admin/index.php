@@ -122,6 +122,6 @@ $form->render();
 
 <div style="margin-top:20px;">
 
-<?php _e('Any questions on Galopin ? Go to the','galopin'); ?> <a href="https://www.themesdefrance.fr/support/?utm_source=theme&utm_medium=supportlink&utm_campaign=galopin" target="_blank"><?php _e('Themes de France support page.','galopin'); ?></a> - <?php _e('If you like Galopin, you should','galopin'); ?>, <a href="https://www.facebook.com/ThemesDeFrance" target="_blank"><?php _e('follow us on Facebook','galopin'); ?></a>.
+<?php _e('Any questions on Galopin ? Go to the','galopin'); ?> <a href="https://www.themesdefrance.fr/support/?utm_source=Galopin&utm_medium=supportlink&utm_campaign=GalopinAdmin" target="_blank"><?php _e('Themes de France support page.','galopin'); ?></a> - <?php _e('If you like Galopin, you should','galopin'); ?>, <a href="https://www.facebook.com/ThemesDeFrance" target="_blank"><?php _e('follow us on Facebook','galopin'); ?></a>.
 
 </div>
