@@ -34,7 +34,7 @@ if (!function_exists('galopin_excerpt')){
 		// Create a custom excerpt without shortcodes, images and iframes
 		$content = strip_shortcodes(strip_tags(get_the_content(), '<img><iframe>'));
 		
-		return '<p>' . wp_trim_words( $content , $length ) . '</p>';
+		return apply_filters('the_content', wpautop(wp_trim_words( $content , $length )));
 	}
 }
 
