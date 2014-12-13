@@ -7,7 +7,7 @@
 if (!function_exists('galopin_is_masonry')){
 	function galopin_is_masonry(){
 		// Are we on a page that support masonry ? If yes, check if masonry is activated
-		if(!is_page() && !is_single() && !is_404() && !is_singular() && !is_attachment() && !is_page_template() && !is_preview() && !apply_filters('is_custom_page', true))
+		if(!is_page() && !is_single() && !is_404() && !is_singular() && !is_attachment() && !is_page_template() && !is_preview())
 			return get_option('galopin_masonry');
 		return false;
 	}
