@@ -5,14 +5,17 @@ $sidebar = get_option('galopin_show_sidebar');
 
 <?php get_header(); ?>
 
-<div class="wrapper">	
+<?php do_action('galopin_before_main'); ?>	
+
+<div class="wrapper">
+	
+	<?php do_action('galopin_top_main'); ?>
 
 	<div class="<?php if (!$masonry && $sidebar) echo 'grid'; ?>">
 	
-		<div class="<?php if (!$masonry && $sidebar) echo 'col-2-3'; ?>">
+		<div class="main<?php if (!$masonry && $sidebar) echo ' col-2-3'; ?>" role="main" itemprop="mainContentOfPage">
 			
 			<?php if ($masonry){ get_template_part('header', 'masonry'); } ?>
-			
 			
 			<ul class="posts <?php if ($masonry) echo 'masonry'; ?>">
 			
@@ -30,24 +33,20 @@ $sidebar = get_option('galopin_show_sidebar');
 				
 				<?php endwhile; ?>
 				
-			</ul>
+			</ul><!--END .posts-->
 			
 			<?php galopin_posts_nav(false, '', '<div class="pagination">', '</div>'); ?>
 			
 		</div>
 		
-		<?php if (!$masonry && $sidebar){ ?>
+		<?php if (!$masonry && $sidebar)get_sidebar('blog'); ?>
 		
-		<aside class="sidebar col-1-3">
-		
-			<?php get_sidebar('blog'); ?>
-			
-		</aside>
-		
-		<?php } ?>
-		
-	</div>
+	</div><!--END .main -->
 	
-</div>
+	<?php do_action('galopin_bottom_main'); ?>
+	
+</div><!--END .wrapper -->
+
+<?php do_action('galopin_after_main'); ?>
 
 <?php get_footer(); ?>

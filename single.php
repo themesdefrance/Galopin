@@ -1,11 +1,15 @@
 <?php $sidebar = get_option('galopin_show_sidebar'); ?>
 <?php get_header(); ?>
 
-<div class="wrapper">	
+<?php do_action('galopin_before_main'); ?>	
+
+<div class="wrapper">
+	
+	<?php do_action('galopin_top_main'); ?>
 
 	<div class="<?php if ($sidebar) echo 'grid'; ?>">
 	
-		<div class="<?php if ($sidebar) echo 'col-2-3'; ?>">
+		<div class="main<?php if ($sidebar) echo ' col-2-3'; ?>" role="main" itemprop="mainContentOfPage">
 		
 			<?php the_post(); get_template_part('content', get_post_format()); ?>
 			
@@ -13,30 +17,16 @@
 			
 			<?php galopin_posts_nav(false, '','<div class="pagination">','</div>'); ?>
 
-		</div>
+		</div><!--END .main -->
 		
-		<?php if ($sidebar){ ?>
-		
-		<aside class="sidebar col-1-3">
-		
-			<?php get_sidebar('blog'); ?>
-			
-		</aside>
-		
-		<?php } ?>
+		<?php if ($sidebar)get_sidebar('blog'); ?>
 		
 	</div>
+	
+	<?php do_action('galopin_bottom_main'); ?>
+	
+</div><!--END .wrapper -->
 
-	<aside class="footerbar">
-	
-		<div class="grid">
-		
-			<?php get_sidebar('footer'); ?>
-			
-		</div>
-		
-	</aside>
-	
-</div>
+<?php do_action('galopin_after_main'); ?>
 
 <?php get_footer(); ?>

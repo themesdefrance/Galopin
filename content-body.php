@@ -1,3 +1,9 @@
+<?php do_action('galopin_before_content'); ?>
+
+<div class="entry-content post-content <?php get_post_format(); ?>" itemprop="articleBody">
+
+<?php do_action('galopin_top_content'); ?>
+
 <?php
 
 	if (is_single() || is_page()){
@@ -31,10 +37,16 @@
 		
 		if (!galopin_is_masonry()){ ?>
 		
-		<p class="readmore">
-			<a href="<?php the_permalink(); ?>" class="bookmark button" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a>
-		</p>
+			<p class="readmore">
+				<a href="<?php the_permalink(); ?>" class="bookmark button" title="<?php the_title(); ?>"><?php _e('Read more','galopin'); ?></a>
+			</p>
 		
-	<?php } ?>
+		<?php } ?>
 	
 <?php } ?>
+
+<?php do_action('galopin_after_content'); ?>
+
+</div><!--END .entry-content -->
+
+<?php do_action('galopin_after_content'); ?>

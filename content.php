@@ -1,13 +1,15 @@
-<?php 
+<?php 	$sidebar = get_option('galopin_show_sidebar');
+		$postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true); ?>
 
-$sidebar = get_option('galopin_show_sidebar');
-$postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
-
-?>
+<?php do_action('galopin_before_post'); ?>
 
 <article <?php post_class('post'); ?> itemscope itemtype="http://schema.org/Article">
-
+	
+	<?php do_action('galopin_top_post'); ?>
+	
 	<header class="post-header">
+		
+		<?php do_action('galopin_top_header_post'); ?>
 					
 		<?php if (has_post_thumbnail() && !post_password_required()): ?>
 		
@@ -31,7 +33,7 @@ $postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
 		
 		<?php if (is_single() || is_page()): ?>
 			
-			<h1 class="entry-title post-header-title" itemprop="name">
+			<h1 class="entry-title post-header-title" itemprop="headline">
 				
 				<?php the_title(); ?>
 					
@@ -39,7 +41,7 @@ $postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
 			
 		<?php elseif(!is_page()): ?>
 		
-			<h2 class="entry-title post-header-title" itemprop="name">
+			<h2 class="entry-title post-header-title" itemprop="headline">
 			
 				<?php if (galopin_is_masonry()): ?>
 					
@@ -60,18 +62,16 @@ $postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true);
 		
 		<?php if (!galopin_is_masonry()) get_template_part('content', 'header-meta'); ?>
 		
+		<?php do_action('galopin_bottom_header_post'); ?>
+		
 	</header>
-	
-	<div class="entry-content post-content" itemprop="articleBody">
 		
-		<?php get_template_part('content', 'body'); ?>
-
-	</div>
+	<?php get_template_part('content', 'body'); ?>
 	
-	<footer class="post-footer">
+	<?php get_template_part('content', 'footer-meta'); ?>
 	
-		<?php get_template_part('content', 'footer-meta'); ?>
-		
-	</footer>
+	<?php do_action('galopin_bottom_post'); ?>
 	
 </article>
+
+<?php do_action('galopin_after_post'); ?>

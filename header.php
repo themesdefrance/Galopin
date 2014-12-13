@@ -38,7 +38,7 @@
 					 <?php get_search_form(true); ?> 
 				</div>
 				
-				<nav class="main-menu">
+				<nav class="main-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 					<?php
 					wp_nav_menu(array(
 						'theme_location' => 'primary',
@@ -53,7 +53,8 @@
 				<ul class="social-menu">
 					<?php echo galopin_social(); ?>
 				</ul>
-			</header>
+				
+			</header><!--END .menu-wrapper-->
 			
 			<div class="content <?php if (galopin_is_masonry()) echo 'masonry-wrapper'; ?>">
 			
@@ -75,7 +76,4 @@
 					
 					<?php endif; ?>
 					
-				</div>
-				
-				
-				
+				</div><!--END .hero-image-->

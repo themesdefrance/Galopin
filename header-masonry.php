@@ -1,4 +1,8 @@
+<?php do_action('galopin_before_masonry_header'); ?>
+
 <div class="masonry-header">
+	
+	<?php do_action('galopin_top_masonry_header'); ?>
 	
 	<?php if(is_category()){ ?>
 	
@@ -60,5 +64,9 @@
 		</h1>
 		
 	<?php } ?>
-		
-</div>
+	
+	<?php do_action('galopin_bottom_masonry_header'); ?>
+	
+</div><!--END .masonry-header-->
+
+<?php do_action('galopin_after_masonry_header'); ?>

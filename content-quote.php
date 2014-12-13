@@ -1,35 +1,41 @@
 <?php $quote = "“" . get_post_meta($post->ID, '_galopin_quote_meta', true) . "”"; ?>
 <?php $author_quote = get_post_meta($post->ID, '_galopin_quote_author_meta', true); ?>
 
-<article <?php post_class('post'); ?> itemscope itemtype="http://schema.org/Article">
+<?php do_action('galopin_before_post'); ?>
 
+<article <?php post_class('post'); ?> itemscope itemtype="http://schema.org/Article">
+	
+	<?php do_action('galopin_top_post'); ?>
+	
 	<header class="post-header">
+		
+		<?php do_action('galopin_top_header_post'); ?>
 		
 		<div class="post-quote">
 		
 			<?php if (is_single()): ?>
 				
-				<h1 class="post-header-title" itemprop="name">
+				<h1 class="entry-title post-header-title" itemprop="headline">
 				
-					<blockquote><?php echo $quote; ?></blockquote>
+					<blockquote><?php echo sanitize_text_field($quote); ?></blockquote>
 					
 				</h1>
 				
 			<?php else: ?>
 				
-				<h2 class="post-header-title" itemprop="name">
+				<h2 class="entry-title post-header-title" itemprop="headline">
 				
 					<blockquote>
 					
 						<?php if (galopin_is_masonry()): ?>
 						
-							<?php echo $quote; ?>
+							<?php echo sanitize_text_field($quote); ?>
 							
 						<?php else: ?>
 						
-							<a href="<?php the_permalink(); ?>" title="<?php echo $quote; ?>">
+							<a href="<?php the_permalink(); ?>" title="<?php echo sanitize_text_field($quote); ?>">
 							
-								<?php echo $quote; ?>
+								<?php echo sanitize_text_field($quote); ?>
 								
 							</a>
 						
@@ -41,28 +47,22 @@
 				
 			<?php endif; ?>
 			
-			<span class="post-quote-author"><?php echo $author_quote; ?></span>
+			<span class="post-quote-author"><?php echo sanitize_text_field($author_quote); ?></span>
 			
 		</div>
 		
 		<?php if (!galopin_is_masonry()) get_template_part('content', 'header-meta'); ?>
 		
+		<?php do_action('galopin_bottom_header_post'); ?>
+		
 	</header>
 	
-	<?php if(!galopin_is_masonry()){ ?>
-		
-		<div class="post-content quote" itemprop="articleBody">
-			
-			<?php get_template_part('content', 'body'); ?>
-			
-		</div>
-		
-	<?php } ?>
+	<?php if (!galopin_is_masonry()) get_template_part('content', 'body'); ?>
 	
-	<footer class="post-footer">
+	<?php get_template_part('content', 'footer-meta'); ?>
 	
-		<?php get_template_part('content', 'footer-meta'); ?>
-		
-	</footer>
+	<?php do_action('galopin_bottom_post'); ?>
 	
 </article>
+
+<?php do_action('galopin_after_post'); ?>
