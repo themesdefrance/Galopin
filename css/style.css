@@ -1157,7 +1157,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 html {
   font-size: 16pxpx;
-  color: #333; }
+  color: #333;
+  line-height: 1.6; }
 
 .clearfix:before, .grid:before, .menu-wrapper:before, .comment:before, .widget_galopinsocial ul:before, .masonry:before, .clearfix:after, .grid:after, .menu-wrapper:after, .comment:after, .widget_galopinsocial ul:after, .masonry:after {
   content: "";
@@ -1993,10 +1994,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
   .widget ul, .widget ol {
     list-style: none; }
   .widget ul li {
-    padding-bottom: 5px;
     margin-bottom: 10px; }
     .widget ul li:last-child {
-      padding-bottom: 0;
       margin-bottom: 0; }
   .widget a {
     text-decoration: none; }

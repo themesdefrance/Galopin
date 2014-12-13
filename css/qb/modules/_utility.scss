@@ -3,6 +3,7 @@ $font-base: 16px !default;
 html{
 	font-size: #{$font-base}px;
 	color: #333;
+	line-height:1.6;
 }
 @mixin rem-sizing($property, $pxsize){
 	#{$property}: #{$pxsize}px; 
