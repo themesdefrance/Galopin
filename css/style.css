@@ -2155,12 +2155,12 @@ body.admin-bar .cover .menu-wrapper.stuck {
   margin-bottom: 30px;
   padding: 10px;
   transition: 0.4s background ease-out, 0.2s color ease-out; }
-  @media only screen and (min-width: 999px) {
+  @media only screen and (min-width: 701px) {
     .masonry .brick {
-      width: calc(100% / 3 - 20px); } }
-  @media only screen and (max-width: 999px) {
+      width: 31%; } }
+  @media only screen and (max-width: 700px) {
     .masonry .brick {
-      width: calc(100% / 2 - 15px); } }
+      width: 47%; } }
   @media only screen and (max-width: 550px) {
     .masonry .brick {
       width: 100%; } }

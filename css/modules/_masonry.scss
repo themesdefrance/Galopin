@@ -33,11 +33,11 @@
 	transition: .4s background ease-out,
 				.2s color ease-out;
 	
-	@include width-above(999px){
-		width: calc(100% / 3 - 20px) ;
+	@include width-above(701px){
+		width: 31%;
 	}
-	@include width-below(999px){
-		width: calc(100% / 2 - 15px);
+	@include width-below(700px){
+		width: 47%;
 	}
 	@include width-below($grid-collapse-below){
 		width: 100%;

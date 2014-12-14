@@ -1045,7 +1045,8 @@ audio, canvas, video {
   display: inline-block; }
 
 *, *:after, *:before {
-  box-sizing: border-box; }
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
 
 /*
  * miscellaneous stuff, not really box related but always needed
@@ -2198,12 +2199,12 @@ body.admin-bar .cover .menu-wrapper.stuck {
   padding: 10px;
   -webkit-transition: 0.4s background ease-out, 0.2s color ease-out;
           transition: 0.4s background ease-out, 0.2s color ease-out; }
-  @media only screen and (min-width: 999px) {
+  @media only screen and (min-width: 701px) {
     .masonry .brick {
-      width: calc(100% / 3 - 20px); } }
-  @media only screen and (max-width: 999px) {
+      width: 31%; } }
+  @media only screen and (max-width: 700px) {
     .masonry .brick {
-      width: calc(100% / 2 - 15px); } }
+      width: 47%; } }
   @media only screen and (max-width: 550px) {
     .masonry .brick {
       width: 100%; } }
