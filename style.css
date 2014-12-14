@@ -1458,8 +1458,8 @@ input[type='tel'], input[type='number'], input[type='date'] {
   margin-bottom: 40px;
   background: #fafafa;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1472,6 +1472,9 @@ input[type='tel'], input[type='number'], input[type='date'] {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media only screen and (min-width: 800px) {
+    .hero-image {
+      background-attachment: fixed; } }
   @media only screen and (max-width: 550px) {
     .hero-image {
       top: 0;

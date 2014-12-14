@@ -221,11 +221,15 @@ $menu-width: 280px;
 	margin-bottom: 40px;
 	background: #fafafa;
 	background-size: cover;
-	background-attachment: fixed;
-	background-position: center 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
+	@include width-above(800px){
+		background-attachment: fixed;
+	}
 	
 	@include width-below($grid-collapse-below){
 		top: 0;
