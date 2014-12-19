@@ -71,6 +71,11 @@ $menu-width: 280px;
 	font-size: 16px;
 	opacity: .7;
 	
+	&:hover{
+		color: #fff;
+		opacity: 1;
+	}
+	
 	@include width-below($grid-collapse-below){
 		display: block;
 		color: #fff;
@@ -325,6 +330,10 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	font-family: $heading-font;
 	font-size: 38px;
 	text-decoration: none;
+	
+	&:hover{
+		color:#fff;
+	}
 	
 	@include width-below($grid-collapse-below){
 		font-size: 20px;

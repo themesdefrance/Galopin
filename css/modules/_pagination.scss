@@ -7,7 +7,7 @@
 	> span,
 	> a{
 		display: inline-block;
-		color: inherit;
+		color: inherit !important;
 		text-decoration: none;
 		padding: 4px 10px;
 		font-family: $heading-font;
@@ -30,13 +30,14 @@
 	
 	a{
 		padding: 0 4px;
-		color: inherit;
+		color: inherit !important;
 		text-decoration: none;
 		transition: .2s opacity ease-out;
 		opacity: .6;
 		
 		&:hover{
 			opacity: 1;
+			
 		}
 	}
 	

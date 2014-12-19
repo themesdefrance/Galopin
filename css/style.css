@@ -1326,6 +1326,9 @@ input[type='tel'], input[type='number'], input[type='date'] {
   text-decoration: none;
   font-size: 16px;
   opacity: 0.7; }
+  .menu-wrapper a:hover {
+    color: #fff;
+    opacity: 1; }
   @media only screen and (max-width: 550px) {
     .menu-wrapper a {
       display: block;
@@ -1525,6 +1528,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
   font-family: 'Montserrat';
   font-size: 38px;
   text-decoration: none; }
+  .hero-image .hero-text:hover {
+    color: #fff; }
   @media only screen and (max-width: 550px) {
     .hero-image .hero-text {
       font-size: 20px;
@@ -2107,7 +2112,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
   margin: 20px 0 80px; }
   .pagination > span, .pagination > a {
     display: inline-block;
-    color: inherit;
+    color: inherit !important;
     text-decoration: none;
     padding: 4px 10px;
     font-family: 'Montserrat';
@@ -2124,7 +2129,7 @@ body.admin-bar .cover .menu-wrapper.stuck {
   padding: 4px 10px; }
   .post-pagination a {
     padding: 0 4px;
-    color: inherit;
+    color: inherit !important;
     text-decoration: none;
     transition: 0.2s opacity ease-out;
     opacity: 0.6; }
