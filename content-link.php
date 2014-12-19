@@ -14,7 +14,7 @@
 		
 			<?php if (is_single()): ?>
 				
-				<h1 class="entry-title post-header-title" itemprop="headline"><a href="<?php echo $link; ?>" title="<?php the_title(); ?>" rel="external"><?php the_title(); ?></a></h1>
+				<h1 class="entry-title post-header-title" itemprop="headline"><a href="<?php echo esc_url($link); ?>" title="<?php the_title(); ?>" rel="external"><?php the_title(); ?></a></h1>
 				
 			<?php else: ?>
 			
@@ -26,7 +26,7 @@
 						
 					<?php else: ?>
 					
-						<a href="<?php echo $link; ?>" title="<?php the_title(); ?>">
+						<a href="<?php echo esc_url($link); ?>" title="<?php the_title(); ?>">
 						
 							<?php the_title(); ?>
 						</a>
