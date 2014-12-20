@@ -16,24 +16,32 @@ $sidebar = get_option('galopin_show_sidebar');
 		<div class="main<?php if (!$masonry && $sidebar) echo ' col-2-3'; ?>" role="main" itemprop="mainContentOfPage">
 			
 			<?php if ($masonry){ get_template_part('header', 'masonry'); } ?>
-			
-			<ul class="posts <?php if ($masonry) echo 'masonry'; ?>">
-			
-				<?php while (have_posts()) : the_post(); ?>
 				
-					<li class="<?php if ($masonry) echo 'brick'; ?>">
-					
-						<?php if ($masonry): ?><a class="brick-link" title="<?php _e('Read more','galopin'); ?>" href="<?php the_permalink(); ?>"><?php endif; ?>
+				<?php if(have_posts()) : ?>
+				
+					<ul class="posts <?php if ($masonry) echo 'masonry'; ?>">
+			
+						<?php while (have_posts()) : the_post(); ?>
 						
-							<?php get_template_part('content', get_post_format()); ?>
+							<li class="<?php if ($masonry) echo 'brick'; ?>">
 							
-						<?php if ($masonry): ?></a><?php endif; ?>
+								<?php if ($masonry): ?><a class="brick-link" title="<?php _e('Read more','galopin'); ?>" href="<?php the_permalink(); ?>"><?php endif; ?>
+								
+									<?php get_template_part('content', get_post_format()); ?>
+									
+								<?php if ($masonry): ?></a><?php endif; ?>
+								
+							</li>
 						
-					</li>
+						<?php endwhile; ?>
+					
+					</ul><!--END .posts-->
 				
-				<?php endwhile; ?>
-				
-			</ul><!--END .posts-->
+				<?php else : ?>
+					
+						<?php get_template_part('content', 'none'); ?>
+					
+				<?php endif; ?>
 			
 			<?php galopin_posts_nav(false, '', '<div class="pagination">', '</div>'); ?>
 			

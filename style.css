@@ -2189,6 +2189,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
     border-bottom-width: 1px;
     border-bottom-style: solid; }
 
+.search-no-results .masonry-wrapper {
+  background: #fff; }
+
 .content-wrapper.cover .masonry-wrapper .masonry-header {
   padding: 20px 0 30px; }
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Galopin\n"
-"POT-Creation-Date: 2014-12-13 17:08+0100\n"
-"PO-Revision-Date: 2014-12-13 17:11+0100\n"
+"POT-Creation-Date: 2014-12-20 12:24+0100\n"
+"PO-Revision-Date: 2014-12-20 12:25+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: fr_FR\n"
@@ -16,11 +16,11 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../404.php:15
+#: ../404.php:24
 msgid "Oops, there is nothing here..."
 msgstr "Mince, il n'y a rien ici..."
 
-#: ../404.php:25
+#: ../404.php:37
 #, php-format
 msgid ""
 "The page you requested does not seem to exist. You can go back to <a href="
@@ -54,12 +54,12 @@ msgstr "Soyez le premier à publier un commentaire."
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: ../content-body.php:14 ../content-body.php:35 ../content.php:16
-#: ../index.php:23
+#: ../content-body.php:20 ../content-body.php:41 ../content.php:18
+#: ../index.php:28
 msgid "Read more"
 msgstr "Lire la suite"
 
-#: ../content-footer-meta.php:19
+#: ../content-footer-meta.php:23
 msgid "Pages:"
 msgstr "Pages:"
 
@@ -95,7 +95,16 @@ msgstr "% commentaires"
 msgid "Edit"
 msgstr "Modifier"
 
-#: ../footer.php:25 ../admin/index.php:51
+#: ../content-none.php:10
+#, php-format
+msgid ""
+"Sorry, no posts were found. You can go back to <a href=\"%s\">the home page</"
+"a> or browse the archives :"
+msgstr ""
+"Désolé, aucun article ne correspond à votre recherche. Vous pouvez revenir à "
+"<a href=\"%s\">la page d'accueil</a> ou parcourir les archives :"
+
+#: ../footer.php:33 ../admin/index.php:51
 #, php-format
 msgid ""
 "<strong>%s</strong> - Galopin by <a href=\"https://www.themesdefrance.fr/\" "
@@ -104,7 +113,7 @@ msgstr ""
 "<strong>%s</strong> - Galopin par <a href=\"https://www.themesdefrance.fr\" "
 "target=\"_blank\">Thèmes de France</a>"
 
-#: ../footer.php:43
+#: ../footer.php:54
 msgid "Back to the top"
 msgstr "Remonter"
 
@@ -132,27 +141,27 @@ msgstr "Pied de page"
 msgid "Add widgets in the footer."
 msgstr "Ajouter des widgets au pied de page."
 
-#: ../functions.php:86
+#: ../functions.php:89
 msgid "Post width"
 msgstr "Largeur de l'article"
 
-#: ../functions.php:87
+#: ../functions.php:90
 msgid "Fullpage width"
 msgstr "Largeur pleine page"
 
-#: ../functions.php:141 ../admin/index.php:5
+#: ../functions.php:144 ../admin/index.php:5
 msgid "Galopin Settings"
 msgstr "Options Galopin"
 
-#: ../functions.php:149
+#: ../functions.php:152
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous n’avez pas les droits suffisants pour accéder à cette page."
 
-#: ../functions.php:318
+#: ../functions.php:321
 msgid "Themes de France"
 msgstr "Thèmes de France"
 
-#: ../functions.php:336
+#: ../functions.php:339
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
@@ -160,57 +169,57 @@ msgstr ""
 "Afin de recevoir les mises à jour, veuillez entrer votre clé de licence "
 "reçue par email."
 
-#: ../header-masonry.php:6
+#: ../header-masonry.php:10
 msgid "Posts from "
 msgstr "Articles classés dans "
 
-#: ../header-masonry.php:12
+#: ../header-masonry.php:16
 msgid "Posts tagged by "
 msgstr "Articles identifiés par "
 
-#: ../header-masonry.php:18
+#: ../header-masonry.php:22
 #, php-format
 msgid "Search results for : %s"
 msgstr "Résultats de recherche pour : %s"
 
-#: ../header-masonry.php:26
+#: ../header-masonry.php:30
 #, php-format
 msgid "Posts by %s"
 msgstr "Articles par %s"
 
-#: ../header-masonry.php:33
+#: ../header-masonry.php:37
 msgid "Archives from "
 msgstr "Archives de "
 
-#: ../header-masonry.php:37 ../header-masonry.php:41
+#: ../header-masonry.php:41 ../header-masonry.php:45
 msgid "Archives for "
 msgstr "Archives pour "
 
-#: ../header-masonry.php:45
+#: ../header-masonry.php:49
 msgid "Archives"
 msgstr "Archives"
 
-#: ../header-masonry.php:53 ../header-masonry.php:59
+#: ../header-masonry.php:57 ../header-masonry.php:63
 msgid "Blog"
 msgstr "Blog"
 
-#: ../header.php:30
+#: ../header.php:27
 msgid "Your browser is <em>too old !"
 msgstr "Votre navigateur est <em>trop vieux !"
 
-#: ../header.php:30
+#: ../header.php:27
 msgid "Update your browser"
 msgstr "Mettez à jour votre navigateur"
 
-#: ../header.php:30
+#: ../header.php:27
 msgid "or"
 msgstr "ou"
 
-#: ../header.php:30
+#: ../header.php:27
 msgid "Install Google Chrome Frame"
 msgstr "Installez Google Chrome Frame"
 
-#: ../header.php:30
+#: ../header.php:27
 msgid "to display this website correctly"
 msgstr "pour afficher votre site correctement"
 
@@ -397,15 +406,15 @@ msgstr "Si vous aimez Galopin, vous devriez"
 msgid "follow us on Facebook"
 msgstr "nous suivre sur Facebook"
 
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:180
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:181
 msgid "Save all changes"
 msgstr "Sauvegarder"
 
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:274
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:275
 msgid "Select"
 msgstr "Selectionner"
 
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:321
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:322
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -413,72 +422,72 @@ msgstr "Supprimer"
 msgid "Set up the main menu"
 msgstr "Veuillez configurer le menu principal"
 
-#: ../admin/functions/galopin-functions.php:149
+#: ../admin/functions/galopin-functions.php:157
 msgid "Pingback:"
 msgstr "Rétrolien:"
 
-#: ../admin/functions/galopin-functions.php:160
+#: ../admin/functions/galopin-functions.php:168
 msgid "Your comment is waiting for moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: ../admin/functions/galopin-functions.php:168
+#: ../admin/functions/galopin-functions.php:176
 #, php-format
 msgid "%s"
 msgstr "%s"
 
-#: ../admin/functions/galopin-functions.php:168
+#: ../admin/functions/galopin-functions.php:176
 #, php-format
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr "<cite class=\"fn\">%s</cite>"
 
-#: ../admin/functions/galopin-functions.php:178
+#: ../admin/functions/galopin-functions.php:186
 #, php-format
 msgid "Published on %s at %s"
 msgstr "Publié le %s à %s"
 
-#: ../admin/functions/galopin-functions.php:185
+#: ../admin/functions/galopin-functions.php:193
 msgid "Reply"
 msgstr "Répondre"
 
-#: ../admin/functions/galopin-functions.php:208
+#: ../admin/functions/galopin-functions.php:216
 #, php-format
 msgid "Reply to %s"
 msgstr "Répondre à %s"
 
-#: ../admin/functions/galopin-functions.php:209
+#: ../admin/functions/galopin-functions.php:217
 msgid "Post comment"
 msgstr "Envoyer le commentaire"
 
-#: ../admin/functions/galopin-functions.php:216
+#: ../admin/functions/galopin-functions.php:224
 msgid "Name"
 msgstr "Nom"
 
-#: ../admin/functions/galopin-functions.php:216
-#: ../admin/functions/galopin-functions.php:223
+#: ../admin/functions/galopin-functions.php:224
+#: ../admin/functions/galopin-functions.php:231
 msgid "required"
 msgstr "requis"
 
-#: ../admin/functions/galopin-functions.php:223
+#: ../admin/functions/galopin-functions.php:231
 msgid "Email"
 msgstr "Email"
 
-#: ../admin/functions/galopin-functions.php:229
+#: ../admin/functions/galopin-functions.php:237
 msgid "Website"
 msgstr "Site"
 
-#: ../admin/functions/galopin-functions.php:232
+#: ../admin/functions/galopin-functions.php:240
 msgid "Comment"
 msgstr "Commentaire"
 
-#: ../admin/functions/galopin-functions.php:292
+#: ../admin/functions/galopin-functions.php:300
 msgid "There is no archives to display."
 msgstr "Il n'y a aucune archive à afficher."
 
-#: ../admin/functions/galopin-functions.php:342
+#: ../admin/functions/galopin-functions.php:350
 msgid "Galopin bbPress Addon"
 msgstr "Module bbPress pour Galopin"
 
-#: ../admin/functions/galopin-functions.php:350
+#: ../admin/functions/galopin-functions.php:358
 msgid ""
 "Galopin bbPress Addon bring custom CSS styling to Galopin to get a perfect "
 "bbPress integration."
@@ -487,22 +496,22 @@ msgstr ""
 "intégration parfaite avec le plugin bbPress (pour créer un forum sur votre "
 "site)."
 
-#: ../admin/functions/galopin-functions.php:354
+#: ../admin/functions/galopin-functions.php:362
 msgid "Get Galopin bbPress Addon"
 msgstr "Obtenir le module bbPress pour Étendard"
 
-#: ../admin/functions/galopin-functions.php:360
+#: ../admin/functions/galopin-functions.php:368
 msgid "Galopin bbPress Addon is installed. Thanks for using it !"
 msgstr ""
 "Le module bbPress pour Galopin est installé. Merci à vous de l'utiliser !"
 
-#: ../admin/functions/galopin-functions.php:362
+#: ../admin/functions/galopin-functions.php:370
 msgid "If you have some time, help us to improve it by giving some feedback."
 msgstr ""
 "Si vous avez un peu de temps, aidez-nous à améliorer ce module en nous "
 "disant que ce vous en pensez."
 
-#: ../admin/functions/galopin-functions.php:366
+#: ../admin/functions/galopin-functions.php:374
 msgid "Give feedback on Galopin bbPress Addon"
 msgstr "Faire un retour sur bbPress pour Galopin"
 
