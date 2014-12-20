@@ -15,7 +15,7 @@ CocoDictionary::register(CocoDictionary::SHORTHAND, 'endForm', 'cocoricoFormTabl
 function cocoricoSettingShorthand($cocorico, $params){
 	$params = array_merge(array(
 		'labeless'=>false,
-		'filters'=>array()
+		'filters'=>array(),
 	), $params);
 	
 	$cocorico->startWrapper('tr');
