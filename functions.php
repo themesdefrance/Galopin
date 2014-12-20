@@ -69,6 +69,9 @@ if (!function_exists('galopin_setup')){
 		// Enable thumbnails
 		add_theme_support('post-thumbnails');
 		
+		// Enable custom title tag for 4.1
+		add_theme_support( 'title-tag' );
+		
 		// Set images sizes
 		add_image_size('galopin-post-thumbnail', 633, 400, true);
 		add_image_size('galopin-post-thumbnail-full', 900, 400, true);

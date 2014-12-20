@@ -53,6 +53,14 @@ if (!function_exists('galopin_nomenu')){
 	}
 }
 
+// Backward title compatibility for WP < 4.1
+if ( ! function_exists( '_wp_render_title_tag' ) ){
+	function etendard_render_title() {
+	    echo '<title>' . wp_title( '|', false, 'right' ) . "</title>\n";
+	}
+	add_action( 'wp_head', 'etendard_render_title');
+}
+
 //customized pagination links
 if (!function_exists('galopin_posts_nav')){
 	//derived from http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
