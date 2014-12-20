@@ -1,9 +1,9 @@
 <?php
 
-define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr');
-define('EDD_SL_THEME_NAME', 'Galopin Perso');
-define('EDD_SL_THEME_VERSION', '1.000');
-define('EDD_SL_LICENSE_KEY', 'galopin_license_edd');
+define('GALOPIN_STORE_URL', 'https://www.themesdefrance.fr');
+define('GALOPIN_THEME_NAME', 'Galopin Perso');
+define('GALOPIN_THEME_VERSION', '1.001');
+define('GALOPIN_LICENSE_KEY', 'galopin_license_edd');
 
 if(!class_exists('EDD_SL_Theme_Updater'))
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
@@ -294,7 +294,7 @@ add_action('wp_head','galopin_user_styles', 98);
 
 if(!function_exists('galopin_edd')){
 	function galopin_edd(){
-		$license = trim(get_option(EDD_SL_LICENSE_KEY));
+		$license = trim(get_option(GALOPIN_LICENSE_KEY));
 		$status = get_option('galopin_license_status');
 		
 		if (!$status){
@@ -302,10 +302,10 @@ if(!function_exists('galopin_edd')){
 			$api_params = array(
 				'edd_action'=>'activate_license',
 				'license'=>$license,
-				'item_name'=>urlencode(EDD_SL_THEME_NAME)
+				'item_name'=>urlencode(GALOPIN_THEME_NAME)
 			);
 	
-			$response = wp_remote_get(add_query_arg($api_params, EDD_SL_STORE_URL), array('timeout'=>15, 'sslverify'=>false));
+			$response = wp_remote_get(add_query_arg($api_params, GALOPIN_STORE_URL), array('timeout'=>15, 'sslverify'=>false));
 	
 			if (!is_wp_error($response)){
 				$license_data = json_decode(wp_remote_retrieve_body($response));
@@ -314,10 +314,10 @@ if(!function_exists('galopin_edd')){
 		}
 		
 		$edd_updater = new EDD_SL_Theme_Updater(array( 
-				'remote_api_url'=> EDD_SL_STORE_URL,
-				'version' 	=> EDD_SL_THEME_VERSION,
+				'remote_api_url'=> GALOPIN_STORE_URL,
+				'version' 	=> GALOPIN_THEME_VERSION,
 				'license' 	=> $license,
-				'item_name' => EDD_SL_THEME_NAME,
+				'item_name' => GALOPIN_THEME_NAME,
 				'author'	=> __('Themes de France','galopin')
 			)
 		);

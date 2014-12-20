@@ -15,7 +15,7 @@ $form->startWrapper('tab', 'general');
 $form->startForm();
 
 $form->setting(array('type'=>'text',
-					 'name'=>substr(EDD_SL_LICENSE_KEY, strlen(GALOPIN_COCORICO_PREFIX)),
+					 'name'=>substr(GALOPIN_LICENSE_KEY, strlen(GALOPIN_COCORICO_PREFIX)),
 					 'label'=>__("License", 'galopin'),
 					 'description'=>__("Enter your licence key in order to receive Galopin updates. You'll find it in the confirmation email we sent you after your purchase.", 'galopin')));
 
