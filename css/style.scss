@@ -238,7 +238,7 @@ $menu-width: 280px;
 	
 	@include width-below($grid-collapse-below){
 		top: 0;
-		min-height: 50px;
+		max-height: 50px;
 		z-index: 200;
 		justify-content: center;
 		background-position: center;
