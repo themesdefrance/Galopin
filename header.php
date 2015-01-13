@@ -55,20 +55,20 @@
 			
 			<div class="content <?php if (galopin_is_masonry()) echo 'masonry-wrapper'; ?>">
 			
-				<div class="hero-image" style="background-image: url(<?php echo get_option('galopin_hero_image'); ?>);">
+				<div class="hero-image" style="background-image: url(<?php echo esc_url(get_option('galopin_hero_image')); ?>);">
 				
 					<button class="menu-toggle typcn typcn-th-menu <?php if (get_option('galopin_dark_hero')) echo 'inverted'; ?>"></button>
 					
 					<?php if(get_option('galopin_hero_logo')) : ?>
 						
 						<a href="<?php echo home_url(); ?>" class="hero-logo">	
-							<img src="<?php echo get_option('galopin_hero_logo'); ?>" alt="<?php echo bloginfo('name'); ?>">
+							<img src="<?php echo esc_url(get_option('galopin_hero_logo')); ?>" alt="<?php echo bloginfo('name'); ?>">
 						</a>
 					
 					<?php else: ?>
 					
 						<a href="<?php echo home_url(); ?>" class="hero-text">	
-							<?php echo apply_filters('galopin_hero_text', (get_option('galopin_hero_text') ? get_option('galopin_hero_text') : bloginfo('name'))); ?>
+							<?php echo apply_filters('galopin_hero_text', (get_option('galopin_hero_text') ? sanitize_text_field(get_option('galopin_hero_text')) : bloginfo('name'))); ?>
 						</a>
 					
 					<?php endif; ?>

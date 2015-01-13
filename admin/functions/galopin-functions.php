@@ -55,10 +55,10 @@ if (!function_exists('galopin_nomenu')){
 
 // Backward title compatibility for WP < 4.1
 if ( ! function_exists( '_wp_render_title_tag' ) ){
-	function etendard_render_title() {
+	function galopin_render_title() {
 	    echo '<title>' . wp_title( '|', false, 'right' ) . "</title>\n";
 	}
-	add_action( 'wp_head', 'etendard_render_title');
+	add_action( 'wp_head', 'galopin_render_title');
 }
 
 //customized pagination links
