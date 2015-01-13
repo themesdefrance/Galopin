@@ -73,7 +73,7 @@ $(function(){
 	}
 	
 	 $(document).ready(function(){
-	    $('.post-video, .widget-video').fitVids();
+	    $('.post-video, .widget-video, .entry-content').fitVids();
 	  });
 	
 	//back to top button
