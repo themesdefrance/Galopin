@@ -108,22 +108,20 @@ add_action( 'load-post-new.php', 'galopin_custom_format' );
 //enqueue styles & scripts
 if (!function_exists('galopin_enqueue')){
 	function galopin_enqueue(){
-	
-		$theme = wp_get_theme();
 		
-		wp_register_script('fitvids', get_template_directory_uri().'/js/min/jquery.fitvids.min.js', array('jquery'), $theme->get('Version'), true);
+		wp_register_script('fitvids', get_template_directory_uri().'/js/min/jquery.fitvids.min.js', array('jquery'), false, true);
 		
-		wp_register_script('jq-aim', get_template_directory_uri().'/js/min/jquery.aim.min.js', array('jquery'), $theme->get('Version'), true);
+		wp_register_script('jq-aim', get_template_directory_uri().'/js/min/jquery.aim.min.js', array('jquery'), false, true);
 		
-		wp_register_script('galopin', get_template_directory_uri().'/js/min/galopin.min.js', array('jquery'), $theme->get('Version'), true);
+		wp_register_script('galopin', get_template_directory_uri().'/js/min/galopin.min.js', array('jquery'), false, true);
 		
 		wp_enqueue_style( 'galopin-fonts', '//fonts.googleapis.com/css?family=Montserrat|Raleway:400,700&subset=latin,latin-ext');
 		
 		//main stylesheet
-		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), $theme->get('Version'));
+		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), false);
 		
 		//icons
-		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/typicons.min.css', array(), $theme->get('Version'));
+		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/typicons.min.css', array(), false);
 		
 		wp_enqueue_script('fitvids');
 		wp_enqueue_script('jq-aim');
