@@ -17,7 +17,7 @@
 						
 						<?php do_action('galopin_top_post'); ?>
 						
-						<header class="post-header">
+						<header class="entry-header post-header">
 							
 							<h1 class="entry-title post-header-title" itemprop="headline">
 									
@@ -25,7 +25,7 @@
 										
 							</h1>
 							
-						</header>
+						</header><!--END .entry-header-->
 						
 						<?php do_action('galopin_before_content'); ?>
 						
@@ -49,7 +49,7 @@
 						
 						<?php do_action('galopin_bottom_post'); ?>
 						
-					</article>
+					</article><!--END .post-->
 					
 					<?php do_action('galopin_after_post'); ?>
 					

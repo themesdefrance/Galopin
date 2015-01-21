@@ -2,15 +2,15 @@
 
 <?php do_action('galopin_before_post'); ?>
 
-<article <?php post_class('article'); ?> itemscope itemtype="http://schema.org/Article">
+<article <?php post_class('post'); ?> itemscope itemtype="http://schema.org/Article">
 	
 	<?php do_action('galopin_top_post'); ?>
 	
-	<header class="post-header">
+	<header class="entry-header post-header">
 		
 		<?php do_action('galopin_top_header_post'); ?>
 	
-		<div class="post-link">
+		<div class="entry-link post-link">
 		
 			<?php if (is_single()): ?>
 				
@@ -33,11 +33,11 @@
 					
 					<?php endif; ?>
 				
-				</h2>
+				</h2><!--END .entry-title-->
 				
 			<?php endif; ?>
 		
-		</div>
+		</div><!--END .entry-link-->
 		
 		<?php if (!galopin_is_masonry()) get_template_part('content', 'header-meta'); ?>
 		
@@ -51,6 +51,6 @@
 	
 	<?php do_action('galopin_bottom_post'); ?>
 	
-</article>
+</article><!--END .post-->
 
 <?php do_action('galopin_after_post'); ?>

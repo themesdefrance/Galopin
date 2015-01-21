@@ -1,4 +1,4 @@
-<footer class="post-footer">
+<footer class="entry-footer post-footer">
 	
 	<?php do_action('galopin_top_footer_post'); ?>
 	
@@ -32,9 +32,9 @@
 			<time class="date updated">
 				<?php the_time(get_option('date_format')); ?>
 			</time>
-		</div>
+		</div><!--END .masonry-footer-->
 	<?php } ?>
 	
 	<?php do_action('galopin_bottom_footer_post'); ?>
 	
-</footer>
+</footer><!--END .entry-footer-->

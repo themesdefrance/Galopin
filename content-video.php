@@ -6,11 +6,11 @@
 
 	<?php do_action('galopin_top_post'); ?>
 	
-	<header class="post-header">
+	<header class="entry-header post-header">
 		
 		<?php do_action('galopin_top_header_post'); ?>
 	
-		<div class="post-video">
+		<div class="entry-video post-video">
 									
 			<?php echo wp_oembed_get( esc_url($video_link)); ?>
 			
@@ -36,7 +36,7 @@
 				
 				<?php endif; ?>
 			
-			</h2>
+			</h2><!--END .entry-title-->
 			
 		<?php endif; ?>
 		
@@ -44,7 +44,7 @@
 		
 		<?php do_action('galopin_bottom_header_post'); ?>
 		
-	</header>
+	</header><!--END .entry-header-->
 		
 	<?php get_template_part( 'content', 'body' ); ?>	
 	

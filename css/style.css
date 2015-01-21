@@ -1752,6 +1752,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
 .post-header-meta {
   color: #B2B2B2;
   font-size: 14px; }
+  .post-header-meta .updated {
+    display: none; }
 
 .post-header-meta a, .post-footer-meta a {
   text-decoration: none; }

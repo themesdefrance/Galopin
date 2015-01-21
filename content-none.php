@@ -1,6 +1,6 @@
 <?php do_action('galopin_before_post'); ?>
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
+<article class="post" itemscope itemtype="http://schema.org/Article">
 	
 	<?php do_action('galopin_top_post'); ?>
 	
@@ -14,10 +14,10 @@
 			<?php echo galopin_archives(); ?>
 		</ul>
 	
-	</div>
+	</div><!--END .entry-content-->
 	
 	<?php do_action('galopin_bottom_post'); ?>
 	
-</article>
+</article><!--END .post-->
 
 <?php do_action('galopin_after_post'); ?>

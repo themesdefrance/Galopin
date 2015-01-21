@@ -7,13 +7,13 @@
 	
 	<?php do_action('galopin_top_post'); ?>
 	
-	<header class="post-header">
+	<header class="entry-header post-header">
 		
 		<?php do_action('galopin_top_header_post'); ?>
 					
 		<?php if (has_post_thumbnail() && !post_password_required()): ?>
 		
-			<div class="post-thumbnail">
+			<div class="entry-thumbnail post-thumbnail">
 			
 				<?php if ($postlink){ ?> <a href="<?php the_permalink(); ?>" title="<?php _e('Read more','galopin'); ?>" class="post-permalink"><?php } ?>
 
@@ -30,14 +30,13 @@
 			
 		<?php endif; ?>
 		
-		
 		<?php if (is_single() || is_page()): ?>
 			
 			<h1 class="entry-title post-header-title" itemprop="headline">
 				
 				<?php the_title(); ?>
 					
-			</h1>
+			</h1><!--END .entry-title-->
 			
 		<?php elseif(!is_page()): ?>
 		
@@ -55,8 +54,7 @@
 				
 				<?php endif; ?>
 				
-			</h2>
-			
+			</h2><!--END .entry-title-->
 		
 		<?php endif; ?> 
 		
@@ -64,7 +62,7 @@
 		
 		<?php do_action('galopin_bottom_header_post'); ?>
 		
-	</header>
+	</header><!--END .entry-header-->
 		
 	<?php get_template_part('content', 'body'); ?>
 	
@@ -72,6 +70,6 @@
 	
 	<?php do_action('galopin_bottom_post'); ?>
 	
-</article>
+</article><!--END .post-->
 
 <?php do_action('galopin_after_post'); ?>

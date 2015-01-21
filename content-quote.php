@@ -7,11 +7,11 @@
 	
 	<?php do_action('galopin_top_post'); ?>
 	
-	<header class="post-header">
+	<header class="entry-header post-header">
 		
 		<?php do_action('galopin_top_header_post'); ?>
 		
-		<div class="post-quote">
+		<div class="entry-quote post-quote">
 		
 			<?php if (is_single()): ?>
 				
@@ -49,13 +49,13 @@
 			
 			<span class="post-quote-author"><?php echo sanitize_text_field($author_quote); ?></span>
 			
-		</div>
+		</div><!--END .entry-quote-->
 		
 		<?php if (!galopin_is_masonry()) get_template_part('content', 'header-meta'); ?>
 		
 		<?php do_action('galopin_bottom_header_post'); ?>
 		
-	</header>
+	</header><!--END .entry-header-->
 	
 	<?php if (!galopin_is_masonry()) get_template_part('content', 'body'); ?>
 	
@@ -63,6 +63,6 @@
 	
 	<?php do_action('galopin_bottom_post'); ?>
 	
-</article>
+</article><!--END .post-->
 
 <?php do_action('galopin_after_post'); ?>

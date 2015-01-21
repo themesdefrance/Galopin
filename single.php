@@ -21,7 +21,7 @@
 		
 		<?php if ($sidebar)get_sidebar('blog'); ?>
 		
-	</div>
+	</div><!--END .grid-->
 	
 	<?php do_action('galopin_bottom_main'); ?>
 	

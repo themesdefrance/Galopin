@@ -90,19 +90,19 @@
 }
 
 .format-standard .post-header-title:before{
-			content: '\e04a';
+	content: '\e04a';
 }
 
 .format-link .post-header-title:before{
-			content: '\e09b';
+	content: '\e09b';
 }
 
 .format-video .post-header-title:before{
-			content: '\e130';
+	content: '\e130';
 }
 
 .format-quote .post-header-title:before{
-			content: '\e0b7';
+	content: '\e0b7';
 }
 
 .post-header-title,
@@ -120,6 +120,10 @@
 .post-header-meta{
 	color: #B2B2B2;
 	font-size: 14px;
+	
+	.updated{
+		display:none;
+	}
 }
 .post-header-meta a,
 .post-footer-meta a{

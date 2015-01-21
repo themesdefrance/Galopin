@@ -7,7 +7,7 @@
 
 <?php if(!is_page()): ?> 
 		
-	<span class="post-header-meta">
+	<div class="entry-meta post-header-meta">
 		
 	<?php
 		
@@ -21,6 +21,14 @@
 			<time class="date published" itemprop="datePublished" datetime="<?php the_time('c'); ?>">
 				<?php the_time( get_option( 'date_format' ) ); ?>
 			</time>
+			
+			<?php if (get_the_modified_time() != get_the_time()) { ?>
+			
+				<time class="date updated" itemprop="dateModified" datetime="<?php the_modified_time('c'); ?>" >
+					<?php the_modified_time(get_option( 'date_format' )); ?>
+				</time>
+				
+			<?php }
 			
 		<?php
 		}
@@ -50,14 +58,14 @@
 			
 				<a href="<?php the_permalink(); ?>#comments"><?php comments_number(__('No Comment', 'galopin'), __('One Comment', 'galopin'), __('% Comments', 'galopin')); ?></a>
 				
-				<?php echo ' | ';
+				<?php
 				
 			}
 		}
 		
-		edit_post_link(__('Edit', 'galopin'));
+		edit_post_link(__('Edit', 'toutatis'), ' | ');
 	?>
 		
-	</span>
+	</div><!--END .entry-meta-->
 
 <?php endif; ?>

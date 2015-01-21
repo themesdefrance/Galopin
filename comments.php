@@ -1,6 +1,6 @@
 <?php if (post_password_required()) return; ?>
 
-<div id="comments" class="post-comments">
+<div id="comments" class="entry-comments post-comments">
 	<?php if (have_comments()): ?>
 		<h2 class="comments-title">
 			<?php
