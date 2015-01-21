@@ -1161,7 +1161,7 @@ html {
   color: #333;
   line-height: 1.6; }
 
-.clearfix:before, .grid:before, .menu-wrapper:before, .comment:before, .widget_galopinsocial ul:before, .masonry:before, .clearfix:after, .grid:after, .menu-wrapper:after, .comment:after, .widget_galopinsocial ul:after, .masonry:after {
+.clearfix:before, .grid:before, .menu-wrapper:before, .entry-navigation:before, .comment:before, .widget_galopinsocial ul:before, .masonry:before, .clearfix:after, .grid:after, .menu-wrapper:after, .entry-navigation:after, .comment:after, .widget_galopinsocial ul:after, .masonry:after {
   content: "";
   display: table;
   clear: both; }
@@ -1906,6 +1906,22 @@ body.admin-bar .cover .menu-wrapper.stuck {
 
 .post-footer {
   margin-top: 20px; }
+  .post-footer:empty {
+    display: none; }
+
+.entry-navigation {
+  margin-bottom: 50px;
+  font-weight: bold; }
+  .entry-navigation:empty {
+    display: none; }
+  .entry-navigation a {
+    text-decoration: none; }
+    .entry-navigation a:hover {
+      text-decoration: underline; }
+  .entry-navigation .meta-nav-prev {
+    float: left; }
+  .entry-navigation .meta-nav-next {
+    float: right; }
 
 .error404 ul.galopin-archives li:before {
   content: '';

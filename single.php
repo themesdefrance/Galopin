@@ -13,9 +13,9 @@
 		
 			<?php the_post(); get_template_part('content', get_post_format()); ?>
 			
-			<?php comments_template(); ?>
+			<?php galopin_single_post_nav(); ?>
 			
-			<?php galopin_posts_nav(false, '','<div class="pagination">','</div>'); ?>
+			<?php comments_template(); ?>
 
 		</div><!--END .main -->
 		

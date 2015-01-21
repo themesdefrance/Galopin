@@ -21,20 +21,21 @@ if (!function_exists('galopin_excerpt')){
 		if($length==0)
 			return '';
 		
-		// Do we have an excerpt ?
+		// Do we have an excerpt ? (excerpt field in the post editor)
 		if(has_excerpt())
-			return '<p>' . get_the_excerpt() . '</p>';
+			return apply_filters('the_excerpt', wpautop(strip_shortcodes(strip_tags(get_the_excerpt()))));
 		
-		// Do we have a read more tag ?
+		// Do we have a read more tag (<!--more-->) in the post content ?
 		if(strpos( $post->post_content, '<!--more-->' )){
 			$content_arr = get_extended($post->post_content);
-			return '<p>' . $content_arr['main'] . '</p>';
+			return apply_filters('the_excerpt', wpautop(strip_shortcodes(strip_tags($content_arr['main']))));
 		}
 		
-		// Create a custom excerpt without shortcodes, images and iframes
-		$content = strip_shortcodes(strip_tags(get_the_content(), '<img><iframe>'));
+		// Get the post content without shortcodes or HTML tags
+		$content = strip_shortcodes(strip_tags(get_the_content()));
 		
-		return apply_filters('the_content', wpautop(wp_trim_words( $content , $length )));
+		// Create a custom excerpt based on the post content
+		return apply_filters('the_excerpt', wpautop(wp_trim_words( $content , $length )));
 	}
 }
 
@@ -101,7 +102,7 @@ if (!function_exists('galopin_posts_nav')){
 		$output .= $before;
 		
 		// Previous Post Link
-		if ($extremes && get_previous_posts_link()) previous_posts_link();
+		if ($extremes && get_previous_posts_link())$output.= get_previous_posts_link();
 	
 		// Link to first page, plus ellipses if necessary */
 		if (!in_array(1, $links)){
@@ -137,10 +138,50 @@ if (!function_exists('galopin_posts_nav')){
 		
 		$output .= $after;
 		
+		// Next Post Link
+		if ($extremes && get_next_posts_link())$output.= get_next_posts_link();
+		
 		echo apply_filters('galopin_post_nav', $output);
 	
-		// Next Post Link
-		if ($extremes && get_next_posts_link()) next_posts_link();
+	}
+}
+
+/**
+ * Display navigation to next/previous post when applicable.
+ * Derived from Twenty Fourteen Theme
+ *
+ * @since 1.002
+ * @return void
+ */
+ 
+if (!function_exists('galopin_single_post_nav')){
+	function galopin_single_post_nav() {
+		
+		// Filter to handle displaying of the post navigation
+		if(!apply_filters('galopin_single_post_nav',true)){
+			return;
+		}
+		
+		// Don't print empty markup if there's nowhere to navigate.
+		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+		$next     = get_adjacent_post( false, '', false );
+	
+		if ( ! $next && ! $previous ) {
+			return;
+		}
+	
+		?>
+		<nav class="entry-navigation" role="navigation">
+			<?php
+			if ( is_attachment() ) :
+				previous_post_link( '<span class="meta-nav-prev">%link</span>', __( 'Published In', 'toutatis' ) . '%title' );
+			else :
+				previous_post_link( '<span class="meta-nav-prev">%link</span>', __( 'Previous Post', 'toutatis' ));
+				next_post_link( '<span class="meta-nav-next">%link</span>', __( 'Next Post', 'toutatis' ));
+			endif;
+			?>
+		</nav><!-- .entry-navigation -->
+		<?php
 	}
 }
 
