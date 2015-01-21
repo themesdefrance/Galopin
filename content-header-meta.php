@@ -30,7 +30,6 @@
 				
 			<?php }
 			
-		<?php
 		}
 		if($post_header_author){ ?>
 			
@@ -56,14 +55,18 @@
 			
 			if(comments_open()){ ?>
 			
-				<a href="<?php the_permalink(); ?>#comments"><?php comments_number(__('No Comment', 'galopin'), __('One Comment', 'galopin'), __('% Comments', 'galopin')); ?></a>
+				<a href="<?php the_permalink(); ?>#comments" itemprop="discussionUrl">
+					
+					<?php comments_number(	__('No Comment', 'galopin') . '<meta itemprop="interactionCount" content="0 UserComments">',
+											__('One Comment', 'galopin') . '<meta itemprop="interactionCount" content="1 UserComments">',
+											__('% Comments', 'galopin') . '<meta itemprop="interactionCount" content="% UserComments">'); ?></a>
 				
 				<?php
 				
 			}
 		}
 		
-		edit_post_link(__('Edit', 'toutatis'), ' | ');
+		edit_post_link(__('Edit', 'galopin'), ' | ');
 	?>
 		
 	</div><!--END .entry-meta-->
