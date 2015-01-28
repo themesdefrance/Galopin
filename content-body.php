@@ -8,7 +8,12 @@
 
 	if (is_single() || is_page()){
 	
-		the_content();
+		// Display an excerpt on comments page
+		if(get_query_var( 'cpage' ) > 0):
+			echo galopin_excerpt(50);
+		else:
+			the_content();
+		endif;
 	}
 	else if(is_category() || is_tax()){
 	

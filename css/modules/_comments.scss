@@ -163,3 +163,8 @@
 	@extend %custom-color;
 	text-decoration: none;
 }
+
+.comment-navigation a{
+	@extend %custom-color;
+	text-decoration:none;
+}

@@ -13,24 +13,30 @@ if(is_admin())
 	require_once 'admin/Cocorico/Cocorico.php';
 
 // Widgets
-require_once 'admin/widgets/social.php';
-require_once 'admin/widgets/calltoaction.php';
-require_once 'admin/widgets/video.php';
+require 'admin/widgets/social.php';
+require 'admin/widgets/calltoaction.php';
+require 'admin/widgets/video.php';
 
 // Themes functions
-require_once 'admin/functions/galopin-functions.php';
+require 'admin/functions/galopin-functions.php';
 require_once 'admin/functions/color-functions.php';
 
-//////////////////
-// Bootstraping //
-//////////////////
-if (!function_exists('galopin_activation')){
-	function galopin_activation(){
-		global $wp_rewrite;
-		$wp_rewrite->flush_rules();
-	}
-}
-add_action('after_switch_theme', 'galopin_activation');
+//Refresh the permalink structure
+add_action('after_switch_theme', 'flush_rewrite_rules');
+
+//Remove accents in uploaded files
+add_filter( 'sanitize_file_name', 'remove_accents' );
+
+//Remove extra stuff from header
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'start_post_rel_link', 10, 0);
+remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 
 //Register menus, sidebars and image sizes
 if (!function_exists('galopin_setup')){
@@ -72,8 +78,11 @@ if (!function_exists('galopin_setup')){
 		// Enable custom title tag for 4.1
 		add_theme_support( 'title-tag' );
 		
+		// Enable Feed Links
+		add_theme_support( 'automatic-feed-links' );
+		
 		// Set images sizes
-		add_image_size('galopin-post-thumbnail', 633, 400, true);
+		set_post_thumbnail_size('galopin-post-thumbnail', 633, 400, true);
 		add_image_size('galopin-post-thumbnail-full', 900, 400, true);
 		
 		// Add Meta boxes for post formats
@@ -240,6 +249,7 @@ if(!function_exists('galopin_user_styles')){
 			.post-footer-meta a,
 			.comment-author a,
 			.comment-reply-link,
+			.comment-navigation a,
 			.widget a,
 			.comment-form .logged-in-as a,
 			.post-header-title:before,
@@ -255,6 +265,7 @@ if(!function_exists('galopin_user_styles')){
 			.post-footer-meta a:hover,
 			.comment-author a:hover,
 			.comment-reply-link:hover,
+			.comment-navigation a:hover,
 			.widget a:hover,
 			.comment-form .logged-in-as a:hover{
 				color: <?php echo $complement; ?>;
