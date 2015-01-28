@@ -1,6 +1,6 @@
 node_modules/
 .sass-cache
-Galopin/
+./Galopin/
 sources_css/style.css
 
 #################
