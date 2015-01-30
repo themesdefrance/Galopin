@@ -378,6 +378,21 @@ if (!function_exists('galopin_archives')){
 	}
 }
 
+
+/**
+ * Show a popup in order to make people drop IE mouahaha
+ *
+ * @since 1.002
+ * @return void
+ */
+if(!function_exists('galopin_chromeframe_notice')){
+	function galopin_chromeframe_notice(){ ?>
+		<!--[if lt IE 8]><p class='chromeframe'><?php _e('Your browser is <em>too old !','toutatis'); ?></em> <a href="http://browsehappy.com/"><?php _e('Update your browser','toutatis'); ?></a> <?php _e('or','toutatis'); ?> <a href="http://www.google.com/chromeframe/?redirect=true"><?php _e('Install Google Chrome Frame','toutatis'); ?></a> <?php _e('to display this website correctly','toutatis'); ?>.</p><![endif]-->
+	<?php
+	}
+}
+add_action('galopin_body_top','galopin_chromeframe_notice');
+
 // Addons tab content
 
 // bbPress addon

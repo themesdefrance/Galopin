@@ -137,6 +137,10 @@ if (!function_exists('galopin_enqueue')){
 		wp_enqueue_script('masonry');
 		
 		wp_enqueue_script('galopin');
+		
+		if ( is_singular() ){
+			wp_enqueue_script( "comment-reply" );
+		}
 	}
 }
 add_action('wp_enqueue_scripts', 'galopin_enqueue');

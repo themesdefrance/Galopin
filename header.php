@@ -24,7 +24,8 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<!--[if lt IE 8]><p class=chromeframe><?php _e('Your browser is <em>too old !','galopin'); ?></em> <a href="http://browsehappy.com/"><?php _e('Update your browser','galopin'); ?></a> <?php _e('or','galopin'); ?> <a href="http://www.google.com/chromeframe/?redirect=true"><?php _e('Install Google Chrome Frame','galopin'); ?></a> <?php _e('to display this website correctly','galopin'); ?>.</p><![endif]-->
+
+	<?php do_action('galopin_body_top'); ?>
 	
 	<div class="page-wrapper">
 		<div class="content-wrapper <?php if ((is_home() || is_front_page()) && get_option('galopin_use_hero')) echo 'cover'; ?>">
