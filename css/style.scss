@@ -97,7 +97,7 @@ $menu-width: 280px;
 	@include width-below($grid-collapse-below){
 		display: block;
 		position: static;
-		background: #333;
+		background: inherit;
 		padding-top: 0;
 	}
 	
@@ -237,11 +237,13 @@ $menu-width: 280px;
 	}
 	
 	@include width-below($grid-collapse-below){
+		@extend %custom-color;
 		top: 0;
+		min-height: 50px;
 		max-height: 50px;
 		z-index: 200;
 		justify-content: center;
-		background-position: center;
+		background-image:none !important;
 		
 		.menu-toggle{
 			position: absolute;
@@ -295,7 +297,7 @@ $menu-width: 280px;
 	}
 	
 	@include width-below($grid-collapse-below){
-		top: 0;
+		top: 0 !important;
 	}
 	
 	&.stuck{
@@ -394,6 +396,10 @@ body.admin-bar .cover .menu-wrapper.stuck{
 
 .footer-wrapper {
 	padding-top: 60px;
+	
+	@include width-below($grid-collapse-below){
+		padding-top:0;	
+	}
 }
 
 .footerbar{
@@ -401,6 +407,15 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	
 	.widget{
 		border-bottom: none;
+		
+		@include width-below($grid-collapse-below){
+			border-bottom: 1px solid #f1f1f1;
+			
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+		
 	}
 }
 
@@ -415,6 +430,7 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	}
 	@include width-below($grid-collapse-below){
 		width: 100%;
+		padding-left:0;
 	}
 }
 

@@ -1350,7 +1350,7 @@ input[type='tel'], input[type='number'], input[type='date'] {
     .menu-wrapper .sub-menu {
       display: block;
       position: static;
-      background: #333;
+      background: inherit;
       padding-top: 0; } }
   .menu-wrapper .sub-menu li {
     opacity: 1; }
@@ -1456,10 +1456,11 @@ input[type='tel'], input[type='number'], input[type='date'] {
   @media only screen and (max-width: 550px) {
     .hero-image {
       top: 0;
+      min-height: 50px;
       max-height: 50px;
       z-index: 200;
       justify-content: center;
-      background-position: center; }
+      background-image: none !important; }
       .hero-image .menu-toggle {
         position: absolute;
         top: 0;
@@ -1501,7 +1502,7 @@ input[type='tel'], input[type='number'], input[type='date'] {
       top: 830px; } }
   @media only screen and (max-width: 550px) {
     .cover .menu-wrapper {
-      top: 0; } }
+      top: 0 !important; } }
   .cover .menu-wrapper.stuck {
     position: fixed;
     top: 0 !important; }
@@ -1575,11 +1576,19 @@ body.admin-bar .cover .menu-wrapper.stuck {
 
 .footer-wrapper {
   padding-top: 60px; }
+  @media only screen and (max-width: 550px) {
+    .footer-wrapper {
+      padding-top: 0; } }
 
 .footerbar {
   margin-top: 20px; }
   .footerbar .widget {
     border-bottom: none; }
+    @media only screen and (max-width: 550px) {
+      .footerbar .widget {
+        border-bottom: 1px solid #f1f1f1; }
+        .footerbar .widget:last-child {
+          border-bottom: none; } }
 
 @media only screen and (min-width: 701px) {
   .footerbar .widget {
@@ -1589,7 +1598,8 @@ body.admin-bar .cover .menu-wrapper.stuck {
     width: 50%; } }
 @media only screen and (max-width: 550px) {
   .footerbar .widget {
-    width: 100%; } }
+    width: 100%;
+    padding-left: 0; } }
 
 .footer {
   width: 95%;
@@ -2011,6 +2021,9 @@ body.admin-bar .cover .menu-wrapper.stuck {
     padding-right: 4px; }
 
 .comment-reply-link {
+  text-decoration: none; }
+
+.comment-navigation a {
   text-decoration: none; }
 
 .widget {

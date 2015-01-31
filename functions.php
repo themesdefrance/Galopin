@@ -285,7 +285,8 @@ if(!function_exists('galopin_user_styles')){
 			
 			.masonry .brick:hover,
 			.blog .post-thumbnail:hover,
-			.archive .post-thumbnail:hover{
+			.archive .post-thumbnail:hover,
+			.hero-image{
 				background: <?php echo $color; ?>;
 			}
 			
@@ -294,7 +295,9 @@ if(!function_exists('galopin_user_styles')){
 			.masonry .brick:hover .post-header-title blockquote a,
 			.masonry .brick:hover .post-content,
 			.masonry .brick:hover .post-quote-author,
-			.masonry .brick:hover .masonry-footer{
+			.masonry .brick:hover .masonry-footer,
+			.menu-toggle,
+			.menu-wrapper a{
 				color: <?php echo $contrast; ?>;
 			}			
 			</style>
