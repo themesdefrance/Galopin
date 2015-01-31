@@ -1,13 +1,27 @@
 <?php
 
+/**
+ * Galopin functions and definitions
+ *
+ * @package Galopin
+ * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
+ * @since 1.0
+ */
+
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+// Define theme constants (relative to licensing)
 define('GALOPIN_STORE_URL', 'https://www.themesdefrance.fr');
-define('GALOPIN_THEME_NAME', 'Galopin Perso');
-define('GALOPIN_THEME_VERSION', '1.001');
+define('GALOPIN_THEME_NAME', 'Galopin');
+define('GALOPIN_THEME_VERSION', '1.002');
 define('GALOPIN_LICENSE_KEY', 'galopin_license_edd');
 
+// Include theme updater (relative to licensing)
 if(!class_exists('EDD_SL_Theme_Updater'))
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
 
+// Define framework constant then load the Cocorico Framework
 define('GALOPIN_COCORICO_PREFIX', 'galopin_');
 if(is_admin())
 	require_once 'admin/Cocorico/Cocorico.php';
@@ -38,7 +52,12 @@ remove_action('wp_head', 'start_post_rel_link', 10, 0);
 remove_action('wp_head', 'parent_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 
-//Register menus, sidebars and image sizes
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * @since 1.0
+ * @return void
+ */
 if (!function_exists('galopin_setup')){
 	function galopin_setup(){
 		
@@ -92,7 +111,13 @@ if (!function_exists('galopin_setup')){
 }
 add_action('after_setup_theme', 'galopin_setup');
 
-//add custom image size to native dailogs
+/**
+ * Add custom image sizes in the WordPress Media Library
+ *
+ * @since 1.0
+ * @param array $sizes The current image sizes list
+ * @return array
+ */
 if (!function_exists('galopin_image_size_names_choose')){
 	function galopin_image_size_names_choose($sizes) {
 		$added = array('galopin-post-thumbnail'=>__('Post width', 'galopin'));
@@ -103,7 +128,12 @@ if (!function_exists('galopin_image_size_names_choose')){
 }
 add_filter('image_size_names_choose', 'galopin_image_size_names_choose');
 
-//register supported post formats
+/**
+ * Register supported post formats
+ *
+ * @since 1.0
+ * @return void
+ */
 if(!function_exists('galopin_custom_format')){
 	function galopin_custom_format() {
 		$cpts = array('post' => array('video', 'link', 'quote'));
@@ -114,7 +144,12 @@ if(!function_exists('galopin_custom_format')){
 add_action( 'load-post.php', 'galopin_custom_format' );
 add_action( 'load-post-new.php', 'galopin_custom_format' );
 
-//enqueue styles & scripts
+/**
+ * Enqueue styles & scripts
+ *
+ * @since 1.0
+ * @return void
+ */
 if (!function_exists('galopin_enqueue')){
 	function galopin_enqueue(){
 		
@@ -145,11 +180,12 @@ if (!function_exists('galopin_enqueue')){
 }
 add_action('wp_enqueue_scripts', 'galopin_enqueue');
 
-/////////////////////////
-////  Admin stuff   /////
-/////////////////////////
-
-// Add admin menu
+/**
+ * Register the theme options page in the administration
+ *
+ * @since 1.0
+ * @return void
+ */
 if (!function_exists('galopin_admin_menu')){
 	function galopin_admin_menu(){
 		add_theme_page(__('Galopin Settings', 'galopin'),__('Galopin Settings', 'galopin'), 'edit_theme_options', 'galopin_options', 'galopin_options');
@@ -157,6 +193,12 @@ if (!function_exists('galopin_admin_menu')){
 }
 add_action('admin_menu', 'galopin_admin_menu');
 
+/**
+ * Loads the theme options page
+ *
+ * @since 1.0
+ * @return void
+ */
 if (!function_exists('galopin_options')){
 	function galopin_options(){
 		if (!current_user_can('edit_theme_options')) {
@@ -167,7 +209,12 @@ if (!function_exists('galopin_options')){
     }
 }
 
-// Custom CSS loading
+/**
+ * Custom CSS loading
+ *
+ * @since 1.0
+ * @return void
+ */
 if(!function_exists('galopin_custom_styles')){
 	function galopin_custom_styles(){
 		if (get_option("galopin_custom_css")){
@@ -179,7 +226,12 @@ if(!function_exists('galopin_custom_styles')){
 }
 add_action('wp_head', 'galopin_custom_styles', 99);
 
-// Main galopin color
+/**
+ * Applying the theme main color
+ *
+ * @since 1.0
+ * @return void
+ */
 if(!function_exists('galopin_user_styles')){
 	function galopin_user_styles(){
 		if (get_option('galopin_color')){
@@ -306,10 +358,13 @@ if(!function_exists('galopin_user_styles')){
 add_action('wp_head','galopin_user_styles', 98);
 
 
-////////////////////////////////////
-// License activation
-////////////////////////////////////
-
+/**
+ * License activation stuff (from Easy Digital Downloads Software Licensing Addon)
+ * This function will activate the theme licence on Themes de France
+ *
+ * @since 1.0
+ * @return void
+ */
 if(!function_exists('galopin_edd')){
 	function galopin_edd(){
 		$license = trim(get_option(GALOPIN_LICENSE_KEY));
@@ -343,10 +398,12 @@ if(!function_exists('galopin_edd')){
 }
 add_action('admin_init', 'galopin_edd');
 
-////////////////////////////////////
-// Etendard notifications
-////////////////////////////////////
-
+/**
+ * Display an admin notice if the licence isn't activated
+ *
+ * @since 1.0
+ * @return void
+ */
 if(!function_exists('galopin_admin_notice')){
 	function galopin_admin_notice(){
 		global $current_user;
