@@ -19,14 +19,6 @@ $form->setting(array('type'=>'text',
 					 'label'=>__("License", 'galopin'),
 					 'description'=>__("Enter your licence key in order to receive Galopin updates. You'll find it in the confirmation email we sent you after your purchase.", 'galopin')));
 
-$form->setting(array('type'=>'boolean',
-					 'name'=>'use_hero',
-					 'options'=>array(
-					 	'default'=>true
-					 ),
-					 'label'=>__('Fullscreen home header image', 'galopin'),
-					 'description'=>__('Fill out the screen with the home header image.', 'galopin')));
-
 $form->setting(array('type'=>'text',
 					 'name'=>'hero_text',
 					 'label'=>__('Header title', 'galopin'),
@@ -37,11 +29,19 @@ $form->setting(array('type'=>'upload',
 					 'label'=>__('Header logo', 'galopin'),
 					 'description'=>__('Upload a logo to display in the header (if uploaded, the logo will replace the header title).', 'galopin')));
 					 
+$form->setting(array('type'=>'boolean',
+					 'name'=>'use_hero',
+					 'options'=>array(
+					 	'default'=>true
+					 ),
+					 'label'=>__('Fullscreen home header image', 'galopin'),
+					 'description'=>__('Fill out the screen with the home header image.', 'galopin')));
+					 
 $form->setting(array('type'=>'upload',
 					 'name'=>'hero_image',
 					 //'filters'=>array('hero_color'),
-					 'label'=>__('Header image', 'galopin'),
-					 'description'=>__('Upload an image to use as header on your website. Use a 1920x500 jpg/png file or more if you enabled the fullscreen home header image.', 'galopin')));
+					 'label'=>__('Default header image', 'galopin'),
+					 'description'=>__('Upload an default image to use as hero image accross your website. On pages, the featured image will override the default header image. Use a 1920x500 jpg/png file or more if you enabled the fullscreen home header image.', 'galopin')));
 					 
 $form->setting(array('type'=>'textarea',
 					 'name'=>'footer_left',

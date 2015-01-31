@@ -55,8 +55,8 @@
 			</header><!--END .menu-wrapper-->
 			
 			<div class="content <?php if (galopin_is_masonry()) echo 'masonry-wrapper'; ?>">
-			
-				<div class="hero-image" style="background-image: url(<?php echo esc_url(get_option('galopin_hero_image')); ?>);">
+				
+				<div class="hero-image" style="background-image: url(<?php echo galopin_get_hero_image_url(); ?>);">
 				
 					<button class="menu-toggle typcn typcn-th-menu <?php if (get_option('galopin_dark_hero')) echo 'inverted'; ?>"></button>
 					

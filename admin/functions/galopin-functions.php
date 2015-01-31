@@ -39,6 +39,25 @@ if (!function_exists('galopin_excerpt')){
 	}
 }
 
+if (!function_exists('galopin_get_hero_image_url')){
+	function galopin_get_hero_image_url(){
+		
+		global $post;
+		
+		/* Get default hero image */
+		$hero_image = esc_url(get_option('galopin_hero_image'));
+		
+		/* Get page featured image as hero image */
+		if(is_page() && has_post_thumbnail($post->ID)){
+			$thumb_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),array(1920,1080), true);
+			$hero_image = esc_url($thumb_url[0]);
+		}
+		
+		return $hero_image;
+	}
+}
+
+
 // Thanks to https://gist.github.com/tommcfarlin/f2310bfad60b60ae00bf#file-is-paginated-post-php
 if (!function_exists('galopin_is_paginated_post')){
 	function galopin_is_paginated_post() {

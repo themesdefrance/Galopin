@@ -1,5 +1,5 @@
 <?php 	$sidebar = get_option('galopin_show_sidebar');
-		$postlink = ((is_single() || is_page() || galopin_is_masonry()) ? false : true); ?>
+		$postlink = ((is_single() || galopin_is_masonry()) ? false : true); ?>
 
 <?php do_action('galopin_before_post'); ?>
 
@@ -30,7 +30,7 @@
 			
 		<?php endif; ?>
 		
-		<?php if (is_single() || is_page()): ?>
+		<?php if (is_single()): ?>
 			
 			<h1 class="entry-title post-header-title" itemprop="headline">
 				
@@ -38,7 +38,7 @@
 					
 			</h1><!--END .entry-title-->
 			
-		<?php elseif(!is_page()): ?>
+		<?php else: ?>
 		
 			<h2 class="entry-title post-header-title" itemprop="headline">
 			

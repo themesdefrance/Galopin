@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Galopin\n"
-"POT-Creation-Date: 2015-01-21 18:27+0100\n"
-"PO-Revision-Date: 2015-01-21 18:27+0100\n"
+"POT-Creation-Date: 2015-01-31 09:51+0100\n"
+"PO-Revision-Date: 2015-01-31 09:51+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Thèmes de France <bonjour@themesdefrance.fr>\n"
 "Language: en_US\n"
@@ -52,7 +52,7 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: ../content-body.php:20 ../content-body.php:41 ../content.php:18
+#: ../content-body.php:25 ../content-body.php:46 ../content.php:18
 #: ../index.php:28
 msgid "Read more"
 msgstr ""
@@ -61,35 +61,35 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: ../content-header-meta.php:15
+#: ../content-header-meta.php:13
 msgid "Published "
 msgstr ""
 
-#: ../content-header-meta.php:19
+#: ../content-header-meta.php:17
 msgid "on"
 msgstr ""
 
-#: ../content-header-meta.php:36
+#: ../content-header-meta.php:34
 msgid "by"
 msgstr ""
 
-#: ../content-header-meta.php:48
+#: ../content-header-meta.php:46
 msgid "in"
 msgstr ""
 
-#: ../content-header-meta.php:60
+#: ../content-header-meta.php:58
 msgid "No Comment"
 msgstr ""
 
-#: ../content-header-meta.php:61
+#: ../content-header-meta.php:59
 msgid "One Comment"
 msgstr ""
 
-#: ../content-header-meta.php:62
+#: ../content-header-meta.php:60
 msgid "% Comments"
 msgstr ""
 
-#: ../content-header-meta.php:69
+#: ../content-header-meta.php:67
 msgid "Edit"
 msgstr ""
 
@@ -111,51 +111,51 @@ msgstr ""
 msgid "Back to the top"
 msgstr ""
 
-#: ../functions.php:44
+#: ../functions.php:50
 msgid "Main menu"
 msgstr ""
 
-#: ../functions.php:45
+#: ../functions.php:51
 msgid "Footer menu"
 msgstr ""
 
-#: ../functions.php:50 ../admin/index.php:75
+#: ../functions.php:56 ../admin/index.php:75
 msgid "Sidebar"
 msgstr ""
 
-#: ../functions.php:52
+#: ../functions.php:58
 msgid "Add widgets in the sidebar."
 msgstr ""
 
-#: ../functions.php:60 ../admin/index.php:48
+#: ../functions.php:66 ../admin/index.php:48
 msgid "Footer"
 msgstr ""
 
-#: ../functions.php:62
+#: ../functions.php:68
 msgid "Add widgets in the footer."
 msgstr ""
 
-#: ../functions.php:89
+#: ../functions.php:98
 msgid "Post width"
 msgstr ""
 
-#: ../functions.php:90
+#: ../functions.php:99
 msgid "Fullpage width"
 msgstr ""
 
-#: ../functions.php:142 ../admin/index.php:5
+#: ../functions.php:155 ../admin/index.php:5
 msgid "Galopin Settings"
 msgstr ""
 
-#: ../functions.php:150
+#: ../functions.php:163
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../functions.php:321
+#: ../functions.php:336
 msgid "Themes de France"
 msgstr ""
 
-#: ../functions.php:339
+#: ../functions.php:354
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
@@ -193,26 +193,6 @@ msgstr ""
 
 #: ../header-masonry.php:57 ../header-masonry.php:63
 msgid "Blog"
-msgstr ""
-
-#: ../header.php:27
-msgid "Your browser is <em>too old !"
-msgstr ""
-
-#: ../header.php:27
-msgid "Update your browser"
-msgstr ""
-
-#: ../header.php:27
-msgid "or"
-msgstr ""
-
-#: ../header.php:27
-msgid "Install Google Chrome Frame"
-msgstr ""
-
-#: ../header.php:27
-msgid "to display this website correctly"
 msgstr ""
 
 #: ../searchform.php:3 ../searchform.php:4
@@ -263,40 +243,41 @@ msgid ""
 "in the confirmation email we sent you after your purchase."
 msgstr ""
 
-#: ../admin/index.php:27
-msgid "Fullscreen home header image"
-msgstr ""
-
-#: ../admin/index.php:28
-msgid "Fill out the screen with the home header image."
-msgstr ""
-
-#: ../admin/index.php:32
+#: ../admin/index.php:24
 msgid "Header title"
 msgstr ""
 
-#: ../admin/index.php:33
+#: ../admin/index.php:25
 msgid "Enter a title to display in the header (on each page of your website)."
 msgstr ""
 
-#: ../admin/index.php:37
+#: ../admin/index.php:29
 msgid "Header logo"
 msgstr ""
 
-#: ../admin/index.php:38
+#: ../admin/index.php:30
 msgid ""
 "Upload a logo to display in the header (if uploaded, the logo will replace "
 "the header title)."
 msgstr ""
 
+#: ../admin/index.php:37
+msgid "Fullscreen home header image"
+msgstr ""
+
+#: ../admin/index.php:38
+msgid "Fill out the screen with the home header image."
+msgstr ""
+
 #: ../admin/index.php:43
-msgid "Header image"
+msgid "Default header image"
 msgstr ""
 
 #: ../admin/index.php:44
 msgid ""
-"Upload an image to use as header on your website. Use a 1920x500 jpg/png "
-"file or more if you enabled the fullscreen home header image."
+"Upload an default image to use as hero image accross your website. On pages, "
+"the featured image will override the default header image. Use a 1920x500 "
+"jpg/png file or more if you enabled the fullscreen home header image."
 msgstr ""
 
 #: ../admin/index.php:49
@@ -380,106 +361,126 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:53
+#: ../admin/functions/galopin-functions.php:72
 msgid "Set up the main menu"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:177
+#: ../admin/functions/galopin-functions.php:196
 msgid "Published In"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:179
+#: ../admin/functions/galopin-functions.php:198
 msgid "Previous Post"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:180
+#: ../admin/functions/galopin-functions.php:199
 msgid "Next Post"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:198
+#: ../admin/functions/galopin-functions.php:217
 msgid "Pingback:"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:209
+#: ../admin/functions/galopin-functions.php:228
 msgid "Your comment is waiting for moderation."
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:217
+#: ../admin/functions/galopin-functions.php:236
 #, php-format
 msgid "%s"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:217
+#: ../admin/functions/galopin-functions.php:236
 #, php-format
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:227
+#: ../admin/functions/galopin-functions.php:246
 #, php-format
 msgid "Published on %s at %s"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:234
+#: ../admin/functions/galopin-functions.php:253
 msgid "Reply"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:257
+#: ../admin/functions/galopin-functions.php:276
 #, php-format
 msgid "Reply to %s"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:258
+#: ../admin/functions/galopin-functions.php:277
 msgid "Post comment"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:265
+#: ../admin/functions/galopin-functions.php:284
 msgid "Name"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:265
-#: ../admin/functions/galopin-functions.php:272
+#: ../admin/functions/galopin-functions.php:284
+#: ../admin/functions/galopin-functions.php:291
 msgid "required"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:272
+#: ../admin/functions/galopin-functions.php:291
 msgid "Email"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:278
+#: ../admin/functions/galopin-functions.php:297
 msgid "Website"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:281
+#: ../admin/functions/galopin-functions.php:300
 msgid "Comment"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:341
+#: ../admin/functions/galopin-functions.php:360
 msgid "There is no archives to display."
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:391
+#: ../admin/functions/galopin-functions.php:409
+msgid "Your browser is <em>too old !"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:409
+msgid "Update your browser"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:409
+msgid "or"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:409
+msgid "Install Google Chrome Frame"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:409
+msgid "to display this website correctly"
+msgstr ""
+
+#: ../admin/functions/galopin-functions.php:425
 msgid "Galopin bbPress Addon"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:399
+#: ../admin/functions/galopin-functions.php:433
 msgid ""
 "Galopin bbPress Addon bring custom CSS styling to Galopin to get a perfect "
 "bbPress integration."
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:403
+#: ../admin/functions/galopin-functions.php:437
 msgid "Get Galopin bbPress Addon"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:409
+#: ../admin/functions/galopin-functions.php:443
 msgid "Galopin bbPress Addon is installed. Thanks for using it !"
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:411
+#: ../admin/functions/galopin-functions.php:445
 msgid "If you have some time, help us to improve it by giving some feedback."
 msgstr ""
 
-#: ../admin/functions/galopin-functions.php:415
+#: ../admin/functions/galopin-functions.php:449
 msgid "Give feedback on Galopin bbPress Addon"
 msgstr ""
 
@@ -571,6 +572,10 @@ msgstr ""
 
 #: ../admin/widgets/social.php:81
 msgid "More networks"
+msgstr ""
+
+#: ../admin/widgets/social.php:90
+msgid "Title"
 msgstr ""
 
 #: ../admin/widgets/video.php:11
