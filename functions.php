@@ -60,16 +60,16 @@ remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
  */
 if (!function_exists('galopin_setup')){
 	function galopin_setup(){
-		
+
 		// Load language
 		load_theme_textdomain('galopin', get_template_directory().'/languages');
-		
+
 		// Register menus
 		register_nav_menus( array(
 			'primary'   => __('Main menu', 'galopin'),
 			'footer' => __('Footer menu', 'galopin'),
 		) );
-		
+
 		//Register sidebars
 		register_sidebar(array(
 			'name'          => __('Sidebar', 'galopin'),
@@ -90,20 +90,20 @@ if (!function_exists('galopin_setup')){
 			'before_title'  => '<h3>',
 			'after_title'   => '</h3>',
 		));
-		
+
 		// Enable thumbnails
 		add_theme_support('post-thumbnails');
-		
+
 		// Enable custom title tag for 4.1
 		add_theme_support( 'title-tag' );
-		
+
 		// Enable Feed Links
 		add_theme_support( 'automatic-feed-links' );
-		
+
 		// Set images sizes
 		set_post_thumbnail_size('galopin-post-thumbnail', 633, 400, true);
 		add_image_size('galopin-post-thumbnail-full', 900, 400, true);
-		
+
 		// Add Meta boxes for post formats
 		require_once 'admin/metaboxes/post-formats.php';
 
@@ -152,27 +152,27 @@ add_action( 'load-post-new.php', 'galopin_custom_format' );
  */
 if (!function_exists('galopin_enqueue')){
 	function galopin_enqueue(){
-		
+
 		wp_register_script('fitvids', get_template_directory_uri().'/js/min/jquery.fitvids.min.js', array('jquery'), false, true);
-		
+
 		wp_register_script('jq-aim', get_template_directory_uri().'/js/min/jquery.aim.min.js', array('jquery'), false, true);
-		
+
 		wp_register_script('galopin', get_template_directory_uri().'/js/min/galopin.min.js', array('jquery'), false, true);
-		
+
 		wp_enqueue_style( 'galopin-fonts', '//fonts.googleapis.com/css?family=Montserrat|Raleway:400,700&subset=latin,latin-ext');
-		
+
 		//main stylesheet
 		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), false);
-		
+
 		//icons
 		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/typicons.min.css', array(), false);
-		
+
 		wp_enqueue_script('fitvids');
 		wp_enqueue_script('jq-aim');
-		wp_enqueue_script('masonry');
-		
+		wp_enqueue_script('jquery-masonry');
+
 		wp_enqueue_script('galopin');
-		
+
 		if ( is_singular() ){
 			wp_enqueue_script( "comment-reply" );
 		}
@@ -204,7 +204,7 @@ if (!function_exists('galopin_options')){
 		if (!current_user_can('edit_theme_options')) {
 			wp_die(__('You do not have sufficient permissions to access this page.'));
 		}
-       	
+
        	include 'admin/index.php';
     }
 }
@@ -236,7 +236,7 @@ if(!function_exists('galopin_user_styles')){
 	function galopin_user_styles(){
 		if (get_option('galopin_color')){
 			$color = apply_filters('galopin_color', get_option('galopin_color'));
-			
+
 			$hsl = galopin_RGBToHSL(galopin_HTMLToRGB($color));
 			if ($hsl->lightness > 180){
 				$contrast = apply_filters('galopin_color_contrast', '#333');
@@ -244,7 +244,7 @@ if(!function_exists('galopin_user_styles')){
 			else{
 				$contrast = apply_filters('galopin_color_contrast', '#fff');
 			}
-			
+
 			$hsl->lightness -= 30;
 			$complement = apply_filters('galopin_color_complement', galopin_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness));
 		}
@@ -252,15 +252,15 @@ if(!function_exists('galopin_user_styles')){
 			$color = '#E54C3C';
 			$complement = '#c73829';
 			$contrast = '#fff';
-		} 
+		}
 		?>
 			<style type="text/css">
-			.button, 
-			.comment-form input[type="submit"], 
+			.button,
+			.comment-form input[type="submit"],
 			html a.button,
 			input[type='submit'],
 			input[type='button'],
-			.widget_calendar #next a, 
+			.widget_calendar #next a,
 			.widget_calendar #prev a,
 			.menu-wrapper,
 			.search-form .submit-btn,
@@ -272,12 +272,12 @@ if(!function_exists('galopin_user_styles')){
 				background: <?php echo $color; ?>;
 				color: <?php echo $contrast; ?>;
 			}
-			.button:hover, 
-			.comment-form input[type="submit"]:hover, 
+			.button:hover,
+			.comment-form input[type="submit"]:hover,
 			html a.button:hover,
 			input[type='submit']:hover,
 			input[type='button']:hover,
-			.widget_calendar #next a:hover, 
+			.widget_calendar #next a:hover,
 			.widget_calendar #prev a:hover,
 			.search-form .submit-btn:hover,
 			.post-content th:hover,
@@ -326,7 +326,7 @@ if(!function_exists('galopin_user_styles')){
 			.comment-form .logged-in-as a:hover{
 				color: <?php echo $complement; ?>;
 			}
-			
+
 			.footer,
 			.post-header,
 			.comment-footer,
@@ -334,14 +334,14 @@ if(!function_exists('galopin_user_styles')){
 			.masonry-header{
 				border-color: <?php echo $color; ?>;
 			}
-			
+
 			.masonry .brick:hover,
 			.blog .post-thumbnail:hover,
 			.archive .post-thumbnail:hover,
 			.hero-image{
-				background: <?php echo $color; ?>;
+				background-color: <?php echo $color; ?>;
 			}
-			
+
 			.masonry .brick:hover .post-header-title,
 			.masonry .brick:hover .post-header-title:before,
 			.masonry .brick:hover .post-header-title blockquote a,
@@ -351,7 +351,7 @@ if(!function_exists('galopin_user_styles')){
 			.menu-toggle,
 			.menu-wrapper a{
 				color: <?php echo $contrast; ?>;
-			}			
+			}
 			</style>
 		<?php }
 }
@@ -369,7 +369,7 @@ if(!function_exists('galopin_edd')){
 	function galopin_edd(){
 		$license = trim(get_option(GALOPIN_LICENSE_KEY));
 		$status = get_option('galopin_license_status');
-		
+
 		if (!$status){
 			//valider la license
 			$api_params = array(
@@ -377,16 +377,16 @@ if(!function_exists('galopin_edd')){
 				'license'=>$license,
 				'item_name'=>urlencode(GALOPIN_THEME_NAME)
 			);
-	
+
 			$response = wp_remote_get(add_query_arg($api_params, GALOPIN_STORE_URL), array('timeout'=>15, 'sslverify'=>false));
-	
+
 			if (!is_wp_error($response)){
 				$license_data = json_decode(wp_remote_retrieve_body($response));
 				if ($license_data->license === 'valid') update_option('galopin_license_status', true);
 			}
 		}
-		
-		$edd_updater = new EDD_SL_Theme_Updater(array( 
+
+		$edd_updater = new EDD_SL_Theme_Updater(array(
 				'remote_api_url'=> GALOPIN_STORE_URL,
 				'version' 	=> GALOPIN_THEME_VERSION,
 				'license' 	=> $license,
@@ -408,7 +408,7 @@ if(!function_exists('galopin_admin_notice')){
 	function galopin_admin_notice(){
 		global $current_user;
         $user_id = $current_user->ID;
-	
+
 		if(!get_option('galopin_license_status')){
 			echo '<div class="error"><p>';
 			_e("In order to get updates, please enter your licence that you received by email.", 'galopin');
