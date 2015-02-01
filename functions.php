@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Define theme constants (relative to licensing)
 define('GALOPIN_STORE_URL', 'https://www.themesdefrance.fr');
 define('GALOPIN_THEME_NAME', 'Galopin');
-define('GALOPIN_THEME_VERSION', '1.002');
+define('GALOPIN_THEME_VERSION', '1.003');
 define('GALOPIN_LICENSE_KEY', 'galopin_license_edd');
 
 // Include theme updater (relative to licensing)
