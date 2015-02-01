@@ -1,23 +1,24 @@
 // Common styles
 
 .widget{
-	margin-bottom: 30px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid #f1f1f1;
-	
+	max-width: 500px;
+	margin: 0 auto 30px;
+
 	ul,
 	ol{
 		list-style: none;
 	}
-	
+
 	ul li{
 		margin-bottom: 10px;
-		
+
 		&:last-child{
 			margin-bottom:0;
 		}
 	}
-	
+
 	a{
 		@extend %custom-color;
 		text-decoration: none;
@@ -31,7 +32,7 @@
 	select{
 		max-width: 100%;
 	}
-	
+
 }
 .widget > h3{
 	font-size: 20px;
@@ -48,15 +49,15 @@
 
 .widget_search{
 	position: relative;
-	padding: 8px 0 30px;
-	
+	padding: 0 0 30px;
+
 	.search-field{
 		width: 100%;
 		padding: 4px 40px 4px 10px;
 		line-height: 32px;
 	}
 	.reset-btn{
-		right: 15%;
+		right: 40px;
 		top: 6px;
 	}
 	.submit-btn{
@@ -65,7 +66,7 @@
 		right: 0;
 		top: 0;
 		bottom: 0;
-		
+
 		&:before{
 			font-size: 24px;
 		}
@@ -114,18 +115,18 @@
 	h3{
 		@extend .typcn-folder-open;
 	}
-	
+
 	p {
 		margin-bottom: 10px;
 	}
 	img{
 		height:auto;
 	}
-	
+
 	.wp-caption{
 		background: #f1f1f1;
 		margin-bottom: 10px;
-		
+
 		.wp-caption-text{
 			font-size: 14px;
 			text-align: center;
@@ -140,7 +141,7 @@
 	background: #f1f1f1;
 	padding: 6px 8px;
 	margin: 2px 0;
-	
+
 	&:hover{
 		color: darken(#B2B2B2, 10);
 		background: darken(#F1F1F1, 5);
@@ -151,7 +152,7 @@
 	h3{
 		@extend .typcn-calender;
 	}
-	
+
 	caption{
 		font-family: $heading-font;
 		font-size: 16px;
@@ -159,27 +160,27 @@
 		padding: 10px 0;
 		background: #f1f1f1;
 	}
-	
+
 	th{
 		font-weight: 400;
 		color: #B2B2B2;
 		padding: 5px 0;
 	}
-	
+
 	td,
 	th{
 		padding: 5px;
 	}
-	
+
 	#today{
 		font-weight:bold;
 	}
-	
+
 	#next,
 	#prev{
 		padding:0;
 	}
-	
+
 	#next a,
 	#prev a{
 		display:block;
@@ -196,11 +197,11 @@
 		display:block;
 		margin-bottom: 5px;
 	}
-	
+
 	.rss-date {
 		font-size: 14px;
 	}
-	
+
 	.rssSummary{
 		margin: 5px 0;
 	}
@@ -209,39 +210,39 @@
 // Galopin custom widgets
 
 .widget_galopincalltoaction{
-	
+
 	h3{
 		@extend .typcn-flag-outline;
 	}
-	
+
 	.cta-description{
-	
+
 		p{
 			margin-bottom: 10px;
 			line-height: 1.42;
 		}
 	}
-	
+
 	a.button{
 		display:inline-block;
 	}
 }
 
 .widget_galopinsocial{
-	
+
 	h3{
 		@extend .typcn-thumbs-up
 	}
-	
+
 	ul {
 		overflow: hidden;
 		@extend .clearfix;
-		
+
 		li{
 			float: left;
 			padding: 5px;
 			margin-bottom:0;
-			
+
 			a{
 				font-size:26px;
 			}
