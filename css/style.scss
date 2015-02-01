@@ -11,7 +11,7 @@
 $menu-width: 280px;
 
 .content-wrapper{
-	width: 100%; 
+	width: 100%;
 	height: 100%;
 	position: relative;
 	transition: .4s transform ease-out;
@@ -29,7 +29,7 @@ $menu-width: 280px;
 	width: 100%;
 	@extend %custom-bg;
 	@extend .clearfix;
-	
+
 	@include width-below($grid-collapse-below){
 		width: $menu-width;
 		height: 100%;
@@ -43,7 +43,7 @@ $menu-width: 280px;
 	width: 100%;
 	text-align: center;
 	font-family: $heading-font;
-	
+
 	@include width-below($grid-collapse-below){
 		text-align: left;
 	}
@@ -53,11 +53,11 @@ $menu-width: 280px;
 }
 .menu-wrapper li{
 	display: inline-block;
-	
+
 	@include width-below($grid-collapse-below){
-		display: block;		
+		display: block;
 	}
-	
+
 	&.current-menu-item a,
 	&:hover a{
 		opacity: 1;
@@ -70,12 +70,12 @@ $menu-width: 280px;
 	text-decoration: none;
 	font-size: 16px;
 	opacity: .7;
-	
+
 	&:hover{
 		color: #fff;
 		opacity: 1;
 	}
-	
+
 	@include width-below($grid-collapse-below){
 		display: block;
 		color: #fff;
@@ -93,28 +93,28 @@ $menu-width: 280px;
 	top: 100%;
 	padding-top: 1px;
 	display: none;
-	
+
 	@include width-below($grid-collapse-below){
 		display: block;
 		position: static;
 		background: inherit;
 		padding-top: 0;
 	}
-	
+
 	li{
 		opacity: 1;
 	}
 	a{
 		font-size: 14px;
 		padding:12px 10px 14px 10px;
-		transition: .2s background ease-out, 
+		transition: .2s background ease-out,
 					.2s color ease-out;
 	}
 }
 .menu-wrapper .sub-menu a{
 	@extend %custom-color;
 	font-size: 16px;
-	
+
 	@include width-below($grid-collapse-below){
 		color: #fff !important;
 		padding-left: 30px;
@@ -136,7 +136,7 @@ $menu-width: 280px;
 	top: 0;
 	bottom: 0;
 	z-index: 100;
-	
+
 	@include width-below($grid-collapse-below){
 		position: static;
 	}
@@ -147,11 +147,11 @@ $menu-width: 280px;
 	max-width: 250px;
 	display: flex;
 	align-items: center;
-	
+
 	&.active{
 		background: #fff;
 	}
-	
+
 	@include width-below($grid-collapse-below){
 		width: 100%;
 		max-width: none;
@@ -167,7 +167,7 @@ $menu-width: 280px;
 	width: 80%;
 	padding: 4px 4px;
 	border-left: 2px solid #B2B2B2;
-	
+
 	&:focus{
 		background: #fff;
 	}
@@ -183,7 +183,7 @@ $menu-width: 280px;
 	background: none;
 	color: #f1f1f1;
 	font-size: 20px;
-	
+
 	@include width-below($grid-collapse-below){
 		padding-top: 10px;
 		padding-left: 15px;
@@ -192,13 +192,13 @@ $menu-width: 280px;
 
 .menu-wrapper .social-menu{
 	right: 0;
-	
+
 	a{
 		padding: 15px 5px;
 	}
-	
+
 	@include width-below($grid-collapse-below){
-		
+
 		padding-left: 5px;
 		li{
 			display: inline-block;
@@ -211,7 +211,7 @@ $menu-width: 280px;
 
 .content{
 	padding-top: 40px;
-	
+
 	@include width-below($grid-collapse-below){
 		padding-top: 0;
 	}
@@ -231,11 +231,11 @@ $menu-width: 280px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	@include width-above(800px){
 		background-attachment: fixed;
 	}
-	
+
 	@include width-below($grid-collapse-below){
 		@extend %custom-color;
 		top: 0;
@@ -244,7 +244,7 @@ $menu-width: 280px;
 		z-index: 200;
 		justify-content: center;
 		background-image:none !important;
-		
+
 		.menu-toggle{
 			position: absolute;
 			top: 0;
@@ -257,14 +257,14 @@ $menu-width: 280px;
 	.admin-bar .hero-image{
 		top: auto;
 	}
-	
+
 	.home .hero-image{
-//		align-items:baseline;	
+//		align-items:baseline;
 	}
 }
 .cover .hero-image{
 	margin-bottom: 70px;
-	
+
 	@media only screen and (max-height: 500px){
 		height: 400px;
 	}
@@ -277,15 +277,15 @@ $menu-width: 280px;
 	@media only screen and (min-height: 850px){
 		height: 830px;
 	}
-	
+
 	@include width-below($grid-collapse-below){
 		position: static;
 		margin-bottom: 20px;
 	}
-} 
+}
 .cover .menu-wrapper{
 	position: absolute;
-	
+
 	@media only screen and (max-height: 500px){
 		top: 400px;
 	}
@@ -295,11 +295,11 @@ $menu-width: 280px;
 	@media only screen and (min-height: 850px){
 		top: 830px;
 	}
-	
+
 	@include width-below($grid-collapse-below){
 		top: 0 !important;
 	}
-	
+
 	&.stuck{
 		position: fixed;
 		top: 0 !important;
@@ -316,11 +316,11 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	font-size: 30px;
 	display: none;
 	color: #333;
-	
+
 	&.inverted{
 		color: #fff;
 	}
-	
+
 	@include width-below($grid-collapse-below){
 		display: block;
 	}
@@ -332,11 +332,11 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	font-family: $heading-font;
 	font-size: 38px;
 	text-decoration: none;
-	
+
 	&:hover{
 		color:#fff;
 	}
-	
+
 	@include width-below($grid-collapse-below){
 		font-size: 20px;
 		margin-right: 10px;
@@ -347,7 +347,7 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	img{
 		max-height: 400px;
 		display: block;
-		
+
 		@include width-below($grid-collapse-below){
 			max-height: 50px;
 		}
@@ -357,9 +357,22 @@ body.admin-bar .cover .menu-wrapper.stuck{
 .content .wrapper,
 .footer-wrapper .wrapper{
 
-	width: 900px;
+	max-width: 900px;
+	width:94%;
+	//width: 900px;
 	margin: 0 auto;
-	
+
+	@extend .clearfix;
+
+	@include width-below(960px){
+		max-width: 800px;
+	}
+	@include width-below($grid-collapse-below){
+		width: 100%;
+		padding: 0 15px;
+	}
+
+	/*
 	@include width-below(1000px){
 		width: 800px;
 	}
@@ -370,7 +383,7 @@ body.admin-bar .cover .menu-wrapper.stuck{
 		width: 100%;
 		padding: 0 15px;
 		/*padding-top: 50px;*/
-	}
+	//}
 }
 
 .posts{
@@ -379,7 +392,7 @@ body.admin-bar .cover .menu-wrapper.stuck{
 }
 
 .cover .posts{
-	padding-top:25px;	
+	padding-top:25px;
 }
 
 .posts .post{
@@ -388,6 +401,10 @@ body.admin-bar .cover .menu-wrapper.stuck{
 
 .sidebar{
 	padding-top:0;
+
+	@include width-below($grid-collapse-below){
+		padding-top:25px;
+	}
 }
 
 .cover .sidebar{
@@ -396,41 +413,42 @@ body.admin-bar .cover .menu-wrapper.stuck{
 
 .footer-wrapper {
 	padding-top: 60px;
-	
+
 	@include width-below($grid-collapse-below){
-		padding-top:0;	
+		padding-top:0;
 	}
 }
 
 .footerbar{
 	margin-top: 20px;
-	
+
 	.widget{
 		border-bottom: none;
-		
+
+		width: 33.3%;
+		margin-bottom:30px;
+
+		@extend %grid-col;
+
+		@include width-below(700px){
+			width: 50%;
+		}
+		@include width-below($grid-collapse-below){
+			width: 100%;
+			max-width: 500px;
+			float:none;
+			padding-left:0;
+			margin: 0 auto 30px;
+		}
+
 		@include width-below($grid-collapse-below){
 			border-bottom: 1px solid #f1f1f1;
-			
+
 			&:last-child{
 				border-bottom: none;
 			}
 		}
-		
-	}
-}
 
-.footerbar .widget{
-	@extend %grid-col;
-	
-	@include width-above(701px){
-		width: 33.3%;
-	}
-	@include width-below(700px){
-		width: 50%;
-	}
-	@include width-below($grid-collapse-below){
-		width: 100%;
-		padding-left:0;
 	}
 }
 
@@ -454,7 +472,7 @@ body.admin-bar .cover .menu-wrapper.stuck{
 }
 .footer .menu{
 	text-align: right;
-	
+
 	@include width-below($grid-collapse-below){
 		text-align: center;
 		margin-top: 20px;
@@ -474,7 +492,8 @@ body.admin-bar .cover .menu-wrapper.stuck{
 	right: 0;
 	bottom: 70px;
 	padding: 10px;
-	
+	z-index:1000;
+
 	&:before{
 		font-size: 22px;
 	}
@@ -483,7 +502,7 @@ body.admin-bar .cover .menu-wrapper.stuck{
 /* Jetpack optimization */
 
 .jetpack_subscription_widget{
-	
+
 	input[type='text'], input[type='email']{
 		margin: 8px 0;
 	}

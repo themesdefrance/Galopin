@@ -1,6 +1,6 @@
 .masonry-wrapper{
 	background: #f1f1f1;
-	
+
 	.masonry-header{
 		margin-bottom: 20px;
 		padding:0 0 30px;
@@ -18,46 +18,40 @@
 }
 
 .masonry{
-	margin: 0 auto;
-	
+	//margin: 0 auto;
+	margin: 0 -1.2% 0 -1%;
 	@extend .clearfix
 }
 
 .masonry .brick{
 	float:left;
-	/*margin-right: 30px;
-	
-	&:nth-child(3n){
-		margin-right:0;
-	}*/
-	
+	margin: 0 1.1% 20px;
+	width: 31.1%;
 	background: #fff;
-	margin-bottom: 30px;
 	padding: 10px;
 	transition: .4s background ease-out,
 				.2s color ease-out;
-	
-	@include width-above(701px){
-		width: 31%;
-	}
-	@include width-below(700px){
-		width: 47%;
-	}
+
 	@include width-below($grid-collapse-below){
-		width: 100%;
+		width: 47.6%;
 	}
-	
+
+	@include width-below(500px){
+		width: 100%;
+		margin: 0 0 30px;
+	}
+
 	img,
 	.post-video{
 		height: auto;
 		transition: .4s opacity ease-out;
 		overflow:hidden;
 	}
-	
+
 	.post{
 		margin-bottom: 0;
 	}
-	
+
 	.post-header{
 		border-bottom: none;
 		margin-bottom: 0;
@@ -68,20 +62,20 @@
 		line-height: 1.1;
 		transition: .4s color ease-out;
 	}
-	
+
 	.post-quote .post-header-title blockquote{
 		display:inline;
-		
+
 		.post-quote-author{
 			transition: .4s color ease-out;
 		}
 	}
-	
+
 	.post-footer{
 		font-size:14px;
 		margin-top:0px;
 	}
-	
+
 	&:hover{
 		img,
 		.post-video{
@@ -94,7 +88,7 @@
 	color: inherit;
 	position: relative;
 	display: block;
-	
+
 	&:before{
 		content: attr(title);
 		opacity: 0;
@@ -121,7 +115,7 @@
 	.masonry-footer{
 		filter: blur(1.5px);
 	}
-	
+
 	.brick-link:before{
 		opacity: 1;
 		transform: translate(-50%, -50%);
@@ -135,11 +129,11 @@
 	@extend %custom-border;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	
+
 	.read-more{
 		float: right;
 		text-decoration: none;
-		
+
 		&:hover{
 			text-decoration: underline;
 		}
